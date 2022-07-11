@@ -33,15 +33,15 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
-        "silk_line_width": 0.13999999999999999,
+        "silk_line_width": 0.15,
         "silk_text_italic": false,
-        "silk_text_size_h": 0.6,
-        "silk_text_size_v": 0.6,
-        "silk_text_thickness": 0.13999999999999999,
+        "silk_text_size_h": 1.0,
+        "silk_text_size_v": 1.0,
+        "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
@@ -120,14 +120,10 @@
       },
       "track_widths": [
         0.0,
-        0.15,
         0.2,
-        0.25,
-        1.0,
-        5.0,
-        6.0,
-        16.0,
-        18.0
+        0.4,
+        0.5,
+        1.0
       ],
       "via_dimensions": [
         {
@@ -135,7 +131,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.4,
+          "diameter": 0.3,
           "drill": 0.2
         }
       ],
@@ -358,7 +354,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "oskar_feet_rev1.kicad_pro",
+    "filename": "oskar_body_rev1.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -392,7 +388,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "oskar_feet_rev1.step",
+      "step": "oskar_body_rev1.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
