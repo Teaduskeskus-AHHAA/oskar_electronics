@@ -38,10 +38,14 @@ void CAN_enable_clkout();
 void CAN_disable_clkout();
 void CAN_read_registers(uint8_t start, uint8_t target[], uint8_t len);
 uint8_t CAN_read_register(uint8_t reg);
-void CAN_load_message(uint8_t buffer, CAN_frame_t* frame);
+void CAN_load_message(uint8_t buffer, CAN_frame_t *frame);
 void CAN_request_to_send(uint8_t buffer);
 void CAN_abort_send(uint8_t buffer);
-CAN_error CAN_send(CAN_frame_t* frame);
-void CAN_read(uint8_t buffer, CAN_frame_t* frame);
+CAN_error CAN_send(CAN_frame_t *frame);
+void CAN_read(uint8_t buffer, CAN_frame_t *frame);
+uint8_t CAN_verify_register(uint8_t reg, uint8_t expected);
+uint8_t CAN_init_regcheck();
+uint8_t CAN_get_TEC();
+uint8_t CAN_check_bit(uint8_t reg, uint8_t bitmask);
 
-#endif  // CAN_H
+#endif // CAN_H

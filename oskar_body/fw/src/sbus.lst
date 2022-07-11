@@ -1,0 +1,761 @@
+GAS LISTING /tmp/cc4XBTqo.s 			page 1
+
+
+   1               		.file	"sbus.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"src/sbus.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/cc4XBTqo.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"./include/sbus.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  65               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  66               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  67               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  68               		.stabs	"int8_t:t(6,1)=(0,12)",128,0,125,0
+  69               		.stabs	"uint8_t:t(6,2)=(0,13)",128,0,126,0
+  70               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,127,0
+  71               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,128,0
+  72               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,129,0
+  73               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,130,0
+  74               		.stabs	"int64_t:t(6,7)=(0,8)",128,0,132,0
+  75               		.stabs	"uint64_t:t(6,8)=(0,9)",128,0,133,0
+  76               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,146,0
+  77               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,151,0
+  78               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,163,0
+  79               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,168,0
+  80               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,173,0
+  81               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,178,0
+  82               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,183,0
+  83               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,188,0
+  84               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,196,0
+  85               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,203,0
+  86               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,217,0
+  87               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,222,0
+  88               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,227,0
+  89               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,232,0
+  90               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,237,0
+  91               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,242,0
+  92               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,250,0
+  93               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,257,0
+  94               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,277,0
+  95               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,282,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  99               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 103               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabn	162,0,0,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabs	"SBUS_init:F(0,49)",36,0,16,SBUS_init
+ 108               	.global	SBUS_init
+ 109               		.type	SBUS_init, @function
+ 110               	SBUS_init:
+ 111               		.stabd	46,0,0
+   1:src/sbus.c    **** #include "include/sbus.h"
+   2:src/sbus.c    **** #include <avr/interrupt.h>
+   3:src/sbus.c    **** 
+GAS LISTING /tmp/cc4XBTqo.s 			page 3
+
+
+   4:src/sbus.c    **** ISR(USART2_RX_vect)
+   5:src/sbus.c    **** {
+   6:src/sbus.c    **** 
+   7:src/sbus.c    ****   uint8_t data = UDR2;
+   8:src/sbus.c    ****   rx_buffer[rx_pointer++] = data;
+   9:src/sbus.c    ****   if (rx_pointer == SBUS_PACKAGE_SIZE)
+  10:src/sbus.c    ****   {
+  11:src/sbus.c    ****     rx_pointer = 0;
+  12:src/sbus.c    ****     SBUS_read();
+  13:src/sbus.c    ****   }
+  14:src/sbus.c    **** }
+  15:src/sbus.c    **** 
+  16:src/sbus.c    **** void SBUS_init()
+  17:src/sbus.c    **** {
+ 112               		.stabn	68,0,17,.LM0-.LFBB1
+ 113               	.LM0:
+ 114               	.LFBB1:
+ 115               	/* prologue: function */
+ 116               	/* frame size = 0 */
+ 117               	/* stack size = 0 */
+ 118               	.L__stack_usage = 0
+  18:src/sbus.c    ****   rx_pointer = 0;
+ 119               		.stabn	68,0,18,.LM1-.LFBB1
+ 120               	.LM1:
+ 121 0000 1092 0000 		sts rx_pointer,__zero_reg__
+  19:src/sbus.c    ****   UBRR2 = 9;
+ 122               		.stabn	68,0,19,.LM2-.LFBB1
+ 123               	.LM2:
+ 124 0004 E4ED      		ldi r30,lo8(-44)
+ 125 0006 F0E0      		ldi r31,0
+ 126 0008 89E0      		ldi r24,lo8(9)
+ 127 000a 90E0      		ldi r25,0
+ 128 000c 9183      		std Z+1,r25
+ 129 000e 8083      		st Z,r24
+  20:src/sbus.c    ****   UBRR2 = 9;
+ 130               		.stabn	68,0,20,.LM3-.LFBB1
+ 131               	.LM3:
+ 132 0010 9183      		std Z+1,r25
+ 133 0012 8083      		st Z,r24
+  21:src/sbus.c    ****   UCSR2B |= (1 << RXEN2) | (1 << RXCIE2);
+ 134               		.stabn	68,0,21,.LM4-.LFBB1
+ 135               	.LM4:
+ 136 0014 E1ED      		ldi r30,lo8(-47)
+ 137 0016 F0E0      		ldi r31,0
+ 138 0018 8081      		ld r24,Z
+ 139 001a 8069      		ori r24,lo8(-112)
+ 140 001c 8083      		st Z,r24
+  22:src/sbus.c    ****   UCSR2C |= (1 << USBS0) | (1 << UPM21);
+ 141               		.stabn	68,0,22,.LM5-.LFBB1
+ 142               	.LM5:
+ 143 001e E2ED      		ldi r30,lo8(-46)
+ 144 0020 F0E0      		ldi r31,0
+ 145 0022 8081      		ld r24,Z
+ 146 0024 8862      		ori r24,lo8(40)
+ 147 0026 8083      		st Z,r24
+ 148 0028 0895      		ret
+ 149               		.size	SBUS_init, .-SBUS_init
+GAS LISTING /tmp/cc4XBTqo.s 			page 4
+
+
+ 150               	.Lscope1:
+ 151               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 152               		.stabd	78,0,0
+ 153               		.stabs	"SBUS_decode:F(0,49)",36,0,36,SBUS_decode
+ 154               		.stabs	"data:P(0,50)=*(6,2)",64,0,36,30
+ 155               	.global	SBUS_decode
+ 156               		.type	SBUS_decode, @function
+ 157               	SBUS_decode:
+ 158               		.stabd	46,0,0
+  23:src/sbus.c    **** }
+  24:src/sbus.c    **** 
+  25:src/sbus.c    **** void SBUS_read()
+  26:src/sbus.c    **** {
+  27:src/sbus.c    ****   if (rx_buffer[0] == 0x0F && rx_buffer[24] == 0x00)
+  28:src/sbus.c    ****   {
+  29:src/sbus.c    ****     SBUS_decode(rx_buffer);
+  30:src/sbus.c    **** 
+  31:src/sbus.c    ****     sbus_safety = 0;
+  32:src/sbus.c    ****     OPER_MODE = 0;
+  33:src/sbus.c    ****   }
+  34:src/sbus.c    **** }
+  35:src/sbus.c    **** 
+  36:src/sbus.c    **** void SBUS_decode(uint8_t *data)
+  37:src/sbus.c    **** {
+ 159               		.stabn	68,0,37,.LM6-.LFBB2
+ 160               	.LM6:
+ 161               	.LFBB2:
+ 162               	/* prologue: function */
+ 163               	/* frame size = 0 */
+ 164               	/* stack size = 0 */
+ 165               	.L__stack_usage = 0
+ 166 002a FC01      		movw r30,r24
+  38:src/sbus.c    ****   channels[0] = ((data[1] | data[2] << 8) & 0x07FF);
+ 167               		.stabn	68,0,38,.LM7-.LFBB2
+ 168               	.LM7:
+ 169 002c 2281      		ldd r18,Z+2
+ 170 002e A0E0      		ldi r26,lo8(channels)
+ 171 0030 B0E0      		ldi r27,hi8(channels)
+ 172 0032 8181      		ldd r24,Z+1
+ 173 0034 9281      		ldd r25,Z+2
+ 174 0036 9770      		andi r25,7
+ 175 0038 1196      		adiw r26,1
+ 176 003a 9C93      		st X,r25
+ 177 003c 8E93      		st -X,r24
+  39:src/sbus.c    ****   channels[1] = ((data[2] >> 3 | data[3] << 5) & 0x07FF);
+ 178               		.stabn	68,0,39,.LM8-.LFBB2
+ 179               	.LM8:
+ 180 003e 8381      		ldd r24,Z+3
+ 181 0040 30E2      		ldi r19,lo8(32)
+ 182 0042 839F      		mul r24,r19
+ 183 0044 C001      		movw r24,r0
+ 184 0046 1124      		clr __zero_reg__
+ 185 0048 2695      		lsr r18
+ 186 004a 2695      		lsr r18
+ 187 004c 2695      		lsr r18
+ 188 004e 822B      		or r24,r18
+ 189 0050 9770      		andi r25,7
+GAS LISTING /tmp/cc4XBTqo.s 			page 5
+
+
+ 190 0052 1396      		adiw r26,2+1
+ 191 0054 9C93      		st X,r25
+ 192 0056 8E93      		st -X,r24
+ 193 0058 1297      		sbiw r26,2
+  40:src/sbus.c    ****   channels[2] = ((data[3] >> 6 | data[4] << 2 | data[5] << 10) & 0x07FF);
+ 194               		.stabn	68,0,40,.LM9-.LFBB2
+ 195               	.LM9:
+ 196 005a 2381      		ldd r18,Z+3
+ 197 005c 2295      		swap r18
+ 198 005e 2695      		lsr r18
+ 199 0060 2695      		lsr r18
+ 200 0062 2370      		andi r18,lo8(3)
+ 201 0064 8481      		ldd r24,Z+4
+ 202 0066 90E0      		ldi r25,0
+ 203 0068 880F      		lsl r24
+ 204 006a 991F      		rol r25
+ 205 006c 880F      		lsl r24
+ 206 006e 991F      		rol r25
+ 207 0070 822B      		or r24,r18
+ 208 0072 2581      		ldd r18,Z+5
+ 209 0074 30E0      		ldi r19,0
+ 210 0076 322F      		mov r19,r18
+ 211 0078 2227      		clr r18
+ 212 007a 330F      		lsl r19
+ 213 007c 330F      		lsl r19
+ 214 007e 822B      		or r24,r18
+ 215 0080 932B      		or r25,r19
+ 216 0082 9770      		andi r25,7
+ 217 0084 1596      		adiw r26,4+1
+ 218 0086 9C93      		st X,r25
+ 219 0088 8E93      		st -X,r24
+ 220 008a 1497      		sbiw r26,4
+  41:src/sbus.c    ****   channels[3] = ((data[5] >> 1 | data[6] << 7) & 0x07FF);
+ 221               		.stabn	68,0,41,.LM10-.LFBB2
+ 222               	.LM10:
+ 223 008c 2581      		ldd r18,Z+5
+ 224 008e 2695      		lsr r18
+ 225 0090 8681      		ldd r24,Z+6
+ 226 0092 30E8      		ldi r19,lo8(-128)
+ 227 0094 839F      		mul r24,r19
+ 228 0096 C001      		movw r24,r0
+ 229 0098 1124      		clr __zero_reg__
+ 230 009a 822B      		or r24,r18
+ 231 009c 9770      		andi r25,7
+ 232 009e 1796      		adiw r26,6+1
+ 233 00a0 9C93      		st X,r25
+ 234 00a2 8E93      		st -X,r24
+ 235 00a4 1697      		sbiw r26,6
+  42:src/sbus.c    ****   channels[4] = ((data[6] >> 4 | data[7] << 4) & 0x07FF);
+ 236               		.stabn	68,0,42,.LM11-.LFBB2
+ 237               	.LM11:
+ 238 00a6 2681      		ldd r18,Z+6
+ 239 00a8 2295      		swap r18
+ 240 00aa 2F70      		andi r18,lo8(15)
+ 241 00ac 8781      		ldd r24,Z+7
+ 242 00ae 30E1      		ldi r19,lo8(16)
+ 243 00b0 839F      		mul r24,r19
+GAS LISTING /tmp/cc4XBTqo.s 			page 6
+
+
+ 244 00b2 C001      		movw r24,r0
+ 245 00b4 1124      		clr __zero_reg__
+ 246 00b6 822B      		or r24,r18
+ 247 00b8 9770      		andi r25,7
+ 248 00ba 1996      		adiw r26,8+1
+ 249 00bc 9C93      		st X,r25
+ 250 00be 8E93      		st -X,r24
+ 251 00c0 1897      		sbiw r26,8
+  43:src/sbus.c    ****   channels[5] = ((data[7] >> 7 | data[8] << 1 | data[9] << 9) & 0x07FF);
+ 252               		.stabn	68,0,43,.LM12-.LFBB2
+ 253               	.LM12:
+ 254 00c2 2781      		ldd r18,Z+7
+ 255 00c4 221F      		rol r18
+ 256 00c6 2227      		clr r18
+ 257 00c8 221F      		rol r18
+ 258 00ca 8085      		ldd r24,Z+8
+ 259 00cc 90E0      		ldi r25,0
+ 260 00ce 880F      		lsl r24
+ 261 00d0 991F      		rol r25
+ 262 00d2 822B      		or r24,r18
+ 263 00d4 2185      		ldd r18,Z+9
+ 264 00d6 30E0      		ldi r19,0
+ 265 00d8 322F      		mov r19,r18
+ 266 00da 2227      		clr r18
+ 267 00dc 330F      		lsl r19
+ 268 00de 822B      		or r24,r18
+ 269 00e0 932B      		or r25,r19
+ 270 00e2 9770      		andi r25,7
+ 271 00e4 1B96      		adiw r26,10+1
+ 272 00e6 9C93      		st X,r25
+ 273 00e8 8E93      		st -X,r24
+ 274 00ea 1A97      		sbiw r26,10
+  44:src/sbus.c    ****   channels[6] = ((data[9] >> 2 | data[10] << 6) & 0x07FF);
+ 275               		.stabn	68,0,44,.LM13-.LFBB2
+ 276               	.LM13:
+ 277 00ec 2185      		ldd r18,Z+9
+ 278 00ee 2695      		lsr r18
+ 279 00f0 2695      		lsr r18
+ 280 00f2 8285      		ldd r24,Z+10
+ 281 00f4 30E4      		ldi r19,lo8(64)
+ 282 00f6 839F      		mul r24,r19
+ 283 00f8 C001      		movw r24,r0
+ 284 00fa 1124      		clr __zero_reg__
+ 285 00fc 822B      		or r24,r18
+ 286 00fe 9770      		andi r25,7
+ 287 0100 1D96      		adiw r26,12+1
+ 288 0102 9C93      		st X,r25
+ 289 0104 8E93      		st -X,r24
+ 290 0106 1C97      		sbiw r26,12
+  45:src/sbus.c    ****   channels[7] = ((data[10] >> 5 | data[11] << 3) & 0x07FF); // & the other 8 + 2 channels if you ne
+ 291               		.stabn	68,0,45,.LM14-.LFBB2
+ 292               	.LM14:
+ 293 0108 2285      		ldd r18,Z+10
+ 294 010a 2295      		swap r18
+ 295 010c 2695      		lsr r18
+ 296 010e 2770      		andi r18,lo8(7)
+ 297 0110 8385      		ldd r24,Z+11
+GAS LISTING /tmp/cc4XBTqo.s 			page 7
+
+
+ 298 0112 90E0      		ldi r25,0
+ 299 0114 880F      		lsl r24
+ 300 0116 991F      		rol r25
+ 301 0118 880F      		lsl r24
+ 302 011a 991F      		rol r25
+ 303 011c 880F      		lsl r24
+ 304 011e 991F      		rol r25
+ 305 0120 822B      		or r24,r18
+ 306 0122 1F96      		adiw r26,14+1
+ 307 0124 9C93      		st X,r25
+ 308 0126 8E93      		st -X,r24
+ 309 0128 1E97      		sbiw r26,14
+  46:src/sbus.c    ****   channels[8] = ((data[12] | data[13] << 8) & 0x07FF);
+ 310               		.stabn	68,0,46,.LM15-.LFBB2
+ 311               	.LM15:
+ 312 012a 8485      		ldd r24,Z+12
+ 313 012c 9585      		ldd r25,Z+13
+ 314 012e 9770      		andi r25,7
+ 315 0130 5196      		adiw r26,16+1
+ 316 0132 9C93      		st X,r25
+ 317 0134 8E93      		st -X,r24
+ 318 0136 5097      		sbiw r26,16
+  47:src/sbus.c    ****   channels[9] = ((data[13] >> 3 | data[14] << 5) & 0x07FF);
+ 319               		.stabn	68,0,47,.LM16-.LFBB2
+ 320               	.LM16:
+ 321 0138 2585      		ldd r18,Z+13
+ 322 013a 2695      		lsr r18
+ 323 013c 2695      		lsr r18
+ 324 013e 2695      		lsr r18
+ 325 0140 8685      		ldd r24,Z+14
+ 326 0142 30E2      		ldi r19,lo8(32)
+ 327 0144 839F      		mul r24,r19
+ 328 0146 C001      		movw r24,r0
+ 329 0148 1124      		clr __zero_reg__
+ 330 014a 822B      		or r24,r18
+ 331 014c 9770      		andi r25,7
+ 332 014e 5396      		adiw r26,18+1
+ 333 0150 9C93      		st X,r25
+ 334 0152 8E93      		st -X,r24
+ 335 0154 5297      		sbiw r26,18
+  48:src/sbus.c    ****   channels[10] = ((data[14] >> 6 | data[15] << 2 | data[16] << 10) & 0x07FF);
+ 336               		.stabn	68,0,48,.LM17-.LFBB2
+ 337               	.LM17:
+ 338 0156 2685      		ldd r18,Z+14
+ 339 0158 2295      		swap r18
+ 340 015a 2695      		lsr r18
+ 341 015c 2695      		lsr r18
+ 342 015e 2370      		andi r18,lo8(3)
+ 343 0160 8785      		ldd r24,Z+15
+ 344 0162 90E0      		ldi r25,0
+ 345 0164 880F      		lsl r24
+ 346 0166 991F      		rol r25
+ 347 0168 880F      		lsl r24
+ 348 016a 991F      		rol r25
+ 349 016c 822B      		or r24,r18
+ 350 016e 2089      		ldd r18,Z+16
+ 351 0170 30E0      		ldi r19,0
+GAS LISTING /tmp/cc4XBTqo.s 			page 8
+
+
+ 352 0172 322F      		mov r19,r18
+ 353 0174 2227      		clr r18
+ 354 0176 330F      		lsl r19
+ 355 0178 330F      		lsl r19
+ 356 017a 822B      		or r24,r18
+ 357 017c 932B      		or r25,r19
+ 358 017e 9770      		andi r25,7
+ 359 0180 5596      		adiw r26,20+1
+ 360 0182 9C93      		st X,r25
+ 361 0184 8E93      		st -X,r24
+ 362 0186 5497      		sbiw r26,20
+  49:src/sbus.c    ****   channels[11] = ((data[16] >> 1 | data[17] << 7) & 0x07FF);
+ 363               		.stabn	68,0,49,.LM18-.LFBB2
+ 364               	.LM18:
+ 365 0188 2089      		ldd r18,Z+16
+ 366 018a 2695      		lsr r18
+ 367 018c 8189      		ldd r24,Z+17
+ 368 018e 30E8      		ldi r19,lo8(-128)
+ 369 0190 839F      		mul r24,r19
+ 370 0192 C001      		movw r24,r0
+ 371 0194 1124      		clr __zero_reg__
+ 372 0196 822B      		or r24,r18
+ 373 0198 9770      		andi r25,7
+ 374 019a 5796      		adiw r26,22+1
+ 375 019c 9C93      		st X,r25
+ 376 019e 8E93      		st -X,r24
+ 377 01a0 5697      		sbiw r26,22
+  50:src/sbus.c    ****   channels[12] = ((data[17] >> 4 | data[18] << 4) & 0x07FF);
+ 378               		.stabn	68,0,50,.LM19-.LFBB2
+ 379               	.LM19:
+ 380 01a2 2189      		ldd r18,Z+17
+ 381 01a4 2295      		swap r18
+ 382 01a6 2F70      		andi r18,lo8(15)
+ 383 01a8 8289      		ldd r24,Z+18
+ 384 01aa 30E1      		ldi r19,lo8(16)
+ 385 01ac 839F      		mul r24,r19
+ 386 01ae C001      		movw r24,r0
+ 387 01b0 1124      		clr __zero_reg__
+ 388 01b2 822B      		or r24,r18
+ 389 01b4 9770      		andi r25,7
+ 390 01b6 5996      		adiw r26,24+1
+ 391 01b8 9C93      		st X,r25
+ 392 01ba 8E93      		st -X,r24
+ 393 01bc 5897      		sbiw r26,24
+  51:src/sbus.c    ****   channels[13] = ((data[18] >> 7 | data[19] << 1 | data[20] << 9) & 0x07FF);
+ 394               		.stabn	68,0,51,.LM20-.LFBB2
+ 395               	.LM20:
+ 396 01be 2289      		ldd r18,Z+18
+ 397 01c0 221F      		rol r18
+ 398 01c2 2227      		clr r18
+ 399 01c4 221F      		rol r18
+ 400 01c6 8389      		ldd r24,Z+19
+ 401 01c8 90E0      		ldi r25,0
+ 402 01ca 880F      		lsl r24
+ 403 01cc 991F      		rol r25
+ 404 01ce 822B      		or r24,r18
+ 405 01d0 2489      		ldd r18,Z+20
+GAS LISTING /tmp/cc4XBTqo.s 			page 9
+
+
+ 406 01d2 30E0      		ldi r19,0
+ 407 01d4 322F      		mov r19,r18
+ 408 01d6 2227      		clr r18
+ 409 01d8 330F      		lsl r19
+ 410 01da 822B      		or r24,r18
+ 411 01dc 932B      		or r25,r19
+ 412 01de 9770      		andi r25,7
+ 413 01e0 5B96      		adiw r26,26+1
+ 414 01e2 9C93      		st X,r25
+ 415 01e4 8E93      		st -X,r24
+ 416 01e6 5A97      		sbiw r26,26
+  52:src/sbus.c    ****   channels[14] = ((data[20] >> 2 | data[21] << 6) & 0x07FF);
+ 417               		.stabn	68,0,52,.LM21-.LFBB2
+ 418               	.LM21:
+ 419 01e8 2489      		ldd r18,Z+20
+ 420 01ea 2695      		lsr r18
+ 421 01ec 2695      		lsr r18
+ 422 01ee 8589      		ldd r24,Z+21
+ 423 01f0 30E4      		ldi r19,lo8(64)
+ 424 01f2 839F      		mul r24,r19
+ 425 01f4 C001      		movw r24,r0
+ 426 01f6 1124      		clr __zero_reg__
+ 427 01f8 822B      		or r24,r18
+ 428 01fa 9770      		andi r25,7
+ 429 01fc 5D96      		adiw r26,28+1
+ 430 01fe 9C93      		st X,r25
+ 431 0200 8E93      		st -X,r24
+ 432 0202 5C97      		sbiw r26,28
+  53:src/sbus.c    ****   channels[15] = ((data[21] >> 5 | data[22] << 3) & 0x07FF);
+ 433               		.stabn	68,0,53,.LM22-.LFBB2
+ 434               	.LM22:
+ 435 0204 2589      		ldd r18,Z+21
+ 436 0206 2295      		swap r18
+ 437 0208 2695      		lsr r18
+ 438 020a 2770      		andi r18,lo8(7)
+ 439 020c 8689      		ldd r24,Z+22
+ 440 020e 90E0      		ldi r25,0
+ 441 0210 880F      		lsl r24
+ 442 0212 991F      		rol r25
+ 443 0214 880F      		lsl r24
+ 444 0216 991F      		rol r25
+ 445 0218 880F      		lsl r24
+ 446 021a 991F      		rol r25
+ 447 021c 822B      		or r24,r18
+ 448 021e 5F96      		adiw r26,30+1
+ 449 0220 9C93      		st X,r25
+ 450 0222 8E93      		st -X,r24
+ 451 0224 5E97      		sbiw r26,30
+ 452 0226 0895      		ret
+ 453               		.size	SBUS_decode, .-SBUS_decode
+ 454               	.Lscope2:
+ 455               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 456               		.stabd	78,0,0
+ 457               		.stabs	"__vector_51:F(0,49)",36,0,4,__vector_51
+ 458               	.global	__vector_51
+ 459               		.type	__vector_51, @function
+ 460               	__vector_51:
+GAS LISTING /tmp/cc4XBTqo.s 			page 10
+
+
+ 461               		.stabd	46,0,0
+   5:src/sbus.c    **** 
+ 462               		.stabn	68,0,5,.LM23-.LFBB3
+ 463               	.LM23:
+ 464               	.LFBB3:
+ 465 0228 1F92      		push r1
+ 466 022a 0F92      		push r0
+ 467 022c 0FB6      		in r0,__SREG__
+ 468 022e 0F92      		push r0
+ 469 0230 1124      		clr __zero_reg__
+ 470 0232 0BB6      		in r0,__RAMPZ__
+ 471 0234 0F92      		push r0
+ 472 0236 2F93      		push r18
+ 473 0238 3F93      		push r19
+ 474 023a 4F93      		push r20
+ 475 023c 5F93      		push r21
+ 476 023e 6F93      		push r22
+ 477 0240 7F93      		push r23
+ 478 0242 8F93      		push r24
+ 479 0244 9F93      		push r25
+ 480 0246 AF93      		push r26
+ 481 0248 BF93      		push r27
+ 482 024a EF93      		push r30
+ 483 024c FF93      		push r31
+ 484               	/* prologue: Signal */
+ 485               	/* frame size = 0 */
+ 486               	/* stack size = 16 */
+ 487               	.L__stack_usage = 16
+   7:src/sbus.c    ****   rx_buffer[rx_pointer++] = data;
+ 488               		.stabn	68,0,7,.LM24-.LFBB3
+ 489               	.LM24:
+ 490 024e 9091 D600 		lds r25,214
+   8:src/sbus.c    ****   if (rx_pointer == SBUS_PACKAGE_SIZE)
+ 491               		.stabn	68,0,8,.LM25-.LFBB3
+ 492               	.LM25:
+ 493 0252 E091 0000 		lds r30,rx_pointer
+ 494 0256 81E0      		ldi r24,lo8(1)
+ 495 0258 8E0F      		add r24,r30
+ 496 025a 8093 0000 		sts rx_pointer,r24
+ 497 025e F0E0      		ldi r31,0
+ 498 0260 E050      		subi r30,lo8(-(rx_buffer))
+ 499 0262 F040      		sbci r31,hi8(-(rx_buffer))
+ 500 0264 9083      		st Z,r25
+   9:src/sbus.c    ****   {
+ 501               		.stabn	68,0,9,.LM26-.LFBB3
+ 502               	.LM26:
+ 503 0266 8931      		cpi r24,lo8(25)
+ 504 0268 01F0      		breq .L8
+ 505               	.L3:
+ 506               	/* epilogue start */
+  14:src/sbus.c    **** 
+ 507               		.stabn	68,0,14,.LM27-.LFBB3
+ 508               	.LM27:
+ 509 026a FF91      		pop r31
+ 510 026c EF91      		pop r30
+ 511 026e BF91      		pop r27
+ 512 0270 AF91      		pop r26
+GAS LISTING /tmp/cc4XBTqo.s 			page 11
+
+
+ 513 0272 9F91      		pop r25
+ 514 0274 8F91      		pop r24
+ 515 0276 7F91      		pop r23
+ 516 0278 6F91      		pop r22
+ 517 027a 5F91      		pop r21
+ 518 027c 4F91      		pop r20
+ 519 027e 3F91      		pop r19
+ 520 0280 2F91      		pop r18
+ 521 0282 0F90      		pop r0
+ 522 0284 0BBE      		out __RAMPZ__,r0
+ 523 0286 0F90      		pop r0
+ 524 0288 0FBE      		out __SREG__,r0
+ 525 028a 0F90      		pop r0
+ 526 028c 1F90      		pop r1
+ 527 028e 1895      		reti
+ 528               	.L8:
+  11:src/sbus.c    ****     SBUS_read();
+ 529               		.stabn	68,0,11,.LM28-.LFBB3
+ 530               	.LM28:
+ 531 0290 1092 0000 		sts rx_pointer,__zero_reg__
+ 532               	.LBB8:
+ 533               	.LBB9:
+  27:src/sbus.c    ****   {
+ 534               		.stabn	68,0,27,.LM29-.LFBB3
+ 535               	.LM29:
+ 536 0294 8091 0000 		lds r24,rx_buffer
+ 537 0298 8F30      		cpi r24,lo8(15)
+ 538 029a 01F4      		brne .L3
+ 539 029c 8091 0000 		lds r24,rx_buffer+24
+ 540 02a0 8111      		cpse r24,__zero_reg__
+ 541 02a2 00C0      		rjmp .L3
+ 542               	.LBB10:
+ 543               	.LBB11:
+  29:src/sbus.c    **** 
+ 544               		.stabn	68,0,29,.LM30-.LFBB3
+ 545               	.LM30:
+ 546 02a4 80E0      		ldi r24,lo8(rx_buffer)
+ 547 02a6 90E0      		ldi r25,hi8(rx_buffer)
+ 548 02a8 0E94 0000 		call SBUS_decode
+  31:src/sbus.c    ****     OPER_MODE = 0;
+ 549               		.stabn	68,0,31,.LM31-.LFBB3
+ 550               	.LM31:
+ 551 02ac 1092 0000 		sts sbus_safety+1,__zero_reg__
+ 552 02b0 1092 0000 		sts sbus_safety,__zero_reg__
+  32:src/sbus.c    ****   }
+ 553               		.stabn	68,0,32,.LM32-.LFBB3
+ 554               	.LM32:
+ 555 02b4 1092 0000 		sts OPER_MODE,__zero_reg__
+ 556               	.LBE11:
+ 557               	.LBE10:
+ 558               	.LBE9:
+ 559               	.LBE8:
+  14:src/sbus.c    **** 
+ 560               		.stabn	68,0,14,.LM33-.LFBB3
+ 561               	.LM33:
+ 562 02b8 00C0      		rjmp .L3
+ 563               		.size	__vector_51, .-__vector_51
+GAS LISTING /tmp/cc4XBTqo.s 			page 12
+
+
+ 564               		.stabs	"data:r(6,2)",64,0,7,25
+ 565               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 566               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 567               	.Lscope3:
+ 568               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 569               		.stabd	78,0,0
+ 570               		.stabs	"SBUS_read:F(0,49)",36,0,25,SBUS_read
+ 571               	.global	SBUS_read
+ 572               		.type	SBUS_read, @function
+ 573               	SBUS_read:
+ 574               		.stabd	46,0,0
+  26:src/sbus.c    ****   if (rx_buffer[0] == 0x0F && rx_buffer[24] == 0x00)
+ 575               		.stabn	68,0,26,.LM34-.LFBB4
+ 576               	.LM34:
+ 577               	.LFBB4:
+ 578               	/* prologue: function */
+ 579               	/* frame size = 0 */
+ 580               	/* stack size = 0 */
+ 581               	.L__stack_usage = 0
+  27:src/sbus.c    ****   {
+ 582               		.stabn	68,0,27,.LM35-.LFBB4
+ 583               	.LM35:
+ 584 02ba 8091 0000 		lds r24,rx_buffer
+ 585 02be 8F30      		cpi r24,lo8(15)
+ 586 02c0 01F0      		breq .L11
+ 587               	.L9:
+ 588 02c2 0895      		ret
+ 589               	.L11:
+  27:src/sbus.c    ****   {
+ 590               		.stabn	68,0,27,.LM36-.LFBB4
+ 591               	.LM36:
+ 592 02c4 8091 0000 		lds r24,rx_buffer+24
+ 593 02c8 8111      		cpse r24,__zero_reg__
+ 594 02ca 00C0      		rjmp .L9
+ 595               	.LBB14:
+ 596               	.LBB15:
+  29:src/sbus.c    **** 
+ 597               		.stabn	68,0,29,.LM37-.LFBB4
+ 598               	.LM37:
+ 599 02cc 80E0      		ldi r24,lo8(rx_buffer)
+ 600 02ce 90E0      		ldi r25,hi8(rx_buffer)
+ 601 02d0 0E94 0000 		call SBUS_decode
+  31:src/sbus.c    ****     OPER_MODE = 0;
+ 602               		.stabn	68,0,31,.LM38-.LFBB4
+ 603               	.LM38:
+ 604 02d4 1092 0000 		sts sbus_safety+1,__zero_reg__
+ 605 02d8 1092 0000 		sts sbus_safety,__zero_reg__
+  32:src/sbus.c    ****   }
+ 606               		.stabn	68,0,32,.LM39-.LFBB4
+ 607               	.LM39:
+ 608 02dc 1092 0000 		sts OPER_MODE,__zero_reg__
+ 609 02e0 0895      		ret
+ 610               	.LBE15:
+ 611               	.LBE14:
+ 612               		.size	SBUS_read, .-SBUS_read
+ 613               	.Lscope4:
+ 614               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+GAS LISTING /tmp/cc4XBTqo.s 			page 13
+
+
+ 615               		.stabd	78,0,0
+ 616               		.comm	channels,32,1
+ 617               		.comm	rx_pointer,1,1
+ 618               		.comm	rx_buffer,25,1
+ 619               		.comm	OPER_MODE,1,1
+ 620               		.comm	sbus_safety,2,1
+ 621               		.stabs	"sbus_safety:G(6,4)",32,0,8,0
+ 622               		.stabs	"OPER_MODE:G(6,2)",32,0,9,0
+ 623               		.stabs	"rx_buffer:G(0,51)=ar(0,52)=r(0,52);0;0177777;;0;24;(6,2)",32,0,11,0
+ 624               		.stabs	"rx_pointer:G(6,2)",32,0,12,0
+ 625               		.stabs	"channels:G(0,53)=ar(0,52);0;15;(6,4)",32,0,13,0
+ 626               		.stabs	"",100,0,0,.Letext0
+ 627               	.Letext0:
+ 628               		.ident	"GCC: (GNU) 5.4.0"
+ 629               	.global __do_clear_bss
+GAS LISTING /tmp/cc4XBTqo.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 sbus.c
+     /tmp/cc4XBTqo.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc4XBTqo.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc4XBTqo.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc4XBTqo.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/cc4XBTqo.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc4XBTqo.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc4XBTqo.s:110    .text:0000000000000000 SBUS_init
+                            *COM*:0000000000000001 rx_pointer
+     /tmp/cc4XBTqo.s:157    .text:000000000000002a SBUS_decode
+                            *COM*:0000000000000020 channels
+     /tmp/cc4XBTqo.s:460    .text:0000000000000228 __vector_51
+                            *COM*:0000000000000019 rx_buffer
+                            *COM*:0000000000000002 sbus_safety
+                            *COM*:0000000000000001 OPER_MODE
+     /tmp/cc4XBTqo.s:573    .text:00000000000002ba SBUS_read
+
+UNDEFINED SYMBOLS
+__do_clear_bss

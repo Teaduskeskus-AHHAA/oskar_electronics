@@ -1,0 +1,456 @@
+GAS LISTING /tmp/ccUl8h3C.s 			page 1
+
+
+   1               		.file	"ros.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"../../common/ros.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccUl8h3C.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"../../common/include/ros.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(3,1)=(0,12)",128,0,125,0
+  66               		.stabs	"uint8_t:t(3,2)=(0,13)",128,0,126,0
+  67               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,127,0
+  68               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,128,0
+  69               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,129,0
+  70               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,130,0
+  71               		.stabs	"int64_t:t(3,7)=(0,8)",128,0,132,0
+  72               		.stabs	"uint64_t:t(3,8)=(0,9)",128,0,133,0
+  73               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,146,0
+  74               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,151,0
+  75               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,163,0
+  76               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,168,0
+  77               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,173,0
+  78               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,178,0
+  79               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,183,0
+  80               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,188,0
+  81               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,196,0
+  82               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,203,0
+  83               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,217,0
+  84               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,222,0
+  85               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,227,0
+  86               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,232,0
+  87               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,237,0
+  88               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,242,0
+  89               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,250,0
+  90               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,257,0
+  91               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,277,0
+  92               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,282,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabn	162,0,0,0
+  96               		.stabs	"map:F(0,3)",36,0,3,map
+  97               		.stabs	"x:P(0,3)",64,0,3,22
+  98               		.stabs	"in_min:P(0,3)",64,0,3,4
+  99               		.stabs	"in_max:P(0,3)",64,0,3,14
+ 100               		.stabs	"out_min:P(0,3)",64,0,3,10
+ 101               		.stabs	"out_max:p(0,3)",160,0,3,18
+ 102               	.global	map
+ 103               		.type	map, @function
+ 104               	map:
+ 105               		.stabd	46,0,0
+   1:../../common/ros.c **** #include "include/ros.h"
+   2:../../common/ros.c **** 
+   3:../../common/ros.c **** long map(long x, long in_min, long in_max, long out_min, long out_max)
+   4:../../common/ros.c **** {
+ 106               		.stabn	68,0,4,.LM0-.LFBB1
+ 107               	.LM0:
+ 108               	.LFBB1:
+ 109 0000 4F92      		push r4
+ 110 0002 5F92      		push r5
+GAS LISTING /tmp/ccUl8h3C.s 			page 3
+
+
+ 111 0004 6F92      		push r6
+ 112 0006 7F92      		push r7
+ 113 0008 AF92      		push r10
+ 114 000a BF92      		push r11
+ 115 000c CF92      		push r12
+ 116 000e DF92      		push r13
+ 117 0010 EF92      		push r14
+ 118 0012 FF92      		push r15
+ 119 0014 0F93      		push r16
+ 120 0016 1F93      		push r17
+ 121 0018 CF93      		push r28
+ 122 001a DF93      		push r29
+ 123 001c CDB7      		in r28,__SP_L__
+ 124 001e DEB7      		in r29,__SP_H__
+ 125               	/* prologue: function */
+ 126               	/* frame size = 0 */
+ 127               	/* stack size = 14 */
+ 128               	.L__stack_usage = 14
+ 129 0020 2901      		movw r4,r18
+ 130 0022 3A01      		movw r6,r20
+   5:../../common/ros.c ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+ 131               		.stabn	68,0,5,.LM1-.LFBB1
+ 132               	.LM1:
+ 133 0024 9B01      		movw r18,r22
+ 134 0026 AC01      		movw r20,r24
+ 135 0028 2419      		sub r18,r4
+ 136 002a 3509      		sbc r19,r5
+ 137 002c 4609      		sbc r20,r6
+ 138 002e 5709      		sbc r21,r7
+ 139 0030 8A89      		ldd r24,Y+18
+ 140 0032 9B89      		ldd r25,Y+19
+ 141 0034 AC89      		ldd r26,Y+20
+ 142 0036 BD89      		ldd r27,Y+21
+ 143 0038 BC01      		movw r22,r24
+ 144 003a CD01      		movw r24,r26
+ 145 003c 6A19      		sub r22,r10
+ 146 003e 7B09      		sbc r23,r11
+ 147 0040 8C09      		sbc r24,r12
+ 148 0042 9D09      		sbc r25,r13
+ 149 0044 0E94 0000 		call __mulsi3
+ 150 0048 A801      		movw r20,r16
+ 151 004a 9701      		movw r18,r14
+ 152 004c 2419      		sub r18,r4
+ 153 004e 3509      		sbc r19,r5
+ 154 0050 4609      		sbc r20,r6
+ 155 0052 5709      		sbc r21,r7
+ 156 0054 0E94 0000 		call __divmodsi4
+ 157 0058 CA01      		movw r24,r20
+ 158 005a B901      		movw r22,r18
+ 159 005c 6A0D      		add r22,r10
+ 160 005e 7B1D      		adc r23,r11
+ 161 0060 8C1D      		adc r24,r12
+ 162 0062 9D1D      		adc r25,r13
+ 163               	/* epilogue start */
+   6:../../common/ros.c **** }
+ 164               		.stabn	68,0,6,.LM2-.LFBB1
+ 165               	.LM2:
+GAS LISTING /tmp/ccUl8h3C.s 			page 4
+
+
+ 166 0064 DF91      		pop r29
+ 167 0066 CF91      		pop r28
+ 168 0068 1F91      		pop r17
+ 169 006a 0F91      		pop r16
+ 170 006c FF90      		pop r15
+ 171 006e EF90      		pop r14
+ 172 0070 DF90      		pop r13
+ 173 0072 CF90      		pop r12
+ 174 0074 BF90      		pop r11
+ 175 0076 AF90      		pop r10
+ 176 0078 7F90      		pop r7
+ 177 007a 6F90      		pop r6
+ 178 007c 5F90      		pop r5
+ 179 007e 4F90      		pop r4
+ 180 0080 0895      		ret
+ 181               		.size	map, .-map
+ 182               		.stabs	"out_max:r(0,3)",64,0,3,24
+ 183               	.Lscope1:
+ 184               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 185               		.stabd	78,0,0
+ 186               	.global	__subsf3
+ 187               	.global	__mulsf3
+ 188               	.global	__divsf3
+ 189               	.global	__addsf3
+ 190               		.stabs	"mapd:F(0,15)",36,0,8,mapd
+ 191               		.stabs	"x:P(0,15)",64,0,8,22
+ 192               		.stabs	"in_min:P(0,15)",64,0,8,4
+ 193               		.stabs	"in_max:p(0,15)",160,0,8,5
+ 194               		.stabs	"out_min:P(0,15)",64,0,8,10
+ 195               		.stabs	"out_max:p(0,15)",160,0,8,26
+ 196               	.global	mapd
+ 197               		.type	mapd, @function
+ 198               	mapd:
+ 199               		.stabd	46,0,0
+   7:../../common/ros.c **** 
+   8:../../common/ros.c **** double mapd(double x, double in_min, double in_max, double out_min, double out_max)
+   9:../../common/ros.c **** {
+ 200               		.stabn	68,0,9,.LM3-.LFBB2
+ 201               	.LM3:
+ 202               	.LFBB2:
+ 203 0082 4F92      		push r4
+ 204 0084 5F92      		push r5
+ 205 0086 6F92      		push r6
+ 206 0088 7F92      		push r7
+ 207 008a AF92      		push r10
+ 208 008c BF92      		push r11
+ 209 008e CF92      		push r12
+ 210 0090 DF92      		push r13
+ 211 0092 EF92      		push r14
+ 212 0094 FF92      		push r15
+ 213 0096 0F93      		push r16
+ 214 0098 1F93      		push r17
+ 215 009a CF93      		push r28
+ 216 009c DF93      		push r29
+ 217 009e CDB7      		in r28,__SP_L__
+ 218 00a0 DEB7      		in r29,__SP_H__
+ 219 00a2 2897      		sbiw r28,8
+GAS LISTING /tmp/ccUl8h3C.s 			page 5
+
+
+ 220 00a4 0FB6      		in __tmp_reg__,__SREG__
+ 221 00a6 F894      		cli
+ 222 00a8 DEBF      		out __SP_H__,r29
+ 223 00aa 0FBE      		out __SREG__,__tmp_reg__
+ 224 00ac CDBF      		out __SP_L__,r28
+ 225               	/* prologue: function */
+ 226               	/* frame size = 8 */
+ 227               	/* stack size = 22 */
+ 228               	.L__stack_usage = 22
+ 229 00ae 2901      		movw r4,r18
+ 230 00b0 3A01      		movw r6,r20
+ 231 00b2 ED82      		std Y+5,r14
+ 232 00b4 FE82      		std Y+6,r15
+ 233 00b6 0F83      		std Y+7,r16
+ 234 00b8 1887      		std Y+8,r17
+  10:../../common/ros.c ****   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+ 235               		.stabn	68,0,10,.LM4-.LFBB2
+ 236               	.LM4:
+ 237 00ba 0E94 0000 		call __subsf3
+ 238 00be 6983      		std Y+1,r22
+ 239 00c0 7A83      		std Y+2,r23
+ 240 00c2 8B83      		std Y+3,r24
+ 241 00c4 9C83      		std Y+4,r25
+ 242 00c6 A601      		movw r20,r12
+ 243 00c8 9501      		movw r18,r10
+ 244 00ca 6A8D      		ldd r22,Y+26
+ 245 00cc 7B8D      		ldd r23,Y+27
+ 246 00ce 8C8D      		ldd r24,Y+28
+ 247 00d0 9D8D      		ldd r25,Y+29
+ 248 00d2 0E94 0000 		call __subsf3
+ 249 00d6 9B01      		movw r18,r22
+ 250 00d8 AC01      		movw r20,r24
+ 251 00da 6981      		ldd r22,Y+1
+ 252 00dc 7A81      		ldd r23,Y+2
+ 253 00de 8B81      		ldd r24,Y+3
+ 254 00e0 9C81      		ldd r25,Y+4
+ 255 00e2 0E94 0000 		call __mulsf3
+ 256 00e6 6983      		std Y+1,r22
+ 257 00e8 7A83      		std Y+2,r23
+ 258 00ea 8B83      		std Y+3,r24
+ 259 00ec 9C83      		std Y+4,r25
+ 260 00ee A301      		movw r20,r6
+ 261 00f0 9201      		movw r18,r4
+ 262 00f2 C801      		movw r24,r16
+ 263 00f4 B701      		movw r22,r14
+ 264 00f6 0E94 0000 		call __subsf3
+ 265 00fa 9B01      		movw r18,r22
+ 266 00fc AC01      		movw r20,r24
+ 267 00fe 6981      		ldd r22,Y+1
+ 268 0100 7A81      		ldd r23,Y+2
+ 269 0102 8B81      		ldd r24,Y+3
+ 270 0104 9C81      		ldd r25,Y+4
+ 271 0106 0E94 0000 		call __divsf3
+ 272 010a A601      		movw r20,r12
+ 273 010c 9501      		movw r18,r10
+ 274 010e 0E94 0000 		call __addsf3
+ 275               	/* epilogue start */
+GAS LISTING /tmp/ccUl8h3C.s 			page 6
+
+
+  11:../../common/ros.c **** }
+ 276               		.stabn	68,0,11,.LM5-.LFBB2
+ 277               	.LM5:
+ 278 0112 2896      		adiw r28,8
+ 279 0114 0FB6      		in __tmp_reg__,__SREG__
+ 280 0116 F894      		cli
+ 281 0118 DEBF      		out __SP_H__,r29
+ 282 011a 0FBE      		out __SREG__,__tmp_reg__
+ 283 011c CDBF      		out __SP_L__,r28
+ 284 011e DF91      		pop r29
+ 285 0120 CF91      		pop r28
+ 286 0122 1F91      		pop r17
+ 287 0124 0F91      		pop r16
+ 288 0126 FF90      		pop r15
+ 289 0128 EF90      		pop r14
+ 290 012a DF90      		pop r13
+ 291 012c CF90      		pop r12
+ 292 012e BF90      		pop r11
+ 293 0130 AF90      		pop r10
+ 294 0132 7F90      		pop r7
+ 295 0134 6F90      		pop r6
+ 296 0136 5F90      		pop r5
+ 297 0138 4F90      		pop r4
+ 298 013a 0895      		ret
+ 299               		.size	mapd, .-mapd
+ 300               	.Lscope2:
+ 301               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 302               		.stabd	78,0,0
+ 303               		.stabs	"get_value:F(3,4)",36,0,13,get_value
+ 304               		.stabs	"channel_data:P(3,4)",64,0,13,24
+ 305               	.global	get_value
+ 306               		.type	get_value, @function
+ 307               	get_value:
+ 308               		.stabd	46,0,0
+  12:../../common/ros.c **** 
+  13:../../common/ros.c **** uint16_t get_value(uint16_t channel_data)
+  14:../../common/ros.c **** {
+ 309               		.stabn	68,0,14,.LM6-.LFBB3
+ 310               	.LM6:
+ 311               	.LFBB3:
+ 312               	/* prologue: function */
+ 313               	/* frame size = 0 */
+ 314               	/* stack size = 0 */
+ 315               	.L__stack_usage = 0
+  15:../../common/ros.c ****   return map(channel_data, 272, 1712, 0, 100);
+ 316               		.stabn	68,0,15,.LM7-.LFBB3
+ 317               	.LM7:
+ 318 013c A0E0      		ldi r26,0
+ 319 013e B0E0      		ldi r27,0
+ 320 0140 9C01      		movw r18,r24
+ 321 0142 AD01      		movw r20,r26
+ 322 0144 2051      		subi r18,16
+ 323 0146 3140      		sbci r19,1
+ 324 0148 4109      		sbc r20,__zero_reg__
+ 325 014a 5109      		sbc r21,__zero_reg__
+ 326 014c A4E6      		ldi r26,lo8(100)
+ 327 014e B0E0      		ldi r27,0
+GAS LISTING /tmp/ccUl8h3C.s 			page 7
+
+
+ 328 0150 0E94 0000 		call __muluhisi3
+ 329 0154 20EA      		ldi r18,lo8(-96)
+ 330 0156 35E0      		ldi r19,lo8(5)
+ 331 0158 40E0      		ldi r20,0
+ 332 015a 50E0      		ldi r21,0
+ 333 015c 0E94 0000 		call __divmodsi4
+  16:../../common/ros.c **** }
+ 334               		.stabn	68,0,16,.LM8-.LFBB3
+ 335               	.LM8:
+ 336 0160 C901      		movw r24,r18
+ 337 0162 0895      		ret
+ 338               		.size	get_value, .-get_value
+ 339               	.Lscope3:
+ 340               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 341               		.stabd	78,0,0
+ 342               	.global	__floatunsisf
+ 343               		.stabs	"get_ROSvalue:F(0,15)",36,0,18,get_ROSvalue
+ 344               		.stabs	"channel_data:P(3,4)",64,0,18,24
+ 345               	.global	get_ROSvalue
+ 346               		.type	get_ROSvalue, @function
+ 347               	get_ROSvalue:
+ 348               		.stabd	46,0,0
+  17:../../common/ros.c **** 
+  18:../../common/ros.c **** double get_ROSvalue(uint16_t channel_data)
+  19:../../common/ros.c **** {
+ 349               		.stabn	68,0,19,.LM9-.LFBB4
+ 350               	.LM9:
+ 351               	.LFBB4:
+ 352               	/* prologue: function */
+ 353               	/* frame size = 0 */
+ 354               	/* stack size = 0 */
+ 355               	.L__stack_usage = 0
+  20:../../common/ros.c ****   return mapd(channel_data, 272, 1712, -0.5, 0.5);
+ 356               		.stabn	68,0,20,.LM10-.LFBB4
+ 357               	.LM10:
+ 358 0164 BC01      		movw r22,r24
+ 359 0166 80E0      		ldi r24,0
+ 360 0168 90E0      		ldi r25,0
+ 361 016a 0E94 0000 		call __floatunsisf
+ 362 016e 20E0      		ldi r18,0
+ 363 0170 30E0      		ldi r19,0
+ 364 0172 48E8      		ldi r20,lo8(-120)
+ 365 0174 53E4      		ldi r21,lo8(67)
+ 366 0176 0E94 0000 		call __subsf3
+ 367 017a 20E0      		ldi r18,0
+ 368 017c 30E0      		ldi r19,0
+ 369 017e 44EB      		ldi r20,lo8(-76)
+ 370 0180 54E4      		ldi r21,lo8(68)
+ 371 0182 0E94 0000 		call __divsf3
+ 372 0186 20E0      		ldi r18,0
+ 373 0188 30E0      		ldi r19,0
+ 374 018a 40E0      		ldi r20,0
+ 375 018c 5FE3      		ldi r21,lo8(63)
+ 376 018e 0E94 0000 		call __subsf3
+  21:../../common/ros.c **** }
+ 377               		.stabn	68,0,21,.LM11-.LFBB4
+ 378               	.LM11:
+GAS LISTING /tmp/ccUl8h3C.s 			page 8
+
+
+ 379 0192 0895      		ret
+ 380               		.size	get_ROSvalue, .-get_ROSvalue
+ 381               	.Lscope4:
+ 382               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 383               		.stabd	78,0,0
+ 384               		.stabs	"",100,0,0,.Letext0
+ 385               	.Letext0:
+ 386               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/ccUl8h3C.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ros.c
+     /tmp/ccUl8h3C.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccUl8h3C.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccUl8h3C.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccUl8h3C.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccUl8h3C.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccUl8h3C.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccUl8h3C.s:104    .text:0000000000000000 map
+     /tmp/ccUl8h3C.s:198    .text:0000000000000082 mapd
+     /tmp/ccUl8h3C.s:307    .text:000000000000013c get_value
+     /tmp/ccUl8h3C.s:347    .text:0000000000000164 get_ROSvalue
+
+UNDEFINED SYMBOLS
+__mulsi3
+__divmodsi4
+__subsf3
+__mulsf3
+__divsf3
+__addsf3
+__muluhisi3
+__floatunsisf

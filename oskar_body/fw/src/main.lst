@@ -1,0 +1,1843 @@
+GAS LISTING /tmp/cctXKsl6.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"src/main.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/cctXKsl6.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  65               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  66               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  67               		.stabs	"int8_t:t(5,1)=(0,12)",128,0,125,0
+  68               		.stabs	"uint8_t:t(5,2)=(0,13)",128,0,126,0
+  69               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,127,0
+  70               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,128,0
+  71               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,129,0
+  72               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,130,0
+  73               		.stabs	"int64_t:t(5,7)=(0,8)",128,0,132,0
+  74               		.stabs	"uint64_t:t(5,8)=(0,9)",128,0,133,0
+  75               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,146,0
+  76               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,151,0
+  77               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,163,0
+  78               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,168,0
+  79               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,173,0
+  80               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,178,0
+  81               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,183,0
+  82               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,188,0
+  83               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,196,0
+  84               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,203,0
+  85               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,217,0
+  86               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,222,0
+  87               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,227,0
+  88               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,232,0
+  89               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,237,0
+  90               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,242,0
+  91               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,250,0
+  92               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,257,0
+  93               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,277,0
+  94               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,282,0
+  95               		.stabn	162,0,0,0
+  96               		.stabn	162,0,0,0
+  97               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  98               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  99               		.stabn	162,0,0,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 102               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+ 106               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stddef.h",130,0,0,0
+ 107               		.stabs	"size_t:t(8,1)=(0,4)",128,0,216,0
+ 108               		.stabs	"wchar_t:t(8,2)=(0,1)",128,0,328,0
+ 109               		.stabn	162,0,0,0
+ 110               		.stabs	"div_t:t(7,1)=(7,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,73,0
+ 111               		.stabs	"ldiv_t:t(7,3)=(7,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,79,0
+ 112               		.stabs	"__compar_fn_t:t(7,5)=(7,6)=*(7,7)=f(0,1)",128,0,82,0
+ 113               		.stabn	162,0,0,0
+ 114               		.stabs	"src/../../../common/include/motor.h",130,0,0,0
+GAS LISTING /tmp/cctXKsl6.s 			page 3
+
+
+ 115               		.stabs	"src/../../../common/include/can.h",130,0,0,0
+ 116               		.stabs	"CAN_frame_t:t(10,1)=(10,2)=s13SID:(5,6),0,32;header:(10,3)=s1rtr:(0,4),0,1;len:(0,4),1,4;;
+ 117               		.stabs	" :T(10,6)=@s8;eCAN_ERROR_NONE:0,CAN_ERROR_ALLTXBUSY:1,CAN_ERROR_UNKNOWN_FLOW:2,CAN_ERROR_A
+ 118               		.stabs	"CAN_error:t(10,7)=(10,6)",128,0,32,0
+ 119               		.stabn	162,0,0,0
+ 120               		.stabs	"encoder_t:t(9,1)=(9,2)=s6current:(5,4),0,16;original:(5,4),16,16;offset:(5,4),32,16;;",128
+ 121               		.stabs	"gyems_motor:t(9,3)=(9,4)=s84id:(5,4),0,16;status:(5,2),16,8;encoder:(9,1),24,48;angle:(5,5
+ 122               		.stabn	162,0,0,0
+ 123               		.stabs	"motors_impl_parse_can_msg:F(0,49)",36,0,39,motors_impl_parse_can_msg
+ 124               	.global	motors_impl_parse_can_msg
+ 125               		.type	motors_impl_parse_can_msg, @function
+ 126               	motors_impl_parse_can_msg:
+ 127               		.stabd	46,0,0
+   1:src/main.c    **** #include <avr/io.h>
+   2:src/main.c    **** #include <avr/interrupt.h>
+   3:src/main.c    **** #include <stdlib.h>
+   4:src/main.c    **** #include "include/sbus.h"
+   5:src/main.c    **** 
+   6:src/main.c    **** #include "../../../common/include/spi.h"
+   7:src/main.c    **** #include "../../../common/include/twimaster.h"
+   8:src/main.c    **** #include "../../../common/include/motor.h"
+   9:src/main.c    **** 
+  10:src/main.c    **** #include "../../../common/include/can.h"
+  11:src/main.c    **** #define F_CPU 16000000U
+  12:src/main.c    **** #include <util/delay.h>
+  13:src/main.c    **** #include "../../../common/include/usart.h"
+  14:src/main.c    **** #include "../../../common/include/ros.h"
+  15:src/main.c    **** 
+  16:src/main.c    **** unsigned char address = 0x20, read = 1, write = 0;
+  17:src/main.c    **** 
+  18:src/main.c    **** gyems_motor motor_l_wrist;
+  19:src/main.c    **** gyems_motor motor_r_wrist;
+  20:src/main.c    **** 
+  21:src/main.c    **** CAN_frame_t recieved_frame;
+  22:src/main.c    **** 
+  23:src/main.c    **** ISR(PCINT0_vect)
+  24:src/main.c    **** {
+  25:src/main.c    ****   cli();
+  26:src/main.c    ****   if (!(PINB & (1 << PINB4)))
+  27:src/main.c    ****   {
+  28:src/main.c    ****     CAN_read(0, &recieved_frame);
+  29:src/main.c    ****     motors_impl_parse_can_msg();
+  30:src/main.c    ****   }
+  31:src/main.c    ****   if (!(PINB & (1 << PINB5)))
+  32:src/main.c    ****   {
+  33:src/main.c    ****     CAN_read(1, &recieved_frame);
+  34:src/main.c    ****     motors_impl_parse_can_msg();
+  35:src/main.c    ****   }
+  36:src/main.c    ****   sei();
+  37:src/main.c    **** }
+  38:src/main.c    **** 
+  39:src/main.c    **** void motors_impl_parse_can_msg()
+  40:src/main.c    **** {
+ 128               		.stabn	68,0,40,.LM0-.LFBB1
+ 129               	.LM0:
+ 130               	.LFBB1:
+ 131               	/* prologue: function */
+GAS LISTING /tmp/cctXKsl6.s 			page 4
+
+
+ 132               	/* frame size = 0 */
+ 133               	/* stack size = 0 */
+ 134               	.L__stack_usage = 0
+  41:src/main.c    ****   gyems_motor_parse_can(&motor_l_wrist, &recieved_frame);
+ 135               		.stabn	68,0,41,.LM1-.LFBB1
+ 136               	.LM1:
+ 137 0000 60E0      		ldi r22,lo8(recieved_frame)
+ 138 0002 70E0      		ldi r23,hi8(recieved_frame)
+ 139 0004 80E0      		ldi r24,lo8(motor_l_wrist)
+ 140 0006 90E0      		ldi r25,hi8(motor_l_wrist)
+ 141 0008 0E94 0000 		call gyems_motor_parse_can
+  42:src/main.c    ****   gyems_motor_parse_can(&motor_r_wrist, &recieved_frame);
+ 142               		.stabn	68,0,42,.LM2-.LFBB1
+ 143               	.LM2:
+ 144 000c 60E0      		ldi r22,lo8(recieved_frame)
+ 145 000e 70E0      		ldi r23,hi8(recieved_frame)
+ 146 0010 80E0      		ldi r24,lo8(motor_r_wrist)
+ 147 0012 90E0      		ldi r25,hi8(motor_r_wrist)
+ 148 0014 0C94 0000 		jmp gyems_motor_parse_can
+ 149               		.size	motors_impl_parse_can_msg, .-motors_impl_parse_can_msg
+ 150               	.Lscope1:
+ 151               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 152               		.stabd	78,0,0
+ 153               		.stabs	"__vector_9:F(0,49)",36,0,23,__vector_9
+ 154               	.global	__vector_9
+ 155               		.type	__vector_9, @function
+ 156               	__vector_9:
+ 157               		.stabd	46,0,0
+  24:src/main.c    ****   cli();
+ 158               		.stabn	68,0,24,.LM3-.LFBB2
+ 159               	.LM3:
+ 160               	.LFBB2:
+ 161 0018 1F92      		push r1
+ 162 001a 0F92      		push r0
+ 163 001c 0FB6      		in r0,__SREG__
+ 164 001e 0F92      		push r0
+ 165 0020 1124      		clr __zero_reg__
+ 166 0022 0BB6      		in r0,__RAMPZ__
+ 167 0024 0F92      		push r0
+ 168 0026 2F93      		push r18
+ 169 0028 3F93      		push r19
+ 170 002a 4F93      		push r20
+ 171 002c 5F93      		push r21
+ 172 002e 6F93      		push r22
+ 173 0030 7F93      		push r23
+ 174 0032 8F93      		push r24
+ 175 0034 9F93      		push r25
+ 176 0036 AF93      		push r26
+ 177 0038 BF93      		push r27
+ 178 003a EF93      		push r30
+ 179 003c FF93      		push r31
+ 180               	/* prologue: Signal */
+ 181               	/* frame size = 0 */
+ 182               	/* stack size = 16 */
+ 183               	.L__stack_usage = 16
+  25:src/main.c    ****   if (!(PINB & (1 << PINB4)))
+ 184               		.stabn	68,0,25,.LM4-.LFBB2
+GAS LISTING /tmp/cctXKsl6.s 			page 5
+
+
+ 185               	.LM4:
+ 186               	/* #APP */
+ 187               	 ;  25 "src/main.c" 1
+ 188 003e F894      		cli
+ 189               	 ;  0 "" 2
+  26:src/main.c    ****   {
+ 190               		.stabn	68,0,26,.LM5-.LFBB2
+ 191               	.LM5:
+ 192               	/* #NOAPP */
+ 193 0040 1C9B      		sbis 0x3,4
+ 194 0042 00C0      		rjmp .L6
+ 195               	.L3:
+  31:src/main.c    ****   {
+ 196               		.stabn	68,0,31,.LM6-.LFBB2
+ 197               	.LM6:
+ 198 0044 1D99      		sbic 0x3,5
+ 199 0046 00C0      		rjmp .L4
+ 200               	.LBB44:
+  33:src/main.c    ****     motors_impl_parse_can_msg();
+ 201               		.stabn	68,0,33,.LM7-.LFBB2
+ 202               	.LM7:
+ 203 0048 60E0      		ldi r22,lo8(recieved_frame)
+ 204 004a 70E0      		ldi r23,hi8(recieved_frame)
+ 205 004c 81E0      		ldi r24,lo8(1)
+ 206 004e 0E94 0000 		call CAN_read
+  34:src/main.c    ****   }
+ 207               		.stabn	68,0,34,.LM8-.LFBB2
+ 208               	.LM8:
+ 209 0052 0E94 0000 		call motors_impl_parse_can_msg
+ 210               	.L4:
+ 211               	.LBE44:
+  36:src/main.c    **** }
+ 212               		.stabn	68,0,36,.LM9-.LFBB2
+ 213               	.LM9:
+ 214               	/* #APP */
+ 215               	 ;  36 "src/main.c" 1
+ 216 0056 7894      		sei
+ 217               	 ;  0 "" 2
+ 218               	/* epilogue start */
+  37:src/main.c    **** 
+ 219               		.stabn	68,0,37,.LM10-.LFBB2
+ 220               	.LM10:
+ 221               	/* #NOAPP */
+ 222 0058 FF91      		pop r31
+ 223 005a EF91      		pop r30
+ 224 005c BF91      		pop r27
+ 225 005e AF91      		pop r26
+ 226 0060 9F91      		pop r25
+ 227 0062 8F91      		pop r24
+ 228 0064 7F91      		pop r23
+ 229 0066 6F91      		pop r22
+ 230 0068 5F91      		pop r21
+ 231 006a 4F91      		pop r20
+ 232 006c 3F91      		pop r19
+ 233 006e 2F91      		pop r18
+ 234 0070 0F90      		pop r0
+ 235 0072 0BBE      		out __RAMPZ__,r0
+GAS LISTING /tmp/cctXKsl6.s 			page 6
+
+
+ 236 0074 0F90      		pop r0
+ 237 0076 0FBE      		out __SREG__,r0
+ 238 0078 0F90      		pop r0
+ 239 007a 1F90      		pop r1
+ 240 007c 1895      		reti
+ 241               	.L6:
+ 242               	.LBB45:
+  28:src/main.c    ****     motors_impl_parse_can_msg();
+ 243               		.stabn	68,0,28,.LM11-.LFBB2
+ 244               	.LM11:
+ 245 007e 60E0      		ldi r22,lo8(recieved_frame)
+ 246 0080 70E0      		ldi r23,hi8(recieved_frame)
+ 247 0082 80E0      		ldi r24,0
+ 248 0084 0E94 0000 		call CAN_read
+  29:src/main.c    ****   }
+ 249               		.stabn	68,0,29,.LM12-.LFBB2
+ 250               	.LM12:
+ 251 0088 0E94 0000 		call motors_impl_parse_can_msg
+ 252 008c 00C0      		rjmp .L3
+ 253               	.LBE45:
+ 254               		.size	__vector_9, .-__vector_9
+ 255               	.Lscope2:
+ 256               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 257               		.stabd	78,0,0
+ 258               		.stabs	"motors_impl_update:F(0,49)",36,0,45,motors_impl_update
+ 259               	.global	motors_impl_update
+ 260               		.type	motors_impl_update, @function
+ 261               	motors_impl_update:
+ 262               		.stabd	46,0,0
+  43:src/main.c    **** }
+  44:src/main.c    **** 
+  45:src/main.c    **** void motors_impl_update()
+  46:src/main.c    **** {
+ 263               		.stabn	68,0,46,.LM13-.LFBB3
+ 264               	.LM13:
+ 265               	.LFBB3:
+ 266               	/* prologue: function */
+ 267               	/* frame size = 0 */
+ 268               	/* stack size = 0 */
+ 269               	.L__stack_usage = 0
+  47:src/main.c    ****   gyems_motor_request_status(&motor_l_wrist);
+ 270               		.stabn	68,0,47,.LM14-.LFBB3
+ 271               	.LM14:
+ 272 008e 80E0      		ldi r24,lo8(motor_l_wrist)
+ 273 0090 90E0      		ldi r25,hi8(motor_l_wrist)
+ 274 0092 0C94 0000 		jmp gyems_motor_request_status
+ 275               		.size	motors_impl_update, .-motors_impl_update
+ 276               	.Lscope3:
+ 277               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 278               		.stabd	78,0,0
+ 279               		.stabs	"motors_impl_safeties:F(0,49)",36,0,51,motors_impl_safeties
+ 280               	.global	motors_impl_safeties
+ 281               		.type	motors_impl_safeties, @function
+ 282               	motors_impl_safeties:
+ 283               		.stabd	46,0,0
+  48:src/main.c    ****   // gyems_motor_request_status(&motor_r_wrist);
+  49:src/main.c    **** }
+GAS LISTING /tmp/cctXKsl6.s 			page 7
+
+
+  50:src/main.c    **** 
+  51:src/main.c    **** void motors_impl_safeties()
+  52:src/main.c    **** {
+ 284               		.stabn	68,0,52,.LM15-.LFBB4
+ 285               	.LM15:
+ 286               	.LFBB4:
+ 287               	/* prologue: function */
+ 288               	/* frame size = 0 */
+ 289               	/* stack size = 0 */
+ 290               	.L__stack_usage = 0
+  53:src/main.c    ****   gyems_motor_safety(&motor_l_wrist);
+ 291               		.stabn	68,0,53,.LM16-.LFBB4
+ 292               	.LM16:
+ 293 0096 80E0      		ldi r24,lo8(motor_l_wrist)
+ 294 0098 90E0      		ldi r25,hi8(motor_l_wrist)
+ 295 009a 0C94 0000 		jmp gyems_motor_safety
+ 296               		.size	motors_impl_safeties, .-motors_impl_safeties
+ 297               	.Lscope4:
+ 298               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 299               		.stabd	78,0,0
+ 300               		.stabs	"motors_impl_config:F(0,49)",36,0,57,motors_impl_config
+ 301               	.global	motors_impl_config
+ 302               		.type	motors_impl_config, @function
+ 303               	motors_impl_config:
+ 304               		.stabd	46,0,0
+  54:src/main.c    ****   // gyems_motor_safety(&motor_r_wrist);
+  55:src/main.c    **** }
+  56:src/main.c    **** 
+  57:src/main.c    **** void motors_impl_config()
+  58:src/main.c    **** {
+ 305               		.stabn	68,0,58,.LM17-.LFBB5
+ 306               	.LM17:
+ 307               	.LFBB5:
+ 308 009e CF92      		push r12
+ 309 00a0 DF92      		push r13
+ 310 00a2 EF92      		push r14
+ 311 00a4 FF92      		push r15
+ 312 00a6 0F93      		push r16
+ 313 00a8 1F93      		push r17
+ 314               	/* prologue: function */
+ 315               	/* frame size = 0 */
+ 316               	/* stack size = 6 */
+ 317               	.L__stack_usage = 6
+  59:src/main.c    ****   motor_l_wrist.id = MOTOR_BASEID + 2; // Base ID of gyems motors + this motor ID
+ 318               		.stabn	68,0,59,.LM18-.LFBB5
+ 319               	.LM18:
+ 320 00aa E0E0      		ldi r30,lo8(motor_l_wrist)
+ 321 00ac F0E0      		ldi r31,hi8(motor_l_wrist)
+ 322 00ae 82E4      		ldi r24,lo8(66)
+ 323 00b0 91E0      		ldi r25,lo8(1)
+ 324 00b2 9183      		std Z+1,r25
+ 325 00b4 8083      		st Z,r24
+  60:src/main.c    ****   motor_l_wrist.endpoint_speed = -100;
+ 326               		.stabn	68,0,60,.LM19-.LFBB5
+ 327               	.LM19:
+ 328 00b6 8CE9      		ldi r24,lo8(-100)
+ 329 00b8 C82E      		mov r12,r24
+GAS LISTING /tmp/cctXKsl6.s 			page 8
+
+
+ 330 00ba DD24      		clr r13
+ 331 00bc DA94      		dec r13
+ 332 00be ED2C      		mov r14,r13
+ 333 00c0 FD2C      		mov r15,r13
+ 334 00c2 C2AE      		std Z+58,r12
+ 335 00c4 D3AE      		std Z+59,r13
+ 336 00c6 E4AE      		std Z+60,r14
+ 337 00c8 F5AE      		std Z+61,r15
+  61:src/main.c    ****   motor_l_wrist.multiturn_angle_range = 180;
+ 338               		.stabn	68,0,61,.LM20-.LFBB5
+ 339               	.LM20:
+ 340 00ca 94EB      		ldi r25,lo8(-76)
+ 341 00cc 958F      		std Z+29,r25
+ 342 00ce 168E      		std Z+30,__zero_reg__
+ 343 00d0 178E      		std Z+31,__zero_reg__
+ 344 00d2 10A2      		std Z+32,__zero_reg__
+ 345 00d4 11A2      		std Z+33,__zero_reg__
+ 346 00d6 12A2      		std Z+34,__zero_reg__
+ 347 00d8 13A2      		std Z+35,__zero_reg__
+ 348 00da 14A2      		std Z+36,__zero_reg__
+  62:src/main.c    ****   motor_l_wrist.operating_mode = 1;
+ 349               		.stabn	68,0,62,.LM21-.LFBB5
+ 350               	.LM21:
+ 351 00dc 81E0      		ldi r24,lo8(1)
+ 352 00de 8093 0000 		sts motor_l_wrist+75,r24
+  63:src/main.c    ****   motor_l_wrist.has_zeropoint = 0;
+ 353               		.stabn	68,0,63,.LM22-.LFBB5
+ 354               	.LM22:
+ 355 00e2 1092 0000 		sts motor_l_wrist+68,__zero_reg__
+  64:src/main.c    ****   motor_l_wrist.endpoints_found = 0;
+ 356               		.stabn	68,0,64,.LM23-.LFBB5
+ 357               	.LM23:
+ 358 00e6 1092 0000 		sts motor_l_wrist+62,__zero_reg__
+ 359 00ea 1092 0000 		sts motor_l_wrist+62+1,__zero_reg__
+ 360 00ee 1092 0000 		sts motor_l_wrist+62+2,__zero_reg__
+ 361 00f2 1092 0000 		sts motor_l_wrist+62+3,__zero_reg__
+  65:src/main.c    ****   motor_l_wrist.gear_ratio_multiplier = 1;
+ 362               		.stabn	68,0,65,.LM24-.LFBB5
+ 363               	.LM24:
+ 364 00f6 8093 0000 		sts motor_l_wrist+69,r24
+  66:src/main.c    ****   motor_l_wrist.max_power_endpoints = 1;
+ 365               		.stabn	68,0,66,.LM25-.LFBB5
+ 366               	.LM25:
+ 367 00fa 01E0      		ldi r16,lo8(1)
+ 368 00fc 10E0      		ldi r17,0
+ 369 00fe 20E0      		ldi r18,0
+ 370 0100 30E0      		ldi r19,0
+ 371 0102 0093 0000 		sts motor_l_wrist+76,r16
+ 372 0106 1093 0000 		sts motor_l_wrist+76+1,r17
+ 373 010a 2093 0000 		sts motor_l_wrist+76+2,r18
+ 374 010e 3093 0000 		sts motor_l_wrist+76+3,r19
+  67:src/main.c    ****   motor_l_wrist.max_power_operating = 3;
+ 375               		.stabn	68,0,67,.LM26-.LFBB5
+ 376               	.LM26:
+ 377 0112 43E0      		ldi r20,lo8(3)
+ 378 0114 50E0      		ldi r21,0
+ 379 0116 60E0      		ldi r22,0
+GAS LISTING /tmp/cctXKsl6.s 			page 9
+
+
+ 380 0118 70E0      		ldi r23,0
+ 381 011a 4093 0000 		sts motor_l_wrist+80,r20
+ 382 011e 5093 0000 		sts motor_l_wrist+80+1,r21
+ 383 0122 6093 0000 		sts motor_l_wrist+80+2,r22
+ 384 0126 7093 0000 		sts motor_l_wrist+80+3,r23
+  68:src/main.c    **** 
+  69:src/main.c    ****   motor_r_wrist.id = MOTOR_BASEID + 4;
+ 385               		.stabn	68,0,69,.LM27-.LFBB5
+ 386               	.LM27:
+ 387 012a E0E0      		ldi r30,lo8(motor_r_wrist)
+ 388 012c F0E0      		ldi r31,hi8(motor_r_wrist)
+ 389 012e A4E4      		ldi r26,lo8(68)
+ 390 0130 B1E0      		ldi r27,lo8(1)
+ 391 0132 B183      		std Z+1,r27
+ 392 0134 A083      		st Z,r26
+  70:src/main.c    ****   motor_r_wrist.endpoint_speed = -100;
+ 393               		.stabn	68,0,70,.LM28-.LFBB5
+ 394               	.LM28:
+ 395 0136 C2AE      		std Z+58,r12
+ 396 0138 D3AE      		std Z+59,r13
+ 397 013a E4AE      		std Z+60,r14
+ 398 013c F5AE      		std Z+61,r15
+  71:src/main.c    ****   motor_r_wrist.multiturn_angle_range = 180;
+ 399               		.stabn	68,0,71,.LM29-.LFBB5
+ 400               	.LM29:
+ 401 013e 958F      		std Z+29,r25
+ 402 0140 168E      		std Z+30,__zero_reg__
+ 403 0142 178E      		std Z+31,__zero_reg__
+ 404 0144 10A2      		std Z+32,__zero_reg__
+ 405 0146 11A2      		std Z+33,__zero_reg__
+ 406 0148 12A2      		std Z+34,__zero_reg__
+ 407 014a 13A2      		std Z+35,__zero_reg__
+ 408 014c 14A2      		std Z+36,__zero_reg__
+  72:src/main.c    ****   motor_r_wrist.gear_ratio_multiplier = 1;
+ 409               		.stabn	68,0,72,.LM30-.LFBB5
+ 410               	.LM30:
+ 411 014e 8093 0000 		sts motor_r_wrist+69,r24
+  73:src/main.c    ****   motor_r_wrist.has_zeropoint = 0;
+ 412               		.stabn	68,0,73,.LM31-.LFBB5
+ 413               	.LM31:
+ 414 0152 1092 0000 		sts motor_r_wrist+68,__zero_reg__
+  74:src/main.c    ****   motor_r_wrist.operating_mode = 1;
+ 415               		.stabn	68,0,74,.LM32-.LFBB5
+ 416               	.LM32:
+ 417 0156 8093 0000 		sts motor_r_wrist+75,r24
+  75:src/main.c    ****   motor_r_wrist.endpoints_found = 0;
+ 418               		.stabn	68,0,75,.LM33-.LFBB5
+ 419               	.LM33:
+ 420 015a 1092 0000 		sts motor_r_wrist+62,__zero_reg__
+ 421 015e 1092 0000 		sts motor_r_wrist+62+1,__zero_reg__
+ 422 0162 1092 0000 		sts motor_r_wrist+62+2,__zero_reg__
+ 423 0166 1092 0000 		sts motor_r_wrist+62+3,__zero_reg__
+  76:src/main.c    ****   motor_r_wrist.max_power_endpoints = 1;
+ 424               		.stabn	68,0,76,.LM34-.LFBB5
+ 425               	.LM34:
+ 426 016a 0093 0000 		sts motor_r_wrist+76,r16
+ 427 016e 1093 0000 		sts motor_r_wrist+76+1,r17
+GAS LISTING /tmp/cctXKsl6.s 			page 10
+
+
+ 428 0172 2093 0000 		sts motor_r_wrist+76+2,r18
+ 429 0176 3093 0000 		sts motor_r_wrist+76+3,r19
+  77:src/main.c    ****   motor_r_wrist.max_power_operating = 3;
+ 430               		.stabn	68,0,77,.LM35-.LFBB5
+ 431               	.LM35:
+ 432 017a 4093 0000 		sts motor_r_wrist+80,r20
+ 433 017e 5093 0000 		sts motor_r_wrist+80+1,r21
+ 434 0182 6093 0000 		sts motor_r_wrist+80+2,r22
+ 435 0186 7093 0000 		sts motor_r_wrist+80+3,r23
+ 436               	/* epilogue start */
+  78:src/main.c    **** }
+ 437               		.stabn	68,0,78,.LM36-.LFBB5
+ 438               	.LM36:
+ 439 018a 1F91      		pop r17
+ 440 018c 0F91      		pop r16
+ 441 018e FF90      		pop r15
+ 442 0190 EF90      		pop r14
+ 443 0192 DF90      		pop r13
+ 444 0194 CF90      		pop r12
+ 445 0196 0895      		ret
+ 446               		.size	motors_impl_config, .-motors_impl_config
+ 447               	.Lscope5:
+ 448               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 449               		.stabd	78,0,0
+ 450               		.stabs	"blink_can_fail:F(0,49)",36,0,80,blink_can_fail
+ 451               	.global	blink_can_fail
+ 452               		.type	blink_can_fail, @function
+ 453               	blink_can_fail:
+ 454               		.stabd	46,0,0
+  79:src/main.c    **** 
+  80:src/main.c    **** void blink_can_fail()
+  81:src/main.c    **** {
+ 455               		.stabn	68,0,81,.LM37-.LFBB6
+ 456               	.LM37:
+ 457               	.LFBB6:
+ 458               	/* prologue: function */
+ 459               	/* frame size = 0 */
+ 460               	/* stack size = 0 */
+ 461               	.L__stack_usage = 0
+ 462               	.L11:
+  82:src/main.c    ****   while (1)
+  83:src/main.c    ****   {
+  84:src/main.c    ****     PORTD |= (1 << PD3);
+ 463               		.stabn	68,0,84,.LM38-.LFBB6
+ 464               	.LM38:
+ 465 0198 5B9A      		sbi 0xb,3
+ 466               	.LBB46:
+ 467               	.LBB47:
+ 468               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext1
+ 469               	.Ltext1:
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+GAS LISTING /tmp/cctXKsl6.s 			page 11
+
+
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __DOXYGEN__
+  39:/usr/lib/avr/include/util/delay.h **** #  ifndef __HAS_DELAY_CYCLES
+  40:/usr/lib/avr/include/util/delay.h **** #    define __HAS_DELAY_CYCLES 1
+  41:/usr/lib/avr/include/util/delay.h **** #  endif
+  42:/usr/lib/avr/include/util/delay.h **** #endif  /* __DOXYGEN__ */
+  43:/usr/lib/avr/include/util/delay.h **** 
+  44:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+  45:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  46:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  47:/usr/lib/avr/include/util/delay.h **** 
+  48:/usr/lib/avr/include/util/delay.h **** /** \file */
+  49:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  50:/usr/lib/avr/include/util/delay.h ****     \code
+  51:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  52:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  53:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  54:/usr/lib/avr/include/util/delay.h ****     \endcode
+  55:/usr/lib/avr/include/util/delay.h **** 
+  56:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  57:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  58:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  59:/usr/lib/avr/include/util/delay.h ****     used.
+  60:/usr/lib/avr/include/util/delay.h **** 
+  61:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  62:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  63:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  64:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+GAS LISTING /tmp/cctXKsl6.s 			page 12
+
+
+  65:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  66:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  67:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  68:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  69:/usr/lib/avr/include/util/delay.h **** 
+  70:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  71:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  72:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  73:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  74:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  75:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  76:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  77:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+  78:/usr/lib/avr/include/util/delay.h **** 
+  79:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  80:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  81:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** */
+  84:/usr/lib/avr/include/util/delay.h **** 
+  85:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  86:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_us(double __us) __attribute__((__always_inline__));
+  87:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_ms(double __ms) __attribute__((__always_inline__));
+  88:/usr/lib/avr/include/util/delay.h **** #endif
+  89:/usr/lib/avr/include/util/delay.h **** 
+  90:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  91:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  92:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  93:/usr/lib/avr/include/util/delay.h **** /** \ingroup util_delay
+  94:/usr/lib/avr/include/util/delay.h ****     \def F_CPU
+  95:/usr/lib/avr/include/util/delay.h ****     \brief CPU frequency in Hz
+  96:/usr/lib/avr/include/util/delay.h **** 
+  97:/usr/lib/avr/include/util/delay.h ****     The macro F_CPU specifies the CPU frequency to be considered by
+  98:/usr/lib/avr/include/util/delay.h ****     the delay macros.  This macro is normally supplied by the
+  99:/usr/lib/avr/include/util/delay.h ****     environment (e.g. from within a project header, or the project's
+ 100:/usr/lib/avr/include/util/delay.h ****     Makefile).  The value 1 MHz here is only provided as a "vanilla"
+ 101:/usr/lib/avr/include/util/delay.h ****     fallback if no such user-provided definition could be found.
+ 102:/usr/lib/avr/include/util/delay.h **** 
+ 103:/usr/lib/avr/include/util/delay.h ****     In terms of the delay functions, the CPU frequency can be given as
+ 104:/usr/lib/avr/include/util/delay.h ****     a floating-point constant (e.g. 3.6864E6 for 3.6864 MHz).
+ 105:/usr/lib/avr/include/util/delay.h ****     However, the macros in <util/setbaud.h> require it to be an
+ 106:/usr/lib/avr/include/util/delay.h ****     integer value.
+ 107:/usr/lib/avr/include/util/delay.h ****  */
+ 108:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+ 109:/usr/lib/avr/include/util/delay.h **** #endif
+ 110:/usr/lib/avr/include/util/delay.h **** 
+ 111:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+ 112:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+ 113:/usr/lib/avr/include/util/delay.h **** #endif
+ 114:/usr/lib/avr/include/util/delay.h **** 
+ 115:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 116:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 117:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 118:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 119:/usr/lib/avr/include/util/delay.h **** #endif
+ 120:/usr/lib/avr/include/util/delay.h **** 
+ 121:/usr/lib/avr/include/util/delay.h **** /**
+GAS LISTING /tmp/cctXKsl6.s 			page 13
+
+
+ 122:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 123:/usr/lib/avr/include/util/delay.h **** 
+ 124:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 125:/usr/lib/avr/include/util/delay.h **** 
+ 126:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 127:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 130:/usr/lib/avr/include/util/delay.h **** 
+ 131:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 132:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 133:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 134:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 135:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 136:/usr/lib/avr/include/util/delay.h **** 
+ 137:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles()
+ 138:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 139:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 140:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 141:/usr/lib/avr/include/util/delay.h **** 
+ 142:/usr/lib/avr/include/util/delay.h ****    Conversion of \c __ms into clock cycles may not always result in
+ 143:/usr/lib/avr/include/util/delay.h ****    integer.  By default, the clock cycles rounded up to next
+ 144:/usr/lib/avr/include/util/delay.h ****    integer. This ensures that the user gets at least \c __ms
+ 145:/usr/lib/avr/include/util/delay.h ****    microseconds of delay.
+ 146:/usr/lib/avr/include/util/delay.h **** 
+ 147:/usr/lib/avr/include/util/delay.h ****    Alternatively, by defining the macro \c __DELAY_ROUND_DOWN__, or
+ 148:/usr/lib/avr/include/util/delay.h ****    \c __DELAY_ROUND_CLOSEST__, before including this header file, the
+ 149:/usr/lib/avr/include/util/delay.h ****    algorithm can be made to round down, or round to closest integer,
+ 150:/usr/lib/avr/include/util/delay.h ****    respectively.
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h ****    \note
+ 153:/usr/lib/avr/include/util/delay.h **** 
+ 154:/usr/lib/avr/include/util/delay.h ****    The implementation of _delay_ms() based on
+ 155:/usr/lib/avr/include/util/delay.h ****    __builtin_avr_delay_cycles() is not backward compatible with older
+ 156:/usr/lib/avr/include/util/delay.h ****    implementations.  In order to get functionality backward compatible
+ 157:/usr/lib/avr/include/util/delay.h ****    with previous versions, the macro \c "__DELAY_BACKWARD_COMPATIBLE__"
+ 158:/usr/lib/avr/include/util/delay.h ****    must be defined before including this header file. Also, the
+ 159:/usr/lib/avr/include/util/delay.h ****    backward compatible algorithm will be chosen if the code is
+ 160:/usr/lib/avr/include/util/delay.h ****    compiled in a <em>freestanding environment</em> (GCC option
+ 161:/usr/lib/avr/include/util/delay.h ****    \c -ffreestanding), as the math functions required for rounding are
+ 162:/usr/lib/avr/include/util/delay.h ****    not available to the compiler then.
+ 163:/usr/lib/avr/include/util/delay.h **** 
+ 164:/usr/lib/avr/include/util/delay.h ****  */
+ 165:/usr/lib/avr/include/util/delay.h **** void
+ 166:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 167:/usr/lib/avr/include/util/delay.h **** {
+ 168:/usr/lib/avr/include/util/delay.h **** 	double __tmp ;
+ 169:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 170:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 171:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 172:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 173:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 174:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 175:/usr/lib/avr/include/util/delay.h **** 
+ 176:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 177:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 178:/usr/lib/avr/include/util/delay.h **** 
+GAS LISTING /tmp/cctXKsl6.s 			page 14
+
+
+ 179:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 180:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+ 181:/usr/lib/avr/include/util/delay.h **** 
+ 182:/usr/lib/avr/include/util/delay.h **** 	#else
+ 183:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 184:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 185:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 186:/usr/lib/avr/include/util/delay.h **** 
+ 187:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+ 470               		.stabn	68,0,187,.LM39-.LFBB6
+ 471               	.LM39:
+ 472 019a 2FEF      		ldi r18,lo8(3199999)
+ 473 019c 83ED      		ldi r24,hi8(3199999)
+ 474 019e 90E3      		ldi r25,hlo8(3199999)
+ 475 01a0 2150      	1:	subi r18,1
+ 476 01a2 8040      		sbci r24,0
+ 477 01a4 9040      		sbci r25,0
+ 478 01a6 01F4      		brne 1b
+ 479 01a8 00C0      		rjmp .
+ 480 01aa 0000      		nop
+ 481               	.LBE47:
+ 482               	.LBE46:
+ 483               		.stabs	"src/main.c",132,0,0,.Ltext2
+ 484               	.Ltext2:
+  85:src/main.c    ****     _delay_ms(1000);
+  86:src/main.c    ****     PORTD &= ~(1 << PD3);
+ 485               		.stabn	68,0,86,.LM40-.LFBB6
+ 486               	.LM40:
+ 487 01ac 5B98      		cbi 0xb,3
+ 488               	.LBB48:
+ 489               	.LBB49:
+ 490               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext3
+ 491               	.Ltext3:
+ 492               		.stabn	68,0,187,.LM41-.LFBB6
+ 493               	.LM41:
+ 494 01ae 2FEF      		ldi r18,lo8(3199999)
+ 495 01b0 83ED      		ldi r24,hi8(3199999)
+ 496 01b2 90E3      		ldi r25,hlo8(3199999)
+ 497 01b4 2150      	1:	subi r18,1
+ 498 01b6 8040      		sbci r24,0
+ 499 01b8 9040      		sbci r25,0
+ 500 01ba 01F4      		brne 1b
+ 501 01bc 00C0      		rjmp .
+ 502 01be 0000      		nop
+ 503 01c0 00C0      		rjmp .L11
+ 504               	.LBE49:
+ 505               	.LBE48:
+ 506               		.size	blink_can_fail, .-blink_can_fail
+ 507               	.Lscope6:
+ 508               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 509               		.stabd	78,0,0
+ 510               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 511               	.LC0:
+ 512 0000 5445 433A 		.string	"TEC: "
+ 512      2000 
+ 513               	.LC1:
+ 514 0006 0D0A 00   		.string	"\r\n"
+GAS LISTING /tmp/cctXKsl6.s 			page 15
+
+
+ 515               		.section	.text.startup,"ax",@progbits
+ 516               		.stabs	"main:F(0,1)",36,0,91,main
+ 517               	.global	main
+ 518               		.type	main, @function
+ 519               	main:
+ 520               		.stabd	46,0,0
+ 521               		.stabs	"src/main.c",132,0,0,.Ltext4
+ 522               	.Ltext4:
+  87:src/main.c    ****     _delay_ms(1000);
+  88:src/main.c    ****   }
+  89:src/main.c    **** }
+  90:src/main.c    **** 
+  91:src/main.c    **** int main()
+  92:src/main.c    **** {
+ 523               		.stabn	68,0,92,.LM42-.LFBB7
+ 524               	.LM42:
+ 525               	.LFBB7:
+ 526 0000 CF93      		push r28
+ 527 0002 DF93      		push r29
+ 528 0004 CDB7      		in r28,__SP_L__
+ 529 0006 DEB7      		in r29,__SP_H__
+ 530 0008 2897      		sbiw r28,8
+ 531 000a 0FB6      		in __tmp_reg__,__SREG__
+ 532 000c F894      		cli
+ 533 000e DEBF      		out __SP_H__,r29
+ 534 0010 0FBE      		out __SREG__,__tmp_reg__
+ 535 0012 CDBF      		out __SP_L__,r28
+ 536               	/* prologue: function */
+ 537               	/* frame size = 8 */
+ 538               	/* stack size = 10 */
+ 539               	.L__stack_usage = 10
+  93:src/main.c    **** 
+  94:src/main.c    ****   OPER_MODE = 1;
+ 540               		.stabn	68,0,94,.LM43-.LFBB7
+ 541               	.LM43:
+ 542 0014 81E0      		ldi r24,lo8(1)
+ 543 0016 8093 0000 		sts OPER_MODE,r24
+  95:src/main.c    ****   DDRH |= (1 << DDH6);
+ 544               		.stabn	68,0,95,.LM44-.LFBB7
+ 545               	.LM44:
+ 546 001a 8091 0101 		lds r24,257
+ 547 001e 8064      		ori r24,lo8(64)
+ 548 0020 8093 0101 		sts 257,r24
+  96:src/main.c    ****   DDRD |= (1 << DDD2) | (1 << DDD3) | (1 << DDD4) | (1 << DDD5) | (1 << DDD6) | (1 << DDD7);
+ 549               		.stabn	68,0,96,.LM45-.LFBB7
+ 550               	.LM45:
+ 551 0024 8AB1      		in r24,0xa
+ 552 0026 8C6F      		ori r24,lo8(-4)
+ 553 0028 8AB9      		out 0xa,r24
+  97:src/main.c    **** 
+  98:src/main.c    ****   SPI_init();
+ 554               		.stabn	68,0,98,.LM46-.LFBB7
+ 555               	.LM46:
+ 556 002a 0E94 0000 		call SPI_init
+  99:src/main.c    **** 
+ 100:src/main.c    ****   PORTH |= (1 << PH6);
+ 557               		.stabn	68,0,100,.LM47-.LFBB7
+GAS LISTING /tmp/cctXKsl6.s 			page 16
+
+
+ 558               	.LM47:
+ 559 002e 8091 0201 		lds r24,258
+ 560 0032 8064      		ori r24,lo8(64)
+ 561 0034 8093 0201 		sts 258,r24
+ 562               	.LBB50:
+ 563               	.LBB51:
+ 564               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext5
+ 565               	.Ltext5:
+ 566               		.stabn	68,0,187,.LM48-.LFBB7
+ 567               	.LM48:
+ 568 0038 2FEF      		ldi r18,lo8(3199999)
+ 569 003a 83ED      		ldi r24,hi8(3199999)
+ 570 003c 90E3      		ldi r25,hlo8(3199999)
+ 571 003e 2150      	1:	subi r18,1
+ 572 0040 8040      		sbci r24,0
+ 573 0042 9040      		sbci r25,0
+ 574 0044 01F4      		brne 1b
+ 575 0046 00C0      		rjmp .
+ 576 0048 0000      		nop
+ 577               	.LBE51:
+ 578               	.LBE50:
+ 579               		.stabs	"src/main.c",132,0,0,.Ltext6
+ 580               	.Ltext6:
+ 101:src/main.c    ****   _delay_ms(1000);
+ 102:src/main.c    ****   PORTH &= ~(1 << PH6);
+ 581               		.stabn	68,0,102,.LM49-.LFBB7
+ 582               	.LM49:
+ 583 004a 8091 0201 		lds r24,258
+ 584 004e 8F7B      		andi r24,lo8(-65)
+ 585 0050 8093 0201 		sts 258,r24
+ 586               	.LBB52:
+ 587               	.LBB53:
+ 588               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext7
+ 589               	.Ltext7:
+ 590               		.stabn	68,0,187,.LM50-.LFBB7
+ 591               	.LM50:
+ 592 0054 2FEF      		ldi r18,lo8(3199999)
+ 593 0056 83ED      		ldi r24,hi8(3199999)
+ 594 0058 90E3      		ldi r25,hlo8(3199999)
+ 595 005a 2150      	1:	subi r18,1
+ 596 005c 8040      		sbci r24,0
+ 597 005e 9040      		sbci r25,0
+ 598 0060 01F4      		brne 1b
+ 599 0062 00C0      		rjmp .
+ 600 0064 0000      		nop
+ 601               	.LBE53:
+ 602               	.LBE52:
+ 603               		.stabs	"src/main.c",132,0,0,.Ltext8
+ 604               	.Ltext8:
+ 103:src/main.c    ****   _delay_ms(1000);
+ 104:src/main.c    ****   PORTH |= (1 << PH6);
+ 605               		.stabn	68,0,104,.LM51-.LFBB7
+ 606               	.LM51:
+ 607 0066 8091 0201 		lds r24,258
+ 608 006a 8064      		ori r24,lo8(64)
+ 609 006c 8093 0201 		sts 258,r24
+ 610               	.LBB54:
+GAS LISTING /tmp/cctXKsl6.s 			page 17
+
+
+ 611               	.LBB55:
+ 612               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext9
+ 613               	.Ltext9:
+ 614               		.stabn	68,0,187,.LM52-.LFBB7
+ 615               	.LM52:
+ 616 0070 2FEF      		ldi r18,lo8(3199999)
+ 617 0072 83ED      		ldi r24,hi8(3199999)
+ 618 0074 90E3      		ldi r25,hlo8(3199999)
+ 619 0076 2150      	1:	subi r18,1
+ 620 0078 8040      		sbci r24,0
+ 621 007a 9040      		sbci r25,0
+ 622 007c 01F4      		brne 1b
+ 623 007e 00C0      		rjmp .
+ 624 0080 0000      		nop
+ 625               	.LBE55:
+ 626               	.LBE54:
+ 627               		.stabs	"src/main.c",132,0,0,.Ltext10
+ 628               	.Ltext10:
+ 105:src/main.c    ****   _delay_ms(1000);
+ 106:src/main.c    **** 
+ 107:src/main.c    ****   CAN_init(16, 1000000);
+ 629               		.stabn	68,0,107,.LM53-.LFBB7
+ 630               	.LM53:
+ 631 0082 40E4      		ldi r20,lo8(64)
+ 632 0084 52E4      		ldi r21,lo8(66)
+ 633 0086 6FE0      		ldi r22,lo8(15)
+ 634 0088 70E0      		ldi r23,0
+ 635 008a 80E1      		ldi r24,lo8(16)
+ 636 008c 0E94 0000 		call CAN_init
+ 108:src/main.c    **** 
+ 109:src/main.c    ****   if (CAN_init_regcheck())
+ 637               		.stabn	68,0,109,.LM54-.LFBB7
+ 638               	.LM54:
+ 639 0090 0E94 0000 		call CAN_init_regcheck
+ 640 0094 8823      		tst r24
+ 641 0096 01F4      		brne .+2
+ 642 0098 00C0      		rjmp .L13
+ 110:src/main.c    ****   {
+ 111:src/main.c    ****     CAN_set_mode(REQOP_NORMAL);
+ 643               		.stabn	68,0,111,.LM55-.LFBB7
+ 644               	.LM55:
+ 645 009a 80E0      		ldi r24,0
+ 646 009c 0E94 0000 		call CAN_set_mode
+ 647               	.L14:
+ 112:src/main.c    ****     while (!(CAN_read_register(CANSTAT) == 0x00))
+ 648               		.stabn	68,0,112,.LM56-.LFBB7
+ 649               	.LM56:
+ 650 00a0 8EE0      		ldi r24,lo8(14)
+ 651 00a2 0E94 0000 		call CAN_read_register
+ 652 00a6 8111      		cpse r24,__zero_reg__
+ 653 00a8 00C0      		rjmp .L14
+ 113:src/main.c    ****     {
+ 114:src/main.c    ****     };
+ 115:src/main.c    ****   }
+ 116:src/main.c    ****   else
+ 117:src/main.c    ****   {
+ 118:src/main.c    ****     blink_can_fail();
+GAS LISTING /tmp/cctXKsl6.s 			page 18
+
+
+ 119:src/main.c    ****   }
+ 120:src/main.c    **** 
+ 121:src/main.c    ****   sbus_safety = 0;
+ 654               		.stabn	68,0,121,.LM57-.LFBB7
+ 655               	.LM57:
+ 656 00aa 1092 0000 		sts sbus_safety+1,__zero_reg__
+ 657 00ae 1092 0000 		sts sbus_safety,__zero_reg__
+ 122:src/main.c    ****   SBUS_init();
+ 658               		.stabn	68,0,122,.LM58-.LFBB7
+ 659               	.LM58:
+ 660 00b2 0E94 0000 		call SBUS_init
+ 123:src/main.c    **** 
+ 124:src/main.c    ****   USART_init();
+ 661               		.stabn	68,0,124,.LM59-.LFBB7
+ 662               	.LM59:
+ 663 00b6 0E94 0000 		call USART_init
+ 664               	.LBB56:
+ 665               	.LBB57:
+ 666               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext11
+ 667               	.Ltext11:
+ 668               		.stabn	68,0,187,.LM60-.LFBB7
+ 669               	.LM60:
+ 670 00ba 2FEF      		ldi r18,lo8(3199999)
+ 671 00bc 83ED      		ldi r24,hi8(3199999)
+ 672 00be 90E3      		ldi r25,hlo8(3199999)
+ 673 00c0 2150      	1:	subi r18,1
+ 674 00c2 8040      		sbci r24,0
+ 675 00c4 9040      		sbci r25,0
+ 676 00c6 01F4      		brne 1b
+ 677 00c8 00C0      		rjmp .
+ 678 00ca 0000      		nop
+ 679               	.LBE57:
+ 680               	.LBE56:
+ 681               		.stabs	"src/main.c",132,0,0,.Ltext12
+ 682               	.Ltext12:
+ 125:src/main.c    **** 
+ 126:src/main.c    ****   /*  i2c_init();
+ 127:src/main.c    **** 
+ 128:src/main.c    ****     i2c_start_wait(0xA2 + I2C_WRITE); // set device address and write mode
+ 129:src/main.c    **** 
+ 130:src/main.c    ****     i2c_write(0x11);
+ 131:src/main.c    ****     i2c_write(0x00);
+ 132:src/main.c    ****     i2c_write(0x00);
+ 133:src/main.c    ****     i2c_write(0x00);
+ 134:src/main.c    ****     i2c_write(0x00);
+ 135:src/main.c    ****     i2c_write(0x00);
+ 136:src/main.c    ****     i2c_write(0x00);
+ 137:src/main.c    ****     motors_impl_safeties();
+ 138:src/main.c    **** 
+ 139:src/main.c    ****     i2c_write(0x11);
+ 140:src/main.c    **** 
+ 141:src/main.c    ****     i2c_stop();*/
+ 142:src/main.c    **** 
+ 143:src/main.c    ****   _delay_ms(1000);
+ 144:src/main.c    **** 
+ 145:src/main.c    ****   PCMSK0 |= (1 << PCINT4) | (1 << PCINT5);
+ 683               		.stabn	68,0,145,.LM61-.LFBB7
+GAS LISTING /tmp/cctXKsl6.s 			page 19
+
+
+ 684               	.LM61:
+ 685 00cc 8091 6B00 		lds r24,107
+ 686 00d0 8063      		ori r24,lo8(48)
+ 687 00d2 8093 6B00 		sts 107,r24
+ 146:src/main.c    ****   PCICR |= (1 << PCIE0);
+ 688               		.stabn	68,0,146,.LM62-.LFBB7
+ 689               	.LM62:
+ 690 00d6 8091 6800 		lds r24,104
+ 691 00da 8160      		ori r24,lo8(1)
+ 692 00dc 8093 6800 		sts 104,r24
+ 147:src/main.c    **** 
+ 148:src/main.c    ****   sei();
+ 693               		.stabn	68,0,148,.LM63-.LFBB7
+ 694               	.LM63:
+ 695               	/* #APP */
+ 696               	 ;  148 "src/main.c" 1
+ 697 00e0 7894      		sei
+ 698               	 ;  0 "" 2
+ 149:src/main.c    **** 
+ 150:src/main.c    ****   motors_impl_config();
+ 699               		.stabn	68,0,150,.LM64-.LFBB7
+ 700               	.LM64:
+ 701               	/* #NOAPP */
+ 702 00e2 0E94 0000 		call motors_impl_config
+ 151:src/main.c    **** 
+ 152:src/main.c    ****   gyems_motor_reset(&motor_l_wrist);
+ 703               		.stabn	68,0,152,.LM65-.LFBB7
+ 704               	.LM65:
+ 705 00e6 80E0      		ldi r24,lo8(motor_l_wrist)
+ 706 00e8 90E0      		ldi r25,hi8(motor_l_wrist)
+ 707 00ea 0E94 0000 		call gyems_motor_reset
+ 708               	.LBB58:
+ 709               	.LBB59:
+ 710               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext13
+ 711               	.Ltext13:
+ 712               		.stabn	68,0,187,.LM66-.LFBB7
+ 713               	.LM66:
+ 714 00ee 2FEF      		ldi r18,lo8(319999)
+ 715 00f0 81EE      		ldi r24,hi8(319999)
+ 716 00f2 94E0      		ldi r25,hlo8(319999)
+ 717 00f4 2150      	1:	subi r18,1
+ 718 00f6 8040      		sbci r24,0
+ 719 00f8 9040      		sbci r25,0
+ 720 00fa 01F4      		brne 1b
+ 721 00fc 00C0      		rjmp .
+ 722 00fe 0000      		nop
+ 723               	.LBE59:
+ 724               	.LBE58:
+ 725               		.stabs	"src/main.c",132,0,0,.Ltext14
+ 726               	.Ltext14:
+ 153:src/main.c    ****   _delay_ms(100);
+ 154:src/main.c    **** 
+ 155:src/main.c    ****   gyems_motor_reset(&motor_r_wrist);
+ 727               		.stabn	68,0,155,.LM67-.LFBB7
+ 728               	.LM67:
+ 729 0100 80E0      		ldi r24,lo8(motor_r_wrist)
+ 730 0102 90E0      		ldi r25,hi8(motor_r_wrist)
+GAS LISTING /tmp/cctXKsl6.s 			page 20
+
+
+ 731 0104 0E94 0000 		call gyems_motor_reset
+ 732               	.LBB60:
+ 733               	.LBB61:
+ 734               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext15
+ 735               	.Ltext15:
+ 736               		.stabn	68,0,187,.LM68-.LFBB7
+ 737               	.LM68:
+ 738 0108 2FEF      		ldi r18,lo8(319999)
+ 739 010a 81EE      		ldi r24,hi8(319999)
+ 740 010c 94E0      		ldi r25,hlo8(319999)
+ 741 010e 2150      	1:	subi r18,1
+ 742 0110 8040      		sbci r24,0
+ 743 0112 9040      		sbci r25,0
+ 744 0114 01F4      		brne 1b
+ 745 0116 00C0      		rjmp .
+ 746 0118 0000      		nop
+ 747               	.LBE61:
+ 748               	.LBE60:
+ 749               		.stabs	"src/main.c",132,0,0,.Ltext16
+ 750               	.Ltext16:
+ 156:src/main.c    **** 
+ 157:src/main.c    ****   _delay_ms(100);
+ 158:src/main.c    **** 
+ 159:src/main.c    ****   gyems_motor_find_endpoints(&motor_l_wrist);
+ 751               		.stabn	68,0,159,.LM69-.LFBB7
+ 752               	.LM69:
+ 753 011a 80E0      		ldi r24,lo8(motor_l_wrist)
+ 754 011c 90E0      		ldi r25,hi8(motor_l_wrist)
+ 755 011e 0E94 0000 		call gyems_motor_find_endpoints
+ 756               	.L16:
+ 757               	.LBB62:
+ 758               	.LBB63:
+ 759               	.LBB64:
+  47:src/main.c    ****   // gyems_motor_request_status(&motor_r_wrist);
+ 760               		.stabn	68,0,47,.LM70-.LFBB7
+ 761               	.LM70:
+ 762 0122 80E0      		ldi r24,lo8(motor_l_wrist)
+ 763 0124 90E0      		ldi r25,hi8(motor_l_wrist)
+ 764 0126 0E94 0000 		call gyems_motor_request_status
+ 765               	.LBE64:
+ 766               	.LBE63:
+ 767               	.LBB65:
+ 768               	.LBB66:
+  53:src/main.c    ****   // gyems_motor_safety(&motor_r_wrist);
+ 769               		.stabn	68,0,53,.LM71-.LFBB7
+ 770               	.LM71:
+ 771 012a 80E0      		ldi r24,lo8(motor_l_wrist)
+ 772 012c 90E0      		ldi r25,hi8(motor_l_wrist)
+ 773 012e 0E94 0000 		call gyems_motor_safety
+ 774               	.LBE66:
+ 775               	.LBE65:
+ 160:src/main.c    ****   // gyems_motor_find_endpoints(&motor_r_wrist);
+ 161:src/main.c    ****   while (1)
+ 162:src/main.c    ****   {
+ 163:src/main.c    **** 
+ 164:src/main.c    ****     /*
+ 165:src/main.c    ****         if (OPER_MODE == 0)
+GAS LISTING /tmp/cctXKsl6.s 			page 21
+
+
+ 166:src/main.c    ****         {
+ 167:src/main.c    ****           sbus_safety+1
+ 168:src/main.c    ****           if (sbus_safety > 1000)
+ 169:src/main.c    ****           {
+ 170:src/main.c    ****             OPER_MODE = 1;
+ 171:src/main.c    ****           }
+ 172:src/main.c    ****         }
+ 173:src/main.c    **** 
+ 174:src/main.c    ****         if (OPER_MODE == 0)
+ 175:src/main.c    ****         {
+ 176:src/main.c    ****           int8_t diff = 992-get_value(channels[11]);
+ 177:src/main.c    ****           char buf[8];
+ 178:src/main.c    ****           itoa(diff, buf,10);
+ 179:src/main.c    ****           USART_puts(buf);
+ 180:src/main.c    ****           USART_PUTS("\r\n");
+ 181:src/main.c    ****           sbus_safety = 0;
+ 182:src/main.c    ****         }*/
+ 183:src/main.c    **** 
+ 184:src/main.c    ****     motors_impl_update();
+ 185:src/main.c    ****     motors_impl_safeties();
+ 186:src/main.c    **** 
+ 187:src/main.c    ****     char buf[8];
+ 188:src/main.c    ****     itoa(CAN_get_TEC(), buf, 10);
+ 776               		.stabn	68,0,188,.LM72-.LFBB7
+ 777               	.LM72:
+ 778 0132 0E94 0000 		call CAN_get_TEC
+ 779               	.LBB67:
+ 780               	.LBB68:
+ 781               		.stabs	"/usr/lib/avr/include/stdlib.h",132,0,0,.Ltext17
+ 782               	.Ltext17:
+   1:/usr/lib/avr/include/stdlib.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/stdlib.h ****    Copyright (c) 2004,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/stdlib.h **** 
+   4:/usr/lib/avr/include/stdlib.h ****    Portions of documentation Copyright (c) 1990, 1991, 1993, 1994
+   5:/usr/lib/avr/include/stdlib.h ****    The Regents of the University of California.
+   6:/usr/lib/avr/include/stdlib.h **** 
+   7:/usr/lib/avr/include/stdlib.h ****    All rights reserved.
+   8:/usr/lib/avr/include/stdlib.h **** 
+   9:/usr/lib/avr/include/stdlib.h ****    Redistribution and use in source and binary forms, with or without
+  10:/usr/lib/avr/include/stdlib.h ****    modification, are permitted provided that the following conditions are met:
+  11:/usr/lib/avr/include/stdlib.h **** 
+  12:/usr/lib/avr/include/stdlib.h ****    * Redistributions of source code must retain the above copyright
+  13:/usr/lib/avr/include/stdlib.h ****      notice, this list of conditions and the following disclaimer.
+  14:/usr/lib/avr/include/stdlib.h **** 
+  15:/usr/lib/avr/include/stdlib.h ****    * Redistributions in binary form must reproduce the above copyright
+  16:/usr/lib/avr/include/stdlib.h ****      notice, this list of conditions and the following disclaimer in
+  17:/usr/lib/avr/include/stdlib.h ****      the documentation and/or other materials provided with the
+  18:/usr/lib/avr/include/stdlib.h ****      distribution.
+  19:/usr/lib/avr/include/stdlib.h **** 
+  20:/usr/lib/avr/include/stdlib.h ****    * Neither the name of the copyright holders nor the names of
+  21:/usr/lib/avr/include/stdlib.h ****      contributors may be used to endorse or promote products derived
+  22:/usr/lib/avr/include/stdlib.h ****      from this software without specific prior written permission.
+  23:/usr/lib/avr/include/stdlib.h **** 
+  24:/usr/lib/avr/include/stdlib.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:/usr/lib/avr/include/stdlib.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:/usr/lib/avr/include/stdlib.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  27:/usr/lib/avr/include/stdlib.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+GAS LISTING /tmp/cctXKsl6.s 			page 22
+
+
+  28:/usr/lib/avr/include/stdlib.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  29:/usr/lib/avr/include/stdlib.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  30:/usr/lib/avr/include/stdlib.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  31:/usr/lib/avr/include/stdlib.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  32:/usr/lib/avr/include/stdlib.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:/usr/lib/avr/include/stdlib.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  34:/usr/lib/avr/include/stdlib.h ****   POSSIBILITY OF SUCH DAMAGE.
+  35:/usr/lib/avr/include/stdlib.h **** 
+  36:/usr/lib/avr/include/stdlib.h ****   $Id$
+  37:/usr/lib/avr/include/stdlib.h **** */
+  38:/usr/lib/avr/include/stdlib.h **** 
+  39:/usr/lib/avr/include/stdlib.h **** #ifndef _STDLIB_H_
+  40:/usr/lib/avr/include/stdlib.h **** #define	_STDLIB_H_ 1
+  41:/usr/lib/avr/include/stdlib.h **** 
+  42:/usr/lib/avr/include/stdlib.h **** #ifndef __ASSEMBLER__
+  43:/usr/lib/avr/include/stdlib.h **** 
+  44:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+  45:/usr/lib/avr/include/stdlib.h **** #define __need_NULL
+  46:/usr/lib/avr/include/stdlib.h **** #define __need_size_t
+  47:/usr/lib/avr/include/stdlib.h **** #define __need_wchar_t
+  48:/usr/lib/avr/include/stdlib.h **** #include <stddef.h>
+  49:/usr/lib/avr/include/stdlib.h **** 
+  50:/usr/lib/avr/include/stdlib.h **** #ifndef __ptr_t
+  51:/usr/lib/avr/include/stdlib.h **** #define __ptr_t void *
+  52:/usr/lib/avr/include/stdlib.h **** #endif
+  53:/usr/lib/avr/include/stdlib.h **** #endif	/* !__DOXYGEN__ */
+  54:/usr/lib/avr/include/stdlib.h **** 
+  55:/usr/lib/avr/include/stdlib.h **** #ifdef __cplusplus
+  56:/usr/lib/avr/include/stdlib.h **** extern "C" {
+  57:/usr/lib/avr/include/stdlib.h **** #endif
+  58:/usr/lib/avr/include/stdlib.h **** 
+  59:/usr/lib/avr/include/stdlib.h **** /** \file */
+  60:/usr/lib/avr/include/stdlib.h **** 
+  61:/usr/lib/avr/include/stdlib.h **** /** \defgroup avr_stdlib <stdlib.h>: General utilities
+  62:/usr/lib/avr/include/stdlib.h ****     \code #include <stdlib.h> \endcode
+  63:/usr/lib/avr/include/stdlib.h **** 
+  64:/usr/lib/avr/include/stdlib.h ****     This file declares some basic C macros and functions as
+  65:/usr/lib/avr/include/stdlib.h ****     defined by the ISO standard, plus some AVR-specific extensions.
+  66:/usr/lib/avr/include/stdlib.h **** */
+  67:/usr/lib/avr/include/stdlib.h **** 
+  68:/usr/lib/avr/include/stdlib.h **** /*@{*/
+  69:/usr/lib/avr/include/stdlib.h **** /** Result type for function div(). */
+  70:/usr/lib/avr/include/stdlib.h **** typedef struct {
+  71:/usr/lib/avr/include/stdlib.h **** 	int quot;                   /**< The Quotient. */
+  72:/usr/lib/avr/include/stdlib.h **** 	int rem;                    /**< The Remainder. */
+  73:/usr/lib/avr/include/stdlib.h **** } div_t;
+  74:/usr/lib/avr/include/stdlib.h **** 
+  75:/usr/lib/avr/include/stdlib.h **** /** Result type for function ldiv(). */
+  76:/usr/lib/avr/include/stdlib.h **** typedef struct {
+  77:/usr/lib/avr/include/stdlib.h **** 	long quot;                  /**< The Quotient. */
+  78:/usr/lib/avr/include/stdlib.h **** 	long rem;                   /**< The Remainder. */
+  79:/usr/lib/avr/include/stdlib.h **** } ldiv_t;
+  80:/usr/lib/avr/include/stdlib.h **** 
+  81:/usr/lib/avr/include/stdlib.h **** /** Comparision function type for qsort(), just for convenience. */
+  82:/usr/lib/avr/include/stdlib.h **** typedef int (*__compar_fn_t)(const void *, const void *);
+  83:/usr/lib/avr/include/stdlib.h **** 
+  84:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+GAS LISTING /tmp/cctXKsl6.s 			page 23
+
+
+  85:/usr/lib/avr/include/stdlib.h **** 
+  86:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_CONST__
+  87:/usr/lib/avr/include/stdlib.h **** # define __ATTR_CONST__ __attribute__((__const__))
+  88:/usr/lib/avr/include/stdlib.h **** #endif
+  89:/usr/lib/avr/include/stdlib.h **** 
+  90:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_MALLOC__
+  91:/usr/lib/avr/include/stdlib.h **** # define __ATTR_MALLOC__ __attribute__((__malloc__))
+  92:/usr/lib/avr/include/stdlib.h **** #endif
+  93:/usr/lib/avr/include/stdlib.h **** 
+  94:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_NORETURN__
+  95:/usr/lib/avr/include/stdlib.h **** # define __ATTR_NORETURN__ __attribute__((__noreturn__))
+  96:/usr/lib/avr/include/stdlib.h **** #endif
+  97:/usr/lib/avr/include/stdlib.h **** 
+  98:/usr/lib/avr/include/stdlib.h **** #ifndef __ATTR_PURE__
+  99:/usr/lib/avr/include/stdlib.h **** # define __ATTR_PURE__ __attribute__((__pure__))
+ 100:/usr/lib/avr/include/stdlib.h **** #endif
+ 101:/usr/lib/avr/include/stdlib.h **** 
+ 102:/usr/lib/avr/include/stdlib.h **** #ifndef	__ATTR_GNU_INLINE__
+ 103:/usr/lib/avr/include/stdlib.h **** # ifdef  __GNUC_STDC_INLINE__
+ 104:/usr/lib/avr/include/stdlib.h **** #  define __ATTR_GNU_INLINE__   __attribute__((__gnu_inline__))
+ 105:/usr/lib/avr/include/stdlib.h **** # else
+ 106:/usr/lib/avr/include/stdlib.h **** #  define __ATTR_GNU_INLINE__
+ 107:/usr/lib/avr/include/stdlib.h **** # endif
+ 108:/usr/lib/avr/include/stdlib.h **** #endif
+ 109:/usr/lib/avr/include/stdlib.h **** 
+ 110:/usr/lib/avr/include/stdlib.h **** #endif
+ 111:/usr/lib/avr/include/stdlib.h **** 
+ 112:/usr/lib/avr/include/stdlib.h **** /** The abort() function causes abnormal program termination to occur.
+ 113:/usr/lib/avr/include/stdlib.h ****     This realization disables interrupts and jumps to _exit() function
+ 114:/usr/lib/avr/include/stdlib.h ****     with argument equal to 1. In the limited AVR environment, execution is
+ 115:/usr/lib/avr/include/stdlib.h ****     effectively halted by entering an infinite loop. */
+ 116:/usr/lib/avr/include/stdlib.h **** extern void abort(void) __ATTR_NORETURN__;
+ 117:/usr/lib/avr/include/stdlib.h **** 
+ 118:/usr/lib/avr/include/stdlib.h **** /** The abs() function computes the absolute value of the integer \c i.
+ 119:/usr/lib/avr/include/stdlib.h ****    \note The abs() and labs() functions are builtins of gcc.
+ 120:/usr/lib/avr/include/stdlib.h **** */
+ 121:/usr/lib/avr/include/stdlib.h **** extern int abs(int __i) __ATTR_CONST__;
+ 122:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+ 123:/usr/lib/avr/include/stdlib.h **** #define	abs(__i) __builtin_abs(__i)
+ 124:/usr/lib/avr/include/stdlib.h **** #endif
+ 125:/usr/lib/avr/include/stdlib.h **** 
+ 126:/usr/lib/avr/include/stdlib.h **** /** The labs() function computes the absolute value of the long integer
+ 127:/usr/lib/avr/include/stdlib.h ****     \c i.
+ 128:/usr/lib/avr/include/stdlib.h ****    \note The abs() and labs() functions are builtins of gcc.
+ 129:/usr/lib/avr/include/stdlib.h **** */
+ 130:/usr/lib/avr/include/stdlib.h **** extern long labs(long __i) __ATTR_CONST__;
+ 131:/usr/lib/avr/include/stdlib.h **** #ifndef __DOXYGEN__
+ 132:/usr/lib/avr/include/stdlib.h **** #define labs(__i) __builtin_labs(__i)
+ 133:/usr/lib/avr/include/stdlib.h **** #endif
+ 134:/usr/lib/avr/include/stdlib.h **** 
+ 135:/usr/lib/avr/include/stdlib.h **** /**
+ 136:/usr/lib/avr/include/stdlib.h ****      The bsearch() function searches an array of \c nmemb objects, the
+ 137:/usr/lib/avr/include/stdlib.h ****      initial member of which is pointed to by \c base, for a member
+ 138:/usr/lib/avr/include/stdlib.h ****      that matches the object pointed to by \c key.  The size of each
+ 139:/usr/lib/avr/include/stdlib.h ****      member of the array is specified by \c size.
+ 140:/usr/lib/avr/include/stdlib.h **** 
+ 141:/usr/lib/avr/include/stdlib.h ****      The contents of the array should be in ascending sorted order
+GAS LISTING /tmp/cctXKsl6.s 			page 24
+
+
+ 142:/usr/lib/avr/include/stdlib.h ****      according to the comparison function referenced by \c compar.
+ 143:/usr/lib/avr/include/stdlib.h ****      The \c compar routine is expected to have two arguments which
+ 144:/usr/lib/avr/include/stdlib.h ****      point to the key object and to an array member, in that order,
+ 145:/usr/lib/avr/include/stdlib.h ****      and should return an integer less than, equal to, or greater than
+ 146:/usr/lib/avr/include/stdlib.h ****      zero if the key object is found, respectively, to be less than,
+ 147:/usr/lib/avr/include/stdlib.h ****      to match, or be greater than the array member.
+ 148:/usr/lib/avr/include/stdlib.h **** 
+ 149:/usr/lib/avr/include/stdlib.h ****      The bsearch() function returns a pointer to a matching member of
+ 150:/usr/lib/avr/include/stdlib.h ****      the array, or a null pointer if no match is found.  If two
+ 151:/usr/lib/avr/include/stdlib.h ****      members compare as equal, which member is matched is unspecified.
+ 152:/usr/lib/avr/include/stdlib.h **** */
+ 153:/usr/lib/avr/include/stdlib.h **** extern void *bsearch(const void *__key, const void *__base, size_t __nmemb,
+ 154:/usr/lib/avr/include/stdlib.h **** 		     size_t __size, int (*__compar)(const void *, const void *));
+ 155:/usr/lib/avr/include/stdlib.h **** 
+ 156:/usr/lib/avr/include/stdlib.h **** /* __divmodhi4 and __divmodsi4 from libgcc.a */
+ 157:/usr/lib/avr/include/stdlib.h **** /**
+ 158:/usr/lib/avr/include/stdlib.h ****      The div() function computes the value \c num/denom and returns
+ 159:/usr/lib/avr/include/stdlib.h ****      the quotient and remainder in a structure named \c div_t that
+ 160:/usr/lib/avr/include/stdlib.h ****      contains two int members named \c quot and \c rem.
+ 161:/usr/lib/avr/include/stdlib.h **** */
+ 162:/usr/lib/avr/include/stdlib.h **** extern div_t div(int __num, int __denom) __asm__("__divmodhi4") __ATTR_CONST__;
+ 163:/usr/lib/avr/include/stdlib.h **** /**
+ 164:/usr/lib/avr/include/stdlib.h ****      The ldiv() function computes the value \c num/denom and returns
+ 165:/usr/lib/avr/include/stdlib.h ****      the quotient and remainder in a structure named \c ldiv_t that
+ 166:/usr/lib/avr/include/stdlib.h ****      contains two long integer members named \c quot and \c rem.
+ 167:/usr/lib/avr/include/stdlib.h **** */
+ 168:/usr/lib/avr/include/stdlib.h **** extern ldiv_t ldiv(long __num, long __denom) __asm__("__divmodsi4") __ATTR_CONST__;
+ 169:/usr/lib/avr/include/stdlib.h **** 
+ 170:/usr/lib/avr/include/stdlib.h **** /**
+ 171:/usr/lib/avr/include/stdlib.h ****      The qsort() function is a modified partition-exchange sort, or
+ 172:/usr/lib/avr/include/stdlib.h ****      quicksort.
+ 173:/usr/lib/avr/include/stdlib.h **** 
+ 174:/usr/lib/avr/include/stdlib.h ****      The qsort() function sorts an array of \c nmemb objects, the
+ 175:/usr/lib/avr/include/stdlib.h ****      initial member of which is pointed to by \c base.  The size of
+ 176:/usr/lib/avr/include/stdlib.h ****      each object is specified by \c size.  The contents of the array
+ 177:/usr/lib/avr/include/stdlib.h ****      base are sorted in ascending order according to a comparison
+ 178:/usr/lib/avr/include/stdlib.h ****      function pointed to by \c compar, which requires two arguments
+ 179:/usr/lib/avr/include/stdlib.h ****      pointing to the objects being compared.
+ 180:/usr/lib/avr/include/stdlib.h **** 
+ 181:/usr/lib/avr/include/stdlib.h ****      The comparison function must return an integer less than, equal
+ 182:/usr/lib/avr/include/stdlib.h ****      to, or greater than zero if the first argument is considered to
+ 183:/usr/lib/avr/include/stdlib.h ****      be respectively less than, equal to, or greater than the second.
+ 184:/usr/lib/avr/include/stdlib.h **** */
+ 185:/usr/lib/avr/include/stdlib.h **** extern void qsort(void *__base, size_t __nmemb, size_t __size,
+ 186:/usr/lib/avr/include/stdlib.h **** 		  __compar_fn_t __compar);
+ 187:/usr/lib/avr/include/stdlib.h **** 
+ 188:/usr/lib/avr/include/stdlib.h **** /**
+ 189:/usr/lib/avr/include/stdlib.h ****     The strtol() function converts the string in \c nptr to a long
+ 190:/usr/lib/avr/include/stdlib.h ****     value.  The conversion is done according to the given base, which
+ 191:/usr/lib/avr/include/stdlib.h ****     must be between 2 and 36 inclusive, or be the special value 0.
+ 192:/usr/lib/avr/include/stdlib.h **** 
+ 193:/usr/lib/avr/include/stdlib.h ****     The string may begin with an arbitrary amount of white space (as
+ 194:/usr/lib/avr/include/stdlib.h ****     determined by isspace()) followed by a single optional \c '+' or \c '-'
+ 195:/usr/lib/avr/include/stdlib.h ****     sign.  If \c base is zero or 16, the string may then include a
+ 196:/usr/lib/avr/include/stdlib.h ****     \c "0x" prefix, and the number will be read in base 16; otherwise,
+ 197:/usr/lib/avr/include/stdlib.h ****     a zero base is taken as 10 (decimal) unless the next character is
+ 198:/usr/lib/avr/include/stdlib.h ****     \c '0', in which case it is taken as 8 (octal).
+GAS LISTING /tmp/cctXKsl6.s 			page 25
+
+
+ 199:/usr/lib/avr/include/stdlib.h **** 
+ 200:/usr/lib/avr/include/stdlib.h ****     The remainder of the string is converted to a long value in the
+ 201:/usr/lib/avr/include/stdlib.h ****     obvious manner, stopping at the first character which is not a
+ 202:/usr/lib/avr/include/stdlib.h ****     valid digit in the given base.  (In bases above 10, the letter \c 'A'
+ 203:/usr/lib/avr/include/stdlib.h ****     in either upper or lower case represents 10, \c 'B' represents 11,
+ 204:/usr/lib/avr/include/stdlib.h ****     and so forth, with \c 'Z' representing 35.)
+ 205:/usr/lib/avr/include/stdlib.h **** 
+ 206:/usr/lib/avr/include/stdlib.h ****     If \c endptr is not NULL, strtol() stores the address of the first
+ 207:/usr/lib/avr/include/stdlib.h ****     invalid character in \c *endptr.  If there were no digits at all,
+ 208:/usr/lib/avr/include/stdlib.h ****     however, strtol() stores the original value of \c nptr in \c
+ 209:/usr/lib/avr/include/stdlib.h ****     *endptr.  (Thus, if \c *nptr is not \c '\\0' but \c **endptr is \c '\\0'
+ 210:/usr/lib/avr/include/stdlib.h ****     on return, the entire string was valid.)
+ 211:/usr/lib/avr/include/stdlib.h **** 
+ 212:/usr/lib/avr/include/stdlib.h ****     The strtol() function returns the result of the conversion, unless
+ 213:/usr/lib/avr/include/stdlib.h ****     the value would underflow or overflow.  If no conversion could be
+ 214:/usr/lib/avr/include/stdlib.h ****     performed, 0 is returned.  If an overflow or underflow occurs, \c
+ 215:/usr/lib/avr/include/stdlib.h ****     errno is set to \ref avr_errno "ERANGE" and the function return value
+ 216:/usr/lib/avr/include/stdlib.h ****     is clamped to \c LONG_MIN or \c LONG_MAX, respectively.
+ 217:/usr/lib/avr/include/stdlib.h **** */
+ 218:/usr/lib/avr/include/stdlib.h **** extern long strtol(const char *__nptr, char **__endptr, int __base);
+ 219:/usr/lib/avr/include/stdlib.h **** 
+ 220:/usr/lib/avr/include/stdlib.h **** /**
+ 221:/usr/lib/avr/include/stdlib.h ****     The strtoul() function converts the string in \c nptr to an
+ 222:/usr/lib/avr/include/stdlib.h ****     unsigned long value.  The conversion is done according to the
+ 223:/usr/lib/avr/include/stdlib.h ****     given base, which must be between 2 and 36 inclusive, or be the
+ 224:/usr/lib/avr/include/stdlib.h ****     special value 0.
+ 225:/usr/lib/avr/include/stdlib.h **** 
+ 226:/usr/lib/avr/include/stdlib.h ****     The string may begin with an arbitrary amount of white space (as
+ 227:/usr/lib/avr/include/stdlib.h ****     determined by isspace()) followed by a single optional \c '+' or \c '-'
+ 228:/usr/lib/avr/include/stdlib.h ****     sign.  If \c base is zero or 16, the string may then include a
+ 229:/usr/lib/avr/include/stdlib.h ****     \c "0x" prefix, and the number will be read in base 16; otherwise,
+ 230:/usr/lib/avr/include/stdlib.h ****     a zero base is taken as 10 (decimal) unless the next character is
+ 231:/usr/lib/avr/include/stdlib.h ****     \c '0', in which case it is taken as 8 (octal).
+ 232:/usr/lib/avr/include/stdlib.h **** 
+ 233:/usr/lib/avr/include/stdlib.h ****     The remainder of the string is converted to an unsigned long value
+ 234:/usr/lib/avr/include/stdlib.h ****     in the obvious manner, stopping at the first character which is
+ 235:/usr/lib/avr/include/stdlib.h ****     not a valid digit in the given base.  (In bases above 10, the
+ 236:/usr/lib/avr/include/stdlib.h ****     letter \c 'A' in either upper or lower case represents 10, \c 'B'
+ 237:/usr/lib/avr/include/stdlib.h ****     represents 11, and so forth, with \c 'Z' representing 35.)
+ 238:/usr/lib/avr/include/stdlib.h **** 
+ 239:/usr/lib/avr/include/stdlib.h ****     If \c endptr is not NULL, strtoul() stores the address of the first
+ 240:/usr/lib/avr/include/stdlib.h ****     invalid character in \c *endptr.  If there were no digits at all,
+ 241:/usr/lib/avr/include/stdlib.h ****     however, strtoul() stores the original value of \c nptr in \c
+ 242:/usr/lib/avr/include/stdlib.h ****     *endptr.  (Thus, if \c *nptr is not \c '\\0' but \c **endptr is \c '\\0'
+ 243:/usr/lib/avr/include/stdlib.h ****     on return, the entire string was valid.)
+ 244:/usr/lib/avr/include/stdlib.h **** 
+ 245:/usr/lib/avr/include/stdlib.h ****     The strtoul() function return either the result of the conversion
+ 246:/usr/lib/avr/include/stdlib.h ****     or, if there was a leading minus sign, the negation of the result
+ 247:/usr/lib/avr/include/stdlib.h ****     of the conversion, unless the original (non-negated) value would
+ 248:/usr/lib/avr/include/stdlib.h ****     overflow; in the latter case, strtoul() returns ULONG_MAX, and \c
+ 249:/usr/lib/avr/include/stdlib.h ****     errno is set to \ref avr_errno "ERANGE".  If no conversion could 
+ 250:/usr/lib/avr/include/stdlib.h ****     be performed, 0 is returned.
+ 251:/usr/lib/avr/include/stdlib.h **** */
+ 252:/usr/lib/avr/include/stdlib.h **** extern unsigned long strtoul(const char *__nptr, char **__endptr, int __base);
+ 253:/usr/lib/avr/include/stdlib.h **** 
+ 254:/usr/lib/avr/include/stdlib.h **** /**
+ 255:/usr/lib/avr/include/stdlib.h ****     The atol() function converts the initial portion of the string
+GAS LISTING /tmp/cctXKsl6.s 			page 26
+
+
+ 256:/usr/lib/avr/include/stdlib.h ****     pointed to by \p s to long integer representation. In contrast to
+ 257:/usr/lib/avr/include/stdlib.h **** 
+ 258:/usr/lib/avr/include/stdlib.h ****         \code strtol(s, (char **)NULL, 10); \endcode
+ 259:/usr/lib/avr/include/stdlib.h **** 
+ 260:/usr/lib/avr/include/stdlib.h ****     this function does not detect overflow (\c errno is not changed and
+ 261:/usr/lib/avr/include/stdlib.h ****     the result value is not predictable), uses smaller memory (flash and
+ 262:/usr/lib/avr/include/stdlib.h ****     stack) and works more quickly.
+ 263:/usr/lib/avr/include/stdlib.h **** */
+ 264:/usr/lib/avr/include/stdlib.h **** extern long atol(const char *__s) __ATTR_PURE__;
+ 265:/usr/lib/avr/include/stdlib.h **** 
+ 266:/usr/lib/avr/include/stdlib.h **** /**
+ 267:/usr/lib/avr/include/stdlib.h ****     The atoi() function converts the initial portion of the string
+ 268:/usr/lib/avr/include/stdlib.h ****     pointed to by \p s to integer representation. In contrast to
+ 269:/usr/lib/avr/include/stdlib.h **** 
+ 270:/usr/lib/avr/include/stdlib.h ****         \code (int)strtol(s, (char **)NULL, 10); \endcode
+ 271:/usr/lib/avr/include/stdlib.h **** 
+ 272:/usr/lib/avr/include/stdlib.h ****     this function does not detect overflow (\c errno is not changed and
+ 273:/usr/lib/avr/include/stdlib.h ****     the result value is not predictable), uses smaller memory (flash and
+ 274:/usr/lib/avr/include/stdlib.h ****     stack) and works more quickly.
+ 275:/usr/lib/avr/include/stdlib.h **** */
+ 276:/usr/lib/avr/include/stdlib.h **** extern int atoi(const char *__s) __ATTR_PURE__;
+ 277:/usr/lib/avr/include/stdlib.h **** 
+ 278:/usr/lib/avr/include/stdlib.h **** /**
+ 279:/usr/lib/avr/include/stdlib.h ****    The exit() function terminates the application.  Since there is no
+ 280:/usr/lib/avr/include/stdlib.h ****    environment to return to, \c status is ignored, and code execution
+ 281:/usr/lib/avr/include/stdlib.h ****    will eventually reach an infinite loop, thereby effectively halting
+ 282:/usr/lib/avr/include/stdlib.h ****    all code processing.  Before entering the infinite loop, interrupts
+ 283:/usr/lib/avr/include/stdlib.h ****    are globally disabled.
+ 284:/usr/lib/avr/include/stdlib.h **** 
+ 285:/usr/lib/avr/include/stdlib.h ****    In a C++ context, global destructors will be called before halting
+ 286:/usr/lib/avr/include/stdlib.h ****    execution.
+ 287:/usr/lib/avr/include/stdlib.h **** */
+ 288:/usr/lib/avr/include/stdlib.h **** extern void exit(int __status) __ATTR_NORETURN__;
+ 289:/usr/lib/avr/include/stdlib.h **** 
+ 290:/usr/lib/avr/include/stdlib.h **** /**
+ 291:/usr/lib/avr/include/stdlib.h ****    The malloc() function allocates \c size bytes of memory.
+ 292:/usr/lib/avr/include/stdlib.h ****    If malloc() fails, a NULL pointer is returned.
+ 293:/usr/lib/avr/include/stdlib.h **** 
+ 294:/usr/lib/avr/include/stdlib.h ****    Note that malloc() does \e not initialize the returned memory to
+ 295:/usr/lib/avr/include/stdlib.h ****    zero bytes.
+ 296:/usr/lib/avr/include/stdlib.h **** 
+ 297:/usr/lib/avr/include/stdlib.h ****    See the chapter about \ref malloc "malloc() usage" for implementation
+ 298:/usr/lib/avr/include/stdlib.h ****    details.
+ 299:/usr/lib/avr/include/stdlib.h **** */
+ 300:/usr/lib/avr/include/stdlib.h **** extern void *malloc(size_t __size) __ATTR_MALLOC__;
+ 301:/usr/lib/avr/include/stdlib.h **** 
+ 302:/usr/lib/avr/include/stdlib.h **** /**
+ 303:/usr/lib/avr/include/stdlib.h ****    The free() function causes the allocated memory referenced by \c
+ 304:/usr/lib/avr/include/stdlib.h ****    ptr to be made available for future allocations.  If \c ptr is
+ 305:/usr/lib/avr/include/stdlib.h ****    NULL, no action occurs.
+ 306:/usr/lib/avr/include/stdlib.h **** */
+ 307:/usr/lib/avr/include/stdlib.h **** extern void free(void *__ptr);
+ 308:/usr/lib/avr/include/stdlib.h **** 
+ 309:/usr/lib/avr/include/stdlib.h **** /**
+ 310:/usr/lib/avr/include/stdlib.h ****    \c malloc() \ref malloc_tunables "tunable".
+ 311:/usr/lib/avr/include/stdlib.h **** */
+ 312:/usr/lib/avr/include/stdlib.h **** extern size_t __malloc_margin;
+GAS LISTING /tmp/cctXKsl6.s 			page 27
+
+
+ 313:/usr/lib/avr/include/stdlib.h **** 
+ 314:/usr/lib/avr/include/stdlib.h **** /**
+ 315:/usr/lib/avr/include/stdlib.h ****    \c malloc() \ref malloc_tunables "tunable".
+ 316:/usr/lib/avr/include/stdlib.h **** */
+ 317:/usr/lib/avr/include/stdlib.h **** extern char *__malloc_heap_start;
+ 318:/usr/lib/avr/include/stdlib.h **** 
+ 319:/usr/lib/avr/include/stdlib.h **** /**
+ 320:/usr/lib/avr/include/stdlib.h ****    \c malloc() \ref malloc_tunables "tunable".
+ 321:/usr/lib/avr/include/stdlib.h **** */
+ 322:/usr/lib/avr/include/stdlib.h **** extern char *__malloc_heap_end;
+ 323:/usr/lib/avr/include/stdlib.h **** 
+ 324:/usr/lib/avr/include/stdlib.h **** /**
+ 325:/usr/lib/avr/include/stdlib.h ****    Allocate \c nele elements of \c size each.  Identical to calling
+ 326:/usr/lib/avr/include/stdlib.h ****    \c malloc() using <tt>nele * size</tt> as argument, except the
+ 327:/usr/lib/avr/include/stdlib.h ****    allocated memory will be cleared to zero.
+ 328:/usr/lib/avr/include/stdlib.h **** */
+ 329:/usr/lib/avr/include/stdlib.h **** extern void *calloc(size_t __nele, size_t __size) __ATTR_MALLOC__;
+ 330:/usr/lib/avr/include/stdlib.h **** 
+ 331:/usr/lib/avr/include/stdlib.h **** /**
+ 332:/usr/lib/avr/include/stdlib.h ****    The realloc() function tries to change the size of the region
+ 333:/usr/lib/avr/include/stdlib.h ****    allocated at \c ptr to the new \c size value.  It returns a
+ 334:/usr/lib/avr/include/stdlib.h ****    pointer to the new region.  The returned pointer might be the
+ 335:/usr/lib/avr/include/stdlib.h ****    same as the old pointer, or a pointer to a completely different
+ 336:/usr/lib/avr/include/stdlib.h ****    region.
+ 337:/usr/lib/avr/include/stdlib.h **** 
+ 338:/usr/lib/avr/include/stdlib.h ****    The contents of the returned region up to either the old or the new
+ 339:/usr/lib/avr/include/stdlib.h ****    size value (whatever is less) will be identical to the contents of
+ 340:/usr/lib/avr/include/stdlib.h ****    the old region, even in case a new region had to be allocated.
+ 341:/usr/lib/avr/include/stdlib.h **** 
+ 342:/usr/lib/avr/include/stdlib.h ****    It is acceptable to pass \c ptr as NULL, in which case realloc()
+ 343:/usr/lib/avr/include/stdlib.h ****    will behave identical to malloc().
+ 344:/usr/lib/avr/include/stdlib.h **** 
+ 345:/usr/lib/avr/include/stdlib.h ****    If the new memory cannot be allocated, realloc() returns NULL, and
+ 346:/usr/lib/avr/include/stdlib.h ****    the region at \c ptr will not be changed.
+ 347:/usr/lib/avr/include/stdlib.h **** */
+ 348:/usr/lib/avr/include/stdlib.h **** extern void *realloc(void *__ptr, size_t __size) __ATTR_MALLOC__;
+ 349:/usr/lib/avr/include/stdlib.h **** 
+ 350:/usr/lib/avr/include/stdlib.h **** extern double strtod(const char *__nptr, char **__endptr);
+ 351:/usr/lib/avr/include/stdlib.h **** 
+ 352:/usr/lib/avr/include/stdlib.h **** /** \ingroup avr_stdlib
+ 353:/usr/lib/avr/include/stdlib.h ****     \fn  double atof (const char *nptr)
+ 354:/usr/lib/avr/include/stdlib.h **** 
+ 355:/usr/lib/avr/include/stdlib.h ****     The atof() function converts the initial portion of the string pointed
+ 356:/usr/lib/avr/include/stdlib.h ****     to by \a nptr to double representation.
+ 357:/usr/lib/avr/include/stdlib.h **** 
+ 358:/usr/lib/avr/include/stdlib.h ****     It is equivalent to calling
+ 359:/usr/lib/avr/include/stdlib.h **** 	\code strtod(nptr, (char **)0); \endcode
+ 360:/usr/lib/avr/include/stdlib.h ****  */
+ 361:/usr/lib/avr/include/stdlib.h **** extern double atof(const char *__nptr);
+ 362:/usr/lib/avr/include/stdlib.h **** 
+ 363:/usr/lib/avr/include/stdlib.h **** /** Highest number that can be generated by rand(). */
+ 364:/usr/lib/avr/include/stdlib.h **** #define	RAND_MAX 0x7FFF
+ 365:/usr/lib/avr/include/stdlib.h **** 
+ 366:/usr/lib/avr/include/stdlib.h **** /**
+ 367:/usr/lib/avr/include/stdlib.h ****      The rand() function computes a sequence of pseudo-random integers in the
+ 368:/usr/lib/avr/include/stdlib.h ****      range of 0 to \c RAND_MAX (as defined by the header file <stdlib.h>).
+ 369:/usr/lib/avr/include/stdlib.h **** 
+GAS LISTING /tmp/cctXKsl6.s 			page 28
+
+
+ 370:/usr/lib/avr/include/stdlib.h ****      The srand() function sets its argument \c seed as the seed for a new
+ 371:/usr/lib/avr/include/stdlib.h ****      sequence of pseudo-random numbers to be returned by rand().  These
+ 372:/usr/lib/avr/include/stdlib.h ****      sequences are repeatable by calling srand() with the same seed value.
+ 373:/usr/lib/avr/include/stdlib.h **** 
+ 374:/usr/lib/avr/include/stdlib.h ****      If no seed value is provided, the functions are automatically seeded with
+ 375:/usr/lib/avr/include/stdlib.h ****      a value of 1.
+ 376:/usr/lib/avr/include/stdlib.h **** 
+ 377:/usr/lib/avr/include/stdlib.h ****      In compliance with the C standard, these functions operate on
+ 378:/usr/lib/avr/include/stdlib.h ****      \c int arguments.  Since the underlying algorithm already uses
+ 379:/usr/lib/avr/include/stdlib.h ****      32-bit calculations, this causes a loss of precision.  See
+ 380:/usr/lib/avr/include/stdlib.h ****      \c random() for an alternate set of functions that retains full
+ 381:/usr/lib/avr/include/stdlib.h ****      32-bit precision.
+ 382:/usr/lib/avr/include/stdlib.h **** */
+ 383:/usr/lib/avr/include/stdlib.h **** extern int rand(void);
+ 384:/usr/lib/avr/include/stdlib.h **** /**
+ 385:/usr/lib/avr/include/stdlib.h ****    Pseudo-random number generator seeding; see rand().
+ 386:/usr/lib/avr/include/stdlib.h **** */
+ 387:/usr/lib/avr/include/stdlib.h **** extern void srand(unsigned int __seed);
+ 388:/usr/lib/avr/include/stdlib.h **** 
+ 389:/usr/lib/avr/include/stdlib.h **** /**
+ 390:/usr/lib/avr/include/stdlib.h ****    Variant of rand() that stores the context in the user-supplied
+ 391:/usr/lib/avr/include/stdlib.h ****    variable located at \c ctx instead of a static library variable
+ 392:/usr/lib/avr/include/stdlib.h ****    so the function becomes re-entrant.
+ 393:/usr/lib/avr/include/stdlib.h **** */
+ 394:/usr/lib/avr/include/stdlib.h **** extern int rand_r(unsigned long *__ctx);
+ 395:/usr/lib/avr/include/stdlib.h **** /*@}*/
+ 396:/usr/lib/avr/include/stdlib.h **** 
+ 397:/usr/lib/avr/include/stdlib.h **** /*@{*/
+ 398:/usr/lib/avr/include/stdlib.h **** /** \name Non-standard (i.e. non-ISO C) functions.
+ 399:/usr/lib/avr/include/stdlib.h ****  \ingroup avr_stdlib
+ 400:/usr/lib/avr/include/stdlib.h **** */
+ 401:/usr/lib/avr/include/stdlib.h **** /**
+ 402:/usr/lib/avr/include/stdlib.h ****    \brief Convert an integer to a string.
+ 403:/usr/lib/avr/include/stdlib.h **** 
+ 404:/usr/lib/avr/include/stdlib.h ****    The function itoa() converts the integer value from \c val into an
+ 405:/usr/lib/avr/include/stdlib.h ****    ASCII representation that will be stored under \c s.  The caller
+ 406:/usr/lib/avr/include/stdlib.h ****    is responsible for providing sufficient storage in \c s.
+ 407:/usr/lib/avr/include/stdlib.h **** 
+ 408:/usr/lib/avr/include/stdlib.h ****    \note The minimal size of the buffer \c s depends on the choice of
+ 409:/usr/lib/avr/include/stdlib.h ****    radix. For example, if the radix is 2 (binary), you need to supply a buffer
+ 410:/usr/lib/avr/include/stdlib.h ****    with a minimal length of 8 * sizeof (int) + 1 characters, i.e. one
+ 411:/usr/lib/avr/include/stdlib.h ****    character for each bit plus one for the string terminator. Using a larger
+ 412:/usr/lib/avr/include/stdlib.h ****    radix will require a smaller minimal buffer size.
+ 413:/usr/lib/avr/include/stdlib.h **** 
+ 414:/usr/lib/avr/include/stdlib.h ****    \warning If the buffer is too small, you risk a buffer overflow.
+ 415:/usr/lib/avr/include/stdlib.h **** 
+ 416:/usr/lib/avr/include/stdlib.h ****    Conversion is done using the \c radix as base, which may be a
+ 417:/usr/lib/avr/include/stdlib.h ****    number between 2 (binary conversion) and up to 36.  If \c radix
+ 418:/usr/lib/avr/include/stdlib.h ****    is greater than 10, the next digit after \c '9' will be the letter
+ 419:/usr/lib/avr/include/stdlib.h ****    \c 'a'.
+ 420:/usr/lib/avr/include/stdlib.h ****     
+ 421:/usr/lib/avr/include/stdlib.h ****     If radix is 10 and val is negative, a minus sign will be prepended.
+ 422:/usr/lib/avr/include/stdlib.h **** 
+ 423:/usr/lib/avr/include/stdlib.h ****    The itoa() function returns the pointer passed as \c s.
+ 424:/usr/lib/avr/include/stdlib.h **** */
+ 425:/usr/lib/avr/include/stdlib.h **** #ifdef  __DOXYGEN__
+ 426:/usr/lib/avr/include/stdlib.h **** extern char *itoa(int val, char *s, int radix);
+GAS LISTING /tmp/cctXKsl6.s 			page 29
+
+
+ 427:/usr/lib/avr/include/stdlib.h **** #else
+ 428:/usr/lib/avr/include/stdlib.h **** extern __inline__ __ATTR_GNU_INLINE__
+ 429:/usr/lib/avr/include/stdlib.h **** char *itoa (int __val, char *__s, int __radix)
+ 430:/usr/lib/avr/include/stdlib.h **** {
+ 431:/usr/lib/avr/include/stdlib.h ****     if (!__builtin_constant_p (__radix)) {
+ 432:/usr/lib/avr/include/stdlib.h **** 	extern char *__itoa (int, char *, int);
+ 433:/usr/lib/avr/include/stdlib.h **** 	return __itoa (__val, __s, __radix);
+ 434:/usr/lib/avr/include/stdlib.h ****     } else if (__radix < 2 || __radix > 36) {
+ 435:/usr/lib/avr/include/stdlib.h **** 	*__s = 0;
+ 436:/usr/lib/avr/include/stdlib.h **** 	return __s;
+ 437:/usr/lib/avr/include/stdlib.h ****     } else {
+ 438:/usr/lib/avr/include/stdlib.h **** 	extern char *__itoa_ncheck (int, char *, unsigned char);
+ 439:/usr/lib/avr/include/stdlib.h **** 	return __itoa_ncheck (__val, __s, __radix);
+ 783               		.stabn	68,0,439,.LM73-.LFBB7
+ 784               	.LM73:
+ 785 0136 4AE0      		ldi r20,lo8(10)
+ 786 0138 BE01      		movw r22,r28
+ 787 013a 6F5F      		subi r22,-1
+ 788 013c 7F4F      		sbci r23,-1
+ 789 013e 90E0      		ldi r25,0
+ 790 0140 0E94 0000 		call __itoa_ncheck
+ 791               	.LBE68:
+ 792               	.LBE67:
+ 793               		.stabs	"src/main.c",132,0,0,.Ltext18
+ 794               	.Ltext18:
+ 189:src/main.c    ****     USART_puts("TEC: ");
+ 795               		.stabn	68,0,189,.LM74-.LFBB7
+ 796               	.LM74:
+ 797 0144 80E0      		ldi r24,lo8(.LC0)
+ 798 0146 90E0      		ldi r25,hi8(.LC0)
+ 799 0148 0E94 0000 		call USART_puts
+ 190:src/main.c    ****     USART_puts(buf);
+ 800               		.stabn	68,0,190,.LM75-.LFBB7
+ 801               	.LM75:
+ 802 014c CE01      		movw r24,r28
+ 803 014e 0196      		adiw r24,1
+ 804 0150 0E94 0000 		call USART_puts
+ 191:src/main.c    ****     USART_puts("\r\n");
+ 805               		.stabn	68,0,191,.LM76-.LFBB7
+ 806               	.LM76:
+ 807 0154 80E0      		ldi r24,lo8(.LC1)
+ 808 0156 90E0      		ldi r25,hi8(.LC1)
+ 809 0158 0E94 0000 		call USART_puts
+ 192:src/main.c    **** 
+ 193:src/main.c    ****     //  gyems_motor_set_multiturn_angle(&motor_l_wrist, 10, 90);
+ 194:src/main.c    ****     //   gyems_motor_set_multiturn_angle(&motor_r_wrist, 10, 90);
+ 195:src/main.c    **** 
+ 196:src/main.c    ****     sbus_safety = 0;
+ 810               		.stabn	68,0,196,.LM77-.LFBB7
+ 811               	.LM77:
+ 812 015c 1092 0000 		sts sbus_safety+1,__zero_reg__
+ 813 0160 1092 0000 		sts sbus_safety,__zero_reg__
+ 814 0164 00C0      		rjmp .L16
+ 815               	.L13:
+ 816               	.LBE62:
+ 118:src/main.c    ****   }
+ 817               		.stabn	68,0,118,.LM78-.LFBB7
+GAS LISTING /tmp/cctXKsl6.s 			page 30
+
+
+ 818               	.LM78:
+ 819 0166 0E94 0000 		call blink_can_fail
+ 820               		.size	main, .-main
+ 821               		.stabs	"buf:(0,50)=ar(10,5);0;7;(0,2)",128,0,187,1
+ 822               		.stabn	192,0,0,.LBB62-.LFBB7
+ 823               		.stabn	224,0,0,.LBE62-.LFBB7
+ 824               	.Lscope7:
+ 825               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 826               		.stabd	78,0,0
+ 827               		.comm	recieved_frame,13,1
+ 828               		.comm	motor_r_wrist,84,1
+ 829               		.comm	motor_l_wrist,84,1
+ 830               	.global	write
+ 831               		.section .bss
+ 832               		.type	write, @object
+ 833               		.size	write, 1
+ 834               	write:
+ 835 0000 00        		.zero	1
+ 836               	.global	read
+ 837               		.data
+ 838               		.type	read, @object
+ 839               		.size	read, 1
+ 840               	read:
+ 841 0000 01        		.byte	1
+ 842               	.global	address
+ 843               		.type	address, @object
+ 844               		.size	address, 1
+ 845               	address:
+ 846 0001 20        		.byte	32
+ 847               		.comm	channels,32,1
+ 848               		.comm	rx_pointer,1,1
+ 849               		.comm	rx_buffer,25,1
+ 850               		.comm	OPER_MODE,1,1
+ 851               		.comm	sbus_safety,2,1
+ 852               		.stabs	"sbus_safety:G(5,4)",32,0,8,0
+ 853               		.stabs	"OPER_MODE:G(5,2)",32,0,9,0
+ 854               		.stabs	"rx_buffer:G(0,51)=ar(10,5);0;24;(5,2)",32,0,11,0
+ 855               		.stabs	"rx_pointer:G(5,2)",32,0,12,0
+ 856               		.stabs	"channels:G(0,52)=ar(10,5);0;15;(5,4)",32,0,13,0
+ 857               		.stabs	"address:G(0,13)",32,0,16,0
+ 858               		.stabs	"read:G(0,13)",32,0,16,0
+ 859               		.stabs	"write:G(0,13)",32,0,16,0
+ 860               		.stabs	"motor_l_wrist:G(9,3)",32,0,18,0
+ 861               		.stabs	"motor_r_wrist:G(9,3)",32,0,19,0
+ 862               		.stabs	"recieved_frame:G(10,1)",32,0,21,0
+ 863               		.text
+ 864               		.stabs	"",100,0,0,.Letext0
+ 865               	.Letext0:
+ 866               		.ident	"GCC: (GNU) 5.4.0"
+ 867               	.global __do_copy_data
+ 868               	.global __do_clear_bss
+GAS LISTING /tmp/cctXKsl6.s 			page 31
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/cctXKsl6.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cctXKsl6.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cctXKsl6.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cctXKsl6.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/cctXKsl6.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cctXKsl6.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cctXKsl6.s:126    .text:0000000000000000 motors_impl_parse_can_msg
+                            *COM*:000000000000000d recieved_frame
+                            *COM*:0000000000000054 motor_l_wrist
+                            *COM*:0000000000000054 motor_r_wrist
+     /tmp/cctXKsl6.s:156    .text:0000000000000018 __vector_9
+     /tmp/cctXKsl6.s:261    .text:000000000000008e motors_impl_update
+     /tmp/cctXKsl6.s:282    .text:0000000000000096 motors_impl_safeties
+     /tmp/cctXKsl6.s:303    .text:000000000000009e motors_impl_config
+     /tmp/cctXKsl6.s:453    .text:0000000000000198 blink_can_fail
+     /tmp/cctXKsl6.s:519    .text.startup:0000000000000000 main
+                            *COM*:0000000000000001 OPER_MODE
+                            *COM*:0000000000000002 sbus_safety
+     /tmp/cctXKsl6.s:834    .bss:0000000000000000 write
+     /tmp/cctXKsl6.s:840    .data:0000000000000000 read
+     /tmp/cctXKsl6.s:845    .data:0000000000000001 address
+                            *COM*:0000000000000020 channels
+                            *COM*:0000000000000001 rx_pointer
+                            *COM*:0000000000000019 rx_buffer
+
+UNDEFINED SYMBOLS
+gyems_motor_parse_can
+CAN_read
+gyems_motor_request_status
+gyems_motor_safety
+SPI_init
+CAN_init
+CAN_init_regcheck
+CAN_set_mode
+CAN_read_register
+SBUS_init
+USART_init
+gyems_motor_reset
+gyems_motor_find_endpoints
+CAN_get_TEC
+__itoa_ncheck
+USART_puts
+__do_copy_data
+__do_clear_bss

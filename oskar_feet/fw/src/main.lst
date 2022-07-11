@@ -1,0 +1,481 @@
+GAS LISTING /tmp/cc0i2AMK.s 			page 1
+
+
+   1               		.file	"main.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_feet/fw/",100,0,2,.Ltext0
+   9               		.stabs	"src/main.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/cc0i2AMK.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  65               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  66               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  67               		.stabs	"int8_t:t(5,1)=(0,12)",128,0,125,0
+  68               		.stabs	"uint8_t:t(5,2)=(0,13)",128,0,126,0
+  69               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,127,0
+  70               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,128,0
+  71               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,129,0
+  72               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,130,0
+  73               		.stabs	"int64_t:t(5,7)=(0,8)",128,0,132,0
+  74               		.stabs	"uint64_t:t(5,8)=(0,9)",128,0,133,0
+  75               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,146,0
+  76               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,151,0
+  77               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,163,0
+  78               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,168,0
+  79               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,173,0
+  80               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,178,0
+  81               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,183,0
+  82               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,188,0
+  83               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,196,0
+  84               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,203,0
+  85               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,217,0
+  86               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,222,0
+  87               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,227,0
+  88               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,232,0
+  89               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,237,0
+  90               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,242,0
+  91               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,250,0
+  92               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,257,0
+  93               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,277,0
+  94               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,282,0
+  95               		.stabn	162,0,0,0
+  96               		.stabn	162,0,0,0
+  97               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  98               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  99               		.stabn	162,0,0,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 102               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabs	"__vector_39:F(0,49)",36,0,14,__vector_39
+ 106               	.global	__vector_39
+ 107               		.type	__vector_39, @function
+ 108               	__vector_39:
+ 109               		.stabd	46,0,0
+   1:src/main.c    **** #include <avr/io.h>
+   2:src/main.c    **** #include <avr/interrupt.h>
+   3:src/main.c    **** 
+   4:src/main.c    **** #include "../../../common/include/twislave.h"
+   5:src/main.c    **** 
+GAS LISTING /tmp/cc0i2AMK.s 			page 3
+
+
+   6:src/main.c    **** #define TWI_ADDRESS 0xA2
+   7:src/main.c    **** 
+   8:src/main.c    **** volatile uint8_t twi_readbuf[8];
+   9:src/main.c    **** volatile uint8_t twi_readindex = 0;
+  10:src/main.c    **** volatile uint8_t twi_ready = 0;
+  11:src/main.c    **** volatile uint8_t twi_proc = 0;
+  12:src/main.c    **** volatile uint8_t twi_pckt[8];
+  13:src/main.c    **** 
+  14:src/main.c    **** ISR(TWI_vect)
+  15:src/main.c    **** {
+ 110               		.stabn	68,0,15,.LM0-.LFBB1
+ 111               	.LM0:
+ 112               	.LFBB1:
+ 113 0000 1F92      		push r1
+ 114 0002 0F92      		push r0
+ 115 0004 0FB6      		in r0,__SREG__
+ 116 0006 0F92      		push r0
+ 117 0008 1124      		clr __zero_reg__
+ 118 000a 0BB6      		in r0,__RAMPZ__
+ 119 000c 0F92      		push r0
+ 120 000e 8F93      		push r24
+ 121 0010 AF93      		push r26
+ 122 0012 BF93      		push r27
+ 123 0014 EF93      		push r30
+ 124 0016 FF93      		push r31
+ 125               	/* prologue: Signal */
+ 126               	/* frame size = 0 */
+ 127               	/* stack size = 9 */
+ 128               	.L__stack_usage = 9
+  16:src/main.c    **** 
+  17:src/main.c    ****   switch (TW_STATUS)
+ 129               		.stabn	68,0,17,.LM1-.LFBB1
+ 130               	.LM1:
+ 131 0018 8091 B900 		lds r24,185
+ 132 001c 887F      		andi r24,lo8(-8)
+ 133 001e 8038      		cpi r24,lo8(-128)
+ 134 0020 01F0      		breq .L3
+ 135 0022 803A      		cpi r24,lo8(-96)
+ 136 0024 01F0      		breq .L4
+ 137 0026 8036      		cpi r24,lo8(96)
+ 138 0028 01F0      		breq .L4
+ 139               	.L1:
+ 140               	/* epilogue start */
+  18:src/main.c    ****   {
+  19:src/main.c    ****   case TW_SR_SLA_ACK:
+  20:src/main.c    **** 
+  21:src/main.c    ****     TWCR = (1 << TWIE) | (1 << TWEA) | (1 << TWEN) | (1 << TWINT);
+  22:src/main.c    ****     break;
+  23:src/main.c    ****   case TW_SR_DATA_ACK:
+  24:src/main.c    ****     twi_readbuf[twi_readindex] = TWDR;
+  25:src/main.c    ****     twi_readindex++;
+  26:src/main.c    ****     if (twi_readindex >= 8)
+  27:src/main.c    ****     {
+  28:src/main.c    ****       twi_readindex = 0;
+  29:src/main.c    ****       if (!twi_proc)
+  30:src/main.c    ****       {
+  31:src/main.c    ****         memcpy(twi_pckt, twi_readbuf, sizeof(twi_readbuf));
+GAS LISTING /tmp/cc0i2AMK.s 			page 4
+
+
+  32:src/main.c    ****       }
+  33:src/main.c    ****       twi_ready = 1;
+  34:src/main.c    ****     }
+  35:src/main.c    ****     TWCR = (1 << TWIE) | (1 << TWEA) | (1 << TWEN) | (1 << TWINT);
+  36:src/main.c    **** 
+  37:src/main.c    ****     break;
+  38:src/main.c    ****   case TW_SR_STOP:
+  39:src/main.c    ****     TWCR = (1 << TWEN) | (1 << TWIE) | (1 << TWEA) | (1 << TWINT);
+  40:src/main.c    ****     break;
+  41:src/main.c    ****   default:
+  42:src/main.c    ****     break;
+  43:src/main.c    ****   }
+  44:src/main.c    **** }
+ 141               		.stabn	68,0,44,.LM2-.LFBB1
+ 142               	.LM2:
+ 143 002a FF91      		pop r31
+ 144 002c EF91      		pop r30
+ 145 002e BF91      		pop r27
+ 146 0030 AF91      		pop r26
+ 147 0032 8F91      		pop r24
+ 148 0034 0F90      		pop r0
+ 149 0036 0BBE      		out __RAMPZ__,r0
+ 150 0038 0F90      		pop r0
+ 151 003a 0FBE      		out __SREG__,r0
+ 152 003c 0F90      		pop r0
+ 153 003e 1F90      		pop r1
+ 154 0040 1895      		reti
+ 155               	.L3:
+  24:src/main.c    ****     twi_readindex++;
+ 156               		.stabn	68,0,24,.LM3-.LFBB1
+ 157               	.LM3:
+ 158 0042 E091 0000 		lds r30,twi_readindex
+ 159 0046 F0E0      		ldi r31,0
+ 160 0048 8091 BB00 		lds r24,187
+ 161 004c E050      		subi r30,lo8(-(twi_readbuf))
+ 162 004e F040      		sbci r31,hi8(-(twi_readbuf))
+ 163 0050 8083      		st Z,r24
+  25:src/main.c    ****     if (twi_readindex >= 8)
+ 164               		.stabn	68,0,25,.LM4-.LFBB1
+ 165               	.LM4:
+ 166 0052 8091 0000 		lds r24,twi_readindex
+ 167 0056 8F5F      		subi r24,lo8(-(1))
+ 168 0058 8093 0000 		sts twi_readindex,r24
+  26:src/main.c    ****     {
+ 169               		.stabn	68,0,26,.LM5-.LFBB1
+ 170               	.LM5:
+ 171 005c 8091 0000 		lds r24,twi_readindex
+ 172 0060 8830      		cpi r24,lo8(8)
+ 173 0062 00F0      		brlo .L4
+  28:src/main.c    ****       if (!twi_proc)
+ 174               		.stabn	68,0,28,.LM6-.LFBB1
+ 175               	.LM6:
+ 176 0064 1092 0000 		sts twi_readindex,__zero_reg__
+  29:src/main.c    ****       {
+ 177               		.stabn	68,0,29,.LM7-.LFBB1
+ 178               	.LM7:
+ 179 0068 8091 0000 		lds r24,twi_proc
+GAS LISTING /tmp/cc0i2AMK.s 			page 5
+
+
+ 180 006c 8111      		cpse r24,__zero_reg__
+ 181 006e 00C0      		rjmp .L7
+ 182               	.LBB2:
+  31:src/main.c    ****       }
+ 183               		.stabn	68,0,31,.LM8-.LFBB1
+ 184               	.LM8:
+ 185 0070 88E0      		ldi r24,lo8(8)
+ 186 0072 E0E0      		ldi r30,lo8(twi_readbuf)
+ 187 0074 F0E0      		ldi r31,hi8(twi_readbuf)
+ 188 0076 A0E0      		ldi r26,lo8(twi_pckt)
+ 189 0078 B0E0      		ldi r27,hi8(twi_pckt)
+ 190               		0:
+ 191 007a 0190      		ld r0,Z+
+ 192 007c 0D92      		st X+,r0
+ 193 007e 8A95      		dec r24
+ 194 0080 01F4      		brne 0b
+ 195               	.L7:
+ 196               	.LBE2:
+  33:src/main.c    ****     }
+ 197               		.stabn	68,0,33,.LM9-.LFBB1
+ 198               	.LM9:
+ 199 0082 81E0      		ldi r24,lo8(1)
+ 200 0084 8093 0000 		sts twi_ready,r24
+ 201               	.L4:
+  39:src/main.c    ****     break;
+ 202               		.stabn	68,0,39,.LM10-.LFBB1
+ 203               	.LM10:
+ 204 0088 85EC      		ldi r24,lo8(-59)
+ 205 008a 8093 BC00 		sts 188,r24
+ 206               		.stabn	68,0,44,.LM11-.LFBB1
+ 207               	.LM11:
+ 208 008e 00C0      		rjmp .L1
+ 209               		.size	__vector_39, .-__vector_39
+ 210               	.Lscope1:
+ 211               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 212               		.stabd	78,0,0
+ 213               		.section	.text.startup,"ax",@progbits
+ 214               		.stabs	"main:F(0,1)",36,0,46,main
+ 215               	.global	main
+ 216               		.type	main, @function
+ 217               	main:
+ 218               		.stabd	46,0,0
+  45:src/main.c    **** 
+  46:src/main.c    **** int main(void)
+  47:src/main.c    **** {
+ 219               		.stabn	68,0,47,.LM12-.LFBB2
+ 220               	.LM12:
+ 221               	.LFBB2:
+ 222               	/* prologue: function */
+ 223               	/* frame size = 0 */
+ 224               	/* stack size = 0 */
+ 225               	.L__stack_usage = 0
+  48:src/main.c    **** 
+  49:src/main.c    ****   DDRD = (1 << DDD7);
+ 226               		.stabn	68,0,49,.LM13-.LFBB2
+ 227               	.LM13:
+ 228 0000 80E8      		ldi r24,lo8(-128)
+GAS LISTING /tmp/cc0i2AMK.s 			page 6
+
+
+ 229 0002 8AB9      		out 0xa,r24
+  50:src/main.c    ****   DDRJ = (1 << DDJ7);
+ 230               		.stabn	68,0,50,.LM14-.LFBB2
+ 231               	.LM14:
+ 232 0004 8093 0401 		sts 260,r24
+  51:src/main.c    **** 
+  52:src/main.c    ****   PORTJ &= ~(1 << PJ7);
+ 233               		.stabn	68,0,52,.LM15-.LFBB2
+ 234               	.LM15:
+ 235 0008 8091 0501 		lds r24,261
+ 236 000c 8F77      		andi r24,lo8(127)
+ 237 000e 8093 0501 		sts 261,r24
+  53:src/main.c    **** 
+  54:src/main.c    ****   uint8_t TWIS_ResponseType;
+  55:src/main.c    ****   uint8_t i = 0;
+  56:src/main.c    ****   uint8_t j = 0;
+  57:src/main.c    ****   uint8_t byte[8];
+  58:src/main.c    **** 
+  59:src/main.c    ****   TWAR = TWI_ADDRESS;
+ 238               		.stabn	68,0,59,.LM16-.LFBB2
+ 239               	.LM16:
+ 240 0012 82EA      		ldi r24,lo8(-94)
+ 241 0014 8093 BA00 		sts 186,r24
+  60:src/main.c    ****   TWCR = (1 << TWEN) | (1 << TWIE) | (1 << TWEA) | (1 << TWINT);
+ 242               		.stabn	68,0,60,.LM17-.LFBB2
+ 243               	.LM17:
+ 244 0018 85EC      		ldi r24,lo8(-59)
+ 245 001a 8093 BC00 		sts 188,r24
+  61:src/main.c    ****   sei();
+ 246               		.stabn	68,0,61,.LM18-.LFBB2
+ 247               	.LM18:
+ 248               	/* #APP */
+ 249               	 ;  61 "src/main.c" 1
+ 250 001e 7894      		sei
+ 251               	 ;  0 "" 2
+  62:src/main.c    **** 
+  63:src/main.c    ****   while (1)
+  64:src/main.c    ****   {
+  65:src/main.c    ****     if (twi_ready)
+  66:src/main.c    ****     {
+  67:src/main.c    ****       twi_proc = 1;
+ 252               		.stabn	68,0,67,.LM19-.LFBB2
+ 253               	.LM19:
+ 254               	/* #NOAPP */
+ 255 0020 91E0      		ldi r25,lo8(1)
+ 256               	.L11:
+  65:src/main.c    ****     {
+ 257               		.stabn	68,0,65,.LM20-.LFBB2
+ 258               	.LM20:
+ 259 0022 8091 0000 		lds r24,twi_ready
+ 260 0026 8823      		tst r24
+ 261 0028 01F0      		breq .L11
+ 262               		.stabn	68,0,67,.LM21-.LFBB2
+ 263               	.LM21:
+ 264 002a 9093 0000 		sts twi_proc,r25
+  68:src/main.c    ****       if (twi_pckt[0] == 0x11 && twi_pckt[7] == 0x11 && twi_pckt[1] == 0x00 && twi_pckt[2] == 0x00 
+ 265               		.stabn	68,0,68,.LM22-.LFBB2
+GAS LISTING /tmp/cc0i2AMK.s 			page 7
+
+
+ 266               	.LM22:
+ 267 002e 8091 0000 		lds r24,twi_pckt
+ 268 0032 8131      		cpi r24,lo8(17)
+ 269 0034 01F4      		brne .L11
+ 270               		.stabn	68,0,68,.LM23-.LFBB2
+ 271               	.LM23:
+ 272 0036 8091 0000 		lds r24,twi_pckt+7
+ 273 003a 8131      		cpi r24,lo8(17)
+ 274 003c 01F4      		brne .L11
+ 275               		.stabn	68,0,68,.LM24-.LFBB2
+ 276               	.LM24:
+ 277 003e 8091 0000 		lds r24,twi_pckt+1
+ 278 0042 8111      		cpse r24,__zero_reg__
+ 279 0044 00C0      		rjmp .L11
+ 280               		.stabn	68,0,68,.LM25-.LFBB2
+ 281               	.LM25:
+ 282 0046 8091 0000 		lds r24,twi_pckt+2
+ 283 004a 8111      		cpse r24,__zero_reg__
+ 284 004c 00C0      		rjmp .L11
+ 285               		.stabn	68,0,68,.LM26-.LFBB2
+ 286               	.LM26:
+ 287 004e 8091 0000 		lds r24,twi_pckt+3
+ 288 0052 8111      		cpse r24,__zero_reg__
+ 289 0054 00C0      		rjmp .L11
+ 290               		.stabn	68,0,68,.LM27-.LFBB2
+ 291               	.LM27:
+ 292 0056 8091 0000 		lds r24,twi_pckt+4
+ 293 005a 8111      		cpse r24,__zero_reg__
+ 294 005c 00C0      		rjmp .L11
+ 295               		.stabn	68,0,68,.LM28-.LFBB2
+ 296               	.LM28:
+ 297 005e 8091 0000 		lds r24,twi_pckt+5
+ 298 0062 8111      		cpse r24,__zero_reg__
+ 299 0064 00C0      		rjmp .L11
+ 300               		.stabn	68,0,68,.LM29-.LFBB2
+ 301               	.LM29:
+ 302 0066 8091 0000 		lds r24,twi_pckt+6
+ 303 006a 8111      		cpse r24,__zero_reg__
+ 304 006c 00C0      		rjmp .L11
+  69:src/main.c    ****       {
+  70:src/main.c    ****         PORTD ^= (1 << PD7);
+ 305               		.stabn	68,0,70,.LM30-.LFBB2
+ 306               	.LM30:
+ 307 006e 8BB1      		in r24,0xb
+ 308 0070 8058      		subi r24,lo8(-(-128))
+ 309 0072 8BB9      		out 0xb,r24
+  71:src/main.c    ****         PORTJ ^= (1 << PJ7);
+ 310               		.stabn	68,0,71,.LM31-.LFBB2
+ 311               	.LM31:
+ 312 0074 8091 0501 		lds r24,261
+ 313 0078 8058      		subi r24,lo8(-(-128))
+ 314 007a 8093 0501 		sts 261,r24
+  72:src/main.c    **** 
+  73:src/main.c    ****         twi_ready = 0;
+ 315               		.stabn	68,0,73,.LM32-.LFBB2
+ 316               	.LM32:
+ 317 007e 1092 0000 		sts twi_ready,__zero_reg__
+GAS LISTING /tmp/cc0i2AMK.s 			page 8
+
+
+  74:src/main.c    ****         twi_proc = 0;
+ 318               		.stabn	68,0,74,.LM33-.LFBB2
+ 319               	.LM33:
+ 320 0082 1092 0000 		sts twi_proc,__zero_reg__
+ 321 0086 00C0      		rjmp .L11
+ 322               		.size	main, .-main
+ 323               	.Lscope2:
+ 324               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 325               		.stabd	78,0,0
+ 326               		.comm	twi_pckt,8,1
+ 327               	.global	twi_proc
+ 328               		.section .bss
+ 329               		.type	twi_proc, @object
+ 330               		.size	twi_proc, 1
+ 331               	twi_proc:
+ 332 0000 00        		.zero	1
+ 333               	.global	twi_ready
+ 334               		.type	twi_ready, @object
+ 335               		.size	twi_ready, 1
+ 336               	twi_ready:
+ 337 0001 00        		.zero	1
+ 338               	.global	twi_readindex
+ 339               		.type	twi_readindex, @object
+ 340               		.size	twi_readindex, 1
+ 341               	twi_readindex:
+ 342 0002 00        		.zero	1
+ 343               		.comm	twi_readbuf,8,1
+ 344               		.stabs	"twi_readbuf:G(0,50)=ar(0,51)=r(0,51);0;0177777;;0;7;(0,52)=B(5,2)",32,0,8,0
+ 345               		.stabs	"twi_readindex:G(0,52)",32,0,9,0
+ 346               		.stabs	"twi_ready:G(0,52)",32,0,10,0
+ 347               		.stabs	"twi_proc:G(0,52)",32,0,11,0
+ 348               		.stabs	"twi_pckt:G(0,50)",32,0,12,0
+ 349               		.text
+ 350               		.stabs	"",100,0,0,.Letext0
+ 351               	.Letext0:
+ 352               		.ident	"GCC: (GNU) 5.4.0"
+ 353               	.global __do_clear_bss
+GAS LISTING /tmp/cc0i2AMK.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+     /tmp/cc0i2AMK.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc0i2AMK.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc0i2AMK.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc0i2AMK.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/cc0i2AMK.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc0i2AMK.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc0i2AMK.s:108    .text:0000000000000000 __vector_39
+     /tmp/cc0i2AMK.s:341    .bss:0000000000000002 twi_readindex
+                            *COM*:0000000000000008 twi_readbuf
+     /tmp/cc0i2AMK.s:331    .bss:0000000000000000 twi_proc
+                            *COM*:0000000000000008 twi_pckt
+     /tmp/cc0i2AMK.s:336    .bss:0000000000000001 twi_ready
+     /tmp/cc0i2AMK.s:217    .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+__do_clear_bss

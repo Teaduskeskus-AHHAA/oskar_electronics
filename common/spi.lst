@@ -1,0 +1,270 @@
+GAS LISTING /tmp/ccRvKuwc.s 			page 1
+
+
+   1               		.file	"spi.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"../../common/spi.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccRvKuwc.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"../../common/include/spi.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  65               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  66               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  67               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  68               		.stabs	"int8_t:t(6,1)=(0,12)",128,0,125,0
+  69               		.stabs	"uint8_t:t(6,2)=(0,13)",128,0,126,0
+  70               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,127,0
+  71               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,128,0
+  72               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,129,0
+  73               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,130,0
+  74               		.stabs	"int64_t:t(6,7)=(0,8)",128,0,132,0
+  75               		.stabs	"uint64_t:t(6,8)=(0,9)",128,0,133,0
+  76               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,146,0
+  77               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,151,0
+  78               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,163,0
+  79               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,168,0
+  80               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,173,0
+  81               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,178,0
+  82               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,183,0
+  83               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,188,0
+  84               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,196,0
+  85               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,203,0
+  86               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,217,0
+  87               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,222,0
+  88               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,227,0
+  89               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,232,0
+  90               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,237,0
+  91               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,242,0
+  92               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,250,0
+  93               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,257,0
+  94               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,277,0
+  95               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,282,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  99               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 103               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabn	162,0,0,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabs	"SPI_init:F(0,49)",36,0,3,SPI_init
+ 108               	.global	SPI_init
+ 109               		.type	SPI_init, @function
+ 110               	SPI_init:
+ 111               		.stabd	46,0,0
+   1:../../common/spi.c **** #include "include/spi.h"
+   2:../../common/spi.c **** 
+   3:../../common/spi.c **** void SPI_init()
+GAS LISTING /tmp/ccRvKuwc.s 			page 3
+
+
+   4:../../common/spi.c **** {
+ 112               		.stabn	68,0,4,.LM0-.LFBB1
+ 113               	.LM0:
+ 114               	.LFBB1:
+ 115               	/* prologue: function */
+ 116               	/* frame size = 0 */
+ 117               	/* stack size = 0 */
+ 118               	.L__stack_usage = 0
+   5:../../common/spi.c **** 	DDRB |= (1 << DDB0) | (1 << DDB1) | (1 << DDB2);
+ 119               		.stabn	68,0,5,.LM1-.LFBB1
+ 120               	.LM1:
+ 121 0000 84B1      		in r24,0x4
+ 122 0002 8760      		ori r24,lo8(7)
+ 123 0004 84B9      		out 0x4,r24
+   6:../../common/spi.c **** 	SPCR = (1 << SPE) | (1 << MSTR);
+ 124               		.stabn	68,0,6,.LM2-.LFBB1
+ 125               	.LM2:
+ 126 0006 80E5      		ldi r24,lo8(80)
+ 127 0008 8CBD      		out 0x2c,r24
+   7:../../common/spi.c **** 	SPSR = (1 << SPI2X);
+ 128               		.stabn	68,0,7,.LM3-.LFBB1
+ 129               	.LM3:
+ 130 000a 81E0      		ldi r24,lo8(1)
+ 131 000c 8DBD      		out 0x2d,r24
+   8:../../common/spi.c **** 	PORTB |= (1 << PB0);
+ 132               		.stabn	68,0,8,.LM4-.LFBB1
+ 133               	.LM4:
+ 134 000e 289A      		sbi 0x5,0
+ 135 0010 0895      		ret
+ 136               		.size	SPI_init, .-SPI_init
+ 137               	.Lscope1:
+ 138               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 139               		.stabd	78,0,0
+ 140               		.stabs	"SPI_write:F(0,49)",36,0,11,SPI_write
+ 141               		.stabs	"data:P(6,2)",64,0,11,24
+ 142               	.global	SPI_write
+ 143               		.type	SPI_write, @function
+ 144               	SPI_write:
+ 145               		.stabd	46,0,0
+   9:../../common/spi.c **** }
+  10:../../common/spi.c **** 
+  11:../../common/spi.c **** void SPI_write(uint8_t data)
+  12:../../common/spi.c **** {
+ 146               		.stabn	68,0,12,.LM5-.LFBB2
+ 147               	.LM5:
+ 148               	.LFBB2:
+ 149               	/* prologue: function */
+ 150               	/* frame size = 0 */
+ 151               	/* stack size = 0 */
+ 152               	.L__stack_usage = 0
+  13:../../common/spi.c **** 	SPDR = data;
+ 153               		.stabn	68,0,13,.LM6-.LFBB2
+ 154               	.LM6:
+ 155 0012 8EBD      		out 0x2e,r24
+ 156               	.L3:
+  14:../../common/spi.c **** 	while (!(SPSR & (1 << SPIF)))
+ 157               		.stabn	68,0,14,.LM7-.LFBB2
+GAS LISTING /tmp/ccRvKuwc.s 			page 4
+
+
+ 158               	.LM7:
+ 159 0014 0DB4      		in __tmp_reg__,0x2d
+ 160 0016 07FE      		sbrs __tmp_reg__,7
+ 161 0018 00C0      		rjmp .L3
+ 162               	/* epilogue start */
+  15:../../common/spi.c **** 	{
+  16:../../common/spi.c **** 	};
+  17:../../common/spi.c **** }
+ 163               		.stabn	68,0,17,.LM8-.LFBB2
+ 164               	.LM8:
+ 165 001a 0895      		ret
+ 166               		.size	SPI_write, .-SPI_write
+ 167               	.Lscope2:
+ 168               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 169               		.stabd	78,0,0
+ 170               		.stabs	"SPI_unset_cs:F(0,49)",36,0,19,SPI_unset_cs
+ 171               	.global	SPI_unset_cs
+ 172               		.type	SPI_unset_cs, @function
+ 173               	SPI_unset_cs:
+ 174               		.stabd	46,0,0
+  18:../../common/spi.c **** 
+  19:../../common/spi.c **** void SPI_unset_cs()
+  20:../../common/spi.c **** {
+ 175               		.stabn	68,0,20,.LM9-.LFBB3
+ 176               	.LM9:
+ 177               	.LFBB3:
+ 178               	/* prologue: function */
+ 179               	/* frame size = 0 */
+ 180               	/* stack size = 0 */
+ 181               	.L__stack_usage = 0
+  21:../../common/spi.c **** 	PORTB &= ~(1 << PB0);
+ 182               		.stabn	68,0,21,.LM10-.LFBB3
+ 183               	.LM10:
+ 184 001c 2898      		cbi 0x5,0
+ 185 001e 0895      		ret
+ 186               		.size	SPI_unset_cs, .-SPI_unset_cs
+ 187               	.Lscope3:
+ 188               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 189               		.stabd	78,0,0
+ 190               		.stabs	"SPI_set_cs:F(0,49)",36,0,24,SPI_set_cs
+ 191               	.global	SPI_set_cs
+ 192               		.type	SPI_set_cs, @function
+ 193               	SPI_set_cs:
+ 194               		.stabd	46,0,0
+  22:../../common/spi.c **** }
+  23:../../common/spi.c **** 
+  24:../../common/spi.c **** void SPI_set_cs()
+  25:../../common/spi.c **** {
+ 195               		.stabn	68,0,25,.LM11-.LFBB4
+ 196               	.LM11:
+ 197               	.LFBB4:
+ 198               	/* prologue: function */
+ 199               	/* frame size = 0 */
+ 200               	/* stack size = 0 */
+ 201               	.L__stack_usage = 0
+  26:../../common/spi.c **** 	PORTB |= (1 << PB0);
+ 202               		.stabn	68,0,26,.LM12-.LFBB4
+GAS LISTING /tmp/ccRvKuwc.s 			page 5
+
+
+ 203               	.LM12:
+ 204 0020 289A      		sbi 0x5,0
+ 205 0022 0895      		ret
+ 206               		.size	SPI_set_cs, .-SPI_set_cs
+ 207               	.Lscope4:
+ 208               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 209               		.stabd	78,0,0
+ 210               		.stabs	"",100,0,0,.Letext0
+ 211               	.Letext0:
+ 212               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/ccRvKuwc.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 spi.c
+     /tmp/ccRvKuwc.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccRvKuwc.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccRvKuwc.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccRvKuwc.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccRvKuwc.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccRvKuwc.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccRvKuwc.s:110    .text:0000000000000000 SPI_init
+     /tmp/ccRvKuwc.s:144    .text:0000000000000012 SPI_write
+     /tmp/ccRvKuwc.s:173    .text:000000000000001c SPI_unset_cs
+     /tmp/ccRvKuwc.s:193    .text:0000000000000020 SPI_set_cs
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "usart.h": "c",
+    "random": "c",
+    "twi.h": "c"
+  }
+}

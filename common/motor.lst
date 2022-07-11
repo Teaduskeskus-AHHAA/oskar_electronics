@@ -1,0 +1,2871 @@
+GAS LISTING /tmp/ccT4oBcY.s 			page 1
+
+
+   1               		.file	"motor.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"../../common/motor.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccT4oBcY.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  65               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  66               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  67               		.stabs	"int8_t:t(5,1)=(0,12)",128,0,125,0
+  68               		.stabs	"uint8_t:t(5,2)=(0,13)",128,0,126,0
+  69               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,127,0
+  70               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,128,0
+  71               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,129,0
+  72               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,130,0
+  73               		.stabs	"int64_t:t(5,7)=(0,8)",128,0,132,0
+  74               		.stabs	"uint64_t:t(5,8)=(0,9)",128,0,133,0
+  75               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,146,0
+  76               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,151,0
+  77               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,163,0
+  78               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,168,0
+  79               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,173,0
+  80               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,178,0
+  81               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,183,0
+  82               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,188,0
+  83               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,196,0
+  84               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,203,0
+  85               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,217,0
+  86               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,222,0
+  87               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,227,0
+  88               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,232,0
+  89               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,237,0
+  90               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,242,0
+  91               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,250,0
+  92               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,257,0
+  93               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,277,0
+  94               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,282,0
+  95               		.stabn	162,0,0,0
+  96               		.stabn	162,0,0,0
+  97               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  98               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  99               		.stabn	162,0,0,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 102               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabs	"../../common/include/motor.h",130,0,0,0
+ 106               		.stabs	"../../common/include/can.h",130,0,0,0
+ 107               		.stabs	"CAN_frame_t:t(8,1)=(8,2)=s13SID:(5,6),0,32;header:(8,3)=s1rtr:(0,4),0,1;len:(0,4),1,4;;,32
+ 108               		.stabs	" :T(8,6)=@s8;eCAN_ERROR_NONE:0,CAN_ERROR_ALLTXBUSY:1,CAN_ERROR_UNKNOWN_FLOW:2,CAN_ERROR_AB
+ 109               		.stabs	"CAN_error:t(8,7)=(8,6)",128,0,32,0
+ 110               		.stabn	162,0,0,0
+ 111               		.stabs	"encoder_t:t(7,1)=(7,2)=s6current:(5,4),0,16;original:(5,4),16,16;offset:(5,4),32,16;;",128
+ 112               		.stabs	"gyems_motor:t(7,3)=(7,4)=s84id:(5,4),0,16;status:(5,2),16,8;encoder:(7,1),24,48;angle:(5,5
+ 113               		.stabn	162,0,0,0
+ 114               		.stabs	"/usr/lib/avr/include/stdlib.h",130,0,0,0
+GAS LISTING /tmp/ccT4oBcY.s 			page 3
+
+
+ 115               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stddef.h",130,0,0,0
+ 116               		.stabs	"size_t:t(10,1)=(0,4)",128,0,216,0
+ 117               		.stabs	"wchar_t:t(10,2)=(0,1)",128,0,328,0
+ 118               		.stabn	162,0,0,0
+ 119               		.stabs	"div_t:t(9,1)=(9,2)=s4quot:(0,1),0,16;rem:(0,1),16,16;;",128,0,73,0
+ 120               		.stabs	"ldiv_t:t(9,3)=(9,4)=s8quot:(0,3),0,32;rem:(0,3),32,32;;",128,0,79,0
+ 121               		.stabs	"__compar_fn_t:t(9,5)=(9,6)=*(9,7)=f(0,1)",128,0,82,0
+ 122               		.stabn	162,0,0,0
+ 123               		.stabs	"gyems_motor_request_status:F(0,49)",36,0,8,gyems_motor_request_status
+ 124               		.stabs	"motor:P(0,50)=*(7,3)",64,0,8,24
+ 125               	.global	gyems_motor_request_status
+ 126               		.type	gyems_motor_request_status, @function
+ 127               	gyems_motor_request_status:
+ 128               		.stabd	46,0,0
+   1:../../common/motor.c **** #include <avr/io.h>
+   2:../../common/motor.c **** #include "include/motor.h"
+   3:../../common/motor.c **** #include "include/ros.h"
+   4:../../common/motor.c **** #define myabs(n) ((n) < 0 ? -(n) : (n))
+   5:../../common/motor.c **** #include <stdlib.h>
+   6:../../common/motor.c **** #include <util/delay.h>
+   7:../../common/motor.c **** 
+   8:../../common/motor.c **** void gyems_motor_request_status(gyems_motor *motor)
+   9:../../common/motor.c **** {
+ 129               		.stabn	68,0,9,.LM0-.LFBB1
+ 130               	.LM0:
+ 131               	.LFBB1:
+ 132 0000 CF93      		push r28
+ 133 0002 DF93      		push r29
+ 134 0004 CDB7      		in r28,__SP_L__
+ 135 0006 DEB7      		in r29,__SP_H__
+ 136 0008 2D97      		sbiw r28,13
+ 137 000a 0FB6      		in __tmp_reg__,__SREG__
+ 138 000c F894      		cli
+ 139 000e DEBF      		out __SP_H__,r29
+ 140 0010 0FBE      		out __SREG__,__tmp_reg__
+ 141 0012 CDBF      		out __SP_L__,r28
+ 142               	/* prologue: function */
+ 143               	/* frame size = 13 */
+ 144               	/* stack size = 15 */
+ 145               	.L__stack_usage = 15
+  10:../../common/motor.c ****   // Needs check for recieve canbfrfer empty conditions
+  11:../../common/motor.c ****   CAN_frame_t frm;
+  12:../../common/motor.c ****   // Motor status 1
+  13:../../common/motor.c ****   frm.SID = motor->id;
+ 146               		.stabn	68,0,13,.LM1-.LFBB1
+ 147               	.LM1:
+ 148 0014 FC01      		movw r30,r24
+ 149 0016 8081      		ld r24,Z
+ 150 0018 9181      		ldd r25,Z+1
+ 151 001a A0E0      		ldi r26,0
+ 152 001c B0E0      		ldi r27,0
+ 153 001e 8983      		std Y+1,r24
+ 154 0020 9A83      		std Y+2,r25
+ 155 0022 AB83      		std Y+3,r26
+ 156 0024 BC83      		std Y+4,r27
+  14:../../common/motor.c ****   frm.header.len = 8;
+ 157               		.stabn	68,0,14,.LM2-.LFBB1
+GAS LISTING /tmp/ccT4oBcY.s 			page 4
+
+
+ 158               	.LM2:
+ 159 0026 8D81      		ldd r24,Y+5
+ 160 0028 817E      		andi r24,lo8(-31)
+  15:../../common/motor.c ****   frm.header.rtr = 0;
+ 161               		.stabn	68,0,15,.LM3-.LFBB1
+ 162               	.LM3:
+ 163 002a 8061      		ori r24,lo8(16)
+ 164 002c 8E7F      		andi r24,lo8(~(1<<0))
+ 165 002e 8D83      		std Y+5,r24
+  16:../../common/motor.c **** 
+  17:../../common/motor.c ****   frm.data[0] = READ_MOTOR_STATUS_1_ERROR_FLAGS;
+ 166               		.stabn	68,0,17,.LM4-.LFBB1
+ 167               	.LM4:
+ 168 0030 8AE9      		ldi r24,lo8(-102)
+ 169 0032 8E83      		std Y+6,r24
+ 170               	.L2:
+  18:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 171               		.stabn	68,0,18,.LM5-.LFBB1
+ 172               	.LM5:
+ 173 0034 CE01      		movw r24,r28
+ 174 0036 0196      		adiw r24,1
+ 175 0038 0E94 0000 		call CAN_send
+ 176 003c 8111      		cpse r24,__zero_reg__
+ 177 003e 00C0      		rjmp .L2
+  19:../../common/motor.c ****   {
+  20:../../common/motor.c ****   }
+  21:../../common/motor.c ****   frm.data[0] = READ_MOTOR_STATUS_2;
+ 178               		.stabn	68,0,21,.LM6-.LFBB1
+ 179               	.LM6:
+ 180 0040 8CE9      		ldi r24,lo8(-100)
+ 181 0042 8E83      		std Y+6,r24
+ 182               	.L3:
+  22:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 183               		.stabn	68,0,22,.LM7-.LFBB1
+ 184               	.LM7:
+ 185 0044 CE01      		movw r24,r28
+ 186 0046 0196      		adiw r24,1
+ 187 0048 0E94 0000 		call CAN_send
+ 188 004c 8111      		cpse r24,__zero_reg__
+ 189 004e 00C0      		rjmp .L3
+ 190               	/* epilogue start */
+  23:../../common/motor.c ****   {
+  24:../../common/motor.c ****   }
+  25:../../common/motor.c **** }
+ 191               		.stabn	68,0,25,.LM8-.LFBB1
+ 192               	.LM8:
+ 193 0050 2D96      		adiw r28,13
+ 194 0052 0FB6      		in __tmp_reg__,__SREG__
+ 195 0054 F894      		cli
+ 196 0056 DEBF      		out __SP_H__,r29
+ 197 0058 0FBE      		out __SREG__,__tmp_reg__
+ 198 005a CDBF      		out __SP_L__,r28
+ 199 005c DF91      		pop r29
+ 200 005e CF91      		pop r28
+ 201 0060 0895      		ret
+ 202               		.size	gyems_motor_request_status, .-gyems_motor_request_status
+ 203               		.stabs	"frm:(8,1)",128,0,11,1
+GAS LISTING /tmp/ccT4oBcY.s 			page 5
+
+
+ 204               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 205               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 206               	.Lscope1:
+ 207               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 208               		.stabd	78,0,0
+ 209               		.stabs	"gyems_motor_get_multiturn_angle:F(0,49)",36,0,27,gyems_motor_get_multiturn_angle
+ 210               		.stabs	"motor:P(0,50)",64,0,27,24
+ 211               	.global	gyems_motor_get_multiturn_angle
+ 212               		.type	gyems_motor_get_multiturn_angle, @function
+ 213               	gyems_motor_get_multiturn_angle:
+ 214               		.stabd	46,0,0
+  26:../../common/motor.c **** 
+  27:../../common/motor.c **** void gyems_motor_get_multiturn_angle(gyems_motor *motor)
+  28:../../common/motor.c **** {
+ 215               		.stabn	68,0,28,.LM9-.LFBB2
+ 216               	.LM9:
+ 217               	.LFBB2:
+ 218 0062 CF93      		push r28
+ 219 0064 DF93      		push r29
+ 220 0066 CDB7      		in r28,__SP_L__
+ 221 0068 DEB7      		in r29,__SP_H__
+ 222 006a 2D97      		sbiw r28,13
+ 223 006c 0FB6      		in __tmp_reg__,__SREG__
+ 224 006e F894      		cli
+ 225 0070 DEBF      		out __SP_H__,r29
+ 226 0072 0FBE      		out __SREG__,__tmp_reg__
+ 227 0074 CDBF      		out __SP_L__,r28
+ 228               	/* prologue: function */
+ 229               	/* frame size = 13 */
+ 230               	/* stack size = 15 */
+ 231               	.L__stack_usage = 15
+  29:../../common/motor.c ****   CAN_frame_t frm;
+  30:../../common/motor.c ****   frm.SID = motor->id;
+ 232               		.stabn	68,0,30,.LM10-.LFBB2
+ 233               	.LM10:
+ 234 0076 FC01      		movw r30,r24
+ 235 0078 8081      		ld r24,Z
+ 236 007a 9181      		ldd r25,Z+1
+ 237 007c A0E0      		ldi r26,0
+ 238 007e B0E0      		ldi r27,0
+ 239 0080 8983      		std Y+1,r24
+ 240 0082 9A83      		std Y+2,r25
+ 241 0084 AB83      		std Y+3,r26
+ 242 0086 BC83      		std Y+4,r27
+  31:../../common/motor.c ****   frm.header.len = 8;
+ 243               		.stabn	68,0,31,.LM11-.LFBB2
+ 244               	.LM11:
+ 245 0088 8D81      		ldd r24,Y+5
+ 246 008a 817E      		andi r24,lo8(-31)
+  32:../../common/motor.c ****   frm.header.rtr = 0;
+ 247               		.stabn	68,0,32,.LM12-.LFBB2
+ 248               	.LM12:
+ 249 008c 8061      		ori r24,lo8(16)
+ 250 008e 8E7F      		andi r24,lo8(~(1<<0))
+ 251 0090 8D83      		std Y+5,r24
+  33:../../common/motor.c ****   frm.data[0] = READ_MULTITURN_ANGLE;
+ 252               		.stabn	68,0,33,.LM13-.LFBB2
+GAS LISTING /tmp/ccT4oBcY.s 			page 6
+
+
+ 253               	.LM13:
+ 254 0092 82E9      		ldi r24,lo8(-110)
+ 255 0094 8E83      		std Y+6,r24
+ 256               	.L8:
+  34:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 257               		.stabn	68,0,34,.LM14-.LFBB2
+ 258               	.LM14:
+ 259 0096 CE01      		movw r24,r28
+ 260 0098 0196      		adiw r24,1
+ 261 009a 0E94 0000 		call CAN_send
+ 262 009e 8111      		cpse r24,__zero_reg__
+ 263 00a0 00C0      		rjmp .L8
+ 264               	/* epilogue start */
+  35:../../common/motor.c ****   {
+  36:../../common/motor.c ****   };
+  37:../../common/motor.c **** }
+ 265               		.stabn	68,0,37,.LM15-.LFBB2
+ 266               	.LM15:
+ 267 00a2 2D96      		adiw r28,13
+ 268 00a4 0FB6      		in __tmp_reg__,__SREG__
+ 269 00a6 F894      		cli
+ 270 00a8 DEBF      		out __SP_H__,r29
+ 271 00aa 0FBE      		out __SREG__,__tmp_reg__
+ 272 00ac CDBF      		out __SP_L__,r28
+ 273 00ae DF91      		pop r29
+ 274 00b0 CF91      		pop r28
+ 275 00b2 0895      		ret
+ 276               		.size	gyems_motor_get_multiturn_angle, .-gyems_motor_get_multiturn_angle
+ 277               		.stabs	"frm:(8,1)",128,0,29,1
+ 278               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 279               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 280               	.Lscope2:
+ 281               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 282               		.stabd	78,0,0
+ 283               		.stabs	"gyems_motor_parse_can:F(0,49)",36,0,39,gyems_motor_parse_can
+ 284               		.stabs	"motor:P(0,50)",64,0,39,28
+ 285               		.stabs	"frame:P(0,51)=*(8,1)",64,0,39,30
+ 286               	.global	gyems_motor_parse_can
+ 287               		.type	gyems_motor_parse_can, @function
+ 288               	gyems_motor_parse_can:
+ 289               		.stabd	46,0,0
+  38:../../common/motor.c **** 
+  39:../../common/motor.c **** void gyems_motor_parse_can(gyems_motor *motor, CAN_frame_t *frame)
+  40:../../common/motor.c **** {
+ 290               		.stabn	68,0,40,.LM16-.LFBB3
+ 291               	.LM16:
+ 292               	.LFBB3:
+ 293 00b4 2F92      		push r2
+ 294 00b6 3F92      		push r3
+ 295 00b8 4F92      		push r4
+ 296 00ba 5F92      		push r5
+ 297 00bc 6F92      		push r6
+ 298 00be 7F92      		push r7
+ 299 00c0 8F92      		push r8
+ 300 00c2 9F92      		push r9
+ 301 00c4 AF92      		push r10
+ 302 00c6 BF92      		push r11
+GAS LISTING /tmp/ccT4oBcY.s 			page 7
+
+
+ 303 00c8 CF92      		push r12
+ 304 00ca DF92      		push r13
+ 305 00cc EF92      		push r14
+ 306 00ce FF92      		push r15
+ 307 00d0 0F93      		push r16
+ 308 00d2 1F93      		push r17
+ 309 00d4 CF93      		push r28
+ 310 00d6 DF93      		push r29
+ 311               	/* prologue: function */
+ 312               	/* frame size = 0 */
+ 313               	/* stack size = 18 */
+ 314               	.L__stack_usage = 18
+ 315 00d8 EC01      		movw r28,r24
+ 316 00da FB01      		movw r30,r22
+  41:../../common/motor.c ****   if (frame->SID == motor->id)
+ 317               		.stabn	68,0,41,.LM17-.LFBB3
+ 318               	.LM17:
+ 319 00dc 8881      		ld r24,Y
+ 320 00de 9981      		ldd r25,Y+1
+ 321 00e0 A0E0      		ldi r26,0
+ 322 00e2 B0E0      		ldi r27,0
+ 323 00e4 4081      		ld r20,Z
+ 324 00e6 5181      		ldd r21,Z+1
+ 325 00e8 6281      		ldd r22,Z+2
+ 326 00ea 7381      		ldd r23,Z+3
+ 327 00ec 4817      		cp r20,r24
+ 328 00ee 5907      		cpc r21,r25
+ 329 00f0 6A07      		cpc r22,r26
+ 330 00f2 7B07      		cpc r23,r27
+ 331 00f4 01F0      		breq .L18
+ 332               	.L10:
+ 333               	/* epilogue start */
+  42:../../common/motor.c ****   {
+  43:../../common/motor.c ****     switch (frame->data[0])
+  44:../../common/motor.c ****     {
+  45:../../common/motor.c ****     case READ_MOTOR_STATUS_1_ERROR_FLAGS:
+  46:../../common/motor.c ****       motor->temperature = frame->data[1];
+  47:../../common/motor.c ****       motor->voltage = frame->data[3] | (frame->data[4] << 8);
+  48:../../common/motor.c ****       motor->error_state = frame->data[7];
+  49:../../common/motor.c ****       break;
+  50:../../common/motor.c ****     case READ_MOTOR_STATUS_2:
+  51:../../common/motor.c ****       motor->temperature = frame->data[1];
+  52:../../common/motor.c ****       motor->torque_current = frame->data[2] | (frame->data[3] << 8);
+  53:../../common/motor.c ****       motor->speed = frame->data[4] | (frame->data[5] << 8);
+  54:../../common/motor.c ****       motor->encoder.current = frame->data[6] | (frame->data[7] << 8);
+  55:../../common/motor.c ****       break;
+  56:../../common/motor.c ****     case READ_MOTOR_STATUS_3:
+  57:../../common/motor.c ****       motor->temperature = frame->data[1];
+  58:../../common/motor.c ****       motor->torque_current = frame->data[2] | (frame->data[3] << 8);
+  59:../../common/motor.c **** 
+  60:../../common/motor.c ****       break;
+  61:../../common/motor.c ****     case READ_MULTITURN_ANGLE:
+  62:../../common/motor.c ****       if (motor->has_zeropoint == 0)
+  63:../../common/motor.c ****       {
+  64:../../common/motor.c ****         motor->multiturn_angle_0 =
+  65:../../common/motor.c ****             (int64_t)frame->data[1] | ((int64_t)frame->data[2] << 8) |
+  66:../../common/motor.c ****             ((int64_t)frame->data[3] << 16) | ((int64_t)frame->data[4] << 24) |
+GAS LISTING /tmp/ccT4oBcY.s 			page 8
+
+
+  67:../../common/motor.c ****             ((int64_t)frame->data[5] << 32) | ((int64_t)frame->data[6] << 40) |
+  68:../../common/motor.c ****             ((int64_t)frame->data[7] << 48);
+  69:../../common/motor.c ****         motor->has_zeropoint = 1;
+  70:../../common/motor.c ****         break;
+  71:../../common/motor.c ****       }
+  72:../../common/motor.c ****       else
+  73:../../common/motor.c ****       {
+  74:../../common/motor.c ****         motor->multiturn_angle =
+  75:../../common/motor.c ****             (int64_t)frame->data[1] | ((int64_t)frame->data[2] << 8) |
+  76:../../common/motor.c ****             ((int64_t)frame->data[3] << 16) | ((int64_t)frame->data[4] << 24) |
+  77:../../common/motor.c ****             ((int64_t)frame->data[5] << 32) | ((int64_t)frame->data[6] << 40) |
+  78:../../common/motor.c ****             ((int64_t)frame->data[7] << 48);
+  79:../../common/motor.c ****         break;
+  80:../../common/motor.c ****       }
+  81:../../common/motor.c ****       break;
+  82:../../common/motor.c ****     default:
+  83:../../common/motor.c ****       break;
+  84:../../common/motor.c ****     }
+  85:../../common/motor.c ****   }
+  86:../../common/motor.c **** }
+ 334               		.stabn	68,0,86,.LM18-.LFBB3
+ 335               	.LM18:
+ 336 00f6 DF91      		pop r29
+ 337 00f8 CF91      		pop r28
+ 338 00fa 1F91      		pop r17
+ 339 00fc 0F91      		pop r16
+ 340 00fe FF90      		pop r15
+ 341 0100 EF90      		pop r14
+ 342 0102 DF90      		pop r13
+ 343 0104 CF90      		pop r12
+ 344 0106 BF90      		pop r11
+ 345 0108 AF90      		pop r10
+ 346 010a 9F90      		pop r9
+ 347 010c 8F90      		pop r8
+ 348 010e 7F90      		pop r7
+ 349 0110 6F90      		pop r6
+ 350 0112 5F90      		pop r5
+ 351 0114 4F90      		pop r4
+ 352 0116 3F90      		pop r3
+ 353 0118 2F90      		pop r2
+ 354 011a 0895      		ret
+ 355               	.L18:
+  43:../../common/motor.c ****     {
+ 356               		.stabn	68,0,43,.LM19-.LFBB3
+ 357               	.LM19:
+ 358 011c 8581      		ldd r24,Z+5
+ 359 011e 8A39      		cpi r24,lo8(-102)
+ 360 0120 01F4      		brne .+2
+ 361 0122 00C0      		rjmp .L12
+ 362 0124 00F0      		brlo .L19
+ 363 0126 8C39      		cpi r24,lo8(-100)
+ 364 0128 01F4      		brne .+2
+ 365 012a 00C0      		rjmp .L15
+ 366 012c 8D39      		cpi r24,lo8(-99)
+ 367 012e 01F4      		brne .L10
+  57:../../common/motor.c ****       motor->torque_current = frame->data[2] | (frame->data[3] << 8);
+ 368               		.stabn	68,0,57,.LM20-.LFBB3
+GAS LISTING /tmp/ccT4oBcY.s 			page 9
+
+
+ 369               	.LM20:
+ 370 0130 8681      		ldd r24,Z+6
+ 371 0132 8BA7      		std Y+43,r24
+  58:../../common/motor.c **** 
+ 372               		.stabn	68,0,58,.LM21-.LFBB3
+ 373               	.LM21:
+ 374 0134 8781      		ldd r24,Z+7
+ 375 0136 9085      		ldd r25,Z+8
+ 376 0138 092E      		mov __tmp_reg__,r25
+ 377 013a 000C      		lsl r0
+ 378 013c AA0B      		sbc r26,r26
+ 379 013e BB0B      		sbc r27,r27
+ 380 0140 8FA7      		std Y+47,r24
+ 381 0142 98AB      		std Y+48,r25
+ 382 0144 A9AB      		std Y+49,r26
+ 383 0146 BAAB      		std Y+50,r27
+  60:../../common/motor.c ****     case READ_MULTITURN_ANGLE:
+ 384               		.stabn	68,0,60,.LM22-.LFBB3
+ 385               	.LM22:
+ 386 0148 00C0      		rjmp .L10
+ 387               	.L19:
+  43:../../common/motor.c ****     {
+ 388               		.stabn	68,0,43,.LM23-.LFBB3
+ 389               	.LM23:
+ 390 014a 8239      		cpi r24,lo8(-110)
+ 391 014c 01F4      		brne .L10
+  62:../../common/motor.c ****       {
+ 392               		.stabn	68,0,62,.LM24-.LFBB3
+ 393               	.LM24:
+ 394 014e DE01      		movw r26,r28
+ 395 0150 AC5B      		subi r26,-68
+ 396 0152 BF4F      		sbci r27,-1
+ 397 0154 8C91      		ld r24,X
+  64:../../common/motor.c ****             (int64_t)frame->data[1] | ((int64_t)frame->data[2] << 8) |
+ 398               		.stabn	68,0,64,.LM25-.LFBB3
+ 399               	.LM25:
+ 400 0156 8680      		ldd r8,Z+6
+ 401 0158 9780      		ldd r9,Z+7
+ 402 015a A084      		ldd r10,Z+8
+ 403 015c B184      		ldd r11,Z+9
+ 404 015e 2285      		ldd r18,Z+10
+ 405 0160 30E0      		ldi r19,0
+ 406 0162 40E0      		ldi r20,0
+ 407 0164 50E0      		ldi r21,0
+ 408 0166 60E0      		ldi r22,0
+ 409 0168 70E0      		ldi r23,0
+  62:../../common/motor.c ****       {
+ 410               		.stabn	68,0,62,.LM26-.LFBB3
+ 411               	.LM26:
+ 412 016a 8823      		tst r24
+ 413 016c 01F4      		brne .+2
+ 414 016e 00C0      		rjmp .L20
+  74:../../common/motor.c ****             (int64_t)frame->data[1] | ((int64_t)frame->data[2] << 8) |
+ 415               		.stabn	68,0,74,.LM27-.LFBB3
+ 416               	.LM27:
+ 417 0170 80E0      		ldi r24,0
+ 418 0172 90E0      		ldi r25,0
+GAS LISTING /tmp/ccT4oBcY.s 			page 10
+
+
+ 419 0174 00E2      		ldi r16,lo8(32)
+ 420 0176 0E94 0000 		call __ashldi3
+ 421 017a 762E      		mov r7,r22
+ 422 017c 172F      		mov r17,r23
+ 423 017e B82F      		mov r27,r24
+ 424 0180 A92F      		mov r26,r25
+ 425 0182 482C      		mov r4,r8
+ 426 0184 422A      		or r4,r18
+ 427 0186 592C      		mov r5,r9
+ 428 0188 532A      		or r5,r19
+ 429 018a 6A2C      		mov r6,r10
+ 430 018c 642A      		or r6,r20
+ 431 018e DB2C      		mov r13,r11
+ 432 0190 D52A      		or r13,r21
+ 433 0192 2385      		ldd r18,Z+11
+ 434 0194 30E0      		ldi r19,0
+ 435 0196 40E0      		ldi r20,0
+ 436 0198 50E0      		ldi r21,0
+ 437 019a 60E0      		ldi r22,0
+ 438 019c 70E0      		ldi r23,0
+ 439 019e 80E0      		ldi r24,0
+ 440 01a0 90E0      		ldi r25,0
+ 441 01a2 08E2      		ldi r16,lo8(40)
+ 442 01a4 0E94 0000 		call __ashldi3
+ 443 01a8 A42C      		mov r10,r4
+ 444 01aa A22A      		or r10,r18
+ 445 01ac B52C      		mov r11,r5
+ 446 01ae B32A      		or r11,r19
+ 447 01b0 C62C      		mov r12,r6
+ 448 01b2 C42A      		or r12,r20
+ 449 01b4 D52A      		or r13,r21
+ 450 01b6 E72C      		mov r14,r7
+ 451 01b8 E62A      		or r14,r22
+ 452 01ba F12E      		mov r15,r17
+ 453 01bc F72A      		or r15,r23
+ 454 01be B82B      		or r27,r24
+ 455 01c0 A92B      		or r26,r25
+ 456 01c2 2485      		ldd r18,Z+12
+ 457 01c4 30E0      		ldi r19,0
+ 458 01c6 40E0      		ldi r20,0
+ 459 01c8 50E0      		ldi r21,0
+ 460 01ca 60E0      		ldi r22,0
+ 461 01cc 70E0      		ldi r23,0
+ 462 01ce 80E0      		ldi r24,0
+ 463 01d0 90E0      		ldi r25,0
+ 464 01d2 00E3      		ldi r16,lo8(48)
+ 465 01d4 0E94 0000 		call __ashldi3
+ 466 01d8 2A29      		or r18,r10
+ 467 01da 3B29      		or r19,r11
+ 468 01dc 4C29      		or r20,r12
+ 469 01de 5D29      		or r21,r13
+ 470 01e0 6E29      		or r22,r14
+ 471 01e2 7F29      		or r23,r15
+ 472 01e4 8B2B      		or r24,r27
+ 473 01e6 9A2B      		or r25,r26
+ 474 01e8 2D87      		std Y+13,r18
+ 475 01ea 3E87      		std Y+14,r19
+GAS LISTING /tmp/ccT4oBcY.s 			page 11
+
+
+ 476 01ec 4F87      		std Y+15,r20
+ 477 01ee 588B      		std Y+16,r21
+ 478 01f0 698B      		std Y+17,r22
+ 479 01f2 7A8B      		std Y+18,r23
+ 480 01f4 8B8B      		std Y+19,r24
+ 481 01f6 9C8B      		std Y+20,r25
+ 482               		.stabn	68,0,86,.LM28-.LFBB3
+ 483               	.LM28:
+ 484 01f8 00C0      		rjmp .L10
+ 485               	.L12:
+  46:../../common/motor.c ****       motor->voltage = frame->data[3] | (frame->data[4] << 8);
+ 486               		.stabn	68,0,46,.LM29-.LFBB3
+ 487               	.LM29:
+ 488 01fa 8681      		ldd r24,Z+6
+ 489 01fc 8BA7      		std Y+43,r24
+ 490 01fe 8085      		ldd r24,Z+8
+ 491 0200 9185      		ldd r25,Z+9
+  47:../../common/motor.c ****       motor->error_state = frame->data[7];
+ 492               		.stabn	68,0,47,.LM30-.LFBB3
+ 493               	.LM30:
+ 494 0202 9DA7      		std Y+45,r25
+ 495 0204 8CA7      		std Y+44,r24
+  48:../../common/motor.c ****       break;
+ 496               		.stabn	68,0,48,.LM31-.LFBB3
+ 497               	.LM31:
+ 498 0206 8485      		ldd r24,Z+12
+ 499 0208 8EA7      		std Y+46,r24
+  49:../../common/motor.c ****     case READ_MOTOR_STATUS_2:
+ 500               		.stabn	68,0,49,.LM32-.LFBB3
+ 501               	.LM32:
+ 502 020a 00C0      		rjmp .L10
+ 503               	.L15:
+  51:../../common/motor.c ****       motor->torque_current = frame->data[2] | (frame->data[3] << 8);
+ 504               		.stabn	68,0,51,.LM33-.LFBB3
+ 505               	.LM33:
+ 506 020c 8681      		ldd r24,Z+6
+ 507 020e 8BA7      		std Y+43,r24
+  52:../../common/motor.c ****       motor->speed = frame->data[4] | (frame->data[5] << 8);
+ 508               		.stabn	68,0,52,.LM34-.LFBB3
+ 509               	.LM34:
+ 510 0210 8781      		ldd r24,Z+7
+ 511 0212 9085      		ldd r25,Z+8
+ 512 0214 092E      		mov __tmp_reg__,r25
+ 513 0216 000C      		lsl r0
+ 514 0218 AA0B      		sbc r26,r26
+ 515 021a BB0B      		sbc r27,r27
+ 516 021c 8FA7      		std Y+47,r24
+ 517 021e 98AB      		std Y+48,r25
+ 518 0220 A9AB      		std Y+49,r26
+ 519 0222 BAAB      		std Y+50,r27
+  53:../../common/motor.c ****       motor->encoder.current = frame->data[6] | (frame->data[7] << 8);
+ 520               		.stabn	68,0,53,.LM35-.LFBB3
+ 521               	.LM35:
+ 522 0224 8185      		ldd r24,Z+9
+ 523 0226 9285      		ldd r25,Z+10
+ 524 0228 092E      		mov __tmp_reg__,r25
+ 525 022a 000C      		lsl r0
+GAS LISTING /tmp/ccT4oBcY.s 			page 12
+
+
+ 526 022c AA0B      		sbc r26,r26
+ 527 022e BB0B      		sbc r27,r27
+ 528 0230 8BAB      		std Y+51,r24
+ 529 0232 9CAB      		std Y+52,r25
+ 530 0234 ADAB      		std Y+53,r26
+ 531 0236 BEAB      		std Y+54,r27
+ 532 0238 8385      		ldd r24,Z+11
+ 533 023a 9485      		ldd r25,Z+12
+  54:../../common/motor.c ****       break;
+ 534               		.stabn	68,0,54,.LM36-.LFBB3
+ 535               	.LM36:
+ 536 023c 9C83      		std Y+4,r25
+ 537 023e 8B83      		std Y+3,r24
+  55:../../common/motor.c ****     case READ_MOTOR_STATUS_3:
+ 538               		.stabn	68,0,55,.LM37-.LFBB3
+ 539               	.LM37:
+ 540 0240 00C0      		rjmp .L10
+ 541               	.L20:
+  64:../../common/motor.c ****             (int64_t)frame->data[1] | ((int64_t)frame->data[2] << 8) |
+ 542               		.stabn	68,0,64,.LM38-.LFBB3
+ 543               	.LM38:
+ 544 0242 90E0      		ldi r25,0
+ 545 0244 00E2      		ldi r16,lo8(32)
+ 546 0246 0E94 0000 		call __ashldi3
+ 547 024a 562E      		mov r5,r22
+ 548 024c 672E      		mov r6,r23
+ 549 024e 782E      		mov r7,r24
+ 550 0250 192F      		mov r17,r25
+ 551 0252 282C      		mov r2,r8
+ 552 0254 222A      		or r2,r18
+ 553 0256 392C      		mov r3,r9
+ 554 0258 332A      		or r3,r19
+ 555 025a 4A2C      		mov r4,r10
+ 556 025c 442A      		or r4,r20
+ 557 025e CB2C      		mov r12,r11
+ 558 0260 C52A      		or r12,r21
+ 559 0262 2385      		ldd r18,Z+11
+ 560 0264 30E0      		ldi r19,0
+ 561 0266 40E0      		ldi r20,0
+ 562 0268 50E0      		ldi r21,0
+ 563 026a 60E0      		ldi r22,0
+ 564 026c 70E0      		ldi r23,0
+ 565 026e 80E0      		ldi r24,0
+ 566 0270 90E0      		ldi r25,0
+ 567 0272 08E2      		ldi r16,lo8(40)
+ 568 0274 0E94 0000 		call __ashldi3
+ 569 0278 922C      		mov r9,r2
+ 570 027a 922A      		or r9,r18
+ 571 027c A32C      		mov r10,r3
+ 572 027e A32A      		or r10,r19
+ 573 0280 B42C      		mov r11,r4
+ 574 0282 B42A      		or r11,r20
+ 575 0284 C52A      		or r12,r21
+ 576 0286 D52C      		mov r13,r5
+ 577 0288 D62A      		or r13,r22
+ 578 028a E62C      		mov r14,r6
+ 579 028c E72A      		or r14,r23
+GAS LISTING /tmp/ccT4oBcY.s 			page 13
+
+
+ 580 028e F72C      		mov r15,r7
+ 581 0290 F82A      		or r15,r24
+ 582 0292 192B      		or r17,r25
+ 583 0294 2485      		ldd r18,Z+12
+ 584 0296 30E0      		ldi r19,0
+ 585 0298 40E0      		ldi r20,0
+ 586 029a 50E0      		ldi r21,0
+ 587 029c 60E0      		ldi r22,0
+ 588 029e 70E0      		ldi r23,0
+ 589 02a0 80E0      		ldi r24,0
+ 590 02a2 90E0      		ldi r25,0
+ 591 02a4 00E3      		ldi r16,lo8(48)
+ 592 02a6 0E94 0000 		call __ashldi3
+ 593 02aa 2929      		or r18,r9
+ 594 02ac 3A29      		or r19,r10
+ 595 02ae 4B29      		or r20,r11
+ 596 02b0 5C29      		or r21,r12
+ 597 02b2 6D29      		or r22,r13
+ 598 02b4 7E29      		or r23,r14
+ 599 02b6 8F29      		or r24,r15
+ 600 02b8 912B      		or r25,r17
+ 601 02ba 2D8B      		std Y+21,r18
+ 602 02bc 3E8B      		std Y+22,r19
+ 603 02be 4F8B      		std Y+23,r20
+ 604 02c0 588F      		std Y+24,r21
+ 605 02c2 698F      		std Y+25,r22
+ 606 02c4 7A8F      		std Y+26,r23
+ 607 02c6 8B8F      		std Y+27,r24
+ 608 02c8 9C8F      		std Y+28,r25
+  69:../../common/motor.c ****         break;
+ 609               		.stabn	68,0,69,.LM39-.LFBB3
+ 610               	.LM39:
+ 611 02ca 81E0      		ldi r24,lo8(1)
+ 612 02cc 8C93      		st X,r24
+  70:../../common/motor.c ****       }
+ 613               		.stabn	68,0,70,.LM40-.LFBB3
+ 614               	.LM40:
+ 615 02ce 00C0      		rjmp .L10
+ 616               		.size	gyems_motor_parse_can, .-gyems_motor_parse_can
+ 617               	.Lscope3:
+ 618               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 619               		.stabd	78,0,0
+ 620               		.stabs	"gyems_motor_reset:F(0,49)",36,0,88,gyems_motor_reset
+ 621               		.stabs	"motor:P(0,50)",64,0,88,16
+ 622               	.global	gyems_motor_reset
+ 623               		.type	gyems_motor_reset, @function
+ 624               	gyems_motor_reset:
+ 625               		.stabd	46,0,0
+  87:../../common/motor.c **** 
+  88:../../common/motor.c **** void gyems_motor_reset(gyems_motor *motor)
+  89:../../common/motor.c **** {
+ 626               		.stabn	68,0,89,.LM41-.LFBB4
+ 627               	.LM41:
+ 628               	.LFBB4:
+ 629 02d0 0F93      		push r16
+ 630 02d2 1F93      		push r17
+ 631 02d4 CF93      		push r28
+GAS LISTING /tmp/ccT4oBcY.s 			page 14
+
+
+ 632 02d6 DF93      		push r29
+ 633 02d8 CDB7      		in r28,__SP_L__
+ 634 02da DEB7      		in r29,__SP_H__
+ 635 02dc 2D97      		sbiw r28,13
+ 636 02de 0FB6      		in __tmp_reg__,__SREG__
+ 637 02e0 F894      		cli
+ 638 02e2 DEBF      		out __SP_H__,r29
+ 639 02e4 0FBE      		out __SREG__,__tmp_reg__
+ 640 02e6 CDBF      		out __SP_L__,r28
+ 641               	/* prologue: function */
+ 642               	/* frame size = 13 */
+ 643               	/* stack size = 17 */
+ 644               	.L__stack_usage = 17
+ 645 02e8 8C01      		movw r16,r24
+  90:../../common/motor.c ****   CAN_frame_t frm;
+  91:../../common/motor.c **** 
+  92:../../common/motor.c ****   frm.SID = motor->id;
+ 646               		.stabn	68,0,92,.LM42-.LFBB4
+ 647               	.LM42:
+ 648 02ea FC01      		movw r30,r24
+ 649 02ec 8081      		ld r24,Z
+ 650 02ee 9181      		ldd r25,Z+1
+ 651 02f0 A0E0      		ldi r26,0
+ 652 02f2 B0E0      		ldi r27,0
+ 653 02f4 8983      		std Y+1,r24
+ 654 02f6 9A83      		std Y+2,r25
+ 655 02f8 AB83      		std Y+3,r26
+ 656 02fa BC83      		std Y+4,r27
+  93:../../common/motor.c ****   frm.header.len = 8;
+ 657               		.stabn	68,0,93,.LM43-.LFBB4
+ 658               	.LM43:
+ 659 02fc 8D81      		ldd r24,Y+5
+ 660 02fe 817E      		andi r24,lo8(-31)
+  94:../../common/motor.c ****   frm.header.rtr = 0;
+ 661               		.stabn	68,0,94,.LM44-.LFBB4
+ 662               	.LM44:
+ 663 0300 8061      		ori r24,lo8(16)
+ 664 0302 8E7F      		andi r24,lo8(~(1<<0))
+ 665 0304 8D83      		std Y+5,r24
+  95:../../common/motor.c ****   frm.data[0] = 0x80;
+ 666               		.stabn	68,0,95,.LM45-.LFBB4
+ 667               	.LM45:
+ 668 0306 80E8      		ldi r24,lo8(-128)
+ 669 0308 8E83      		std Y+6,r24
+ 670               	.L22:
+  96:../../common/motor.c **** 
+  97:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 671               		.stabn	68,0,97,.LM46-.LFBB4
+ 672               	.LM46:
+ 673 030a CE01      		movw r24,r28
+ 674 030c 0196      		adiw r24,1
+ 675 030e 0E94 0000 		call CAN_send
+ 676 0312 8111      		cpse r24,__zero_reg__
+ 677 0314 00C0      		rjmp .L22
+ 678               	.LBB10:
+ 679               	.LBB11:
+ 680               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext1
+GAS LISTING /tmp/ccT4oBcY.s 			page 15
+
+
+ 681               	.Ltext1:
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __DOXYGEN__
+  39:/usr/lib/avr/include/util/delay.h **** #  ifndef __HAS_DELAY_CYCLES
+  40:/usr/lib/avr/include/util/delay.h **** #    define __HAS_DELAY_CYCLES 1
+  41:/usr/lib/avr/include/util/delay.h **** #  endif
+  42:/usr/lib/avr/include/util/delay.h **** #endif  /* __DOXYGEN__ */
+  43:/usr/lib/avr/include/util/delay.h **** 
+  44:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+  45:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  46:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  47:/usr/lib/avr/include/util/delay.h **** 
+  48:/usr/lib/avr/include/util/delay.h **** /** \file */
+  49:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  50:/usr/lib/avr/include/util/delay.h ****     \code
+  51:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  52:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  53:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  54:/usr/lib/avr/include/util/delay.h ****     \endcode
+  55:/usr/lib/avr/include/util/delay.h **** 
+  56:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+GAS LISTING /tmp/ccT4oBcY.s 			page 16
+
+
+  57:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  58:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  59:/usr/lib/avr/include/util/delay.h ****     used.
+  60:/usr/lib/avr/include/util/delay.h **** 
+  61:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  62:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  63:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  64:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  65:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  66:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  67:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  68:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  69:/usr/lib/avr/include/util/delay.h **** 
+  70:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  71:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  72:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  73:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  74:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  75:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  76:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  77:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+  78:/usr/lib/avr/include/util/delay.h **** 
+  79:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  80:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  81:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** */
+  84:/usr/lib/avr/include/util/delay.h **** 
+  85:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  86:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_us(double __us) __attribute__((__always_inline__));
+  87:/usr/lib/avr/include/util/delay.h **** static __inline__ void _delay_ms(double __ms) __attribute__((__always_inline__));
+  88:/usr/lib/avr/include/util/delay.h **** #endif
+  89:/usr/lib/avr/include/util/delay.h **** 
+  90:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  91:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  92:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  93:/usr/lib/avr/include/util/delay.h **** /** \ingroup util_delay
+  94:/usr/lib/avr/include/util/delay.h ****     \def F_CPU
+  95:/usr/lib/avr/include/util/delay.h ****     \brief CPU frequency in Hz
+  96:/usr/lib/avr/include/util/delay.h **** 
+  97:/usr/lib/avr/include/util/delay.h ****     The macro F_CPU specifies the CPU frequency to be considered by
+  98:/usr/lib/avr/include/util/delay.h ****     the delay macros.  This macro is normally supplied by the
+  99:/usr/lib/avr/include/util/delay.h ****     environment (e.g. from within a project header, or the project's
+ 100:/usr/lib/avr/include/util/delay.h ****     Makefile).  The value 1 MHz here is only provided as a "vanilla"
+ 101:/usr/lib/avr/include/util/delay.h ****     fallback if no such user-provided definition could be found.
+ 102:/usr/lib/avr/include/util/delay.h **** 
+ 103:/usr/lib/avr/include/util/delay.h ****     In terms of the delay functions, the CPU frequency can be given as
+ 104:/usr/lib/avr/include/util/delay.h ****     a floating-point constant (e.g. 3.6864E6 for 3.6864 MHz).
+ 105:/usr/lib/avr/include/util/delay.h ****     However, the macros in <util/setbaud.h> require it to be an
+ 106:/usr/lib/avr/include/util/delay.h ****     integer value.
+ 107:/usr/lib/avr/include/util/delay.h ****  */
+ 108:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+ 109:/usr/lib/avr/include/util/delay.h **** #endif
+ 110:/usr/lib/avr/include/util/delay.h **** 
+ 111:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+ 112:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+ 113:/usr/lib/avr/include/util/delay.h **** #endif
+GAS LISTING /tmp/ccT4oBcY.s 			page 17
+
+
+ 114:/usr/lib/avr/include/util/delay.h **** 
+ 115:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 116:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 117:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 118:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 119:/usr/lib/avr/include/util/delay.h **** #endif
+ 120:/usr/lib/avr/include/util/delay.h **** 
+ 121:/usr/lib/avr/include/util/delay.h **** /**
+ 122:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 123:/usr/lib/avr/include/util/delay.h **** 
+ 124:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 125:/usr/lib/avr/include/util/delay.h **** 
+ 126:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 127:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 130:/usr/lib/avr/include/util/delay.h **** 
+ 131:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 132:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 133:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 134:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 135:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 136:/usr/lib/avr/include/util/delay.h **** 
+ 137:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles()
+ 138:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 139:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 140:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 141:/usr/lib/avr/include/util/delay.h **** 
+ 142:/usr/lib/avr/include/util/delay.h ****    Conversion of \c __ms into clock cycles may not always result in
+ 143:/usr/lib/avr/include/util/delay.h ****    integer.  By default, the clock cycles rounded up to next
+ 144:/usr/lib/avr/include/util/delay.h ****    integer. This ensures that the user gets at least \c __ms
+ 145:/usr/lib/avr/include/util/delay.h ****    microseconds of delay.
+ 146:/usr/lib/avr/include/util/delay.h **** 
+ 147:/usr/lib/avr/include/util/delay.h ****    Alternatively, by defining the macro \c __DELAY_ROUND_DOWN__, or
+ 148:/usr/lib/avr/include/util/delay.h ****    \c __DELAY_ROUND_CLOSEST__, before including this header file, the
+ 149:/usr/lib/avr/include/util/delay.h ****    algorithm can be made to round down, or round to closest integer,
+ 150:/usr/lib/avr/include/util/delay.h ****    respectively.
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h ****    \note
+ 153:/usr/lib/avr/include/util/delay.h **** 
+ 154:/usr/lib/avr/include/util/delay.h ****    The implementation of _delay_ms() based on
+ 155:/usr/lib/avr/include/util/delay.h ****    __builtin_avr_delay_cycles() is not backward compatible with older
+ 156:/usr/lib/avr/include/util/delay.h ****    implementations.  In order to get functionality backward compatible
+ 157:/usr/lib/avr/include/util/delay.h ****    with previous versions, the macro \c "__DELAY_BACKWARD_COMPATIBLE__"
+ 158:/usr/lib/avr/include/util/delay.h ****    must be defined before including this header file. Also, the
+ 159:/usr/lib/avr/include/util/delay.h ****    backward compatible algorithm will be chosen if the code is
+ 160:/usr/lib/avr/include/util/delay.h ****    compiled in a <em>freestanding environment</em> (GCC option
+ 161:/usr/lib/avr/include/util/delay.h ****    \c -ffreestanding), as the math functions required for rounding are
+ 162:/usr/lib/avr/include/util/delay.h ****    not available to the compiler then.
+ 163:/usr/lib/avr/include/util/delay.h **** 
+ 164:/usr/lib/avr/include/util/delay.h ****  */
+ 165:/usr/lib/avr/include/util/delay.h **** void
+ 166:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 167:/usr/lib/avr/include/util/delay.h **** {
+ 168:/usr/lib/avr/include/util/delay.h **** 	double __tmp ;
+ 169:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 170:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+GAS LISTING /tmp/ccT4oBcY.s 			page 18
+
+
+ 171:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 172:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 173:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 174:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 175:/usr/lib/avr/include/util/delay.h **** 
+ 176:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 177:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 178:/usr/lib/avr/include/util/delay.h **** 
+ 179:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 180:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+ 181:/usr/lib/avr/include/util/delay.h **** 
+ 182:/usr/lib/avr/include/util/delay.h **** 	#else
+ 183:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 184:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 185:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 186:/usr/lib/avr/include/util/delay.h **** 
+ 187:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+ 682               		.stabn	68,0,187,.LM47-.LFBB4
+ 683               	.LM47:
+ 684 0316 FFE9      		ldi r31,lo8(99999)
+ 685 0318 26E8      		ldi r18,hi8(99999)
+ 686 031a 81E0      		ldi r24,hlo8(99999)
+ 687 031c F150      	1:	subi r31,1
+ 688 031e 2040      		sbci r18,0
+ 689 0320 8040      		sbci r24,0
+ 690 0322 01F4      		brne 1b
+ 691 0324 00C0      		rjmp .
+ 692 0326 0000      		nop
+ 693               	.LBE11:
+ 694               	.LBE10:
+ 695               		.stabs	"../../common/motor.c",132,0,0,.Ltext2
+ 696               	.Ltext2:
+  98:../../common/motor.c ****   {
+  99:../../common/motor.c ****   };
+ 100:../../common/motor.c ****   _delay_ms(500);
+ 101:../../common/motor.c ****   frm.SID = motor->id;
+ 697               		.stabn	68,0,101,.LM48-.LFBB4
+ 698               	.LM48:
+ 699 0328 F801      		movw r30,r16
+ 700 032a 8081      		ld r24,Z
+ 701 032c 9181      		ldd r25,Z+1
+ 702 032e A0E0      		ldi r26,0
+ 703 0330 B0E0      		ldi r27,0
+ 704 0332 8983      		std Y+1,r24
+ 705 0334 9A83      		std Y+2,r25
+ 706 0336 AB83      		std Y+3,r26
+ 707 0338 BC83      		std Y+4,r27
+ 102:../../common/motor.c ****   frm.header.len = 8;
+ 708               		.stabn	68,0,102,.LM49-.LFBB4
+ 709               	.LM49:
+ 710 033a 8D81      		ldd r24,Y+5
+ 711 033c 817E      		andi r24,lo8(-31)
+ 103:../../common/motor.c ****   frm.header.rtr = 0;
+ 712               		.stabn	68,0,103,.LM50-.LFBB4
+ 713               	.LM50:
+ 714 033e 8061      		ori r24,lo8(16)
+ 715 0340 8E7F      		andi r24,lo8(~(1<<0))
+GAS LISTING /tmp/ccT4oBcY.s 			page 19
+
+
+ 716 0342 8D83      		std Y+5,r24
+ 104:../../common/motor.c ****   frm.data[0] = 0x76;
+ 717               		.stabn	68,0,104,.LM51-.LFBB4
+ 718               	.LM51:
+ 719 0344 86E7      		ldi r24,lo8(118)
+ 720 0346 8E83      		std Y+6,r24
+ 721               	.L23:
+ 105:../../common/motor.c **** 
+ 106:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 722               		.stabn	68,0,106,.LM52-.LFBB4
+ 723               	.LM52:
+ 724 0348 CE01      		movw r24,r28
+ 725 034a 0196      		adiw r24,1
+ 726 034c 0E94 0000 		call CAN_send
+ 727 0350 8111      		cpse r24,__zero_reg__
+ 728 0352 00C0      		rjmp .L23
+ 729               	.LBB12:
+ 730               	.LBB13:
+ 731               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext3
+ 732               	.Ltext3:
+ 733               		.stabn	68,0,187,.LM53-.LFBB4
+ 734               	.LM53:
+ 735 0354 FFE9      		ldi r31,lo8(99999)
+ 736 0356 26E8      		ldi r18,hi8(99999)
+ 737 0358 81E0      		ldi r24,hlo8(99999)
+ 738 035a F150      	1:	subi r31,1
+ 739 035c 2040      		sbci r18,0
+ 740 035e 8040      		sbci r24,0
+ 741 0360 01F4      		brne 1b
+ 742 0362 00C0      		rjmp .
+ 743 0364 0000      		nop
+ 744               	.LBE13:
+ 745               	.LBE12:
+ 746               		.stabs	"../../common/motor.c",132,0,0,.Ltext4
+ 747               	.Ltext4:
+ 107:../../common/motor.c ****   {
+ 108:../../common/motor.c ****   };
+ 109:../../common/motor.c ****   _delay_ms(500);
+ 110:../../common/motor.c **** 
+ 111:../../common/motor.c ****   frm.SID = motor->id;
+ 748               		.stabn	68,0,111,.LM54-.LFBB4
+ 749               	.LM54:
+ 750 0366 F801      		movw r30,r16
+ 751 0368 8081      		ld r24,Z
+ 752 036a 9181      		ldd r25,Z+1
+ 753 036c A0E0      		ldi r26,0
+ 754 036e B0E0      		ldi r27,0
+ 755 0370 8983      		std Y+1,r24
+ 756 0372 9A83      		std Y+2,r25
+ 757 0374 AB83      		std Y+3,r26
+ 758 0376 BC83      		std Y+4,r27
+ 112:../../common/motor.c ****   frm.header.len = 8;
+ 759               		.stabn	68,0,112,.LM55-.LFBB4
+ 760               	.LM55:
+ 761 0378 8D81      		ldd r24,Y+5
+ 762 037a 817E      		andi r24,lo8(-31)
+ 113:../../common/motor.c ****   frm.header.rtr = 0;
+GAS LISTING /tmp/ccT4oBcY.s 			page 20
+
+
+ 763               		.stabn	68,0,113,.LM56-.LFBB4
+ 764               	.LM56:
+ 765 037c 8061      		ori r24,lo8(16)
+ 766 037e 8E7F      		andi r24,lo8(~(1<<0))
+ 767 0380 8D83      		std Y+5,r24
+ 114:../../common/motor.c ****   frm.data[0] = 0x88;
+ 768               		.stabn	68,0,114,.LM57-.LFBB4
+ 769               	.LM57:
+ 770 0382 88E8      		ldi r24,lo8(-120)
+ 771 0384 8E83      		std Y+6,r24
+ 772               	.L24:
+ 115:../../common/motor.c **** 
+ 116:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 773               		.stabn	68,0,116,.LM58-.LFBB4
+ 774               	.LM58:
+ 775 0386 CE01      		movw r24,r28
+ 776 0388 0196      		adiw r24,1
+ 777 038a 0E94 0000 		call CAN_send
+ 778 038e 8111      		cpse r24,__zero_reg__
+ 779 0390 00C0      		rjmp .L24
+ 780               	.LBB14:
+ 781               	.LBB15:
+ 782               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext5
+ 783               	.Ltext5:
+ 784               		.stabn	68,0,187,.LM59-.LFBB4
+ 785               	.LM59:
+ 786 0392 FFE9      		ldi r31,lo8(99999)
+ 787 0394 26E8      		ldi r18,hi8(99999)
+ 788 0396 81E0      		ldi r24,hlo8(99999)
+ 789 0398 F150      	1:	subi r31,1
+ 790 039a 2040      		sbci r18,0
+ 791 039c 8040      		sbci r24,0
+ 792 039e 01F4      		brne 1b
+ 793 03a0 00C0      		rjmp .
+ 794 03a2 0000      		nop
+ 795               	/* epilogue start */
+ 796               	.LBE15:
+ 797               	.LBE14:
+ 798               		.stabs	"../../common/motor.c",132,0,0,.Ltext6
+ 799               	.Ltext6:
+ 117:../../common/motor.c ****   {
+ 118:../../common/motor.c ****   };
+ 119:../../common/motor.c ****   _delay_ms(500);
+ 120:../../common/motor.c **** }
+ 800               		.stabn	68,0,120,.LM60-.LFBB4
+ 801               	.LM60:
+ 802 03a4 2D96      		adiw r28,13
+ 803 03a6 0FB6      		in __tmp_reg__,__SREG__
+ 804 03a8 F894      		cli
+ 805 03aa DEBF      		out __SP_H__,r29
+ 806 03ac 0FBE      		out __SREG__,__tmp_reg__
+ 807 03ae CDBF      		out __SP_L__,r28
+ 808 03b0 DF91      		pop r29
+ 809 03b2 CF91      		pop r28
+ 810 03b4 1F91      		pop r17
+ 811 03b6 0F91      		pop r16
+ 812 03b8 0895      		ret
+GAS LISTING /tmp/ccT4oBcY.s 			page 21
+
+
+ 813               		.size	gyems_motor_reset, .-gyems_motor_reset
+ 814               		.stabs	"frm:(8,1)",128,0,90,1
+ 815               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 816               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 817               	.Lscope4:
+ 818               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 819               		.stabd	78,0,0
+ 820               		.stabs	"gyems_motor_set_torque:F(0,49)",36,0,122,gyems_motor_set_torque
+ 821               		.stabs	"motor:P(0,50)",64,0,122,24
+ 822               		.stabs	"torque:P(5,3)",64,0,122,22
+ 823               	.global	gyems_motor_set_torque
+ 824               		.type	gyems_motor_set_torque, @function
+ 825               	gyems_motor_set_torque:
+ 826               		.stabd	46,0,0
+ 121:../../common/motor.c **** 
+ 122:../../common/motor.c **** void gyems_motor_set_torque(gyems_motor *motor, int16_t torque)
+ 123:../../common/motor.c **** {
+ 827               		.stabn	68,0,123,.LM61-.LFBB5
+ 828               	.LM61:
+ 829               	.LFBB5:
+ 830 03ba CF93      		push r28
+ 831 03bc DF93      		push r29
+ 832 03be CDB7      		in r28,__SP_L__
+ 833 03c0 DEB7      		in r29,__SP_H__
+ 834 03c2 2D97      		sbiw r28,13
+ 835 03c4 0FB6      		in __tmp_reg__,__SREG__
+ 836 03c6 F894      		cli
+ 837 03c8 DEBF      		out __SP_H__,r29
+ 838 03ca 0FBE      		out __SREG__,__tmp_reg__
+ 839 03cc CDBF      		out __SP_L__,r28
+ 840               	/* prologue: function */
+ 841               	/* frame size = 13 */
+ 842               	/* stack size = 15 */
+ 843               	.L__stack_usage = 15
+ 124:../../common/motor.c ****   int16_t a = 62;
+ 125:../../common/motor.c ****   CAN_frame_t frm;
+ 126:../../common/motor.c ****   frm.SID = motor->id;
+ 844               		.stabn	68,0,126,.LM62-.LFBB5
+ 845               	.LM62:
+ 846 03ce FC01      		movw r30,r24
+ 847 03d0 8081      		ld r24,Z
+ 848 03d2 9181      		ldd r25,Z+1
+ 849 03d4 A0E0      		ldi r26,0
+ 850 03d6 B0E0      		ldi r27,0
+ 851 03d8 8983      		std Y+1,r24
+ 852 03da 9A83      		std Y+2,r25
+ 853 03dc AB83      		std Y+3,r26
+ 854 03de BC83      		std Y+4,r27
+ 127:../../common/motor.c ****   frm.header.len = 8;
+ 855               		.stabn	68,0,127,.LM63-.LFBB5
+ 856               	.LM63:
+ 857 03e0 8D81      		ldd r24,Y+5
+ 858 03e2 817E      		andi r24,lo8(-31)
+ 128:../../common/motor.c ****   frm.header.rtr = 0;
+ 859               		.stabn	68,0,128,.LM64-.LFBB5
+ 860               	.LM64:
+ 861 03e4 8061      		ori r24,lo8(16)
+GAS LISTING /tmp/ccT4oBcY.s 			page 22
+
+
+ 862 03e6 8E7F      		andi r24,lo8(~(1<<0))
+ 863 03e8 8D83      		std Y+5,r24
+ 129:../../common/motor.c ****   frm.data[0] = 0xA1;
+ 864               		.stabn	68,0,129,.LM65-.LFBB5
+ 865               	.LM65:
+ 866 03ea 81EA      		ldi r24,lo8(-95)
+ 867 03ec 8E83      		std Y+6,r24
+ 130:../../common/motor.c ****   frm.data[1] = 0x00;
+ 868               		.stabn	68,0,130,.LM66-.LFBB5
+ 869               	.LM66:
+ 870 03ee 1F82      		std Y+7,__zero_reg__
+ 131:../../common/motor.c ****   frm.data[2] = 0x00;
+ 871               		.stabn	68,0,131,.LM67-.LFBB5
+ 872               	.LM67:
+ 873 03f0 1886      		std Y+8,__zero_reg__
+ 132:../../common/motor.c ****   frm.data[3] = 0x00;
+ 874               		.stabn	68,0,132,.LM68-.LFBB5
+ 875               	.LM68:
+ 876 03f2 1986      		std Y+9,__zero_reg__
+ 133:../../common/motor.c ****   frm.data[4] = *(uint8_t *)(&a);
+ 877               		.stabn	68,0,133,.LM69-.LFBB5
+ 878               	.LM69:
+ 879 03f4 8EE3      		ldi r24,lo8(62)
+ 880 03f6 8A87      		std Y+10,r24
+ 134:../../common/motor.c ****   frm.data[5] = *((uint8_t *)(&a) + 1);
+ 881               		.stabn	68,0,134,.LM70-.LFBB5
+ 882               	.LM70:
+ 883 03f8 1B86      		std Y+11,__zero_reg__
+ 135:../../common/motor.c ****   frm.data[6] = 0x00;
+ 884               		.stabn	68,0,135,.LM71-.LFBB5
+ 885               	.LM71:
+ 886 03fa 1C86      		std Y+12,__zero_reg__
+ 136:../../common/motor.c ****   frm.data[7] = 0x00;
+ 887               		.stabn	68,0,136,.LM72-.LFBB5
+ 888               	.LM72:
+ 889 03fc 1D86      		std Y+13,__zero_reg__
+ 890               	.L29:
+ 137:../../common/motor.c **** 
+ 138:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 891               		.stabn	68,0,138,.LM73-.LFBB5
+ 892               	.LM73:
+ 893 03fe CE01      		movw r24,r28
+ 894 0400 0196      		adiw r24,1
+ 895 0402 0E94 0000 		call CAN_send
+ 896 0406 8111      		cpse r24,__zero_reg__
+ 897 0408 00C0      		rjmp .L29
+ 898               	/* epilogue start */
+ 139:../../common/motor.c ****   {
+ 140:../../common/motor.c ****   };
+ 141:../../common/motor.c **** }
+ 899               		.stabn	68,0,141,.LM74-.LFBB5
+ 900               	.LM74:
+ 901 040a 2D96      		adiw r28,13
+ 902 040c 0FB6      		in __tmp_reg__,__SREG__
+ 903 040e F894      		cli
+ 904 0410 DEBF      		out __SP_H__,r29
+ 905 0412 0FBE      		out __SREG__,__tmp_reg__
+GAS LISTING /tmp/ccT4oBcY.s 			page 23
+
+
+ 906 0414 CDBF      		out __SP_L__,r28
+ 907 0416 DF91      		pop r29
+ 908 0418 CF91      		pop r28
+ 909 041a 0895      		ret
+ 910               		.size	gyems_motor_set_torque, .-gyems_motor_set_torque
+ 911               		.stabs	"frm:(8,1)",128,0,125,1
+ 912               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 913               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 914               	.Lscope5:
+ 915               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 916               		.stabd	78,0,0
+ 917               		.stabs	"gyems_motor_set_speed:F(0,49)",36,0,143,gyems_motor_set_speed
+ 918               		.stabs	"motor:P(0,50)",64,0,143,30
+ 919               		.stabs	"speed:p(5,5)",160,0,143,14
+ 920               	.global	gyems_motor_set_speed
+ 921               		.type	gyems_motor_set_speed, @function
+ 922               	gyems_motor_set_speed:
+ 923               		.stabd	46,0,0
+ 142:../../common/motor.c **** 
+ 143:../../common/motor.c **** void gyems_motor_set_speed(gyems_motor *motor, int32_t speed)
+ 144:../../common/motor.c **** {
+ 924               		.stabn	68,0,144,.LM75-.LFBB6
+ 925               	.LM75:
+ 926               	.LFBB6:
+ 927 041c CF93      		push r28
+ 928 041e DF93      		push r29
+ 929 0420 CDB7      		in r28,__SP_L__
+ 930 0422 DEB7      		in r29,__SP_H__
+ 931 0424 6197      		sbiw r28,17
+ 932 0426 0FB6      		in __tmp_reg__,__SREG__
+ 933 0428 F894      		cli
+ 934 042a DEBF      		out __SP_H__,r29
+ 935 042c 0FBE      		out __SREG__,__tmp_reg__
+ 936 042e CDBF      		out __SP_L__,r28
+ 937               	/* prologue: function */
+ 938               	/* frame size = 17 */
+ 939               	/* stack size = 19 */
+ 940               	.L__stack_usage = 19
+ 941 0430 FC01      		movw r30,r24
+ 145:../../common/motor.c ****   motor->speed = speed;
+ 942               		.stabn	68,0,145,.LM76-.LFBB6
+ 943               	.LM76:
+ 944 0432 9A01      		movw r18,r20
+ 945 0434 AB01      		movw r20,r22
+ 946 0436 23AB      		std Z+51,r18
+ 947 0438 34AB      		std Z+52,r19
+ 948 043a 65AB      		std Z+53,r22
+ 949 043c 56AB      		std Z+54,r21
+ 146:../../common/motor.c ****   speed = speed * 100;
+ 950               		.stabn	68,0,146,.LM77-.LFBB6
+ 951               	.LM77:
+ 952 043e A4E6      		ldi r26,lo8(100)
+ 953 0440 B0E0      		ldi r27,0
+ 954 0442 0E94 0000 		call __muluhisi3
+ 955 0446 6E87      		std Y+14,r22
+ 956 0448 7F87      		std Y+15,r23
+ 957 044a 888B      		std Y+16,r24
+GAS LISTING /tmp/ccT4oBcY.s 			page 24
+
+
+ 958 044c 998B      		std Y+17,r25
+ 147:../../common/motor.c ****   CAN_frame_t frm;
+ 148:../../common/motor.c ****   // Motor status 1
+ 149:../../common/motor.c ****   frm.SID = motor->id;
+ 959               		.stabn	68,0,149,.LM78-.LFBB6
+ 960               	.LM78:
+ 961 044e 8081      		ld r24,Z
+ 962 0450 9181      		ldd r25,Z+1
+ 963 0452 A0E0      		ldi r26,0
+ 964 0454 B0E0      		ldi r27,0
+ 965 0456 8983      		std Y+1,r24
+ 966 0458 9A83      		std Y+2,r25
+ 967 045a AB83      		std Y+3,r26
+ 968 045c BC83      		std Y+4,r27
+ 150:../../common/motor.c ****   frm.header.len = 8;
+ 969               		.stabn	68,0,150,.LM79-.LFBB6
+ 970               	.LM79:
+ 971 045e 8D81      		ldd r24,Y+5
+ 972 0460 817E      		andi r24,lo8(-31)
+ 151:../../common/motor.c ****   frm.header.rtr = 0;
+ 973               		.stabn	68,0,151,.LM80-.LFBB6
+ 974               	.LM80:
+ 975 0462 8061      		ori r24,lo8(16)
+ 976 0464 8E7F      		andi r24,lo8(~(1<<0))
+ 977 0466 8D83      		std Y+5,r24
+ 152:../../common/motor.c ****   frm.data[0] = SET_SPEED;
+ 978               		.stabn	68,0,152,.LM81-.LFBB6
+ 979               	.LM81:
+ 980 0468 82EA      		ldi r24,lo8(-94)
+ 981 046a 8E83      		std Y+6,r24
+ 153:../../common/motor.c ****   frm.data[4] = *(uint8_t *)(&speed);
+ 982               		.stabn	68,0,153,.LM82-.LFBB6
+ 983               	.LM82:
+ 984 046c 6A87      		std Y+10,r22
+ 154:../../common/motor.c ****   frm.data[5] = *((uint8_t *)(&speed) + 1);
+ 985               		.stabn	68,0,154,.LM83-.LFBB6
+ 986               	.LM83:
+ 987 046e 7B87      		std Y+11,r23
+ 155:../../common/motor.c ****   frm.data[6] = *((uint8_t *)(&speed) + 2);
+ 988               		.stabn	68,0,155,.LM84-.LFBB6
+ 989               	.LM84:
+ 990 0470 8889      		ldd r24,Y+16
+ 991 0472 8C87      		std Y+12,r24
+ 156:../../common/motor.c ****   frm.data[7] = *((uint8_t *)(&speed) + 3);
+ 992               		.stabn	68,0,156,.LM85-.LFBB6
+ 993               	.LM85:
+ 994 0474 8989      		ldd r24,Y+17
+ 995 0476 8D87      		std Y+13,r24
+ 996               	.L32:
+ 157:../../common/motor.c **** 
+ 158:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 997               		.stabn	68,0,158,.LM86-.LFBB6
+ 998               	.LM86:
+ 999 0478 CE01      		movw r24,r28
+ 1000 047a 0196      		adiw r24,1
+ 1001 047c 0E94 0000 		call CAN_send
+ 1002 0480 8111      		cpse r24,__zero_reg__
+GAS LISTING /tmp/ccT4oBcY.s 			page 25
+
+
+ 1003 0482 00C0      		rjmp .L32
+ 1004               	/* epilogue start */
+ 159:../../common/motor.c ****   {
+ 160:../../common/motor.c ****   }
+ 161:../../common/motor.c **** }
+ 1005               		.stabn	68,0,161,.LM87-.LFBB6
+ 1006               	.LM87:
+ 1007 0484 6196      		adiw r28,17
+ 1008 0486 0FB6      		in __tmp_reg__,__SREG__
+ 1009 0488 F894      		cli
+ 1010 048a DEBF      		out __SP_H__,r29
+ 1011 048c 0FBE      		out __SREG__,__tmp_reg__
+ 1012 048e CDBF      		out __SP_L__,r28
+ 1013 0490 DF91      		pop r29
+ 1014 0492 CF91      		pop r28
+ 1015 0494 0895      		ret
+ 1016               		.size	gyems_motor_set_speed, .-gyems_motor_set_speed
+ 1017               		.stabs	"frm:(8,1)",128,0,147,1
+ 1018               		.stabn	192,0,0,.LFBB6-.LFBB6
+ 1019               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 1020               	.Lscope6:
+ 1021               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 1022               		.stabd	78,0,0
+ 1023               		.stabs	"gyems_motor_find_endpoints:F(0,49)",36,0,163,gyems_motor_find_endpoints
+ 1024               		.stabs	"motor:P(0,50)",64,0,163,24
+ 1025               	.global	gyems_motor_find_endpoints
+ 1026               		.type	gyems_motor_find_endpoints, @function
+ 1027               	gyems_motor_find_endpoints:
+ 1028               		.stabd	46,0,0
+ 162:../../common/motor.c **** 
+ 163:../../common/motor.c **** void gyems_motor_find_endpoints(gyems_motor *motor)
+ 164:../../common/motor.c **** {
+ 1029               		.stabn	68,0,164,.LM88-.LFBB7
+ 1030               	.LM88:
+ 1031               	.LFBB7:
+ 1032               	/* prologue: function */
+ 1033               	/* frame size = 0 */
+ 1034               	/* stack size = 0 */
+ 1035               	.L__stack_usage = 0
+ 165:../../common/motor.c ****   motor->endpoints_valid = 0;
+ 1036               		.stabn	68,0,165,.LM89-.LFBB7
+ 1037               	.LM89:
+ 1038 0496 FC01      		movw r30,r24
+ 1039 0498 EA5B      		subi r30,-70
+ 1040 049a FF4F      		sbci r31,-1
+ 1041 049c 1082      		st Z,__zero_reg__
+ 166:../../common/motor.c ****   gyems_motor_set_speed(motor, motor->endpoint_speed);
+ 1042               		.stabn	68,0,166,.LM90-.LFBB7
+ 1043               	.LM90:
+ 1044 049e FC01      		movw r30,r24
+ 1045 04a0 42AD      		ldd r20,Z+58
+ 1046 04a2 53AD      		ldd r21,Z+59
+ 1047 04a4 64AD      		ldd r22,Z+60
+ 1048 04a6 75AD      		ldd r23,Z+61
+ 1049 04a8 0C94 0000 		jmp gyems_motor_set_speed
+ 1050               		.size	gyems_motor_find_endpoints, .-gyems_motor_find_endpoints
+ 1051               	.Lscope7:
+GAS LISTING /tmp/ccT4oBcY.s 			page 26
+
+
+ 1052               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 1053               		.stabd	78,0,0
+ 1054               		.stabs	"gyems_motor_parse_switches:F(0,49)",36,0,169,gyems_motor_parse_switches
+ 1055               		.stabs	"motor:P(0,50)",64,0,169,24
+ 1056               		.stabs	"switchport:P(5,2)",64,0,169,22
+ 1057               	.global	gyems_motor_parse_switches
+ 1058               		.type	gyems_motor_parse_switches, @function
+ 1059               	gyems_motor_parse_switches:
+ 1060               		.stabd	46,0,0
+ 167:../../common/motor.c **** }
+ 168:../../common/motor.c **** 
+ 169:../../common/motor.c **** void gyems_motor_parse_switches(gyems_motor *motor, uint8_t switchport)
+ 170:../../common/motor.c **** {
+ 1061               		.stabn	68,0,170,.LM91-.LFBB8
+ 1062               	.LM91:
+ 1063               	.LFBB8:
+ 1064               	/* prologue: function */
+ 1065               	/* frame size = 0 */
+ 1066               	/* stack size = 0 */
+ 1067               	.L__stack_usage = 0
+ 171:../../common/motor.c ****   if (!(switchport & (1 << motor->endpoint_1_pin)))
+ 1068               		.stabn	68,0,171,.LM92-.LFBB8
+ 1069               	.LM92:
+ 1070 04ac 70E0      		ldi r23,0
+ 1071 04ae FC01      		movw r30,r24
+ 1072 04b0 EE5B      		subi r30,-66
+ 1073 04b2 FF4F      		sbci r31,-1
+ 1074 04b4 0080      		ld r0,Z
+ 1075 04b6 00C0      		rjmp 2f
+ 1076               		1:
+ 1077 04b8 7595      		asr r23
+ 1078 04ba 6795      		ror r22
+ 1079               		2:
+ 1080 04bc 0A94      		dec r0
+ 1081 04be 02F4      		brpl 1b
+ 1082 04c0 60FD      		sbrc r22,0
+ 1083 04c2 00C0      		rjmp .L35
+ 172:../../common/motor.c ****   {
+ 173:../../common/motor.c ****     if (motor->endpoints_valid == 0)
+ 1084               		.stabn	68,0,173,.LM93-.LFBB8
+ 1085               	.LM93:
+ 1086 04c4 3496      		adiw r30,4
+ 1087 04c6 2081      		ld r18,Z
+ 1088 04c8 2111      		cpse r18,__zero_reg__
+ 1089 04ca 00C0      		rjmp .L35
+ 174:../../common/motor.c ****     {
+ 175:../../common/motor.c ****       if (motor->endpoints_found == 0)
+ 1090               		.stabn	68,0,175,.LM94-.LFBB8
+ 1091               	.LM94:
+ 1092 04cc DC01      		movw r26,r24
+ 1093 04ce DE96      		adiw r26,62
+ 1094 04d0 4D91      		ld r20,X+
+ 1095 04d2 5D91      		ld r21,X+
+ 1096 04d4 6D91      		ld r22,X+
+ 1097 04d6 7C91      		ld r23,X
+ 1098 04d8 1397      		sbiw r26,3
+ 1099 04da 452B      		or r20,r21
+GAS LISTING /tmp/ccT4oBcY.s 			page 27
+
+
+ 1100 04dc 462B      		or r20,r22
+ 1101 04de 472B      		or r20,r23
+ 1102 04e0 01F0      		breq .L37
+ 1103               	.L35:
+ 1104 04e2 0895      		ret
+ 1105               	.L37:
+ 176:../../common/motor.c ****       {
+ 177:../../common/motor.c ****         motor->endpoints_found = 1;
+ 1106               		.stabn	68,0,177,.LM95-.LFBB8
+ 1107               	.LM95:
+ 1108 04e4 41E0      		ldi r20,lo8(1)
+ 1109 04e6 50E0      		ldi r21,0
+ 1110 04e8 60E0      		ldi r22,0
+ 1111 04ea 70E0      		ldi r23,0
+ 1112 04ec 4D93      		st X+,r20
+ 1113 04ee 5D93      		st X+,r21
+ 1114 04f0 6D93      		st X+,r22
+ 1115 04f2 7C93      		st X,r23
+ 1116 04f4 1397      		sbiw r26,3
+ 1117               	.LBB16:
+ 1118               	.LBB17:
+ 165:../../common/motor.c ****   gyems_motor_set_speed(motor, motor->endpoint_speed);
+ 1119               		.stabn	68,0,165,.LM96-.LFBB8
+ 1120               	.LM96:
+ 1121 04f6 1082      		st Z,__zero_reg__
+ 166:../../common/motor.c **** }
+ 1122               		.stabn	68,0,166,.LM97-.LFBB8
+ 1123               	.LM97:
+ 1124 04f8 FC01      		movw r30,r24
+ 1125 04fa 42AD      		ldd r20,Z+58
+ 1126 04fc 53AD      		ldd r21,Z+59
+ 1127 04fe 64AD      		ldd r22,Z+60
+ 1128 0500 75AD      		ldd r23,Z+61
+ 1129 0502 0C94 0000 		jmp gyems_motor_set_speed
+ 1130               	.LBE17:
+ 1131               	.LBE16:
+ 1132               		.size	gyems_motor_parse_switches, .-gyems_motor_parse_switches
+ 1133               	.Lscope8:
+ 1134               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 1135               		.stabd	78,0,0
+ 1136               		.stabs	"gyems_motor_stop:F(0,49)",36,0,184,gyems_motor_stop
+ 1137               		.stabs	"motor:P(0,50)",64,0,184,24
+ 1138               	.global	gyems_motor_stop
+ 1139               		.type	gyems_motor_stop, @function
+ 1140               	gyems_motor_stop:
+ 1141               		.stabd	46,0,0
+ 178:../../common/motor.c ****         gyems_motor_find_endpoints(motor);
+ 179:../../common/motor.c ****       }
+ 180:../../common/motor.c ****     }
+ 181:../../common/motor.c ****   }
+ 182:../../common/motor.c **** }
+ 183:../../common/motor.c **** 
+ 184:../../common/motor.c **** void gyems_motor_stop(gyems_motor *motor)
+ 185:../../common/motor.c **** {
+ 1142               		.stabn	68,0,185,.LM98-.LFBB9
+ 1143               	.LM98:
+ 1144               	.LFBB9:
+GAS LISTING /tmp/ccT4oBcY.s 			page 28
+
+
+ 1145 0506 CF93      		push r28
+ 1146 0508 DF93      		push r29
+ 1147 050a CDB7      		in r28,__SP_L__
+ 1148 050c DEB7      		in r29,__SP_H__
+ 1149 050e 2D97      		sbiw r28,13
+ 1150 0510 0FB6      		in __tmp_reg__,__SREG__
+ 1151 0512 F894      		cli
+ 1152 0514 DEBF      		out __SP_H__,r29
+ 1153 0516 0FBE      		out __SREG__,__tmp_reg__
+ 1154 0518 CDBF      		out __SP_L__,r28
+ 1155               	/* prologue: function */
+ 1156               	/* frame size = 13 */
+ 1157               	/* stack size = 15 */
+ 1158               	.L__stack_usage = 15
+ 186:../../common/motor.c ****   CAN_frame_t frm;
+ 187:../../common/motor.c ****   frm.SID = motor->id;
+ 1159               		.stabn	68,0,187,.LM99-.LFBB9
+ 1160               	.LM99:
+ 1161 051a FC01      		movw r30,r24
+ 1162 051c 8081      		ld r24,Z
+ 1163 051e 9181      		ldd r25,Z+1
+ 1164 0520 A0E0      		ldi r26,0
+ 1165 0522 B0E0      		ldi r27,0
+ 1166 0524 8983      		std Y+1,r24
+ 1167 0526 9A83      		std Y+2,r25
+ 1168 0528 AB83      		std Y+3,r26
+ 1169 052a BC83      		std Y+4,r27
+ 188:../../common/motor.c ****   frm.header.len = 8;
+ 1170               		.stabn	68,0,188,.LM100-.LFBB9
+ 1171               	.LM100:
+ 1172 052c 8D81      		ldd r24,Y+5
+ 1173 052e 817E      		andi r24,lo8(-31)
+ 189:../../common/motor.c ****   frm.header.rtr = 0;
+ 1174               		.stabn	68,0,189,.LM101-.LFBB9
+ 1175               	.LM101:
+ 1176 0530 8061      		ori r24,lo8(16)
+ 1177 0532 8E7F      		andi r24,lo8(~(1<<0))
+ 1178 0534 8D83      		std Y+5,r24
+ 190:../../common/motor.c ****   frm.data[0] = 0x81;
+ 1179               		.stabn	68,0,190,.LM102-.LFBB9
+ 1180               	.LM102:
+ 1181 0536 81E8      		ldi r24,lo8(-127)
+ 1182 0538 8E83      		std Y+6,r24
+ 191:../../common/motor.c ****   frm.data[1] = 0x00;
+ 1183               		.stabn	68,0,191,.LM103-.LFBB9
+ 1184               	.LM103:
+ 1185 053a 1F82      		std Y+7,__zero_reg__
+ 192:../../common/motor.c ****   frm.data[2] = 0x00;
+ 1186               		.stabn	68,0,192,.LM104-.LFBB9
+ 1187               	.LM104:
+ 1188 053c 1886      		std Y+8,__zero_reg__
+ 193:../../common/motor.c ****   frm.data[3] = 0x00;
+ 1189               		.stabn	68,0,193,.LM105-.LFBB9
+ 1190               	.LM105:
+ 1191 053e 1986      		std Y+9,__zero_reg__
+ 194:../../common/motor.c ****   frm.data[4] = 0x00;
+ 1192               		.stabn	68,0,194,.LM106-.LFBB9
+GAS LISTING /tmp/ccT4oBcY.s 			page 29
+
+
+ 1193               	.LM106:
+ 1194 0540 1A86      		std Y+10,__zero_reg__
+ 195:../../common/motor.c ****   frm.data[5] = 0x00;
+ 1195               		.stabn	68,0,195,.LM107-.LFBB9
+ 1196               	.LM107:
+ 1197 0542 1B86      		std Y+11,__zero_reg__
+ 196:../../common/motor.c ****   frm.data[6] = 0x00;
+ 1198               		.stabn	68,0,196,.LM108-.LFBB9
+ 1199               	.LM108:
+ 1200 0544 1C86      		std Y+12,__zero_reg__
+ 197:../../common/motor.c ****   frm.data[7] = 0x00;
+ 1201               		.stabn	68,0,197,.LM109-.LFBB9
+ 1202               	.LM109:
+ 1203 0546 1D86      		std Y+13,__zero_reg__
+ 1204               	.L39:
+ 198:../../common/motor.c ****   while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 1205               		.stabn	68,0,198,.LM110-.LFBB9
+ 1206               	.LM110:
+ 1207 0548 CE01      		movw r24,r28
+ 1208 054a 0196      		adiw r24,1
+ 1209 054c 0E94 0000 		call CAN_send
+ 1210 0550 8111      		cpse r24,__zero_reg__
+ 1211 0552 00C0      		rjmp .L39
+ 1212               	/* epilogue start */
+ 199:../../common/motor.c ****   {
+ 200:../../common/motor.c ****   }
+ 201:../../common/motor.c **** }
+ 1213               		.stabn	68,0,201,.LM111-.LFBB9
+ 1214               	.LM111:
+ 1215 0554 2D96      		adiw r28,13
+ 1216 0556 0FB6      		in __tmp_reg__,__SREG__
+ 1217 0558 F894      		cli
+ 1218 055a DEBF      		out __SP_H__,r29
+ 1219 055c 0FBE      		out __SREG__,__tmp_reg__
+ 1220 055e CDBF      		out __SP_L__,r28
+ 1221 0560 DF91      		pop r29
+ 1222 0562 CF91      		pop r28
+ 1223 0564 0895      		ret
+ 1224               		.size	gyems_motor_stop, .-gyems_motor_stop
+ 1225               		.stabs	"frm:(8,1)",128,0,186,1
+ 1226               		.stabn	192,0,0,.LFBB9-.LFBB9
+ 1227               		.stabn	224,0,0,.Lscope9-.LFBB9
+ 1228               	.Lscope9:
+ 1229               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 1230               		.stabd	78,0,0
+ 1231               	.global	__muldi3
+ 1232               		.stabs	"gyems_motor_set_multiturn_angle:F(0,49)",36,0,203,gyems_motor_set_multiturn_angle
+ 1233               		.stabs	"motor:P(0,50)",64,0,203,2
+ 1234               		.stabs	"speed:p(5,4)",160,0,203,18
+ 1235               		.stabs	"angle:P(5,5)",64,0,204,4
+ 1236               	.global	gyems_motor_set_multiturn_angle
+ 1237               		.type	gyems_motor_set_multiturn_angle, @function
+ 1238               	gyems_motor_set_multiturn_angle:
+ 1239               		.stabd	46,0,0
+ 202:../../common/motor.c **** 
+ 203:../../common/motor.c **** void gyems_motor_set_multiturn_angle(gyems_motor *motor, uint16_t speed,
+ 204:../../common/motor.c ****                                      int32_t angle)
+GAS LISTING /tmp/ccT4oBcY.s 			page 30
+
+
+ 205:../../common/motor.c **** {
+ 1240               		.stabn	68,0,205,.LM112-.LFBB10
+ 1241               	.LM112:
+ 1242               	.LFBB10:
+ 1243 0566 2F92      		push r2
+ 1244 0568 3F92      		push r3
+ 1245 056a 4F92      		push r4
+ 1246 056c 5F92      		push r5
+ 1247 056e 6F92      		push r6
+ 1248 0570 7F92      		push r7
+ 1249 0572 8F92      		push r8
+ 1250 0574 9F92      		push r9
+ 1251 0576 AF92      		push r10
+ 1252 0578 BF92      		push r11
+ 1253 057a CF92      		push r12
+ 1254 057c DF92      		push r13
+ 1255 057e EF92      		push r14
+ 1256 0580 FF92      		push r15
+ 1257 0582 0F93      		push r16
+ 1258 0584 1F93      		push r17
+ 1259 0586 CF93      		push r28
+ 1260 0588 DF93      		push r29
+ 1261 058a CDB7      		in r28,__SP_L__
+ 1262 058c DEB7      		in r29,__SP_H__
+ 1263 058e A597      		sbiw r28,37
+ 1264 0590 0FB6      		in __tmp_reg__,__SREG__
+ 1265 0592 F894      		cli
+ 1266 0594 DEBF      		out __SP_H__,r29
+ 1267 0596 0FBE      		out __SREG__,__tmp_reg__
+ 1268 0598 CDBF      		out __SP_L__,r28
+ 1269               	/* prologue: function */
+ 1270               	/* frame size = 37 */
+ 1271               	/* stack size = 55 */
+ 1272               	.L__stack_usage = 55
+ 1273 059a 1C01      		movw r2,r24
+ 1274 059c 7B8B      		std Y+19,r23
+ 1275 059e 6A8B      		std Y+18,r22
+ 1276 05a0 2901      		movw r4,r18
+ 1277 05a2 3A01      		movw r6,r20
+ 206:../../common/motor.c ****   if (motor->multiturn_angle_0 == 0 || motor->has_zeropoint == 0)
+ 1278               		.stabn	68,0,206,.LM113-.LFBB10
+ 1279               	.LM113:
+ 1280 05a4 DC01      		movw r26,r24
+ 1281 05a6 5596      		adiw r26,21
+ 1282 05a8 BC91      		ld r27,X
+ 1283 05aa BC8B      		std Y+20,r27
+ 1284 05ac FC01      		movw r30,r24
+ 1285 05ae F689      		ldd r31,Z+22
+ 1286 05b0 FD8B      		std Y+21,r31
+ 1287 05b2 DC01      		movw r26,r24
+ 1288 05b4 5796      		adiw r26,23
+ 1289 05b6 BC91      		ld r27,X
+ 1290 05b8 BE8B      		std Y+22,r27
+ 1291 05ba FC01      		movw r30,r24
+ 1292 05bc F08D      		ldd r31,Z+24
+ 1293 05be FF8B      		std Y+23,r31
+ 1294 05c0 DC01      		movw r26,r24
+GAS LISTING /tmp/ccT4oBcY.s 			page 31
+
+
+ 1295 05c2 5996      		adiw r26,25
+ 1296 05c4 BC91      		ld r27,X
+ 1297 05c6 B88F      		std Y+24,r27
+ 1298 05c8 FC01      		movw r30,r24
+ 1299 05ca F28D      		ldd r31,Z+26
+ 1300 05cc F98F      		std Y+25,r31
+ 1301 05ce DC01      		movw r26,r24
+ 1302 05d0 5B96      		adiw r26,27
+ 1303 05d2 BC91      		ld r27,X
+ 1304 05d4 BA8F      		std Y+26,r27
+ 1305 05d6 FC01      		movw r30,r24
+ 1306 05d8 F48D      		ldd r31,Z+28
+ 1307 05da FB8F      		std Y+27,r31
+ 1308 05dc 2C89      		ldd r18,Y+20
+ 1309 05de 3D89      		ldd r19,Y+21
+ 1310 05e0 4E89      		ldd r20,Y+22
+ 1311 05e2 5F89      		ldd r21,Y+23
+ 1312 05e4 688D      		ldd r22,Y+24
+ 1313 05e6 798D      		ldd r23,Y+25
+ 1314 05e8 8B2F      		mov r24,r27
+ 1315 05ea 9F2F      		mov r25,r31
+ 1316 05ec A0E0      		ldi r26,0
+ 1317 05ee 0E94 0000 		call __cmpdi2_s8
+ 1318 05f2 01F4      		brne .+2
+ 1319 05f4 00C0      		rjmp .L41
+ 1320               		.stabn	68,0,206,.LM114-.LFBB10
+ 1321               	.LM114:
+ 1322 05f6 F101      		movw r30,r2
+ 1323 05f8 EC5B      		subi r30,-68
+ 1324 05fa FF4F      		sbci r31,-1
+ 1325 05fc 8081      		ld r24,Z
+ 1326 05fe 8823      		tst r24
+ 1327 0600 01F4      		brne .+2
+ 1328 0602 00C0      		rjmp .L41
+ 207:../../common/motor.c ****   {
+ 208:../../common/motor.c ****     return;
+ 209:../../common/motor.c ****   };
+ 210:../../common/motor.c **** 
+ 211:../../common/motor.c ****   if (angle < 0)
+ 1329               		.stabn	68,0,211,.LM115-.LFBB10
+ 1330               	.LM115:
+ 1331 0604 77FC      		sbrc r7,7
+ 1332 0606 00C0      		rjmp .L58
+ 212:../../common/motor.c ****   {
+ 213:../../common/motor.c ****     angle = 0;
+ 214:../../common/motor.c ****   }
+ 215:../../common/motor.c ****   else if (angle > myabs(motor->multiturn_angle_range))
+ 1333               		.stabn	68,0,215,.LM116-.LFBB10
+ 1334               	.LM116:
+ 1335 0608 F101      		movw r30,r2
+ 1336 060a F58D      		ldd r31,Z+29
+ 1337 060c FC8F      		std Y+28,r31
+ 1338 060e D101      		movw r26,r2
+ 1339 0610 5E96      		adiw r26,30
+ 1340 0612 BC91      		ld r27,X
+ 1341 0614 BD8F      		std Y+29,r27
+ 1342 0616 F101      		movw r30,r2
+GAS LISTING /tmp/ccT4oBcY.s 			page 32
+
+
+ 1343 0618 878C      		ldd r8,Z+31
+ 1344 061a 90A0      		ldd r9,Z+32
+ 1345 061c F1A1      		ldd r31,Z+33
+ 1346 061e D101      		movw r26,r2
+ 1347 0620 9296      		adiw r26,34
+ 1348 0622 EC91      		ld r30,X
+ 1349 0624 9297      		sbiw r26,34
+ 1350 0626 9396      		adiw r26,35
+ 1351 0628 BC91      		ld r27,X
+ 1352 062a BAA3      		std Y+34,r27
+ 1353 062c D101      		movw r26,r2
+ 1354 062e 9496      		adiw r26,36
+ 1355 0630 BC91      		ld r27,X
+ 1356 0632 BBA3      		std Y+35,r27
+ 1357 0634 BC8D      		ldd r27,Y+28
+ 1358 0636 8D8D      		ldd r24,Y+29
+ 1359 0638 8E8F      		std Y+30,r24
+ 1360 063a 8CA2      		std Y+36,r8
+ 1361 063c 9DA2      		std Y+37,r9
+ 1362 063e EF2E      		mov r14,r31
+ 1363 0640 FE2E      		mov r15,r30
+ 1364 0642 0AA1      		ldd r16,Y+34
+ 1365 0644 1BA1      		ldd r17,Y+35
+ 1366 0646 2B2F      		mov r18,r27
+ 1367 0648 382F      		mov r19,r24
+ 1368 064a A401      		movw r20,r8
+ 1369 064c 6F2F      		mov r22,r31
+ 1370 064e 7E2F      		mov r23,r30
+ 1371 0650 C801      		movw r24,r16
+ 1372 0652 A0E0      		ldi r26,0
+ 1373 0654 0E94 0000 		call __cmpdi2_s8
+ 1374 0658 04F4      		brge .+2
+ 1375 065a 00C0      		rjmp .L59
+ 1376               	.L47:
+ 1377 065c 9201      		movw r18,r4
+ 1378 065e A301      		movw r20,r6
+ 1379 0660 6301      		movw r12,r6
+ 1380 0662 5201      		movw r10,r4
+ 1381 0664 DD0C      		lsl r13
+ 1382 0666 AA08      		sbc r10,r10
+ 1383 0668 BA2C      		mov r11,r10
+ 1384 066a 6501      		movw r12,r10
+ 1385 066c 6A2D      		mov r22,r10
+ 1386 066e 7A2D      		mov r23,r10
+ 1387 0670 8A2D      		mov r24,r10
+ 1388 0672 9A2D      		mov r25,r10
+ 1389 0674 AB2E      		mov r10,r27
+ 1390 0676 BE8C      		ldd r11,Y+30
+ 1391 0678 CCA0      		ldd r12,Y+36
+ 1392 067a DDA0      		ldd r13,Y+37
+ 1393 067c 0E94 0000 		call __cmpdi2
+ 1394 0680 01F0      		breq .+4
+ 1395 0682 04F0      		brlt .+2
+ 1396 0684 00C0      		rjmp .L60
+ 1397               	.L46:
+ 216:../../common/motor.c ****   {
+ 217:../../common/motor.c ****     angle = myabs(motor->multiturn_angle_range);
+GAS LISTING /tmp/ccT4oBcY.s 			page 33
+
+
+ 218:../../common/motor.c ****   }
+ 219:../../common/motor.c **** 
+ 220:../../common/motor.c ****   speed = speed;
+ 221:../../common/motor.c ****   motor->angle = angle;
+ 1398               		.stabn	68,0,221,.LM117-.LFBB10
+ 1399               	.LM117:
+ 1400 0686 D101      		movw r26,r2
+ 1401 0688 1996      		adiw r26,9
+ 1402 068a 4D92      		st X+,r4
+ 1403 068c 5D92      		st X+,r5
+ 1404 068e 6D92      		st X+,r6
+ 1405 0690 7C92      		st X,r7
+ 1406 0692 1C97      		sbiw r26,9+3
+ 222:../../common/motor.c **** 
+ 223:../../common/motor.c ****   if (motor->multiturn_angle_range > 0)
+ 1407               		.stabn	68,0,223,.LM118-.LFBB10
+ 1408               	.LM118:
+ 1409 0694 2C8D      		ldd r18,Y+28
+ 1410 0696 3D8D      		ldd r19,Y+29
+ 1411 0698 A401      		movw r20,r8
+ 1412 069a 6F2F      		mov r22,r31
+ 1413 069c 7E2F      		mov r23,r30
+ 1414 069e 8AA1      		ldd r24,Y+34
+ 1415 06a0 9BA1      		ldd r25,Y+35
+ 1416 06a2 A0E0      		ldi r26,0
+ 1417 06a4 0E94 0000 		call __cmpdi2_s8
+ 1418 06a8 01F0      		breq .+2
+ 1419 06aa 04F4      		brge .+2
+ 1420 06ac 00C0      		rjmp .L48
+ 1421               	.LBB18:
+ 224:../../common/motor.c ****   {
+ 225:../../common/motor.c ****     // Uus angle peab olema _0+angle
+ 226:../../common/motor.c ****     int32_t workAngle = motor->multiturn_angle_0 + (angle * 100 * motor->gear_ratio_multiplier);
+ 1422               		.stabn	68,0,226,.LM119-.LFBB10
+ 1423               	.LM119:
+ 1424 06ae D101      		movw r26,r2
+ 1425 06b0 AB5B      		subi r26,-69
+ 1426 06b2 BF4F      		sbci r27,-1
+ 1427 06b4 8C91      		ld r24,X
+ 1428 06b6 8CA3      		std Y+36,r24
+ 1429 06b8 A4E6      		ldi r26,lo8(100)
+ 1430 06ba B0E0      		ldi r27,0
+ 1431 06bc A301      		movw r20,r6
+ 1432 06be 9201      		movw r18,r4
+ 1433 06c0 0E94 0000 		call __muluhisi3
+ 1434 06c4 9B01      		movw r18,r22
+ 1435 06c6 AC01      		movw r20,r24
+ 1436 06c8 9CA1      		ldd r25,Y+36
+ 1437 06ca A92F      		mov r26,r25
+ 1438 06cc B0E0      		ldi r27,0
+ 1439 06ce 0E94 0000 		call __muluhisi3
+ 1440 06d2 4C88      		ldd r4,Y+20
+ 1441 06d4 5D88      		ldd r5,Y+21
+ 1442 06d6 6E88      		ldd r6,Y+22
+ 1443 06d8 7F88      		ldd r7,Y+23
+ 1444 06da 460E      		add r4,r22
+ 1445 06dc 571E      		adc r5,r23
+GAS LISTING /tmp/ccT4oBcY.s 			page 34
+
+
+ 1446 06de 681E      		adc r6,r24
+ 1447 06e0 791E      		adc r7,r25
+ 1448 06e2 4E86      		std Y+14,r4
+ 1449 06e4 5F86      		std Y+15,r5
+ 1450 06e6 688A      		std Y+16,r6
+ 1451 06e8 798A      		std Y+17,r7
+ 227:../../common/motor.c ****     if (workAngle <= (motor->multiturn_angle_0 + (motor->multiturn_angle_range * 100 * motor->gear_
+ 1452               		.stabn	68,0,227,.LM120-.LFBB10
+ 1453               	.LM120:
+ 1454 06ea D301      		movw r26,r6
+ 1455 06ec C201      		movw r24,r4
+ 1456 06ee BB0F      		lsl r27
+ 1457 06f0 880B      		sbc r24,r24
+ 1458 06f2 982F      		mov r25,r24
+ 1459 06f4 DC01      		movw r26,r24
+ 1460 06f6 8E8F      		std Y+30,r24
+ 1461 06f8 9F8F      		std Y+31,r25
+ 1462 06fa A8A3      		std Y+32,r26
+ 1463 06fc B9A3      		std Y+33,r27
+ 1464 06fe 2C8D      		ldd r18,Y+28
+ 1465 0700 3D8D      		ldd r19,Y+29
+ 1466 0702 A401      		movw r20,r8
+ 1467 0704 6F2F      		mov r22,r31
+ 1468 0706 7E2F      		mov r23,r30
+ 1469 0708 8AA1      		ldd r24,Y+34
+ 1470 070a 9BA1      		ldd r25,Y+35
+ 1471 070c 02E0      		ldi r16,lo8(2)
+ 1472 070e 0E94 0000 		call __ashldi3
+ 1473 0712 2C8F      		std Y+28,r18
+ 1474 0714 3D8F      		std Y+29,r19
+ 1475 0716 4A01      		movw r8,r20
+ 1476 0718 B62F      		mov r27,r22
+ 1477 071a A72F      		mov r26,r23
+ 1478 071c F82F      		mov r31,r24
+ 1479 071e E92F      		mov r30,r25
+ 1480 0720 0E94 0000 		call __ashldi3
+ 1481 0724 5901      		movw r10,r18
+ 1482 0726 6A01      		movw r12,r20
+ 1483 0728 7B01      		movw r14,r22
+ 1484 072a 8C01      		movw r16,r24
+ 1485 072c 2C8D      		ldd r18,Y+28
+ 1486 072e 3D8D      		ldd r19,Y+29
+ 1487 0730 A401      		movw r20,r8
+ 1488 0732 6B2F      		mov r22,r27
+ 1489 0734 7A2F      		mov r23,r26
+ 1490 0736 8F2F      		mov r24,r31
+ 1491 0738 9E2F      		mov r25,r30
+ 1492 073a 0E94 0000 		call __adddi3
+ 1493 073e 2C8F      		std Y+28,r18
+ 1494 0740 3D8F      		std Y+29,r19
+ 1495 0742 4A01      		movw r8,r20
+ 1496 0744 B62F      		mov r27,r22
+ 1497 0746 A72F      		mov r26,r23
+ 1498 0748 F82F      		mov r31,r24
+ 1499 074a E92F      		mov r30,r25
+ 1500 074c 02E0      		ldi r16,lo8(2)
+ 1501 074e 0E94 0000 		call __ashldi3
+GAS LISTING /tmp/ccT4oBcY.s 			page 35
+
+
+ 1502 0752 5901      		movw r10,r18
+ 1503 0754 6A01      		movw r12,r20
+ 1504 0756 7B01      		movw r14,r22
+ 1505 0758 8C01      		movw r16,r24
+ 1506 075a 2C8D      		ldd r18,Y+28
+ 1507 075c 3D8D      		ldd r19,Y+29
+ 1508 075e A401      		movw r20,r8
+ 1509 0760 6B2F      		mov r22,r27
+ 1510 0762 7A2F      		mov r23,r26
+ 1511 0764 8F2F      		mov r24,r31
+ 1512 0766 9E2F      		mov r25,r30
+ 1513 0768 0E94 0000 		call __adddi3
+ 1514 076c ACA0      		ldd r10,Y+36
+ 1515 076e B12C      		mov r11,__zero_reg__
+ 1516 0770 C12C      		mov r12,__zero_reg__
+ 1517 0772 D12C      		mov r13,__zero_reg__
+ 1518 0774 E12C      		mov r14,__zero_reg__
+ 1519 0776 F12C      		mov r15,__zero_reg__
+ 1520 0778 00E0      		ldi r16,0
+ 1521 077a 10E0      		ldi r17,0
+ 1522 077c 0E94 0000 		call __muldi3
+ 1523 0780 AC88      		ldd r10,Y+20
+ 1524 0782 BD88      		ldd r11,Y+21
+ 1525 0784 CE88      		ldd r12,Y+22
+ 1526 0786 DF88      		ldd r13,Y+23
+ 1527 0788 E88C      		ldd r14,Y+24
+ 1528 078a F98C      		ldd r15,Y+25
+ 1529 078c 0A8D      		ldd r16,Y+26
+ 1530 078e 1B8D      		ldd r17,Y+27
+ 1531 0790 0E94 0000 		call __adddi3
+ 1532 0794 5901      		movw r10,r18
+ 1533 0796 6A01      		movw r12,r20
+ 1534 0798 7B01      		movw r14,r22
+ 1535 079a 8C01      		movw r16,r24
+ 1536 079c 9201      		movw r18,r4
+ 1537 079e A301      		movw r20,r6
+ 1538 07a0 6E8D      		ldd r22,Y+30
+ 1539 07a2 762F      		mov r23,r22
+ 1540 07a4 862F      		mov r24,r22
+ 1541 07a6 962F      		mov r25,r22
+ 1542 07a8 0E94 0000 		call __cmpdi2
+ 1543 07ac 01F0      		breq .+2
+ 1544 07ae 04F4      		brge .L41
+ 1545               	.LBB19:
+ 228:../../common/motor.c ****     {
+ 229:../../common/motor.c ****       CAN_frame_t frm;
+ 230:../../common/motor.c ****       frm.SID = motor->id;
+ 1546               		.stabn	68,0,230,.LM121-.LFBB10
+ 1547               	.LM121:
+ 1548 07b0 D101      		movw r26,r2
+ 1549 07b2 8D91      		ld r24,X+
+ 1550 07b4 9C91      		ld r25,X
+ 1551 07b6 A0E0      		ldi r26,0
+ 1552 07b8 B0E0      		ldi r27,0
+ 1553 07ba 8983      		std Y+1,r24
+ 1554 07bc 9A83      		std Y+2,r25
+ 1555 07be AB83      		std Y+3,r26
+GAS LISTING /tmp/ccT4oBcY.s 			page 36
+
+
+ 1556 07c0 BC83      		std Y+4,r27
+ 231:../../common/motor.c ****       frm.header.len = 8;
+ 1557               		.stabn	68,0,231,.LM122-.LFBB10
+ 1558               	.LM122:
+ 1559 07c2 8D81      		ldd r24,Y+5
+ 1560 07c4 817E      		andi r24,lo8(-31)
+ 232:../../common/motor.c ****       frm.header.rtr = 0;
+ 1561               		.stabn	68,0,232,.LM123-.LFBB10
+ 1562               	.LM123:
+ 1563 07c6 8061      		ori r24,lo8(16)
+ 1564 07c8 8E7F      		andi r24,lo8(~(1<<0))
+ 1565 07ca 8D83      		std Y+5,r24
+ 233:../../common/motor.c ****       frm.data[0] = SET_MULTITURN_ANGLE;
+ 1566               		.stabn	68,0,233,.LM124-.LFBB10
+ 1567               	.LM124:
+ 1568 07cc 84EA      		ldi r24,lo8(-92)
+ 1569 07ce 8E83      		std Y+6,r24
+ 234:../../common/motor.c ****       frm.data[2] = *(uint8_t *)(&speed);
+ 1570               		.stabn	68,0,234,.LM125-.LFBB10
+ 1571               	.LM125:
+ 1572 07d0 8A89      		ldd r24,Y+18
+ 1573 07d2 8887      		std Y+8,r24
+ 235:../../common/motor.c ****       frm.data[3] = *((uint8_t *)(&speed) + 1);
+ 1574               		.stabn	68,0,235,.LM126-.LFBB10
+ 1575               	.LM126:
+ 1576 07d4 8B89      		ldd r24,Y+19
+ 1577 07d6 8987      		std Y+9,r24
+ 236:../../common/motor.c ****       frm.data[4] = *((uint8_t *)(&workAngle));
+ 1578               		.stabn	68,0,236,.LM127-.LFBB10
+ 1579               	.LM127:
+ 1580 07d8 8E85      		ldd r24,Y+14
+ 1581 07da 8A87      		std Y+10,r24
+ 237:../../common/motor.c ****       frm.data[5] = *((uint8_t *)(&workAngle) + 1);
+ 1582               		.stabn	68,0,237,.LM128-.LFBB10
+ 1583               	.LM128:
+ 1584 07dc 8F85      		ldd r24,Y+15
+ 1585 07de 8B87      		std Y+11,r24
+ 238:../../common/motor.c ****       frm.data[6] = *((uint8_t *)(&workAngle) + 2);
+ 1586               		.stabn	68,0,238,.LM129-.LFBB10
+ 1587               	.LM129:
+ 1588 07e0 8889      		ldd r24,Y+16
+ 1589 07e2 8C87      		std Y+12,r24
+ 239:../../common/motor.c ****       frm.data[7] = *((uint8_t *)(&workAngle) + 3);
+ 1590               		.stabn	68,0,239,.LM130-.LFBB10
+ 1591               	.LM130:
+ 1592 07e4 8989      		ldd r24,Y+17
+ 1593 07e6 8D87      		std Y+13,r24
+ 1594 07e8 8E01      		movw r16,r28
+ 1595 07ea 0F5F      		subi r16,-1
+ 1596 07ec 1F4F      		sbci r17,-1
+ 1597               	.L50:
+ 240:../../common/motor.c ****       while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 1598               		.stabn	68,0,240,.LM131-.LFBB10
+ 1599               	.LM131:
+ 1600 07ee C801      		movw r24,r16
+ 1601 07f0 0E94 0000 		call CAN_send
+ 1602 07f4 8111      		cpse r24,__zero_reg__
+GAS LISTING /tmp/ccT4oBcY.s 			page 37
+
+
+ 1603 07f6 00C0      		rjmp .L50
+ 1604               	.L41:
+ 1605               	/* epilogue start */
+ 1606               	.LBE19:
+ 1607               	.LBE18:
+ 241:../../common/motor.c ****       {
+ 242:../../common/motor.c ****       }
+ 243:../../common/motor.c ****     }
+ 244:../../common/motor.c ****   }
+ 245:../../common/motor.c ****   else if (motor->multiturn_angle_range < 0)
+ 246:../../common/motor.c ****   {
+ 247:../../common/motor.c ****     int32_t workAngle = motor->multiturn_angle_0 - (angle * 1);
+ 248:../../common/motor.c ****     if (workAngle <= (motor->multiturn_angle_0 - (motor->multiturn_angle_range * 1)))
+ 249:../../common/motor.c ****     {
+ 250:../../common/motor.c ****       CAN_frame_t frm;
+ 251:../../common/motor.c ****       frm.SID = motor->id;
+ 252:../../common/motor.c ****       frm.header.len = 8;
+ 253:../../common/motor.c ****       frm.header.rtr = 0;
+ 254:../../common/motor.c ****       frm.data[0] = SET_MULTITURN_ANGLE;
+ 255:../../common/motor.c ****       frm.data[2] = *(uint8_t *)(&speed);
+ 256:../../common/motor.c ****       frm.data[3] = *((uint8_t *)(&speed) + 1);
+ 257:../../common/motor.c ****       frm.data[4] = *((uint8_t *)(&workAngle));
+ 258:../../common/motor.c ****       frm.data[5] = *((uint8_t *)(&workAngle) + 1);
+ 259:../../common/motor.c ****       frm.data[6] = *((uint8_t *)(&workAngle) + 2);
+ 260:../../common/motor.c ****       frm.data[7] = *((uint8_t *)(&workAngle) + 3);
+ 261:../../common/motor.c ****       while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 262:../../common/motor.c ****       {
+ 263:../../common/motor.c ****       };
+ 264:../../common/motor.c ****     }
+ 265:../../common/motor.c ****   }
+ 266:../../common/motor.c **** }
+ 1608               		.stabn	68,0,266,.LM132-.LFBB10
+ 1609               	.LM132:
+ 1610 07f8 A596      		adiw r28,37
+ 1611 07fa 0FB6      		in __tmp_reg__,__SREG__
+ 1612 07fc F894      		cli
+ 1613 07fe DEBF      		out __SP_H__,r29
+ 1614 0800 0FBE      		out __SREG__,__tmp_reg__
+ 1615 0802 CDBF      		out __SP_L__,r28
+ 1616 0804 DF91      		pop r29
+ 1617 0806 CF91      		pop r28
+ 1618 0808 1F91      		pop r17
+ 1619 080a 0F91      		pop r16
+ 1620 080c FF90      		pop r15
+ 1621 080e EF90      		pop r14
+ 1622 0810 DF90      		pop r13
+ 1623 0812 CF90      		pop r12
+ 1624 0814 BF90      		pop r11
+ 1625 0816 AF90      		pop r10
+ 1626 0818 9F90      		pop r9
+ 1627 081a 8F90      		pop r8
+ 1628 081c 7F90      		pop r7
+ 1629 081e 6F90      		pop r6
+ 1630 0820 5F90      		pop r5
+ 1631 0822 4F90      		pop r4
+ 1632 0824 3F90      		pop r3
+ 1633 0826 2F90      		pop r2
+GAS LISTING /tmp/ccT4oBcY.s 			page 38
+
+
+ 1634 0828 0895      		ret
+ 1635               	.L60:
+ 217:../../common/motor.c ****   }
+ 1636               		.stabn	68,0,217,.LM133-.LFBB10
+ 1637               	.LM133:
+ 1638 082a 4B2E      		mov r4,r27
+ 1639 082c 5B2C      		mov r5,r11
+ 1640 082e 6C2C      		mov r6,r12
+ 1641 0830 7D2C      		mov r7,r13
+ 1642 0832 00C0      		rjmp .L46
+ 1643               	.L59:
+ 215:../../common/motor.c ****   {
+ 1644               		.stabn	68,0,215,.LM134-.LFBB10
+ 1645               	.LM134:
+ 1646 0834 0E94 0000 		call __negdi2
+ 1647 0838 B22F      		mov r27,r18
+ 1648 083a 3E8F      		std Y+30,r19
+ 1649 083c 4CA3      		std Y+36,r20
+ 1650 083e 5DA3      		std Y+37,r21
+ 1651 0840 7B01      		movw r14,r22
+ 1652 0842 8C01      		movw r16,r24
+ 1653 0844 00C0      		rjmp .L47
+ 1654               	.L48:
+ 245:../../common/motor.c ****   {
+ 1655               		.stabn	68,0,245,.LM135-.LFBB10
+ 1656               	.LM135:
+ 1657 0846 2C8D      		ldd r18,Y+28
+ 1658 0848 3D8D      		ldd r19,Y+29
+ 1659 084a A401      		movw r20,r8
+ 1660 084c 6F2F      		mov r22,r31
+ 1661 084e 7E2F      		mov r23,r30
+ 1662 0850 8AA1      		ldd r24,Y+34
+ 1663 0852 9BA1      		ldd r25,Y+35
+ 1664 0854 A0E0      		ldi r26,0
+ 1665 0856 0E94 0000 		call __cmpdi2_s8
+ 1666 085a 01F0      		breq .L41
+ 1667               	.LBB20:
+ 247:../../common/motor.c ****     if (workAngle <= (motor->multiturn_angle_0 - (motor->multiturn_angle_range * 1)))
+ 1668               		.stabn	68,0,247,.LM136-.LFBB10
+ 1669               	.LM136:
+ 1670 085c 8C89      		ldd r24,Y+20
+ 1671 085e 9D89      		ldd r25,Y+21
+ 1672 0860 AE89      		ldd r26,Y+22
+ 1673 0862 BF89      		ldd r27,Y+23
+ 1674 0864 8419      		sub r24,r4
+ 1675 0866 9509      		sbc r25,r5
+ 1676 0868 A609      		sbc r26,r6
+ 1677 086a B709      		sbc r27,r7
+ 1678 086c 2C01      		movw r4,r24
+ 1679 086e 3D01      		movw r6,r26
+ 1680 0870 8E87      		std Y+14,r24
+ 1681 0872 9F87      		std Y+15,r25
+ 1682 0874 A88B      		std Y+16,r26
+ 1683 0876 B98B      		std Y+17,r27
+ 248:../../common/motor.c ****     {
+ 1684               		.stabn	68,0,248,.LM137-.LFBB10
+ 1685               	.LM137:
+GAS LISTING /tmp/ccT4oBcY.s 			page 39
+
+
+ 1686 0878 BB0F      		lsl r27
+ 1687 087a 880B      		sbc r24,r24
+ 1688 087c 982F      		mov r25,r24
+ 1689 087e DC01      		movw r26,r24
+ 1690 0880 8E8F      		std Y+30,r24
+ 1691 0882 9F8F      		std Y+31,r25
+ 1692 0884 A8A3      		std Y+32,r26
+ 1693 0886 B9A3      		std Y+33,r27
+ 1694 0888 2C89      		ldd r18,Y+20
+ 1695 088a 3D89      		ldd r19,Y+21
+ 1696 088c 4E89      		ldd r20,Y+22
+ 1697 088e 5F89      		ldd r21,Y+23
+ 1698 0890 688D      		ldd r22,Y+24
+ 1699 0892 798D      		ldd r23,Y+25
+ 1700 0894 8A8D      		ldd r24,Y+26
+ 1701 0896 9B8D      		ldd r25,Y+27
+ 1702 0898 AC8C      		ldd r10,Y+28
+ 1703 089a BD8C      		ldd r11,Y+29
+ 1704 089c 6401      		movw r12,r8
+ 1705 089e EF2E      		mov r14,r31
+ 1706 08a0 FE2E      		mov r15,r30
+ 1707 08a2 0AA1      		ldd r16,Y+34
+ 1708 08a4 1BA1      		ldd r17,Y+35
+ 1709 08a6 0E94 0000 		call __subdi3
+ 1710 08aa 5901      		movw r10,r18
+ 1711 08ac 6A01      		movw r12,r20
+ 1712 08ae 7B01      		movw r14,r22
+ 1713 08b0 8C01      		movw r16,r24
+ 1714 08b2 9201      		movw r18,r4
+ 1715 08b4 A301      		movw r20,r6
+ 1716 08b6 6E8D      		ldd r22,Y+30
+ 1717 08b8 762F      		mov r23,r22
+ 1718 08ba 862F      		mov r24,r22
+ 1719 08bc 962F      		mov r25,r22
+ 1720 08be 0E94 0000 		call __cmpdi2
+ 1721 08c2 01F0      		breq .+4
+ 1722 08c4 04F0      		brlt .+2
+ 1723 08c6 00C0      		rjmp .L41
+ 1724               	.LBB21:
+ 251:../../common/motor.c ****       frm.header.len = 8;
+ 1725               		.stabn	68,0,251,.LM138-.LFBB10
+ 1726               	.LM138:
+ 1727 08c8 D101      		movw r26,r2
+ 1728 08ca 8D91      		ld r24,X+
+ 1729 08cc 9C91      		ld r25,X
+ 1730 08ce A0E0      		ldi r26,0
+ 1731 08d0 B0E0      		ldi r27,0
+ 1732 08d2 8983      		std Y+1,r24
+ 1733 08d4 9A83      		std Y+2,r25
+ 1734 08d6 AB83      		std Y+3,r26
+ 1735 08d8 BC83      		std Y+4,r27
+ 252:../../common/motor.c ****       frm.header.rtr = 0;
+ 1736               		.stabn	68,0,252,.LM139-.LFBB10
+ 1737               	.LM139:
+ 1738 08da 8D81      		ldd r24,Y+5
+ 1739 08dc 817E      		andi r24,lo8(-31)
+ 253:../../common/motor.c ****       frm.data[0] = SET_MULTITURN_ANGLE;
+GAS LISTING /tmp/ccT4oBcY.s 			page 40
+
+
+ 1740               		.stabn	68,0,253,.LM140-.LFBB10
+ 1741               	.LM140:
+ 1742 08de 8061      		ori r24,lo8(16)
+ 1743 08e0 8E7F      		andi r24,lo8(~(1<<0))
+ 1744 08e2 8D83      		std Y+5,r24
+ 254:../../common/motor.c ****       frm.data[2] = *(uint8_t *)(&speed);
+ 1745               		.stabn	68,0,254,.LM141-.LFBB10
+ 1746               	.LM141:
+ 1747 08e4 84EA      		ldi r24,lo8(-92)
+ 1748 08e6 8E83      		std Y+6,r24
+ 255:../../common/motor.c ****       frm.data[3] = *((uint8_t *)(&speed) + 1);
+ 1749               		.stabn	68,0,255,.LM142-.LFBB10
+ 1750               	.LM142:
+ 1751 08e8 8A89      		ldd r24,Y+18
+ 1752 08ea 8887      		std Y+8,r24
+ 256:../../common/motor.c ****       frm.data[4] = *((uint8_t *)(&workAngle));
+ 1753               		.stabn	68,0,256,.LM143-.LFBB10
+ 1754               	.LM143:
+ 1755 08ec 8B89      		ldd r24,Y+19
+ 1756 08ee 8987      		std Y+9,r24
+ 257:../../common/motor.c ****       frm.data[5] = *((uint8_t *)(&workAngle) + 1);
+ 1757               		.stabn	68,0,257,.LM144-.LFBB10
+ 1758               	.LM144:
+ 1759 08f0 8E85      		ldd r24,Y+14
+ 1760 08f2 8A87      		std Y+10,r24
+ 258:../../common/motor.c ****       frm.data[6] = *((uint8_t *)(&workAngle) + 2);
+ 1761               		.stabn	68,0,258,.LM145-.LFBB10
+ 1762               	.LM145:
+ 1763 08f4 8F85      		ldd r24,Y+15
+ 1764 08f6 8B87      		std Y+11,r24
+ 259:../../common/motor.c ****       frm.data[7] = *((uint8_t *)(&workAngle) + 3);
+ 1765               		.stabn	68,0,259,.LM146-.LFBB10
+ 1766               	.LM146:
+ 1767 08f8 8889      		ldd r24,Y+16
+ 1768 08fa 8C87      		std Y+12,r24
+ 260:../../common/motor.c ****       while (CAN_send(&frm) != CAN_ERROR_NONE)
+ 1769               		.stabn	68,0,260,.LM147-.LFBB10
+ 1770               	.LM147:
+ 1771 08fc 8989      		ldd r24,Y+17
+ 1772 08fe 8D87      		std Y+13,r24
+ 1773 0900 8E01      		movw r16,r28
+ 1774 0902 0F5F      		subi r16,-1
+ 1775 0904 1F4F      		sbci r17,-1
+ 1776               	.L52:
+ 261:../../common/motor.c ****       {
+ 1777               		.stabn	68,0,261,.LM148-.LFBB10
+ 1778               	.LM148:
+ 1779 0906 C801      		movw r24,r16
+ 1780 0908 0E94 0000 		call CAN_send
+ 1781 090c 8111      		cpse r24,__zero_reg__
+ 1782 090e 00C0      		rjmp .L52
+ 1783 0910 00C0      		rjmp .L41
+ 1784               	.L58:
+ 1785 0912 D101      		movw r26,r2
+ 1786 0914 5D96      		adiw r26,29
+ 1787 0916 BC91      		ld r27,X
+ 1788 0918 BC8F      		std Y+28,r27
+GAS LISTING /tmp/ccT4oBcY.s 			page 41
+
+
+ 1789 091a F101      		movw r30,r2
+ 1790 091c F68D      		ldd r31,Z+30
+ 1791 091e FD8F      		std Y+29,r31
+ 1792 0920 D101      		movw r26,r2
+ 1793 0922 5F96      		adiw r26,31
+ 1794 0924 8C90      		ld r8,X
+ 1795 0926 5F97      		sbiw r26,31
+ 1796 0928 9096      		adiw r26,32
+ 1797 092a 9C90      		ld r9,X
+ 1798 092c 9097      		sbiw r26,32
+ 1799 092e 9196      		adiw r26,33
+ 1800 0930 FC91      		ld r31,X
+ 1801 0932 9197      		sbiw r26,33
+ 1802 0934 9296      		adiw r26,34
+ 1803 0936 EC91      		ld r30,X
+ 1804 0938 9297      		sbiw r26,34
+ 1805 093a 9396      		adiw r26,35
+ 1806 093c BC91      		ld r27,X
+ 1807 093e BAA3      		std Y+34,r27
+ 1808 0940 D101      		movw r26,r2
+ 1809 0942 9496      		adiw r26,36
+ 1810 0944 BC91      		ld r27,X
+ 1811 0946 BBA3      		std Y+35,r27
+ 1812               	.LBE21:
+ 1813               	.LBE20:
+ 213:../../common/motor.c ****   }
+ 1814               		.stabn	68,0,213,.LM149-.LFBB10
+ 1815               	.LM149:
+ 1816 0948 412C      		mov r4,__zero_reg__
+ 1817 094a 512C      		mov r5,__zero_reg__
+ 1818 094c 3201      		movw r6,r4
+ 1819 094e 00C0      		rjmp .L46
+ 1820               		.size	gyems_motor_set_multiturn_angle, .-gyems_motor_set_multiturn_angle
+ 1821               		.stabs	"workAngle:(5,5)",128,0,226,14
+ 1822               		.stabn	192,0,0,.LBB18-.LFBB10
+ 1823               		.stabs	"frm:(8,1)",128,0,229,1
+ 1824               		.stabn	192,0,0,.LBB19-.LFBB10
+ 1825               		.stabn	224,0,0,.LBE19-.LFBB10
+ 1826               		.stabn	224,0,0,.LBE18-.LFBB10
+ 1827               		.stabs	"workAngle:(5,5)",128,0,247,14
+ 1828               		.stabn	192,0,0,.LBB20-.LFBB10
+ 1829               		.stabs	"frm:(8,1)",128,0,250,1
+ 1830               		.stabn	192,0,0,.LBB21-.LFBB10
+ 1831               		.stabn	224,0,0,.LBE21-.LFBB10
+ 1832               		.stabn	224,0,0,.LBE20-.LFBB10
+ 1833               	.Lscope10:
+ 1834               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 1835               		.stabd	78,0,0
+ 1836               		.stabs	"gyems_motor_safety:F(0,49)",36,0,268,gyems_motor_safety
+ 1837               		.stabs	"motor:P(0,50)",64,0,268,28
+ 1838               	.global	gyems_motor_safety
+ 1839               		.type	gyems_motor_safety, @function
+ 1840               	gyems_motor_safety:
+ 1841               		.stabd	46,0,0
+ 267:../../common/motor.c **** 
+ 268:../../common/motor.c **** void gyems_motor_safety(gyems_motor *motor)
+ 269:../../common/motor.c **** {
+GAS LISTING /tmp/ccT4oBcY.s 			page 42
+
+
+ 1842               		.stabn	68,0,269,.LM150-.LFBB11
+ 1843               	.LM150:
+ 1844               	.LFBB11:
+ 1845 0950 4F92      		push r4
+ 1846 0952 5F92      		push r5
+ 1847 0954 6F92      		push r6
+ 1848 0956 7F92      		push r7
+ 1849 0958 8F92      		push r8
+ 1850 095a 9F92      		push r9
+ 1851 095c AF92      		push r10
+ 1852 095e BF92      		push r11
+ 1853 0960 CF92      		push r12
+ 1854 0962 DF92      		push r13
+ 1855 0964 EF92      		push r14
+ 1856 0966 FF92      		push r15
+ 1857 0968 0F93      		push r16
+ 1858 096a 1F93      		push r17
+ 1859 096c CF93      		push r28
+ 1860 096e DF93      		push r29
+ 1861               	/* prologue: function */
+ 1862               	/* frame size = 0 */
+ 1863               	/* stack size = 16 */
+ 1864               	.L__stack_usage = 16
+ 1865 0970 EC01      		movw r28,r24
+ 270:../../common/motor.c ****   if (!motor->has_zeropoint && (map(motor->torque_current, -2048, 2048, -33, 33) > motor->max_power
+ 1866               		.stabn	68,0,270,.LM151-.LFBB11
+ 1867               	.LM151:
+ 1868 0972 4C01      		movw r8,r24
+ 1869 0974 24E4      		ldi r18,68
+ 1870 0976 820E      		add r8,r18
+ 1871 0978 911C      		adc r9,__zero_reg__
+ 1872 097a F401      		movw r30,r8
+ 1873 097c 8081      		ld r24,Z
+ 1874 097e 8823      		tst r24
+ 1875 0980 01F4      		brne .+2
+ 1876 0982 00C0      		rjmp .L62
+ 1877               	.L67:
+ 271:../../common/motor.c ****   {
+ 272:../../common/motor.c ****     gyems_motor_stop(motor);
+ 273:../../common/motor.c ****     gyems_motor_set_speed(motor, 0);
+ 274:../../common/motor.c ****     gyems_motor_get_multiturn_angle(motor);
+ 275:../../common/motor.c ****   }
+ 276:../../common/motor.c ****   else if (motor->has_zeropoint && (map(motor->torque_current, -2048, 2048, -33, 33) > motor->max_p
+ 1878               		.stabn	68,0,276,.LM152-.LFBB11
+ 1879               	.LM152:
+ 1880 0984 6FA5      		ldd r22,Y+47
+ 1881 0986 78A9      		ldd r23,Y+48
+ 1882 0988 89A9      		ldd r24,Y+49
+ 1883 098a 9AA9      		ldd r25,Y+50
+ 1884 098c 1F92      		push __zero_reg__
+ 1885 098e 1F92      		push __zero_reg__
+ 1886 0990 1F92      		push __zero_reg__
+ 1887 0992 B1E2      		ldi r27,lo8(33)
+ 1888 0994 7B2E      		mov r7,r27
+ 1889 0996 7F92      		push r7
+ 1890 0998 1FED      		ldi r17,lo8(-33)
+ 1891 099a A12E      		mov r10,r17
+GAS LISTING /tmp/ccT4oBcY.s 			page 43
+
+
+ 1892 099c BB24      		clr r11
+ 1893 099e BA94      		dec r11
+ 1894 09a0 CB2C      		mov r12,r11
+ 1895 09a2 DB2C      		mov r13,r11
+ 1896 09a4 E12C      		mov r14,__zero_reg__
+ 1897 09a6 18E0      		ldi r17,lo8(8)
+ 1898 09a8 F12E      		mov r15,r17
+ 1899 09aa 00E0      		ldi r16,0
+ 1900 09ac 10E0      		ldi r17,0
+ 1901 09ae 20E0      		ldi r18,0
+ 1902 09b0 38EF      		ldi r19,lo8(-8)
+ 1903 09b2 4FEF      		ldi r20,lo8(-1)
+ 1904 09b4 5FEF      		ldi r21,lo8(-1)
+ 1905 09b6 0E94 0000 		call map
+ 1906 09ba 4E01      		movw r8,r28
+ 1907 09bc F0E5      		ldi r31,80
+ 1908 09be 8F0E      		add r8,r31
+ 1909 09c0 911C      		adc r9,__zero_reg__
+ 1910 09c2 0F90      		pop __tmp_reg__
+ 1911 09c4 0F90      		pop __tmp_reg__
+ 1912 09c6 0F90      		pop __tmp_reg__
+ 1913 09c8 0F90      		pop __tmp_reg__
+ 1914 09ca F401      		movw r30,r8
+ 1915 09cc 0081      		ld r16,Z
+ 1916 09ce 1181      		ldd r17,Z+1
+ 1917 09d0 2281      		ldd r18,Z+2
+ 1918 09d2 3381      		ldd r19,Z+3
+ 1919 09d4 0617      		cp r16,r22
+ 1920 09d6 1707      		cpc r17,r23
+ 1921 09d8 2807      		cpc r18,r24
+ 1922 09da 3907      		cpc r19,r25
+ 1923 09dc 04F4      		brge .+2
+ 1924 09de 00C0      		rjmp .L63
+ 1925               		.stabn	68,0,276,.LM153-.LFBB11
+ 1926               	.LM153:
+ 1927 09e0 6FA5      		ldd r22,Y+47
+ 1928 09e2 78A9      		ldd r23,Y+48
+ 1929 09e4 89A9      		ldd r24,Y+49
+ 1930 09e6 9AA9      		ldd r25,Y+50
+ 1931 09e8 1F92      		push __zero_reg__
+ 1932 09ea 1F92      		push __zero_reg__
+ 1933 09ec 1F92      		push __zero_reg__
+ 1934 09ee 7F92      		push r7
+ 1935 09f0 2FED      		ldi r18,lo8(-33)
+ 1936 09f2 A22E      		mov r10,r18
+ 1937 09f4 BB24      		clr r11
+ 1938 09f6 BA94      		dec r11
+ 1939 09f8 CB2C      		mov r12,r11
+ 1940 09fa DB2C      		mov r13,r11
+ 1941 09fc E12C      		mov r14,__zero_reg__
+ 1942 09fe 18E0      		ldi r17,lo8(8)
+ 1943 0a00 F12E      		mov r15,r17
+ 1944 0a02 00E0      		ldi r16,0
+ 1945 0a04 10E0      		ldi r17,0
+ 1946 0a06 20E0      		ldi r18,0
+ 1947 0a08 38EF      		ldi r19,lo8(-8)
+ 1948 0a0a 4FEF      		ldi r20,lo8(-1)
+GAS LISTING /tmp/ccT4oBcY.s 			page 44
+
+
+ 1949 0a0c 5FEF      		ldi r21,lo8(-1)
+ 1950 0a0e 0E94 0000 		call map
+ 1951 0a12 F401      		movw r30,r8
+ 1952 0a14 4080      		ld r4,Z
+ 1953 0a16 5180      		ldd r5,Z+1
+ 1954 0a18 6280      		ldd r6,Z+2
+ 1955 0a1a 7380      		ldd r7,Z+3
+ 1956 0a1c 7094      		com r7
+ 1957 0a1e 6094      		com r6
+ 1958 0a20 5094      		com r5
+ 1959 0a22 4094      		com r4
+ 1960 0a24 411C      		adc r4,__zero_reg__
+ 1961 0a26 511C      		adc r5,__zero_reg__
+ 1962 0a28 611C      		adc r6,__zero_reg__
+ 1963 0a2a 711C      		adc r7,__zero_reg__
+ 1964 0a2c 0F90      		pop __tmp_reg__
+ 1965 0a2e 0F90      		pop __tmp_reg__
+ 1966 0a30 0F90      		pop __tmp_reg__
+ 1967 0a32 0F90      		pop __tmp_reg__
+ 1968 0a34 6415      		cp r22,r4
+ 1969 0a36 7505      		cpc r23,r5
+ 1970 0a38 8605      		cpc r24,r6
+ 1971 0a3a 9705      		cpc r25,r7
+ 1972 0a3c 04F0      		brlt .L63
+ 1973               	.L61:
+ 1974               	/* epilogue start */
+ 277:../../common/motor.c ****   {
+ 278:../../common/motor.c ****     //    gyems_motor_stop(motor);
+ 279:../../common/motor.c ****     gyems_motor_stop(motor);
+ 280:../../common/motor.c **** 
+ 281:../../common/motor.c ****     gyems_motor_set_speed(motor, 0);
+ 282:../../common/motor.c ****   }
+ 283:../../common/motor.c **** }...
+ 1975               		.stabn	68,0,283,.LM154-.LFBB11
+ 1976               	.LM154:
+ 1977 0a3e DF91      		pop r29
+ 1978 0a40 CF91      		pop r28
+ 1979 0a42 1F91      		pop r17
+ 1980 0a44 0F91      		pop r16
+ 1981 0a46 FF90      		pop r15
+ 1982 0a48 EF90      		pop r14
+ 1983 0a4a DF90      		pop r13
+ 1984 0a4c CF90      		pop r12
+ 1985 0a4e BF90      		pop r11
+ 1986 0a50 AF90      		pop r10
+ 1987 0a52 9F90      		pop r9
+ 1988 0a54 8F90      		pop r8
+ 1989 0a56 7F90      		pop r7
+ 1990 0a58 6F90      		pop r6
+ 1991 0a5a 5F90      		pop r5
+ 1992 0a5c 4F90      		pop r4
+ 1993 0a5e 0895      		ret
+ 1994               	.L63:
+ 279:../../common/motor.c ****     gyems_motor_stop(motor);
+ 1995               		.stabn	68,0,279,.LM155-.LFBB11
+ 1996               	.LM155:
+ 1997 0a60 CE01      		movw r24,r28
+GAS LISTING /tmp/ccT4oBcY.s 			page 45
+
+
+ 1998 0a62 0E94 0000 		call gyems_motor_stop
+ 281:../../common/motor.c ****     gyems_motor_set_speed(motor, 0);
+ 1999               		.stabn	68,0,281,.LM156-.LFBB11
+ 2000               	.LM156:
+ 2001 0a66 40E0      		ldi r20,0
+ 2002 0a68 50E0      		ldi r21,0
+ 2003 0a6a BA01      		movw r22,r20
+ 2004 0a6c CE01      		movw r24,r28
+ 2005               	/* epilogue start */
+ 2006               		.stabn	68,0,283,.LM157-.LFBB11
+ 2007               	.LM157:
+ 2008 0a6e DF91      		pop r29
+ 2009 0a70 CF91      		pop r28
+ 2010 0a72 1F91      		pop r17
+ 2011 0a74 0F91      		pop r16
+ 2012 0a76 FF90      		pop r15
+ 2013 0a78 EF90      		pop r14
+ 2014 0a7a DF90      		pop r13
+ 2015 0a7c CF90      		pop r12
+ 2016 0a7e BF90      		pop r11
+ 2017 0a80 AF90      		pop r10
+ 2018 0a82 9F90      		pop r9
+ 2019 0a84 8F90      		pop r8
+ 2020 0a86 7F90      		pop r7
+ 2021 0a88 6F90      		pop r6
+ 2022 0a8a 5F90      		pop r5
+ 2023 0a8c 4F90      		pop r4
+ 281:../../common/motor.c ****     gyems_motor_set_speed(motor, 0);
+ 2024               		.stabn	68,0,281,.LM158-.LFBB11
+ 2025               	.LM158:
+ 2026 0a8e 0C94 0000 		jmp gyems_motor_set_speed
+ 2027               	.L62:
+ 270:../../common/motor.c ****   if (!motor->has_zeropoint && (map(motor->torque_current, -2048, 2048, -33, 33) > motor->max_power
+ 2028               		.stabn	68,0,270,.LM159-.LFBB11
+ 2029               	.LM159:
+ 2030 0a92 6FA5      		ldd r22,Y+47
+ 2031 0a94 78A9      		ldd r23,Y+48
+ 2032 0a96 89A9      		ldd r24,Y+49
+ 2033 0a98 9AA9      		ldd r25,Y+50
+ 2034 0a9a 1F92      		push __zero_reg__
+ 2035 0a9c 1F92      		push __zero_reg__
+ 2036 0a9e 1F92      		push __zero_reg__
+ 2037 0aa0 E1E2      		ldi r30,lo8(33)
+ 2038 0aa2 5E2E      		mov r5,r30
+ 2039 0aa4 5F92      		push r5
+ 2040 0aa6 FFED      		ldi r31,lo8(-33)
+ 2041 0aa8 AF2E      		mov r10,r31
+ 2042 0aaa BB24      		clr r11
+ 2043 0aac BA94      		dec r11
+ 2044 0aae CB2C      		mov r12,r11
+ 2045 0ab0 DB2C      		mov r13,r11
+ 2046 0ab2 E12C      		mov r14,__zero_reg__
+ 2047 0ab4 18E0      		ldi r17,lo8(8)
+ 2048 0ab6 F12E      		mov r15,r17
+ 2049 0ab8 00E0      		ldi r16,0
+ 2050 0aba 10E0      		ldi r17,0
+ 2051 0abc 20E0      		ldi r18,0
+GAS LISTING /tmp/ccT4oBcY.s 			page 46
+
+
+ 2052 0abe 38EF      		ldi r19,lo8(-8)
+ 2053 0ac0 4FEF      		ldi r20,lo8(-1)
+ 2054 0ac2 5FEF      		ldi r21,lo8(-1)
+ 2055 0ac4 0E94 0000 		call map
+ 2056 0ac8 3E01      		movw r6,r28
+ 2057 0aca FCE4      		ldi r31,76
+ 2058 0acc 6F0E      		add r6,r31
+ 2059 0ace 711C      		adc r7,__zero_reg__
+ 2060 0ad0 0F90      		pop __tmp_reg__
+ 2061 0ad2 0F90      		pop __tmp_reg__
+ 2062 0ad4 0F90      		pop __tmp_reg__
+ 2063 0ad6 0F90      		pop __tmp_reg__
+ 2064 0ad8 F301      		movw r30,r6
+ 2065 0ada 0081      		ld r16,Z
+ 2066 0adc 1181      		ldd r17,Z+1
+ 2067 0ade 2281      		ldd r18,Z+2
+ 2068 0ae0 3381      		ldd r19,Z+3
+ 2069 0ae2 0617      		cp r16,r22
+ 2070 0ae4 1707      		cpc r17,r23
+ 2071 0ae6 2807      		cpc r18,r24
+ 2072 0ae8 3907      		cpc r19,r25
+ 2073 0aea 04F0      		brlt .L66
+ 270:../../common/motor.c ****   if (!motor->has_zeropoint && (map(motor->torque_current, -2048, 2048, -33, 33) > motor->max_power
+ 2074               		.stabn	68,0,270,.LM160-.LFBB11
+ 2075               	.LM160:
+ 2076 0aec 6FA5      		ldd r22,Y+47
+ 2077 0aee 78A9      		ldd r23,Y+48
+ 2078 0af0 89A9      		ldd r24,Y+49
+ 2079 0af2 9AA9      		ldd r25,Y+50
+ 2080 0af4 1F92      		push __zero_reg__
+ 2081 0af6 1F92      		push __zero_reg__
+ 2082 0af8 1F92      		push __zero_reg__
+ 2083 0afa 5F92      		push r5
+ 2084 0afc 4FED      		ldi r20,lo8(-33)
+ 2085 0afe A42E      		mov r10,r20
+ 2086 0b00 BB24      		clr r11
+ 2087 0b02 BA94      		dec r11
+ 2088 0b04 CB2C      		mov r12,r11
+ 2089 0b06 DB2C      		mov r13,r11
+ 2090 0b08 E12C      		mov r14,__zero_reg__
+ 2091 0b0a 18E0      		ldi r17,lo8(8)
+ 2092 0b0c F12E      		mov r15,r17
+ 2093 0b0e 00E0      		ldi r16,0
+ 2094 0b10 10E0      		ldi r17,0
+ 2095 0b12 20E0      		ldi r18,0
+ 2096 0b14 38EF      		ldi r19,lo8(-8)
+ 2097 0b16 4FEF      		ldi r20,lo8(-1)
+ 2098 0b18 5FEF      		ldi r21,lo8(-1)
+ 2099 0b1a 0E94 0000 		call map
+ 2100 0b1e F301      		movw r30,r6
+ 2101 0b20 4080      		ld r4,Z
+ 2102 0b22 5180      		ldd r5,Z+1
+ 2103 0b24 6280      		ldd r6,Z+2
+ 2104 0b26 7380      		ldd r7,Z+3
+ 2105 0b28 7094      		com r7
+ 2106 0b2a 6094      		com r6
+ 2107 0b2c 5094      		com r5
+GAS LISTING /tmp/ccT4oBcY.s 			page 47
+
+
+ 2108 0b2e 4094      		com r4
+ 2109 0b30 411C      		adc r4,__zero_reg__
+ 2110 0b32 511C      		adc r5,__zero_reg__
+ 2111 0b34 611C      		adc r6,__zero_reg__
+ 2112 0b36 711C      		adc r7,__zero_reg__
+ 2113 0b38 0F90      		pop __tmp_reg__
+ 2114 0b3a 0F90      		pop __tmp_reg__
+ 2115 0b3c 0F90      		pop __tmp_reg__
+ 2116 0b3e 0F90      		pop __tmp_reg__
+ 2117 0b40 6415      		cp r22,r4
+ 2118 0b42 7505      		cpc r23,r5
+ 2119 0b44 8605      		cpc r24,r6
+ 2120 0b46 9705      		cpc r25,r7
+ 2121 0b48 04F0      		brlt .L66
+ 276:../../common/motor.c ****   else if (motor->has_zeropoint && (map(motor->torque_current, -2048, 2048, -33, 33) > motor->max_p
+ 2122               		.stabn	68,0,276,.LM161-.LFBB11
+ 2123               	.LM161:
+ 2124 0b4a F401      		movw r30,r8
+ 2125 0b4c 8081      		ld r24,Z
+ 2126 0b4e 8823      		tst r24
+ 2127 0b50 01F4      		brne .+2
+ 2128 0b52 00C0      		rjmp .L61
+ 2129 0b54 00C0      		rjmp .L67
+ 2130               	.L66:
+ 272:../../common/motor.c ****     gyems_motor_stop(motor);
+ 2131               		.stabn	68,0,272,.LM162-.LFBB11
+ 2132               	.LM162:
+ 2133 0b56 CE01      		movw r24,r28
+ 2134 0b58 0E94 0000 		call gyems_motor_stop
+ 273:../../common/motor.c ****     gyems_motor_set_speed(motor, 0);
+ 2135               		.stabn	68,0,273,.LM163-.LFBB11
+ 2136               	.LM163:
+ 2137 0b5c 40E0      		ldi r20,0
+ 2138 0b5e 50E0      		ldi r21,0
+ 2139 0b60 BA01      		movw r22,r20
+ 2140 0b62 CE01      		movw r24,r28
+ 2141 0b64 0E94 0000 		call gyems_motor_set_speed
+ 274:../../common/motor.c ****     gyems_motor_get_multiturn_angle(motor);
+ 2142               		.stabn	68,0,274,.LM164-.LFBB11
+ 2143               	.LM164:
+ 2144 0b68 CE01      		movw r24,r28
+ 2145               	/* epilogue start */
+ 2146               		.stabn	68,0,283,.LM165-.LFBB11
+ 2147               	.LM165:
+ 2148 0b6a DF91      		pop r29
+ 2149 0b6c CF91      		pop r28
+ 2150 0b6e 1F91      		pop r17
+ 2151 0b70 0F91      		pop r16
+ 2152 0b72 FF90      		pop r15
+ 2153 0b74 EF90      		pop r14
+ 2154 0b76 DF90      		pop r13
+ 2155 0b78 CF90      		pop r12
+ 2156 0b7a BF90      		pop r11
+ 2157 0b7c AF90      		pop r10
+ 2158 0b7e 9F90      		pop r9
+ 2159 0b80 8F90      		pop r8
+ 2160 0b82 7F90      		pop r7
+GAS LISTING /tmp/ccT4oBcY.s 			page 48
+
+
+ 2161 0b84 6F90      		pop r6
+ 2162 0b86 5F90      		pop r5
+ 2163 0b88 4F90      		pop r4
+ 274:../../common/motor.c ****     gyems_motor_get_multiturn_angle(motor);
+ 2164               		.stabn	68,0,274,.LM166-.LFBB11
+ 2165               	.LM166:
+ 2166 0b8a 0C94 0000 		jmp gyems_motor_get_multiturn_angle
+ 2167               		.size	gyems_motor_safety, .-gyems_motor_safety
+ 2168               	.Lscope11:
+ 2169               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 2170               		.stabd	78,0,0
+ 2171               		.stabs	"",100,0,0,.Letext0
+ 2172               	.Letext0:
+ 2173               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/ccT4oBcY.s 			page 49
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 motor.c
+     /tmp/ccT4oBcY.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccT4oBcY.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccT4oBcY.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccT4oBcY.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccT4oBcY.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccT4oBcY.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccT4oBcY.s:127    .text:0000000000000000 gyems_motor_request_status
+     /tmp/ccT4oBcY.s:213    .text:0000000000000062 gyems_motor_get_multiturn_angle
+     /tmp/ccT4oBcY.s:288    .text:00000000000000b4 gyems_motor_parse_can
+     /tmp/ccT4oBcY.s:624    .text:00000000000002d0 gyems_motor_reset
+     /tmp/ccT4oBcY.s:825    .text:00000000000003ba gyems_motor_set_torque
+     /tmp/ccT4oBcY.s:922    .text:000000000000041c gyems_motor_set_speed
+     /tmp/ccT4oBcY.s:1027   .text:0000000000000496 gyems_motor_find_endpoints
+     /tmp/ccT4oBcY.s:1059   .text:00000000000004ac gyems_motor_parse_switches
+     /tmp/ccT4oBcY.s:1140   .text:0000000000000506 gyems_motor_stop
+     /tmp/ccT4oBcY.s:1238   .text:0000000000000566 gyems_motor_set_multiturn_angle
+     /tmp/ccT4oBcY.s:1840   .text:0000000000000950 gyems_motor_safety
+
+UNDEFINED SYMBOLS
+CAN_send
+__ashldi3
+__muluhisi3
+__muldi3
+__cmpdi2_s8
+__cmpdi2
+__adddi3
+__negdi2
+__subdi3
+map

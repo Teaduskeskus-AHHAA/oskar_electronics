@@ -1,0 +1,730 @@
+GAS LISTING /tmp/ccZ5uauV.s 			page 1
+
+
+   1               		.file	"twimaster.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"../../common/twimaster.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccZ5uauV.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(3,1)=(0,12)",128,0,125,0
+  66               		.stabs	"uint8_t:t(3,2)=(0,13)",128,0,126,0
+  67               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,127,0
+  68               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,128,0
+  69               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,129,0
+  70               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,130,0
+  71               		.stabs	"int64_t:t(3,7)=(0,8)",128,0,132,0
+  72               		.stabs	"uint64_t:t(3,8)=(0,9)",128,0,133,0
+  73               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,146,0
+  74               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,151,0
+  75               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,163,0
+  76               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,168,0
+  77               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,173,0
+  78               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,178,0
+  79               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,183,0
+  80               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,188,0
+  81               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,196,0
+  82               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,203,0
+  83               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,217,0
+  84               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,222,0
+  85               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,227,0
+  86               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,232,0
+  87               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,237,0
+  88               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,242,0
+  89               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,250,0
+  90               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,257,0
+  91               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,277,0
+  92               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,282,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(1,1)=(3,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(1,2)=(3,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(5,1)=(5,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabs	"i2c_init:F(0,49)",36,0,26,i2c_init
+ 104               	.global	i2c_init
+ 105               		.type	i2c_init, @function
+ 106               	i2c_init:
+ 107               		.stabd	46,0,0
+   1:../../common/twimaster.c **** /*************************************************************************
+   2:../../common/twimaster.c ****  * Title:    I2C master library using hardware TWI interface
+   3:../../common/twimaster.c ****  * Author:   Peter Fleury <pfleury@gmx.ch>  http://jump.to/fleury
+   4:../../common/twimaster.c ****  * File:     $Id: twimaster.c,v 1.4 2015/01/17 12:16:05 peter Exp $
+   5:../../common/twimaster.c ****  * Software: AVR-GCC 3.4.3 / avr-libc 1.2.3
+   6:../../common/twimaster.c ****  * Target:   any AVR device with hardware TWI
+   7:../../common/twimaster.c ****  * Usage:    API compatible with I2C Software Library i2cmaster.h
+GAS LISTING /tmp/ccZ5uauV.s 			page 3
+
+
+   8:../../common/twimaster.c ****  **************************************************************************/
+   9:../../common/twimaster.c **** #include <inttypes.h>
+  10:../../common/twimaster.c **** #include <avr/io.h>
+  11:../../common/twimaster.c **** #include <compat/twi.h>
+  12:../../common/twimaster.c **** 
+  13:../../common/twimaster.c **** #include "include/twimaster.h"
+  14:../../common/twimaster.c **** 
+  15:../../common/twimaster.c **** /* define CPU frequency in hz here if not defined in Makefile */
+  16:../../common/twimaster.c **** #ifndef F_CPU
+  17:../../common/twimaster.c **** #define F_CPU 4000000UL
+  18:../../common/twimaster.c **** #endif
+  19:../../common/twimaster.c **** 
+  20:../../common/twimaster.c **** /* I2C clock in Hz */
+  21:../../common/twimaster.c **** #define SCL_CLOCK 100000L
+  22:../../common/twimaster.c **** 
+  23:../../common/twimaster.c **** /*************************************************************************
+  24:../../common/twimaster.c ****  Initialization of the I2C bus interface. Need to be called only once
+  25:../../common/twimaster.c **** *************************************************************************/
+  26:../../common/twimaster.c **** void i2c_init(void)
+  27:../../common/twimaster.c **** {
+ 108               		.stabn	68,0,27,.LM0-.LFBB1
+ 109               	.LM0:
+ 110               	.LFBB1:
+ 111               	/* prologue: function */
+ 112               	/* frame size = 0 */
+ 113               	/* stack size = 0 */
+ 114               	.L__stack_usage = 0
+  28:../../common/twimaster.c ****   /* initialize TWI clock: 100 kHz clock, TWPS = 0 => prescaler = 1 */
+  29:../../common/twimaster.c **** 
+  30:../../common/twimaster.c ****   TWSR = 0;                              /* no prescaler */
+ 115               		.stabn	68,0,30,.LM1-.LFBB1
+ 116               	.LM1:
+ 117 0000 1092 B900 		sts 185,__zero_reg__
+  31:../../common/twimaster.c ****   TWBR = ((F_CPU / SCL_CLOCK) - 16) / 2; /* must be > 10 for stable operation */
+ 118               		.stabn	68,0,31,.LM2-.LFBB1
+ 119               	.LM2:
+ 120 0004 8CE0      		ldi r24,lo8(12)
+ 121 0006 8093 B800 		sts 184,r24
+ 122 000a 0895      		ret
+ 123               		.size	i2c_init, .-i2c_init
+ 124               	.Lscope1:
+ 125               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 126               		.stabd	78,0,0
+ 127               		.stabs	"i2c_start:F(0,13)",36,0,39,i2c_start
+ 128               		.stabs	"address:P(0,13)",64,0,39,24
+ 129               	.global	i2c_start
+ 130               		.type	i2c_start, @function
+ 131               	i2c_start:
+ 132               		.stabd	46,0,0
+  32:../../common/twimaster.c **** 
+  33:../../common/twimaster.c **** } /* i2c_init */
+  34:../../common/twimaster.c **** 
+  35:../../common/twimaster.c **** /*************************************************************************
+  36:../../common/twimaster.c ****   Issues a start condition and sends address and transfer direction.
+  37:../../common/twimaster.c ****   return 0 = device accessible, 1= failed to access device
+  38:../../common/twimaster.c **** *************************************************************************/
+  39:../../common/twimaster.c **** unsigned char i2c_start(unsigned char address)
+GAS LISTING /tmp/ccZ5uauV.s 			page 4
+
+
+  40:../../common/twimaster.c **** {
+ 133               		.stabn	68,0,40,.LM3-.LFBB2
+ 134               	.LM3:
+ 135               	.LFBB2:
+ 136               	/* prologue: function */
+ 137               	/* frame size = 0 */
+ 138               	/* stack size = 0 */
+ 139               	.L__stack_usage = 0
+  41:../../common/twimaster.c ****   uint8_t twst;
+  42:../../common/twimaster.c **** 
+  43:../../common/twimaster.c ****   // send START condition
+  44:../../common/twimaster.c ****   TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
+ 140               		.stabn	68,0,44,.LM4-.LFBB2
+ 141               	.LM4:
+ 142 000c 94EA      		ldi r25,lo8(-92)
+ 143 000e 9093 BC00 		sts 188,r25
+ 144               	.L3:
+  45:../../common/twimaster.c **** 
+  46:../../common/twimaster.c ****   // wait until transmission completed
+  47:../../common/twimaster.c ****   while (!(TWCR & (1 << TWINT)))
+ 145               		.stabn	68,0,47,.LM5-.LFBB2
+ 146               	.LM5:
+ 147 0012 9091 BC00 		lds r25,188
+ 148 0016 97FF      		sbrs r25,7
+ 149 0018 00C0      		rjmp .L3
+  48:../../common/twimaster.c ****     ;
+  49:../../common/twimaster.c **** 
+  50:../../common/twimaster.c ****   // check value of TWI Status Register. Mask prescaler bits.
+  51:../../common/twimaster.c ****   twst = TW_STATUS & 0xF8;
+ 150               		.stabn	68,0,51,.LM6-.LFBB2
+ 151               	.LM6:
+ 152 001a 9091 B900 		lds r25,185
+ 153 001e 987F      		andi r25,lo8(-8)
+  52:../../common/twimaster.c ****   if ((twst != TW_START) && (twst != TW_REP_START))
+ 154               		.stabn	68,0,52,.LM7-.LFBB2
+ 155               	.LM7:
+ 156 0020 9830      		cpi r25,lo8(8)
+ 157 0022 01F0      		breq .L4
+ 158               		.stabn	68,0,52,.LM8-.LFBB2
+ 159               	.LM8:
+ 160 0024 9031      		cpi r25,lo8(16)
+ 161 0026 01F0      		breq .L4
+ 162               	.L7:
+  53:../../common/twimaster.c ****     return 1;
+ 163               		.stabn	68,0,53,.LM9-.LFBB2
+ 164               	.LM9:
+ 165 0028 81E0      		ldi r24,lo8(1)
+ 166 002a 0895      		ret
+ 167               	.L4:
+ 168               	.LBB4:
+ 169               	.LBB5:
+  54:../../common/twimaster.c **** 
+  55:../../common/twimaster.c ****   // send device address
+  56:../../common/twimaster.c ****   TWDR = address;
+ 170               		.stabn	68,0,56,.LM10-.LFBB2
+ 171               	.LM10:
+ 172 002c 8093 BB00 		sts 187,r24
+GAS LISTING /tmp/ccZ5uauV.s 			page 5
+
+
+  57:../../common/twimaster.c ****   TWCR = (1 << TWINT) | (1 << TWEN);
+ 173               		.stabn	68,0,57,.LM11-.LFBB2
+ 174               	.LM11:
+ 175 0030 84E8      		ldi r24,lo8(-124)
+ 176 0032 8093 BC00 		sts 188,r24
+ 177               	.L6:
+  58:../../common/twimaster.c **** 
+  59:../../common/twimaster.c ****   // wail until transmission completed and ACK/NACK has been received
+  60:../../common/twimaster.c ****   while (!(TWCR & (1 << TWINT)))
+ 178               		.stabn	68,0,60,.LM12-.LFBB2
+ 179               	.LM12:
+ 180 0036 8091 BC00 		lds r24,188
+ 181 003a 87FF      		sbrs r24,7
+ 182 003c 00C0      		rjmp .L6
+  61:../../common/twimaster.c ****     ;
+  62:../../common/twimaster.c **** 
+  63:../../common/twimaster.c ****   // check value of TWI Status Register. Mask prescaler bits.
+  64:../../common/twimaster.c ****   twst = TW_STATUS & 0xF8;
+ 183               		.stabn	68,0,64,.LM13-.LFBB2
+ 184               	.LM13:
+ 185 003e 8091 B900 		lds r24,185
+ 186 0042 887F      		andi r24,lo8(-8)
+  65:../../common/twimaster.c ****   if ((twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK))
+ 187               		.stabn	68,0,65,.LM14-.LFBB2
+ 188               	.LM14:
+ 189 0044 8831      		cpi r24,lo8(24)
+ 190 0046 01F0      		breq .L8
+ 191 0048 8034      		cpi r24,lo8(64)
+ 192 004a 01F4      		brne .L7
+ 193               	.L8:
+  66:../../common/twimaster.c ****     return 1;
+  67:../../common/twimaster.c **** 
+  68:../../common/twimaster.c ****   return 0;
+ 194               		.stabn	68,0,68,.LM15-.LFBB2
+ 195               	.LM15:
+ 196 004c 80E0      		ldi r24,0
+ 197               	.LBE5:
+ 198               	.LBE4:
+  69:../../common/twimaster.c **** 
+  70:../../common/twimaster.c **** } /* i2c_start */
+ 199               		.stabn	68,0,70,.LM16-.LFBB2
+ 200               	.LM16:
+ 201 004e 0895      		ret
+ 202               		.size	i2c_start, .-i2c_start
+ 203               		.stabs	"twst:r(3,2)",64,0,41,25
+ 204               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 205               		.stabs	"twst:r(3,2)",64,0,41,24
+ 206               		.stabn	192,0,0,.LBB5-.LFBB2
+ 207               		.stabn	224,0,0,.LBE5-.LFBB2
+ 208               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 209               	.Lscope2:
+ 210               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 211               		.stabd	78,0,0
+ 212               		.stabs	"i2c_start_wait:F(0,49)",36,0,78,i2c_start_wait
+ 213               		.stabs	"address:P(0,13)",64,0,78,24
+ 214               	.global	i2c_start_wait
+ 215               		.type	i2c_start_wait, @function
+GAS LISTING /tmp/ccZ5uauV.s 			page 6
+
+
+ 216               	i2c_start_wait:
+ 217               		.stabd	46,0,0
+  71:../../common/twimaster.c **** 
+  72:../../common/twimaster.c **** /*************************************************************************
+  73:../../common/twimaster.c ****  Issues a start condition and sends address and transfer direction.
+  74:../../common/twimaster.c ****  If device is busy, use ack polling to wait until device is ready
+  75:../../common/twimaster.c **** 
+  76:../../common/twimaster.c ****  Input:   address and transfer direction of I2C device
+  77:../../common/twimaster.c **** *************************************************************************/
+  78:../../common/twimaster.c **** void i2c_start_wait(unsigned char address)
+  79:../../common/twimaster.c **** {
+ 218               		.stabn	68,0,79,.LM17-.LFBB3
+ 219               	.LM17:
+ 220               	.LFBB3:
+ 221               	/* prologue: function */
+ 222               	/* frame size = 0 */
+ 223               	/* stack size = 0 */
+ 224               	.L__stack_usage = 0
+  80:../../common/twimaster.c ****   uint8_t twst;
+  81:../../common/twimaster.c **** 
+  82:../../common/twimaster.c ****   while (1)
+  83:../../common/twimaster.c ****   {
+  84:../../common/twimaster.c ****     // send START condition
+  85:../../common/twimaster.c ****     TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
+ 225               		.stabn	68,0,85,.LM18-.LFBB3
+ 226               	.LM18:
+ 227 0050 24EA      		ldi r18,lo8(-92)
+  86:../../common/twimaster.c **** 
+  87:../../common/twimaster.c ****     // wait until transmission completed
+  88:../../common/twimaster.c ****     while (!(TWCR & (1 << TWINT)))
+  89:../../common/twimaster.c ****       ;
+  90:../../common/twimaster.c **** 
+  91:../../common/twimaster.c ****     // check value of TWI Status Register. Mask prescaler bits.
+  92:../../common/twimaster.c ****     twst = TW_STATUS & 0xF8;
+  93:../../common/twimaster.c ****     if ((twst != TW_START) && (twst != TW_REP_START))
+  94:../../common/twimaster.c ****       continue;
+  95:../../common/twimaster.c **** 
+  96:../../common/twimaster.c ****     // send device address
+  97:../../common/twimaster.c ****     TWDR = address;
+  98:../../common/twimaster.c ****     TWCR = (1 << TWINT) | (1 << TWEN);
+ 228               		.stabn	68,0,98,.LM19-.LFBB3
+ 229               	.LM19:
+ 230 0052 34E8      		ldi r19,lo8(-124)
+  99:../../common/twimaster.c **** 
+ 100:../../common/twimaster.c ****     // wail until transmission completed
+ 101:../../common/twimaster.c ****     while (!(TWCR & (1 << TWINT)))
+ 102:../../common/twimaster.c ****       ;
+ 103:../../common/twimaster.c **** 
+ 104:../../common/twimaster.c ****     // check value of TWI Status Register. Mask prescaler bits.
+ 105:../../common/twimaster.c ****     twst = TW_STATUS & 0xF8;
+ 106:../../common/twimaster.c ****     if ((twst == TW_MT_SLA_NACK) || (twst == TW_MR_DATA_NACK))
+ 107:../../common/twimaster.c ****     {
+ 108:../../common/twimaster.c ****       /* device busy, send stop condition to terminate write operation */
+ 109:../../common/twimaster.c ****       TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);
+ 231               		.stabn	68,0,109,.LM20-.LFBB3
+ 232               	.LM20:
+ 233 0054 44E9      		ldi r20,lo8(-108)
+GAS LISTING /tmp/ccZ5uauV.s 			page 7
+
+
+ 234               	.L19:
+  85:../../common/twimaster.c **** 
+ 235               		.stabn	68,0,85,.LM21-.LFBB3
+ 236               	.LM21:
+ 237 0056 2093 BC00 		sts 188,r18
+ 238               	.L20:
+  88:../../common/twimaster.c ****       ;
+ 239               		.stabn	68,0,88,.LM22-.LFBB3
+ 240               	.LM22:
+ 241 005a 9091 BC00 		lds r25,188
+ 242 005e 97FF      		sbrs r25,7
+ 243 0060 00C0      		rjmp .L20
+  92:../../common/twimaster.c ****     if ((twst != TW_START) && (twst != TW_REP_START))
+ 244               		.stabn	68,0,92,.LM23-.LFBB3
+ 245               	.LM23:
+ 246 0062 9091 B900 		lds r25,185
+ 247 0066 987F      		andi r25,lo8(-8)
+  93:../../common/twimaster.c ****       continue;
+ 248               		.stabn	68,0,93,.LM24-.LFBB3
+ 249               	.LM24:
+ 250 0068 9830      		cpi r25,lo8(8)
+ 251 006a 01F0      		breq .L21
+  93:../../common/twimaster.c ****       continue;
+ 252               		.stabn	68,0,93,.LM25-.LFBB3
+ 253               	.LM25:
+ 254 006c 9031      		cpi r25,lo8(16)
+ 255 006e 01F4      		brne .L19
+ 256               	.L21:
+  97:../../common/twimaster.c ****     TWCR = (1 << TWINT) | (1 << TWEN);
+ 257               		.stabn	68,0,97,.LM26-.LFBB3
+ 258               	.LM26:
+ 259 0070 8093 BB00 		sts 187,r24
+  98:../../common/twimaster.c **** 
+ 260               		.stabn	68,0,98,.LM27-.LFBB3
+ 261               	.LM27:
+ 262 0074 3093 BC00 		sts 188,r19
+ 263               	.L23:
+ 101:../../common/twimaster.c ****       ;
+ 264               		.stabn	68,0,101,.LM28-.LFBB3
+ 265               	.LM28:
+ 266 0078 9091 BC00 		lds r25,188
+ 267 007c 97FF      		sbrs r25,7
+ 268 007e 00C0      		rjmp .L23
+ 105:../../common/twimaster.c ****     if ((twst == TW_MT_SLA_NACK) || (twst == TW_MR_DATA_NACK))
+ 269               		.stabn	68,0,105,.LM29-.LFBB3
+ 270               	.LM29:
+ 271 0080 9091 B900 		lds r25,185
+ 272 0084 987F      		andi r25,lo8(-8)
+ 106:../../common/twimaster.c ****     {
+ 273               		.stabn	68,0,106,.LM30-.LFBB3
+ 274               	.LM30:
+ 275 0086 9032      		cpi r25,lo8(32)
+ 276 0088 01F0      		breq .L24
+ 106:../../common/twimaster.c ****     {
+ 277               		.stabn	68,0,106,.LM31-.LFBB3
+ 278               	.LM31:
+ 279 008a 9835      		cpi r25,lo8(88)
+GAS LISTING /tmp/ccZ5uauV.s 			page 8
+
+
+ 280 008c 01F0      		breq .L24
+ 281 008e 0895      		ret
+ 282               	.L24:
+ 283               		.stabn	68,0,109,.LM32-.LFBB3
+ 284               	.LM32:
+ 285 0090 4093 BC00 		sts 188,r20
+ 286               	.L26:
+ 110:../../common/twimaster.c **** 
+ 111:../../common/twimaster.c ****       // wait until stop condition is executed and bus released
+ 112:../../common/twimaster.c ****       while (TWCR & (1 << TWSTO))
+ 287               		.stabn	68,0,112,.LM33-.LFBB3
+ 288               	.LM33:
+ 289 0094 9091 BC00 		lds r25,188
+ 290 0098 94FD      		sbrc r25,4
+ 291 009a 00C0      		rjmp .L26
+ 292 009c 00C0      		rjmp .L19
+ 293               		.size	i2c_start_wait, .-i2c_start_wait
+ 294               	.Lscope3:
+ 295               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 296               		.stabd	78,0,0
+ 297               		.stabs	"i2c_rep_start:F(0,13)",36,0,131,i2c_rep_start
+ 298               		.stabs	"address:P(0,13)",64,0,131,24
+ 299               	.global	i2c_rep_start
+ 300               		.type	i2c_rep_start, @function
+ 301               	i2c_rep_start:
+ 302               		.stabd	46,0,0
+ 113:../../common/twimaster.c ****         ;
+ 114:../../common/twimaster.c **** 
+ 115:../../common/twimaster.c ****       continue;
+ 116:../../common/twimaster.c ****     }
+ 117:../../common/twimaster.c ****     // if( twst != TW_MT_SLA_ACK) return 1;
+ 118:../../common/twimaster.c ****     break;
+ 119:../../common/twimaster.c ****   }
+ 120:../../common/twimaster.c **** 
+ 121:../../common/twimaster.c **** } /* i2c_start_wait */
+ 122:../../common/twimaster.c **** 
+ 123:../../common/twimaster.c **** /*************************************************************************
+ 124:../../common/twimaster.c ****  Issues a repeated start condition and sends address and transfer direction
+ 125:../../common/twimaster.c **** 
+ 126:../../common/twimaster.c ****  Input:   address and transfer direction of I2C device
+ 127:../../common/twimaster.c **** 
+ 128:../../common/twimaster.c ****  Return:  0 device accessible
+ 129:../../common/twimaster.c ****           1 failed to access device
+ 130:../../common/twimaster.c **** *************************************************************************/
+ 131:../../common/twimaster.c **** unsigned char i2c_rep_start(unsigned char address)
+ 132:../../common/twimaster.c **** {
+ 303               		.stabn	68,0,132,.LM34-.LFBB4
+ 304               	.LM34:
+ 305               	.LFBB4:
+ 306               	/* prologue: function */
+ 307               	/* frame size = 0 */
+ 308               	/* stack size = 0 */
+ 309               	.L__stack_usage = 0
+ 133:../../common/twimaster.c ****   return i2c_start(address);
+ 310               		.stabn	68,0,133,.LM35-.LFBB4
+ 311               	.LM35:
+ 312 009e 0C94 0000 		jmp i2c_start
+GAS LISTING /tmp/ccZ5uauV.s 			page 9
+
+
+ 313               		.size	i2c_rep_start, .-i2c_rep_start
+ 314               	.Lscope4:
+ 315               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 316               		.stabd	78,0,0
+ 317               		.stabs	"i2c_stop:F(0,49)",36,0,140,i2c_stop
+ 318               	.global	i2c_stop
+ 319               		.type	i2c_stop, @function
+ 320               	i2c_stop:
+ 321               		.stabd	46,0,0
+ 134:../../common/twimaster.c **** 
+ 135:../../common/twimaster.c **** } /* i2c_rep_start */
+ 136:../../common/twimaster.c **** 
+ 137:../../common/twimaster.c **** /*************************************************************************
+ 138:../../common/twimaster.c ****  Terminates the data transfer and releases the I2C bus
+ 139:../../common/twimaster.c **** *************************************************************************/
+ 140:../../common/twimaster.c **** void i2c_stop(void)
+ 141:../../common/twimaster.c **** {
+ 322               		.stabn	68,0,141,.LM36-.LFBB5
+ 323               	.LM36:
+ 324               	.LFBB5:
+ 325               	/* prologue: function */
+ 326               	/* frame size = 0 */
+ 327               	/* stack size = 0 */
+ 328               	.L__stack_usage = 0
+ 142:../../common/twimaster.c ****   /* send stop condition */
+ 143:../../common/twimaster.c ****   TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);
+ 329               		.stabn	68,0,143,.LM37-.LFBB5
+ 330               	.LM37:
+ 331 00a2 84E9      		ldi r24,lo8(-108)
+ 332 00a4 8093 BC00 		sts 188,r24
+ 333               	.L38:
+ 144:../../common/twimaster.c **** 
+ 145:../../common/twimaster.c ****   // wait until stop condition is executed and bus released
+ 146:../../common/twimaster.c ****   while (TWCR & (1 << TWSTO))
+ 334               		.stabn	68,0,146,.LM38-.LFBB5
+ 335               	.LM38:
+ 336 00a8 8091 BC00 		lds r24,188
+ 337 00ac 84FD      		sbrc r24,4
+ 338 00ae 00C0      		rjmp .L38
+ 339               	/* epilogue start */
+ 147:../../common/twimaster.c ****     ;
+ 148:../../common/twimaster.c **** 
+ 149:../../common/twimaster.c **** } /* i2c_stop */
+ 340               		.stabn	68,0,149,.LM39-.LFBB5
+ 341               	.LM39:
+ 342 00b0 0895      		ret
+ 343               		.size	i2c_stop, .-i2c_stop
+ 344               	.Lscope5:
+ 345               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 346               		.stabd	78,0,0
+ 347               		.stabs	"i2c_write:F(0,13)",36,0,158,i2c_write
+ 348               		.stabs	"data:P(0,13)",64,0,158,24
+ 349               	.global	i2c_write
+ 350               		.type	i2c_write, @function
+ 351               	i2c_write:
+ 352               		.stabd	46,0,0
+ 150:../../common/twimaster.c **** 
+GAS LISTING /tmp/ccZ5uauV.s 			page 10
+
+
+ 151:../../common/twimaster.c **** /*************************************************************************
+ 152:../../common/twimaster.c ****   Send one byte to I2C device
+ 153:../../common/twimaster.c **** 
+ 154:../../common/twimaster.c ****   Input:    byte to be transfered
+ 155:../../common/twimaster.c ****   Return:   0 write successful
+ 156:../../common/twimaster.c ****             1 write failed
+ 157:../../common/twimaster.c **** *************************************************************************/
+ 158:../../common/twimaster.c **** unsigned char i2c_write(unsigned char data)
+ 159:../../common/twimaster.c **** {
+ 353               		.stabn	68,0,159,.LM40-.LFBB6
+ 354               	.LM40:
+ 355               	.LFBB6:
+ 356               	/* prologue: function */
+ 357               	/* frame size = 0 */
+ 358               	/* stack size = 0 */
+ 359               	.L__stack_usage = 0
+ 160:../../common/twimaster.c ****   uint8_t twst;
+ 161:../../common/twimaster.c **** 
+ 162:../../common/twimaster.c ****   // send data to the previously addressed device
+ 163:../../common/twimaster.c ****   TWDR = data;
+ 360               		.stabn	68,0,163,.LM41-.LFBB6
+ 361               	.LM41:
+ 362 00b2 8093 BB00 		sts 187,r24
+ 164:../../common/twimaster.c ****   TWCR = (1 << TWINT) | (1 << TWEN);
+ 363               		.stabn	68,0,164,.LM42-.LFBB6
+ 364               	.LM42:
+ 365 00b6 84E8      		ldi r24,lo8(-124)
+ 366 00b8 8093 BC00 		sts 188,r24
+ 367               	.L41:
+ 165:../../common/twimaster.c **** 
+ 166:../../common/twimaster.c ****   // wait until transmission completed
+ 167:../../common/twimaster.c ****   while (!(TWCR & (1 << TWINT)))
+ 368               		.stabn	68,0,167,.LM43-.LFBB6
+ 369               	.LM43:
+ 370 00bc 8091 BC00 		lds r24,188
+ 371 00c0 87FF      		sbrs r24,7
+ 372 00c2 00C0      		rjmp .L41
+ 168:../../common/twimaster.c ****     ;
+ 169:../../common/twimaster.c **** 
+ 170:../../common/twimaster.c ****   // check value of TWI Status Register. Mask prescaler bits
+ 171:../../common/twimaster.c ****   twst = TW_STATUS & 0xF8;
+ 373               		.stabn	68,0,171,.LM44-.LFBB6
+ 374               	.LM44:
+ 375 00c4 9091 B900 		lds r25,185
+ 376 00c8 987F      		andi r25,lo8(-8)
+ 377 00ca 81E0      		ldi r24,lo8(1)
+ 378 00cc 9832      		cpi r25,lo8(40)
+ 379 00ce 01F0      		breq .L44
+ 172:../../common/twimaster.c ****   if (twst != TW_MT_DATA_ACK)
+ 173:../../common/twimaster.c ****     return 1;
+ 174:../../common/twimaster.c ****   return 0;
+ 175:../../common/twimaster.c **** 
+ 176:../../common/twimaster.c **** } /* i2c_write */
+ 380               		.stabn	68,0,176,.LM45-.LFBB6
+ 381               	.LM45:
+ 382 00d0 0895      		ret
+ 383               	.L44:
+GAS LISTING /tmp/ccZ5uauV.s 			page 11
+
+
+ 384 00d2 80E0      		ldi r24,0
+ 385 00d4 0895      		ret
+ 386               		.size	i2c_write, .-i2c_write
+ 387               	.Lscope6:
+ 388               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 389               		.stabd	78,0,0
+ 390               		.stabs	"i2c_readAck:F(0,13)",36,0,183,i2c_readAck
+ 391               	.global	i2c_readAck
+ 392               		.type	i2c_readAck, @function
+ 393               	i2c_readAck:
+ 394               		.stabd	46,0,0
+ 177:../../common/twimaster.c **** 
+ 178:../../common/twimaster.c **** /*************************************************************************
+ 179:../../common/twimaster.c ****  Read one byte from the I2C device, request more data from device
+ 180:../../common/twimaster.c **** 
+ 181:../../common/twimaster.c ****  Return:  byte read from I2C device
+ 182:../../common/twimaster.c **** *************************************************************************/
+ 183:../../common/twimaster.c **** unsigned char i2c_readAck(void)
+ 184:../../common/twimaster.c **** {
+ 395               		.stabn	68,0,184,.LM46-.LFBB7
+ 396               	.LM46:
+ 397               	.LFBB7:
+ 398               	/* prologue: function */
+ 399               	/* frame size = 0 */
+ 400               	/* stack size = 0 */
+ 401               	.L__stack_usage = 0
+ 185:../../common/twimaster.c ****   TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA);
+ 402               		.stabn	68,0,185,.LM47-.LFBB7
+ 403               	.LM47:
+ 404 00d6 84EC      		ldi r24,lo8(-60)
+ 405 00d8 8093 BC00 		sts 188,r24
+ 406               	.L46:
+ 186:../../common/twimaster.c ****   while (!(TWCR & (1 << TWINT)))
+ 407               		.stabn	68,0,186,.LM48-.LFBB7
+ 408               	.LM48:
+ 409 00dc 8091 BC00 		lds r24,188
+ 410 00e0 87FF      		sbrs r24,7
+ 411 00e2 00C0      		rjmp .L46
+ 187:../../common/twimaster.c ****     ;
+ 188:../../common/twimaster.c **** 
+ 189:../../common/twimaster.c ****   return TWDR;
+ 412               		.stabn	68,0,189,.LM49-.LFBB7
+ 413               	.LM49:
+ 414 00e4 8091 BB00 		lds r24,187
+ 190:../../common/twimaster.c **** 
+ 191:../../common/twimaster.c **** } /* i2c_readAck */
+ 415               		.stabn	68,0,191,.LM50-.LFBB7
+ 416               	.LM50:
+ 417 00e8 0895      		ret
+ 418               		.size	i2c_readAck, .-i2c_readAck
+ 419               	.Lscope7:
+ 420               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 421               		.stabd	78,0,0
+ 422               		.stabs	"i2c_readNak:F(0,13)",36,0,198,i2c_readNak
+ 423               	.global	i2c_readNak
+ 424               		.type	i2c_readNak, @function
+ 425               	i2c_readNak:
+GAS LISTING /tmp/ccZ5uauV.s 			page 12
+
+
+ 426               		.stabd	46,0,0
+ 192:../../common/twimaster.c **** 
+ 193:../../common/twimaster.c **** /*************************************************************************
+ 194:../../common/twimaster.c ****  Read one byte from the I2C device, read is followed by a stop condition
+ 195:../../common/twimaster.c **** 
+ 196:../../common/twimaster.c ****  Return:  byte read from I2C device
+ 197:../../common/twimaster.c **** *************************************************************************/
+ 198:../../common/twimaster.c **** unsigned char i2c_readNak(void)
+ 199:../../common/twimaster.c **** {
+ 427               		.stabn	68,0,199,.LM51-.LFBB8
+ 428               	.LM51:
+ 429               	.LFBB8:
+ 430               	/* prologue: function */
+ 431               	/* frame size = 0 */
+ 432               	/* stack size = 0 */
+ 433               	.L__stack_usage = 0
+ 200:../../common/twimaster.c ****   TWCR = (1 << TWINT) | (1 << TWEN);
+ 434               		.stabn	68,0,200,.LM52-.LFBB8
+ 435               	.LM52:
+ 436 00ea 84E8      		ldi r24,lo8(-124)
+ 437 00ec 8093 BC00 		sts 188,r24
+ 438               	.L49:
+ 201:../../common/twimaster.c ****   while (!(TWCR & (1 << TWINT)))
+ 439               		.stabn	68,0,201,.LM53-.LFBB8
+ 440               	.LM53:
+ 441 00f0 8091 BC00 		lds r24,188
+ 442 00f4 87FF      		sbrs r24,7
+ 443 00f6 00C0      		rjmp .L49
+ 202:../../common/twimaster.c ****     ;
+ 203:../../common/twimaster.c **** 
+ 204:../../common/twimaster.c ****   return TWDR;
+ 444               		.stabn	68,0,204,.LM54-.LFBB8
+ 445               	.LM54:
+ 446 00f8 8091 BB00 		lds r24,187
+ 205:../../common/twimaster.c **** 
+ 206:../../common/twimaster.c **** } /* i2c_readNak */...
+ 447               		.stabn	68,0,206,.LM55-.LFBB8
+ 448               	.LM55:
+ 449 00fc 0895      		ret
+ 450               		.size	i2c_readNak, .-i2c_readNak
+ 451               	.Lscope8:
+ 452               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 453               		.stabd	78,0,0
+ 454               		.stabs	"",100,0,0,.Letext0
+ 455               	.Letext0:
+ 456               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/ccZ5uauV.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 twimaster.c
+     /tmp/ccZ5uauV.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccZ5uauV.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccZ5uauV.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccZ5uauV.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccZ5uauV.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccZ5uauV.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccZ5uauV.s:106    .text:0000000000000000 i2c_init
+     /tmp/ccZ5uauV.s:131    .text:000000000000000c i2c_start
+     /tmp/ccZ5uauV.s:216    .text:0000000000000050 i2c_start_wait
+     /tmp/ccZ5uauV.s:301    .text:000000000000009e i2c_rep_start
+     /tmp/ccZ5uauV.s:320    .text:00000000000000a2 i2c_stop
+     /tmp/ccZ5uauV.s:351    .text:00000000000000b2 i2c_write
+     /tmp/ccZ5uauV.s:393    .text:00000000000000d6 i2c_readAck
+     /tmp/ccZ5uauV.s:425    .text:00000000000000ea i2c_readNak
+
+NO UNDEFINED SYMBOLS

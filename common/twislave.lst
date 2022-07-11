@@ -1,0 +1,505 @@
+GAS LISTING /tmp/ccunSBJi.s 			page 1
+
+
+   1               		.file	"twislave.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"../../common/twislave.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccunSBJi.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  65               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  66               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  67               		.stabs	"int8_t:t(5,1)=(0,12)",128,0,125,0
+  68               		.stabs	"uint8_t:t(5,2)=(0,13)",128,0,126,0
+  69               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,127,0
+  70               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,128,0
+  71               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,129,0
+  72               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,130,0
+  73               		.stabs	"int64_t:t(5,7)=(0,8)",128,0,132,0
+  74               		.stabs	"uint64_t:t(5,8)=(0,9)",128,0,133,0
+  75               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,146,0
+  76               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,151,0
+  77               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,163,0
+  78               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,168,0
+  79               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,173,0
+  80               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,178,0
+  81               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,183,0
+  82               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,188,0
+  83               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,196,0
+  84               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,203,0
+  85               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,217,0
+  86               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,222,0
+  87               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,227,0
+  88               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,232,0
+  89               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,237,0
+  90               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,242,0
+  91               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,250,0
+  92               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,257,0
+  93               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,277,0
+  94               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,282,0
+  95               		.stabn	162,0,0,0
+  96               		.stabn	162,0,0,0
+  97               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  98               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  99               		.stabn	162,0,0,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 102               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabs	"/usr/lib/avr/include/avr/eeprom.h",130,0,0,0
+ 106               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stddef.h",130,0,0,0
+ 107               		.stabs	"ptrdiff_t:t(8,1)=(0,1)",128,0,149,0
+ 108               		.stabs	"size_t:t(8,2)=(0,4)",128,0,216,0
+ 109               		.stabs	"wchar_t:t(8,3)=(0,1)",128,0,328,0
+ 110               		.stabs	"max_align_t:t(8,4)=(8,5)=s12__max_align_ll:(0,8),0,64;__max_align_ld:(0,16),64,32;;",128,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabn	162,0,0,0
+ 113               		.stabs	"TWIS_Init:F(5,2)",36,0,76,TWIS_Init
+ 114               		.stabs	"addr:P(5,2)",64,0,76,24
+GAS LISTING /tmp/ccunSBJi.s 			page 3
+
+
+ 115               	.global	TWIS_Init
+ 116               		.type	TWIS_Init, @function
+ 117               	TWIS_Init:
+ 118               		.stabd	46,0,0
+   1:../../common/twislave.c **** /*******************************************************
+   2:../../common/twislave.c ****  Author:					Manfred Langemann
+   3:../../common/twislave.c ****  mailto:					Manfred.Langemann �t t-online.de
+   4:../../common/twislave.c ****  Begin of project:			04.01.2008
+   5:../../common/twislave.c ****  Latest version generated:	04.01.2008
+   6:../../common/twislave.c ****  Filename:					TWI_Slave.c
+   7:../../common/twislave.c ****  Description:				TWI slave functions
+   8:../../common/twislave.c **** 
+   9:../../common/twislave.c ****  -------------------------------------------------------
+  10:../../common/twislave.c ****  Program Example
+  11:../../common/twislave.c ****  -------------------------------------------------------
+  12:../../common/twislave.c **** #include "twislave.h"
+  13:../../common/twislave.c **** 
+  14:../../common/twislave.c **** int main (void)
+  15:../../common/twislave.c ****   {
+  16:../../common/twislave.c ****   uint8_t		i=0;
+  17:../../common/twislave.c ****   uint8_t		j=0;
+  18:../../common/twislave.c ****   uint8_t		byte[8];
+  19:../../common/twislave.c ****   uint8_t		TWIS_ResponseType;
+  20:../../common/twislave.c **** 
+  21:../../common/twislave.c ****  // Clear any interrupt
+  22:../../common/twislave.c ****   cli ();
+  23:../../common/twislave.c **** 
+  24:../../common/twislave.c ****  // Wait 0.5 second for POR
+  25:../../common/twislave.c ****   Delay_ms (500);
+  26:../../common/twislave.c **** 
+  27:../../common/twislave.c ****  // Initiate the TWI slave interface
+  28:../../common/twislave.c ****   TWIS_Init (15, 100000);
+  29:../../common/twislave.c **** 
+  30:../../common/twislave.c ****  // Endless loop
+  31:../../common/twislave.c ****   while (1)
+  32:../../common/twislave.c ****   {
+  33:../../common/twislave.c **** 
+  34:../../common/twislave.c ****  // Is something to do for the TWI slave interface ?
+  35:../../common/twislave.c ****     if (TWIS_ResponseRequired (&TWIS_ResponseType))
+  36:../../common/twislave.c ****     {
+  37:../../common/twislave.c ****       switch (TWIS_ResponseType)
+  38:../../common/twislave.c ****       {
+  39:../../common/twislave.c ****  // TWI requests to read a byte from the master.
+  40:../../common/twislave.c ****  // It is implicitely assumed, that the master
+  41:../../common/twislave.c ****  // sends 8 bytes.
+  42:../../common/twislave.c **** 
+  43:../../common/twislave.c ****         case TW_SR_SLA_ACK:
+  44:../../common/twislave.c ****           for (i=0;i<7;i++)
+  45:../../common/twislave.c ****           {
+  46:../../common/twislave.c ****             byte[0] = TWIS_ReadAck ();
+  47:../../common/twislave.c ****           }
+  48:../../common/twislave.c ****           byte[7] = TWIS_ReadNack ();
+  49:../../common/twislave.c ****           TWIS_Stop ();
+  50:../../common/twislave.c ****           break;
+  51:../../common/twislave.c **** 
+  52:../../common/twislave.c ****  // TWI requests to write a byte to the master.
+  53:../../common/twislave.c ****  // It is implicitely assumed, that the master
+GAS LISTING /tmp/ccunSBJi.s 			page 4
+
+
+  54:../../common/twislave.c ****  // is prepared to receive 8 bytes.
+  55:../../common/twislave.c **** 
+  56:../../common/twislave.c ****         case TW_ST_SLA_ACK:
+  57:../../common/twislave.c ****           for (i = 0; i < 8; i++)
+  58:../../common/twislave.c ****           {
+  59:../../common/twislave.c ****             TWIS_Write(j++);
+  60:../../common/twislave.c ****           }
+  61:../../common/twislave.c ****           TWIS_Stop();
+  62:../../common/twislave.c ****           break;
+  63:../../common/twislave.c ****         }
+  64:../../common/twislave.c ****       }
+  65:../../common/twislave.c ****  // Do something else ....... e.g.:
+  66:../../common/twislave.c ****     i++;
+  67:../../common/twislave.c ****     }
+  68:../../common/twislave.c ****   return 0;
+  69:../../common/twislave.c ****   }
+  70:../../common/twislave.c ****  ********************************************************/
+  71:../../common/twislave.c **** #include <avr/io.h>
+  72:../../common/twislave.c **** #include <avr/interrupt.h>
+  73:../../common/twislave.c **** #include <avr/eeprom.h>
+  74:../../common/twislave.c **** #include "include/twislave.h"
+  75:../../common/twislave.c **** 
+  76:../../common/twislave.c **** uint8_t TWIS_Init(uint8_t addr)
+  77:../../common/twislave.c **** {
+ 119               		.stabn	68,0,77,.LM0-.LFBB1
+ 120               	.LM0:
+ 121               	.LFBB1:
+ 122               	/* prologue: function */
+ 123               	/* frame size = 0 */
+ 124               	/* stack size = 0 */
+ 125               	.L__stack_usage = 0
+  78:../../common/twislave.c ****   /*
+  79:../../common/twislave.c ****   ** Set the TWI slave address
+  80:../../common/twislave.c ****   */
+  81:../../common/twislave.c **** 
+  82:../../common/twislave.c ****   TWAR = addr;
+ 126               		.stabn	68,0,82,.LM1-.LFBB1
+ 127               	.LM1:
+ 128 0000 8093 BA00 		sts 186,r24
+  83:../../common/twislave.c ****   /*
+  84:../../common/twislave.c ****   ** Activate TWI interface
+  85:../../common/twislave.c ****   */
+  86:../../common/twislave.c ****   TWSR = 0;
+ 129               		.stabn	68,0,86,.LM2-.LFBB1
+ 130               	.LM2:
+ 131 0004 1092 B900 		sts 185,__zero_reg__
+  87:../../common/twislave.c ****   TWBR = 0;
+ 132               		.stabn	68,0,87,.LM3-.LFBB1
+ 133               	.LM3:
+ 134 0008 1092 B800 		sts 184,__zero_reg__
+  88:../../common/twislave.c ****   TWCR = _BV(TWEN) | _BV(TWEA) | (1 << TWIE);
+ 135               		.stabn	68,0,88,.LM4-.LFBB1
+ 136               	.LM4:
+ 137 000c 85E4      		ldi r24,lo8(69)
+ 138 000e 8093 BC00 		sts 188,r24
+  89:../../common/twislave.c ****   return 1;
+  90:../../common/twislave.c **** }
+GAS LISTING /tmp/ccunSBJi.s 			page 5
+
+
+ 139               		.stabn	68,0,90,.LM5-.LFBB1
+ 140               	.LM5:
+ 141 0012 81E0      		ldi r24,lo8(1)
+ 142 0014 0895      		ret
+ 143               		.size	TWIS_Init, .-TWIS_Init
+ 144               	.Lscope1:
+ 145               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 146               		.stabd	78,0,0
+ 147               		.stabs	"TWIS_Stop:F(0,49)",36,0,92,TWIS_Stop
+ 148               	.global	TWIS_Stop
+ 149               		.type	TWIS_Stop, @function
+ 150               	TWIS_Stop:
+ 151               		.stabd	46,0,0
+  91:../../common/twislave.c **** 
+  92:../../common/twislave.c **** void TWIS_Stop()
+  93:../../common/twislave.c **** {
+ 152               		.stabn	68,0,93,.LM6-.LFBB2
+ 153               	.LM6:
+ 154               	.LFBB2:
+ 155               	/* prologue: function */
+ 156               	/* frame size = 0 */
+ 157               	/* stack size = 0 */
+ 158               	.L__stack_usage = 0
+  94:../../common/twislave.c ****   TWCR = _BV(TWEN) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 159               		.stabn	68,0,94,.LM7-.LFBB2
+ 160               	.LM7:
+ 161 0016 84ED      		ldi r24,lo8(-44)
+ 162 0018 8093 BC00 		sts 188,r24
+ 163               	.L3:
+  95:../../common/twislave.c **** 
+  96:../../common/twislave.c ****   while (TWCR & _BV(TWINT))
+ 164               		.stabn	68,0,96,.LM8-.LFBB2
+ 165               	.LM8:
+ 166 001c 8091 BC00 		lds r24,188
+ 167 0020 87FD      		sbrc r24,7
+ 168 0022 00C0      		rjmp .L3
+  97:../../common/twislave.c ****     ;
+  98:../../common/twislave.c **** 
+  99:../../common/twislave.c ****   TWCR = _BV(TWEN) | _BV(TWEA);
+ 169               		.stabn	68,0,99,.LM9-.LFBB2
+ 170               	.LM9:
+ 171 0024 84E4      		ldi r24,lo8(68)
+ 172 0026 8093 BC00 		sts 188,r24
+ 173 002a 0895      		ret
+ 174               		.size	TWIS_Stop, .-TWIS_Stop
+ 175               	.Lscope2:
+ 176               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 177               		.stabd	78,0,0
+ 178               		.stabs	"TWIS_Write:F(0,49)",36,0,102,TWIS_Write
+ 179               		.stabs	"byte:P(5,2)",64,0,102,24
+ 180               	.global	TWIS_Write
+ 181               		.type	TWIS_Write, @function
+ 182               	TWIS_Write:
+ 183               		.stabd	46,0,0
+ 100:../../common/twislave.c **** }
+ 101:../../common/twislave.c **** 
+ 102:../../common/twislave.c **** void TWIS_Write(uint8_t byte)
+GAS LISTING /tmp/ccunSBJi.s 			page 6
+
+
+ 103:../../common/twislave.c **** {
+ 184               		.stabn	68,0,103,.LM10-.LFBB3
+ 185               	.LM10:
+ 186               	.LFBB3:
+ 187               	/* prologue: function */
+ 188               	/* frame size = 0 */
+ 189               	/* stack size = 0 */
+ 190               	.L__stack_usage = 0
+ 104:../../common/twislave.c ****   TWDR = byte;
+ 191               		.stabn	68,0,104,.LM11-.LFBB3
+ 192               	.LM11:
+ 193 002c 8093 BB00 		sts 187,r24
+ 105:../../common/twislave.c ****   TWCR = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);
+ 194               		.stabn	68,0,105,.LM12-.LFBB3
+ 195               	.LM12:
+ 196 0030 84EC      		ldi r24,lo8(-60)
+ 197 0032 8093 BC00 		sts 188,r24
+ 198               	.L7:
+ 106:../../common/twislave.c **** 
+ 107:../../common/twislave.c ****   while (!(TWCR & _BV(TWINT)))
+ 199               		.stabn	68,0,107,.LM13-.LFBB3
+ 200               	.LM13:
+ 201 0036 8091 BC00 		lds r24,188
+ 202 003a 87FF      		sbrs r24,7
+ 203 003c 00C0      		rjmp .L7
+ 204               	/* epilogue start */
+ 108:../../common/twislave.c ****     ;
+ 109:../../common/twislave.c **** }
+ 205               		.stabn	68,0,109,.LM14-.LFBB3
+ 206               	.LM14:
+ 207 003e 0895      		ret
+ 208               		.size	TWIS_Write, .-TWIS_Write
+ 209               	.Lscope3:
+ 210               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 211               		.stabd	78,0,0
+ 212               		.stabs	"TWIS_ReadAck:F(5,2)",36,0,111,TWIS_ReadAck
+ 213               	.global	TWIS_ReadAck
+ 214               		.type	TWIS_ReadAck, @function
+ 215               	TWIS_ReadAck:
+ 216               		.stabd	46,0,0
+ 110:../../common/twislave.c **** 
+ 111:../../common/twislave.c **** uint8_t TWIS_ReadAck()
+ 112:../../common/twislave.c **** {
+ 217               		.stabn	68,0,112,.LM15-.LFBB4
+ 218               	.LM15:
+ 219               	.LFBB4:
+ 220               	/* prologue: function */
+ 221               	/* frame size = 0 */
+ 222               	/* stack size = 0 */
+ 223               	.L__stack_usage = 0
+ 113:../../common/twislave.c ****   TWCR = _BV(TWINT) | _BV(TWEN) | _BV(TWEA);
+ 224               		.stabn	68,0,113,.LM16-.LFBB4
+ 225               	.LM16:
+ 226 0040 84EC      		ldi r24,lo8(-60)
+ 227 0042 8093 BC00 		sts 188,r24
+ 228               	.L10:
+ 114:../../common/twislave.c **** 
+GAS LISTING /tmp/ccunSBJi.s 			page 7
+
+
+ 115:../../common/twislave.c ****   while (!(TWCR & _BV(TWINT)))
+ 229               		.stabn	68,0,115,.LM17-.LFBB4
+ 230               	.LM17:
+ 231 0046 8091 BC00 		lds r24,188
+ 232 004a 87FF      		sbrs r24,7
+ 233 004c 00C0      		rjmp .L10
+ 116:../../common/twislave.c ****     ;
+ 117:../../common/twislave.c **** 
+ 118:../../common/twislave.c ****   return TWDR;
+ 234               		.stabn	68,0,118,.LM18-.LFBB4
+ 235               	.LM18:
+ 236 004e 8091 BB00 		lds r24,187
+ 119:../../common/twislave.c **** }
+ 237               		.stabn	68,0,119,.LM19-.LFBB4
+ 238               	.LM19:
+ 239 0052 0895      		ret
+ 240               		.size	TWIS_ReadAck, .-TWIS_ReadAck
+ 241               	.Lscope4:
+ 242               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 243               		.stabd	78,0,0
+ 244               		.stabs	"TWIS_ReadNack:F(5,2)",36,0,121,TWIS_ReadNack
+ 245               	.global	TWIS_ReadNack
+ 246               		.type	TWIS_ReadNack, @function
+ 247               	TWIS_ReadNack:
+ 248               		.stabd	46,0,0
+ 120:../../common/twislave.c **** 
+ 121:../../common/twislave.c **** uint8_t TWIS_ReadNack()
+ 122:../../common/twislave.c **** {
+ 249               		.stabn	68,0,122,.LM20-.LFBB5
+ 250               	.LM20:
+ 251               	.LFBB5:
+ 252               	/* prologue: function */
+ 253               	/* frame size = 0 */
+ 254               	/* stack size = 0 */
+ 255               	.L__stack_usage = 0
+ 123:../../common/twislave.c ****   TWCR = _BV(TWINT) | _BV(TWEN);
+ 256               		.stabn	68,0,123,.LM21-.LFBB5
+ 257               	.LM21:
+ 258 0054 84E8      		ldi r24,lo8(-124)
+ 259 0056 8093 BC00 		sts 188,r24
+ 260               	.L13:
+ 124:../../common/twislave.c **** 
+ 125:../../common/twislave.c ****   while (!(TWCR & _BV(TWINT)))
+ 261               		.stabn	68,0,125,.LM22-.LFBB5
+ 262               	.LM22:
+ 263 005a 8091 BC00 		lds r24,188
+ 264 005e 87FF      		sbrs r24,7
+ 265 0060 00C0      		rjmp .L13
+ 126:../../common/twislave.c ****     ;
+ 127:../../common/twislave.c **** 
+ 128:../../common/twislave.c ****   return TWDR;
+ 266               		.stabn	68,0,128,.LM23-.LFBB5
+ 267               	.LM23:
+ 268 0062 8091 BB00 		lds r24,187
+ 129:../../common/twislave.c **** }
+ 269               		.stabn	68,0,129,.LM24-.LFBB5
+ 270               	.LM24:
+GAS LISTING /tmp/ccunSBJi.s 			page 8
+
+
+ 271 0066 0895      		ret
+ 272               		.size	TWIS_ReadNack, .-TWIS_ReadNack
+ 273               	.Lscope5:
+ 274               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 275               		.stabd	78,0,0
+ 276               		.stabs	"TWIS_ResponseRequired:F(5,2)",36,0,131,TWIS_ResponseRequired
+ 277               		.stabs	"TWI_ResponseType:P(0,50)=*(5,2)",64,0,131,30
+ 278               	.global	TWIS_ResponseRequired
+ 279               		.type	TWIS_ResponseRequired, @function
+ 280               	TWIS_ResponseRequired:
+ 281               		.stabd	46,0,0
+ 130:../../common/twislave.c **** 
+ 131:../../common/twislave.c **** uint8_t TWIS_ResponseRequired(uint8_t *TWI_ResponseType)
+ 132:../../common/twislave.c **** {
+ 282               		.stabn	68,0,132,.LM25-.LFBB6
+ 283               	.LM25:
+ 284               	.LFBB6:
+ 285               	/* prologue: function */
+ 286               	/* frame size = 0 */
+ 287               	/* stack size = 0 */
+ 288               	.L__stack_usage = 0
+ 289 0068 FC01      		movw r30,r24
+ 133:../../common/twislave.c ****   if (TWCR & _BV(TWINT))
+ 290               		.stabn	68,0,133,.LM26-.LFBB6
+ 291               	.LM26:
+ 292 006a 9091 BC00 		lds r25,188
+ 293 006e 97FD      		sbrc r25,7
+ 294 0070 00C0      		rjmp .L18
+ 134:../../common/twislave.c ****   {
+ 135:../../common/twislave.c ****     *TWI_ResponseType = TW_STATUS;
+ 136:../../common/twislave.c ****     return 1;
+ 137:../../common/twislave.c ****   }
+ 138:../../common/twislave.c **** 
+ 139:../../common/twislave.c ****   return 0;
+ 295               		.stabn	68,0,139,.LM27-.LFBB6
+ 296               	.LM27:
+ 297 0072 80E0      		ldi r24,0
+ 140:../../common/twislave.c **** }
+ 298               		.stabn	68,0,140,.LM28-.LFBB6
+ 299               	.LM28:
+ 300 0074 0895      		ret
+ 301               	.L18:
+ 135:../../common/twislave.c ****     return 1;
+ 302               		.stabn	68,0,135,.LM29-.LFBB6
+ 303               	.LM29:
+ 304 0076 9091 B900 		lds r25,185
+ 305 007a 987F      		andi r25,lo8(-8)
+ 306 007c 9083      		st Z,r25
+ 136:../../common/twislave.c ****   }
+ 307               		.stabn	68,0,136,.LM30-.LFBB6
+ 308               	.LM30:
+ 309 007e 81E0      		ldi r24,lo8(1)
+ 310 0080 0895      		ret
+ 311               		.size	TWIS_ResponseRequired, .-TWIS_ResponseRequired
+ 312               	.Lscope6:
+ 313               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 314               		.stabd	78,0,0
+GAS LISTING /tmp/ccunSBJi.s 			page 9
+
+
+ 315               		.stabs	"",100,0,0,.Letext0
+ 316               	.Letext0:
+ 317               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/ccunSBJi.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 twislave.c
+     /tmp/ccunSBJi.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccunSBJi.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccunSBJi.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccunSBJi.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccunSBJi.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccunSBJi.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccunSBJi.s:117    .text:0000000000000000 TWIS_Init
+     /tmp/ccunSBJi.s:150    .text:0000000000000016 TWIS_Stop
+     /tmp/ccunSBJi.s:182    .text:000000000000002c TWIS_Write
+     /tmp/ccunSBJi.s:215    .text:0000000000000040 TWIS_ReadAck
+     /tmp/ccunSBJi.s:247    .text:0000000000000054 TWIS_ReadNack
+     /tmp/ccunSBJi.s:280    .text:0000000000000068 TWIS_ResponseRequired
+
+NO UNDEFINED SYMBOLS

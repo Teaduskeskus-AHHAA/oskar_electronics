@@ -1,0 +1,1587 @@
+GAS LISTING /tmp/ccj0XBbI.s 			page 1
+
+
+   1               		.file	"can.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__RAMPZ__ = 0x3b
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   8               		.stabs	"/home/rando/oskar_electronics/oskar_body/fw/",100,0,2,.Ltext0
+   9               		.stabs	"../../common/can.c",100,0,2,.Ltext0
+  10               		.text
+  11               	.Ltext0:
+  12               		.stabs	"gcc2_compiled.",60,0,0,0
+  13               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  14               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  15               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  16               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  17               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  18               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  19               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  20               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  21               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  22               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  23               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  24               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  25               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  26               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccj0XBbI.s 			page 2
+
+
+  58               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  62               		.stabs	"../../common/include/can.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(3,1)=(0,12)",128,0,125,0
+  66               		.stabs	"uint8_t:t(3,2)=(0,13)",128,0,126,0
+  67               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,127,0
+  68               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,128,0
+  69               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,129,0
+  70               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,130,0
+  71               		.stabs	"int64_t:t(3,7)=(0,8)",128,0,132,0
+  72               		.stabs	"uint64_t:t(3,8)=(0,9)",128,0,133,0
+  73               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,146,0
+  74               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,151,0
+  75               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,163,0
+  76               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,168,0
+  77               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,173,0
+  78               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,178,0
+  79               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,183,0
+  80               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,188,0
+  81               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,196,0
+  82               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,203,0
+  83               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,217,0
+  84               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,222,0
+  85               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,227,0
+  86               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,232,0
+  87               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,237,0
+  88               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,242,0
+  89               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,250,0
+  90               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,257,0
+  91               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,277,0
+  92               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,282,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"CAN_frame_t:t(1,1)=(1,2)=s13SID:(3,6),0,32;header:(1,3)=s1rtr:(0,4),0,1;len:(0,4),1,4;;,32
+  96               		.stabs	" :T(1,6)=@s8;eCAN_ERROR_NONE:0,CAN_ERROR_ALLTXBUSY:1,CAN_ERROR_UNKNOWN_FLOW:2,CAN_ERROR_AB
+  97               		.stabs	"CAN_error:t(1,7)=(1,6)",128,0,32,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"../../common/include/spi.h",130,0,0,0
+ 100               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+ 101               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+ 103               		.stabs	"int_farptr_t:t(7,1)=(3,5)",128,0,77,0
+ 104               		.stabs	"uint_farptr_t:t(7,2)=(3,6)",128,0,81,0
+ 105               		.stabn	162,0,0,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 108               		.stabs	"__fuse_t:t(8,1)=(8,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 109               		.stabn	162,0,0,0
+ 110               		.stabn	162,0,0,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"CAN_set_mode:F(0,49)",36,0,4,CAN_set_mode
+ 113               		.stabs	"mode:P(3,2)",64,0,4,28
+ 114               	.global	CAN_set_mode
+GAS LISTING /tmp/ccj0XBbI.s 			page 3
+
+
+ 115               		.type	CAN_set_mode, @function
+ 116               	CAN_set_mode:
+ 117               		.stabd	46,0,0
+   1:../../common/can.c **** #include "include/can.h"
+   2:../../common/can.c **** #include "include/spi.h"
+   3:../../common/can.c **** 
+   4:../../common/can.c **** void CAN_set_mode(uint8_t mode)
+   5:../../common/can.c **** {
+ 118               		.stabn	68,0,5,.LM0-.LFBB1
+ 119               	.LM0:
+ 120               	.LFBB1:
+ 121 0000 CF93      		push r28
+ 122               	/* prologue: function */
+ 123               	/* frame size = 0 */
+ 124               	/* stack size = 1 */
+ 125               	.L__stack_usage = 1
+ 126 0002 C82F      		mov r28,r24
+   6:../../common/can.c ****   SPI_unset_cs();
+ 127               		.stabn	68,0,6,.LM1-.LFBB1
+ 128               	.LM1:
+ 129 0004 0E94 0000 		call SPI_unset_cs
+   7:../../common/can.c ****   SPI_write(BIT_MODIFY);
+ 130               		.stabn	68,0,7,.LM2-.LFBB1
+ 131               	.LM2:
+ 132 0008 85E0      		ldi r24,lo8(5)
+ 133 000a 0E94 0000 		call SPI_write
+   8:../../common/can.c ****   SPI_write(CANCTRL);
+ 134               		.stabn	68,0,8,.LM3-.LFBB1
+ 135               	.LM3:
+ 136 000e 8FE0      		ldi r24,lo8(15)
+ 137 0010 0E94 0000 		call SPI_write
+   9:../../common/can.c ****   SPI_write(REQOP_MASK);
+ 138               		.stabn	68,0,9,.LM4-.LFBB1
+ 139               	.LM4:
+ 140 0014 80EE      		ldi r24,lo8(-32)
+ 141 0016 0E94 0000 		call SPI_write
+  10:../../common/can.c ****   SPI_write((mode << REQOP_OFFSET));
+ 142               		.stabn	68,0,10,.LM5-.LFBB1
+ 143               	.LM5:
+ 144 001a 8C2F      		mov r24,r28
+ 145 001c 8295      		swap r24
+ 146 001e 880F      		lsl r24
+ 147 0020 807E      		andi r24,lo8(-32)
+ 148 0022 0E94 0000 		call SPI_write
+ 149               	/* epilogue start */
+  11:../../common/can.c ****   SPI_set_cs();
+  12:../../common/can.c **** }
+ 150               		.stabn	68,0,12,.LM6-.LFBB1
+ 151               	.LM6:
+ 152 0026 CF91      		pop r28
+  11:../../common/can.c ****   SPI_set_cs();
+ 153               		.stabn	68,0,11,.LM7-.LFBB1
+ 154               	.LM7:
+ 155 0028 0C94 0000 		jmp SPI_set_cs
+ 156               		.size	CAN_set_mode, .-CAN_set_mode
+ 157               	.Lscope1:
+ 158               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+GAS LISTING /tmp/ccj0XBbI.s 			page 4
+
+
+ 159               		.stabd	78,0,0
+ 160               		.stabs	"CAN_read_register:F(3,2)",36,0,36,CAN_read_register
+ 161               		.stabs	"reg:P(3,2)",64,0,36,28
+ 162               	.global	CAN_read_register
+ 163               		.type	CAN_read_register, @function
+ 164               	CAN_read_register:
+ 165               		.stabd	46,0,0
+  13:../../common/can.c **** 
+  14:../../common/can.c **** uint8_t CAN_init(uint8_t freq_meg, long baudrate)
+  15:../../common/can.c **** {
+  16:../../common/can.c ****   CAN_set_mode(REQOP_CONFIG);
+  17:../../common/can.c ****   while (!(CAN_read_register(CANSTAT) & 0x80))
+  18:../../common/can.c ****   {
+  19:../../common/can.c ****   };
+  20:../../common/can.c **** 
+  21:../../common/can.c ****   /* https://www.kvaser.com/support/calculators/bit-timing-calculator/ (16MHz, 1Mbps, MCP2510)*/
+  22:../../common/can.c ****   uint8_t cnf1 = 0x00;
+  23:../../common/can.c ****   uint8_t cnf2 = 0x91;
+  24:../../common/can.c ****   uint8_t cnf3 = 0x01;
+  25:../../common/can.c **** 
+  26:../../common/can.c ****   CAN_set_register(CNF1, cnf1);
+  27:../../common/can.c ****   CAN_set_register(CNF2, cnf2);
+  28:../../common/can.c ****   CAN_set_register(CNF3, cnf3);
+  29:../../common/can.c **** 
+  30:../../common/can.c ****   CAN_set_register(RXB0CTRL, 0x64); // FIlters off, rollover enable
+  31:../../common/can.c ****   CAN_set_register(RXB1CTRL, 0x60); // FIlters off
+  32:../../common/can.c **** 
+  33:../../common/can.c ****   CAN_set_register(BFPCTRL, 0b00001111);
+  34:../../common/can.c **** }
+  35:../../common/can.c **** 
+  36:../../common/can.c **** uint8_t CAN_read_register(uint8_t reg)
+  37:../../common/can.c **** {
+ 166               		.stabn	68,0,37,.LM8-.LFBB2
+ 167               	.LM8:
+ 168               	.LFBB2:
+ 169 002c CF93      		push r28
+ 170               	/* prologue: function */
+ 171               	/* frame size = 0 */
+ 172               	/* stack size = 1 */
+ 173               	.L__stack_usage = 1
+ 174 002e C82F      		mov r28,r24
+  38:../../common/can.c ****   SPI_unset_cs();
+ 175               		.stabn	68,0,38,.LM9-.LFBB2
+ 176               	.LM9:
+ 177 0030 0E94 0000 		call SPI_unset_cs
+  39:../../common/can.c ****   SPI_write(READ);
+ 178               		.stabn	68,0,39,.LM10-.LFBB2
+ 179               	.LM10:
+ 180 0034 83E0      		ldi r24,lo8(3)
+ 181 0036 0E94 0000 		call SPI_write
+  40:../../common/can.c ****   SPI_write(reg);
+ 182               		.stabn	68,0,40,.LM11-.LFBB2
+ 183               	.LM11:
+ 184 003a 8C2F      		mov r24,r28
+ 185 003c 0E94 0000 		call SPI_write
+  41:../../common/can.c ****   SPI_write(0x00);
+ 186               		.stabn	68,0,41,.LM12-.LFBB2
+GAS LISTING /tmp/ccj0XBbI.s 			page 5
+
+
+ 187               	.LM12:
+ 188 0040 80E0      		ldi r24,0
+ 189 0042 0E94 0000 		call SPI_write
+  42:../../common/can.c ****   SPI_set_cs();
+ 190               		.stabn	68,0,42,.LM13-.LFBB2
+ 191               	.LM13:
+ 192 0046 0E94 0000 		call SPI_set_cs
+  43:../../common/can.c ****   return SPDR;
+ 193               		.stabn	68,0,43,.LM14-.LFBB2
+ 194               	.LM14:
+ 195 004a 8EB5      		in r24,0x2e
+ 196               	/* epilogue start */
+  44:../../common/can.c **** }
+ 197               		.stabn	68,0,44,.LM15-.LFBB2
+ 198               	.LM15:
+ 199 004c CF91      		pop r28
+ 200 004e 0895      		ret
+ 201               		.size	CAN_read_register, .-CAN_read_register
+ 202               	.Lscope2:
+ 203               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 204               		.stabd	78,0,0
+ 205               		.stabs	"CAN_set_register:F(0,49)",36,0,46,CAN_set_register
+ 206               		.stabs	"reg:P(3,2)",64,0,46,29
+ 207               		.stabs	"value:P(3,2)",64,0,46,28
+ 208               	.global	CAN_set_register
+ 209               		.type	CAN_set_register, @function
+ 210               	CAN_set_register:
+ 211               		.stabd	46,0,0
+  45:../../common/can.c **** 
+  46:../../common/can.c **** void CAN_set_register(uint8_t reg, uint8_t value)
+  47:../../common/can.c **** {
+ 212               		.stabn	68,0,47,.LM16-.LFBB3
+ 213               	.LM16:
+ 214               	.LFBB3:
+ 215 0050 CF93      		push r28
+ 216 0052 DF93      		push r29
+ 217               	/* prologue: function */
+ 218               	/* frame size = 0 */
+ 219               	/* stack size = 2 */
+ 220               	.L__stack_usage = 2
+ 221 0054 D82F      		mov r29,r24
+ 222 0056 C62F      		mov r28,r22
+  48:../../common/can.c ****   SPI_unset_cs();
+ 223               		.stabn	68,0,48,.LM17-.LFBB3
+ 224               	.LM17:
+ 225 0058 0E94 0000 		call SPI_unset_cs
+  49:../../common/can.c ****   SPI_write(WRITE);
+ 226               		.stabn	68,0,49,.LM18-.LFBB3
+ 227               	.LM18:
+ 228 005c 82E0      		ldi r24,lo8(2)
+ 229 005e 0E94 0000 		call SPI_write
+  50:../../common/can.c ****   SPI_write(reg);
+ 230               		.stabn	68,0,50,.LM19-.LFBB3
+ 231               	.LM19:
+ 232 0062 8D2F      		mov r24,r29
+ 233 0064 0E94 0000 		call SPI_write
+  51:../../common/can.c ****   SPI_write(value);
+GAS LISTING /tmp/ccj0XBbI.s 			page 6
+
+
+ 234               		.stabn	68,0,51,.LM20-.LFBB3
+ 235               	.LM20:
+ 236 0068 8C2F      		mov r24,r28
+ 237 006a 0E94 0000 		call SPI_write
+ 238               	/* epilogue start */
+  52:../../common/can.c ****   SPI_set_cs();
+  53:../../common/can.c **** }
+ 239               		.stabn	68,0,53,.LM21-.LFBB3
+ 240               	.LM21:
+ 241 006e DF91      		pop r29
+ 242 0070 CF91      		pop r28
+  52:../../common/can.c ****   SPI_set_cs();
+ 243               		.stabn	68,0,52,.LM22-.LFBB3
+ 244               	.LM22:
+ 245 0072 0C94 0000 		jmp SPI_set_cs
+ 246               		.size	CAN_set_register, .-CAN_set_register
+ 247               	.Lscope3:
+ 248               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 249               		.stabd	78,0,0
+ 250               		.stabs	"CAN_init:F(3,2)",36,0,14,CAN_init
+ 251               		.stabs	"freq_meg:P(3,2)",64,0,14,24
+ 252               		.stabs	"baudrate:P(0,3)",64,0,14,20
+ 253               	.global	CAN_init
+ 254               		.type	CAN_init, @function
+ 255               	CAN_init:
+ 256               		.stabd	46,0,0
+  15:../../common/can.c ****   CAN_set_mode(REQOP_CONFIG);
+ 257               		.stabn	68,0,15,.LM23-.LFBB4
+ 258               	.LM23:
+ 259               	.LFBB4:
+ 260               	/* prologue: function */
+ 261               	/* frame size = 0 */
+ 262               	/* stack size = 0 */
+ 263               	.L__stack_usage = 0
+  16:../../common/can.c ****   while (!(CAN_read_register(CANSTAT) & 0x80))
+ 264               		.stabn	68,0,16,.LM24-.LFBB4
+ 265               	.LM24:
+ 266 0076 84E0      		ldi r24,lo8(4)
+ 267 0078 0E94 0000 		call CAN_set_mode
+ 268               	.L5:
+  17:../../common/can.c ****   {
+ 269               		.stabn	68,0,17,.LM25-.LFBB4
+ 270               	.LM25:
+ 271 007c 8EE0      		ldi r24,lo8(14)
+ 272 007e 0E94 0000 		call CAN_read_register
+ 273 0082 87FF      		sbrs r24,7
+ 274 0084 00C0      		rjmp .L5
+  26:../../common/can.c ****   CAN_set_register(CNF2, cnf2);
+ 275               		.stabn	68,0,26,.LM26-.LFBB4
+ 276               	.LM26:
+ 277 0086 60E0      		ldi r22,0
+ 278 0088 8AE2      		ldi r24,lo8(42)
+ 279 008a 0E94 0000 		call CAN_set_register
+  27:../../common/can.c ****   CAN_set_register(CNF3, cnf3);
+ 280               		.stabn	68,0,27,.LM27-.LFBB4
+ 281               	.LM27:
+ 282 008e 61E9      		ldi r22,lo8(-111)
+GAS LISTING /tmp/ccj0XBbI.s 			page 7
+
+
+ 283 0090 89E2      		ldi r24,lo8(41)
+ 284 0092 0E94 0000 		call CAN_set_register
+  28:../../common/can.c **** 
+ 285               		.stabn	68,0,28,.LM28-.LFBB4
+ 286               	.LM28:
+ 287 0096 61E0      		ldi r22,lo8(1)
+ 288 0098 88E2      		ldi r24,lo8(40)
+ 289 009a 0E94 0000 		call CAN_set_register
+  30:../../common/can.c ****   CAN_set_register(RXB1CTRL, 0x60); // FIlters off
+ 290               		.stabn	68,0,30,.LM29-.LFBB4
+ 291               	.LM29:
+ 292 009e 64E6      		ldi r22,lo8(100)
+ 293 00a0 80E6      		ldi r24,lo8(96)
+ 294 00a2 0E94 0000 		call CAN_set_register
+  31:../../common/can.c **** 
+ 295               		.stabn	68,0,31,.LM30-.LFBB4
+ 296               	.LM30:
+ 297 00a6 60E6      		ldi r22,lo8(96)
+ 298 00a8 80E7      		ldi r24,lo8(112)
+ 299 00aa 0E94 0000 		call CAN_set_register
+  33:../../common/can.c **** }
+ 300               		.stabn	68,0,33,.LM31-.LFBB4
+ 301               	.LM31:
+ 302 00ae 6FE0      		ldi r22,lo8(15)
+ 303 00b0 8CE0      		ldi r24,lo8(12)
+ 304 00b2 0E94 0000 		call CAN_set_register
+  34:../../common/can.c **** 
+ 305               		.stabn	68,0,34,.LM32-.LFBB4
+ 306               	.LM32:
+ 307 00b6 0895      		ret
+ 308               		.size	CAN_init, .-CAN_init
+ 309               	.Lscope4:
+ 310               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 311               		.stabd	78,0,0
+ 312               		.stabs	"CAN_verify_register:F(3,2)",36,0,55,CAN_verify_register
+ 313               		.stabs	"reg:P(3,2)",64,0,55,24
+ 314               		.stabs	"expected:P(3,2)",64,0,55,28
+ 315               	.global	CAN_verify_register
+ 316               		.type	CAN_verify_register, @function
+ 317               	CAN_verify_register:
+ 318               		.stabd	46,0,0
+  54:../../common/can.c **** 
+  55:../../common/can.c **** uint8_t CAN_verify_register(uint8_t reg, uint8_t expected)
+  56:../../common/can.c **** {
+ 319               		.stabn	68,0,56,.LM33-.LFBB5
+ 320               	.LM33:
+ 321               	.LFBB5:
+ 322 00b8 CF93      		push r28
+ 323               	/* prologue: function */
+ 324               	/* frame size = 0 */
+ 325               	/* stack size = 1 */
+ 326               	.L__stack_usage = 1
+ 327 00ba C62F      		mov r28,r22
+  57:../../common/can.c ****   uint8_t reading = CAN_read_register(reg);
+ 328               		.stabn	68,0,57,.LM34-.LFBB5
+ 329               	.LM34:
+ 330 00bc 0E94 0000 		call CAN_read_register
+GAS LISTING /tmp/ccj0XBbI.s 			page 8
+
+
+  58:../../common/can.c ****   return (reading == expected);
+ 331               		.stabn	68,0,58,.LM35-.LFBB5
+ 332               	.LM35:
+ 333 00c0 91E0      		ldi r25,lo8(1)
+ 334 00c2 8C13      		cpse r24,r28
+ 335 00c4 90E0      		ldi r25,0
+ 336               	.L9:
+  59:../../common/can.c **** }
+ 337               		.stabn	68,0,59,.LM36-.LFBB5
+ 338               	.LM36:
+ 339 00c6 892F      		mov r24,r25
+ 340               	/* epilogue start */
+ 341 00c8 CF91      		pop r28
+ 342 00ca 0895      		ret
+ 343               		.size	CAN_verify_register, .-CAN_verify_register
+ 344               	.Lscope5:
+ 345               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 346               		.stabd	78,0,0
+ 347               		.stabs	"CAN_init_regcheck:F(3,2)",36,0,61,CAN_init_regcheck
+ 348               	.global	CAN_init_regcheck
+ 349               		.type	CAN_init_regcheck, @function
+ 350               	CAN_init_regcheck:
+ 351               		.stabd	46,0,0
+  60:../../common/can.c **** 
+  61:../../common/can.c **** uint8_t CAN_init_regcheck()
+  62:../../common/can.c **** {
+ 352               		.stabn	68,0,62,.LM37-.LFBB6
+ 353               	.LM37:
+ 354               	.LFBB6:
+ 355               	/* prologue: function */
+ 356               	/* frame size = 0 */
+ 357               	/* stack size = 0 */
+ 358               	.L__stack_usage = 0
+ 359               	.LBB39:
+ 360               	.LBB40:
+  57:../../common/can.c ****   return (reading == expected);
+ 361               		.stabn	68,0,57,.LM38-.LFBB6
+ 362               	.LM38:
+ 363 00cc 8AE2      		ldi r24,lo8(42)
+ 364 00ce 0E94 0000 		call CAN_read_register
+ 365               	.LBE40:
+ 366               	.LBE39:
+  63:../../common/can.c ****   /* https://www.kvaser.com/support/calculators/bit-timing-calculator/ (16MHz, 1Mbps, MCP2510)*/
+  64:../../common/can.c ****   uint8_t c1 = 0x00;
+  65:../../common/can.c ****   uint8_t c2 = 0x91;
+  66:../../common/can.c ****   uint8_t c3 = 0x01;
+  67:../../common/can.c ****   return CAN_verify_register(CNF1, c1) && CAN_verify_register(CNF2, c2) && CAN_verify_register(CNF3
+ 367               		.stabn	68,0,67,.LM39-.LFBB6
+ 368               	.LM39:
+ 369 00d2 8823      		tst r24
+ 370 00d4 01F0      		breq .L19
+ 371               	.L18:
+ 372 00d6 90E0      		ldi r25,0
+ 373               	.L12:
+  68:../../common/can.c **** }
+ 374               		.stabn	68,0,68,.LM40-.LFBB6
+ 375               	.LM40:
+GAS LISTING /tmp/ccj0XBbI.s 			page 9
+
+
+ 376 00d8 892F      		mov r24,r25
+ 377 00da 0895      		ret
+ 378               	.L19:
+ 379               	.LBB41:
+ 380               	.LBB42:
+  57:../../common/can.c ****   return (reading == expected);
+ 381               		.stabn	68,0,57,.LM41-.LFBB6
+ 382               	.LM41:
+ 383 00dc 89E2      		ldi r24,lo8(41)
+ 384 00de 0E94 0000 		call CAN_read_register
+ 385               	.LBE42:
+ 386               	.LBE41:
+  67:../../common/can.c **** }
+ 387               		.stabn	68,0,67,.LM42-.LFBB6
+ 388               	.LM42:
+ 389 00e2 8139      		cpi r24,lo8(-111)
+ 390 00e4 01F4      		brne .L18
+ 391               	.LBB43:
+ 392               	.LBB44:
+  57:../../common/can.c ****   return (reading == expected);
+ 393               		.stabn	68,0,57,.LM43-.LFBB6
+ 394               	.LM43:
+ 395 00e6 88E2      		ldi r24,lo8(40)
+ 396 00e8 0E94 0000 		call CAN_read_register
+ 397 00ec 91E0      		ldi r25,lo8(1)
+ 398 00ee 8130      		cpi r24,lo8(1)
+ 399 00f0 01F4      		brne .L18
+ 400 00f2 00C0      		rjmp .L12
+ 401               	.LBE44:
+ 402               	.LBE43:
+ 403               		.size	CAN_init_regcheck, .-CAN_init_regcheck
+ 404               	.Lscope6:
+ 405               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 406               		.stabd	78,0,0
+ 407               		.stabs	"CAN_load_message:F(0,49)",36,0,70,CAN_load_message
+ 408               		.stabs	"buffer:P(3,2)",64,0,70,28
+ 409               		.stabs	"frame:P(0,50)=*(1,1)",64,0,70,14
+ 410               	.global	CAN_load_message
+ 411               		.type	CAN_load_message, @function
+ 412               	CAN_load_message:
+ 413               		.stabd	46,0,0
+  69:../../common/can.c **** 
+  70:../../common/can.c **** void CAN_load_message(uint8_t buffer, CAN_frame_t *frame)
+  71:../../common/can.c **** {
+ 414               		.stabn	68,0,71,.LM44-.LFBB7
+ 415               	.LM44:
+ 416               	.LFBB7:
+ 417 00f4 EF92      		push r14
+ 418 00f6 FF92      		push r15
+ 419 00f8 0F93      		push r16
+ 420 00fa 1F93      		push r17
+ 421 00fc CF93      		push r28
+ 422 00fe DF93      		push r29
+ 423               	/* prologue: function */
+ 424               	/* frame size = 0 */
+ 425               	/* stack size = 6 */
+ 426               	.L__stack_usage = 6
+GAS LISTING /tmp/ccj0XBbI.s 			page 10
+
+
+ 427 0100 C82F      		mov r28,r24
+ 428 0102 7B01      		movw r14,r22
+  72:../../common/can.c ****   SPI_unset_cs();
+ 429               		.stabn	68,0,72,.LM45-.LFBB7
+ 430               	.LM45:
+ 431 0104 0E94 0000 		call SPI_unset_cs
+  73:../../common/can.c ****   SPI_write(LOAD_TX_BUFFER | buffer);
+ 432               		.stabn	68,0,73,.LM46-.LFBB7
+ 433               	.LM46:
+ 434 0108 8C2F      		mov r24,r28
+ 435 010a 8064      		ori r24,lo8(64)
+ 436 010c 0E94 0000 		call SPI_write
+  74:../../common/can.c ****   SPI_write((frame->SID >> 3));
+ 437               		.stabn	68,0,74,.LM47-.LFBB7
+ 438               	.LM47:
+ 439 0110 F701      		movw r30,r14
+ 440 0112 8081      		ld r24,Z
+ 441 0114 9181      		ldd r25,Z+1
+ 442 0116 A281      		ldd r26,Z+2
+ 443 0118 B381      		ldd r27,Z+3
+ 444 011a 23E0      		ldi r18,3
+ 445               		1:
+ 446 011c B695      		lsr r27
+ 447 011e A795      		ror r26
+ 448 0120 9795      		ror r25
+ 449 0122 8795      		ror r24
+ 450 0124 2A95      		dec r18
+ 451 0126 01F4      		brne 1b
+ 452 0128 0E94 0000 		call SPI_write
+  75:../../common/can.c ****   SPI_write((frame->SID << 5));
+ 453               		.stabn	68,0,75,.LM48-.LFBB7
+ 454               	.LM48:
+ 455 012c F701      		movw r30,r14
+ 456 012e 8081      		ld r24,Z
+ 457 0130 8295      		swap r24
+ 458 0132 880F      		lsl r24
+ 459 0134 807E      		andi r24,lo8(-32)
+ 460 0136 0E94 0000 		call SPI_write
+  76:../../common/can.c ****   SPI_write(0);
+ 461               		.stabn	68,0,76,.LM49-.LFBB7
+ 462               	.LM49:
+ 463 013a 80E0      		ldi r24,0
+ 464 013c 0E94 0000 		call SPI_write
+  77:../../common/can.c ****   SPI_write(0);
+ 465               		.stabn	68,0,77,.LM50-.LFBB7
+ 466               	.LM50:
+ 467 0140 80E0      		ldi r24,0
+ 468 0142 0E94 0000 		call SPI_write
+  78:../../common/can.c **** 
+  79:../../common/can.c ****   uint8_t length = frame->header.len & 0x0F;
+ 469               		.stabn	68,0,79,.LM51-.LFBB7
+ 470               	.LM51:
+ 471 0146 F701      		movw r30,r14
+ 472 0148 8481      		ldd r24,Z+4
+ 473 014a 182F      		mov r17,r24
+ 474 014c 1695      		lsr r17
+ 475 014e 1F70      		andi r17,lo8(15)
+GAS LISTING /tmp/ccj0XBbI.s 			page 11
+
+
+  80:../../common/can.c ****   if (frame->header.rtr)
+ 476               		.stabn	68,0,80,.LM52-.LFBB7
+ 477               	.LM52:
+ 478 0150 80FD      		sbrc r24,0
+ 479 0152 00C0      		rjmp .L27
+ 480               	.LBB45:
+  81:../../common/can.c ****   {
+  82:../../common/can.c ****     SPI_write((1 << RTR) | length);
+  83:../../common/can.c ****   }
+  84:../../common/can.c ****   else
+  85:../../common/can.c ****   {
+  86:../../common/can.c ****     SPI_write(length);
+ 481               		.stabn	68,0,86,.LM53-.LFBB7
+ 482               	.LM53:
+ 483 0154 812F      		mov r24,r17
+ 484 0156 0E94 0000 		call SPI_write
+  87:../../common/can.c ****     uint8_t i;
+  88:../../common/can.c ****     for (i = 0; i < length; i++)
+ 485               		.stabn	68,0,88,.LM54-.LFBB7
+ 486               	.LM54:
+ 487 015a 1123      		tst r17
+ 488 015c 01F0      		breq .L22
+ 489 015e E701      		movw r28,r14
+ 490 0160 2596      		adiw r28,5
+ 491 0162 1150      		subi r17,lo8(-(-1))
+ 492 0164 012F      		mov r16,r17
+ 493 0166 10E0      		ldi r17,0
+ 494 0168 0A5F      		subi r16,-6
+ 495 016a 1F4F      		sbci r17,-1
+ 496 016c 0E0D      		add r16,r14
+ 497 016e 1F1D      		adc r17,r15
+ 498               	.L24:
+  89:../../common/can.c ****     {
+  90:../../common/can.c ****       SPI_write(frame->data[i]);
+ 499               		.stabn	68,0,90,.LM55-.LFBB7
+ 500               	.LM55:
+ 501 0170 8991      		ld r24,Y+
+ 502 0172 0E94 0000 		call SPI_write
+  88:../../common/can.c ****     {
+ 503               		.stabn	68,0,88,.LM56-.LFBB7
+ 504               	.LM56:
+ 505 0176 C017      		cp r28,r16
+ 506 0178 D107      		cpc r29,r17
+ 507 017a 01F4      		brne .L24
+ 508               	.L22:
+ 509               	/* epilogue start */
+ 510               	.LBE45:
+  91:../../common/can.c ****     }
+  92:../../common/can.c ****   }
+  93:../../common/can.c ****   SPI_set_cs();
+  94:../../common/can.c **** }
+ 511               		.stabn	68,0,94,.LM57-.LFBB7
+ 512               	.LM57:
+ 513 017c DF91      		pop r29
+ 514 017e CF91      		pop r28
+ 515 0180 1F91      		pop r17
+ 516 0182 0F91      		pop r16
+GAS LISTING /tmp/ccj0XBbI.s 			page 12
+
+
+ 517 0184 FF90      		pop r15
+ 518 0186 EF90      		pop r14
+  93:../../common/can.c **** }
+ 519               		.stabn	68,0,93,.LM58-.LFBB7
+ 520               	.LM58:
+ 521 0188 0C94 0000 		jmp SPI_set_cs
+ 522               	.L27:
+  82:../../common/can.c ****   }
+ 523               		.stabn	68,0,82,.LM59-.LFBB7
+ 524               	.LM59:
+ 525 018c 812F      		mov r24,r17
+ 526 018e 8064      		ori r24,lo8(64)
+ 527 0190 0E94 0000 		call SPI_write
+ 528               	/* epilogue start */
+ 529               		.stabn	68,0,94,.LM60-.LFBB7
+ 530               	.LM60:
+ 531 0194 DF91      		pop r29
+ 532 0196 CF91      		pop r28
+ 533 0198 1F91      		pop r17
+ 534 019a 0F91      		pop r16
+ 535 019c FF90      		pop r15
+ 536 019e EF90      		pop r14
+  93:../../common/can.c **** }
+ 537               		.stabn	68,0,93,.LM61-.LFBB7
+ 538               	.LM61:
+ 539 01a0 0C94 0000 		jmp SPI_set_cs
+ 540               		.size	CAN_load_message, .-CAN_load_message
+ 541               		.stabs	"length:r(3,2)",64,0,79,17
+ 542               		.stabn	192,0,0,.LFBB7-.LFBB7
+ 543               		.stabn	224,0,0,.Lscope7-.LFBB7
+ 544               	.Lscope7:
+ 545               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 546               		.stabd	78,0,0
+ 547               		.stabs	"CAN_request_to_send:F(0,49)",36,0,95,CAN_request_to_send
+ 548               		.stabs	"buffer:P(3,2)",64,0,95,24
+ 549               	.global	CAN_request_to_send
+ 550               		.type	CAN_request_to_send, @function
+ 551               	CAN_request_to_send:
+ 552               		.stabd	46,0,0
+  95:../../common/can.c **** void CAN_request_to_send(uint8_t buffer)
+  96:../../common/can.c **** {
+ 553               		.stabn	68,0,96,.LM62-.LFBB8
+ 554               	.LM62:
+ 555               	.LFBB8:
+ 556 01a4 CF93      		push r28
+ 557               	/* prologue: function */
+ 558               	/* frame size = 0 */
+ 559               	/* stack size = 1 */
+ 560               	.L__stack_usage = 1
+  97:../../common/can.c ****   uint8_t address = (buffer == 0) ? 1 : buffer;
+ 561               		.stabn	68,0,97,.LM63-.LFBB8
+ 562               	.LM63:
+ 563 01a6 8823      		tst r24
+ 564 01a8 01F0      		breq .L30
+ 565 01aa C82F      		mov r28,r24
+ 566 01ac C068      		ori r28,lo8(-128)
+  98:../../common/can.c ****   SPI_unset_cs();
+GAS LISTING /tmp/ccj0XBbI.s 			page 13
+
+
+ 567               		.stabn	68,0,98,.LM64-.LFBB8
+ 568               	.LM64:
+ 569 01ae 0E94 0000 		call SPI_unset_cs
+  99:../../common/can.c ****   SPI_write(RTS | address);
+ 570               		.stabn	68,0,99,.LM65-.LFBB8
+ 571               	.LM65:
+ 572 01b2 8C2F      		mov r24,r28
+ 573 01b4 0E94 0000 		call SPI_write
+ 574               	/* epilogue start */
+ 100:../../common/can.c ****   SPI_set_cs();
+ 101:../../common/can.c **** }
+ 575               		.stabn	68,0,101,.LM66-.LFBB8
+ 576               	.LM66:
+ 577 01b8 CF91      		pop r28
+ 100:../../common/can.c ****   SPI_set_cs();
+ 578               		.stabn	68,0,100,.LM67-.LFBB8
+ 579               	.LM67:
+ 580 01ba 0C94 0000 		jmp SPI_set_cs
+ 581               	.L30:
+ 582 01be C1E8      		ldi r28,lo8(-127)
+  98:../../common/can.c ****   SPI_write(RTS | address);
+ 583               		.stabn	68,0,98,.LM68-.LFBB8
+ 584               	.LM68:
+ 585 01c0 0E94 0000 		call SPI_unset_cs
+  99:../../common/can.c ****   SPI_write(RTS | address);
+ 586               		.stabn	68,0,99,.LM69-.LFBB8
+ 587               	.LM69:
+ 588 01c4 8C2F      		mov r24,r28
+ 589 01c6 0E94 0000 		call SPI_write
+ 590               	/* epilogue start */
+ 591               		.stabn	68,0,101,.LM70-.LFBB8
+ 592               	.LM70:
+ 593 01ca CF91      		pop r28
+ 100:../../common/can.c ****   SPI_set_cs();
+ 594               		.stabn	68,0,100,.LM71-.LFBB8
+ 595               	.LM71:
+ 596 01cc 0C94 0000 		jmp SPI_set_cs
+ 597               		.size	CAN_request_to_send, .-CAN_request_to_send
+ 598               	.Lscope8:
+ 599               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 600               		.stabd	78,0,0
+ 601               		.stabs	"CAN_read_registers:F(0,49)",36,0,133,CAN_read_registers
+ 602               		.stabs	"start:P(3,2)",64,0,133,28
+ 603               		.stabs	"len:P(3,2)",64,0,133,17
+ 604               	.global	CAN_read_registers
+ 605               		.type	CAN_read_registers, @function
+ 606               	CAN_read_registers:
+ 607               		.stabd	46,0,0
+ 102:../../common/can.c **** 
+ 103:../../common/can.c **** void CAN_read(uint8_t buffer, CAN_frame_t *frame)
+ 104:../../common/can.c **** {
+ 105:../../common/can.c ****   uint8_t metadata[5];
+ 106:../../common/can.c ****   if (buffer == 0)
+ 107:../../common/can.c ****   {
+ 108:../../common/can.c ****     CAN_read_registers(RXB0SIDH, metadata, 5);
+ 109:../../common/can.c ****     CAN_read_registers(RXB0D0, frame->data, 8);
+ 110:../../common/can.c ****     SPI_unset_cs();
+GAS LISTING /tmp/ccj0XBbI.s 			page 14
+
+
+ 111:../../common/can.c ****     SPI_write(BIT_MODIFY);
+ 112:../../common/can.c ****     SPI_write(CANINTF);
+ 113:../../common/can.c ****     SPI_write(RX0IF);
+ 114:../../common/can.c ****     SPI_write(!RX0IF);
+ 115:../../common/can.c ****     SPI_set_cs();
+ 116:../../common/can.c ****   }
+ 117:../../common/can.c ****   else if (buffer == 1)
+ 118:../../common/can.c ****   {
+ 119:../../common/can.c ****     CAN_read_registers(RXB1SIDH, metadata, 5);
+ 120:../../common/can.c ****     CAN_read_registers(RXB1D0, frame->data, 8);
+ 121:../../common/can.c ****     SPI_unset_cs();
+ 122:../../common/can.c ****     SPI_write(BIT_MODIFY);
+ 123:../../common/can.c ****     SPI_write(CANINTF);
+ 124:../../common/can.c ****     SPI_write(RX1IF);
+ 125:../../common/can.c ****     SPI_write(!RX1IF);
+ 126:../../common/can.c ****     SPI_set_cs();
+ 127:../../common/can.c ****   }
+ 128:../../common/can.c ****   frame->SID = (metadata[0] << 3) | (metadata[1] >> 5);
+ 129:../../common/can.c **** 
+ 130:../../common/can.c ****   frame->header.len = metadata[4];
+ 131:../../common/can.c **** }
+ 132:../../common/can.c **** 
+ 133:../../common/can.c **** void CAN_read_registers(uint8_t start, uint8_t target[], uint8_t len)
+ 134:../../common/can.c **** {
+ 608               		.stabn	68,0,134,.LM72-.LFBB9
+ 609               	.LM72:
+ 610               	.LFBB9:
+ 611 01d0 FF92      		push r15
+ 612 01d2 0F93      		push r16
+ 613 01d4 1F93      		push r17
+ 614 01d6 CF93      		push r28
+ 615 01d8 DF93      		push r29
+ 616               	/* prologue: function */
+ 617               	/* frame size = 0 */
+ 618               	/* stack size = 5 */
+ 619               	.L__stack_usage = 5
+ 620 01da C82F      		mov r28,r24
+ 621 01dc F62E      		mov r15,r22
+ 622 01de 072F      		mov r16,r23
+ 623 01e0 142F      		mov r17,r20
+ 135:../../common/can.c ****   SPI_unset_cs();
+ 624               		.stabn	68,0,135,.LM73-.LFBB9
+ 625               	.LM73:
+ 626 01e2 0E94 0000 		call SPI_unset_cs
+ 136:../../common/can.c ****   SPI_write(READ);
+ 627               		.stabn	68,0,136,.LM74-.LFBB9
+ 628               	.LM74:
+ 629 01e6 83E0      		ldi r24,lo8(3)
+ 630 01e8 0E94 0000 		call SPI_write
+ 137:../../common/can.c ****   SPI_write(start);
+ 631               		.stabn	68,0,137,.LM75-.LFBB9
+ 632               	.LM75:
+ 633 01ec 8C2F      		mov r24,r28
+ 634 01ee 0E94 0000 		call SPI_write
+ 635               	.LBB46:
+ 138:../../common/can.c ****   for (int i = 0; i < len; i++)
+ 636               		.stabn	68,0,138,.LM76-.LFBB9
+GAS LISTING /tmp/ccj0XBbI.s 			page 15
+
+
+ 637               	.LM76:
+ 638 01f2 1123      		tst r17
+ 639 01f4 01F0      		breq .L34
+ 640 01f6 CF2D      		mov r28,r15
+ 641 01f8 D02F      		mov r29,r16
+ 642 01fa CE01      		movw r24,r28
+ 643 01fc 810F      		add r24,r17
+ 644 01fe 911D      		adc r25,__zero_reg__
+ 645 0200 8C01      		movw r16,r24
+ 646               	.L33:
+ 139:../../common/can.c ****   {
+ 140:../../common/can.c ****     SPI_write(0x00);
+ 647               		.stabn	68,0,140,.LM77-.LFBB9
+ 648               	.LM77:
+ 649 0202 80E0      		ldi r24,0
+ 650 0204 0E94 0000 		call SPI_write
+ 141:../../common/can.c ****     target[i] = SPDR;
+ 651               		.stabn	68,0,141,.LM78-.LFBB9
+ 652               	.LM78:
+ 653 0208 8EB5      		in r24,0x2e
+ 654 020a 8993      		st Y+,r24
+ 138:../../common/can.c ****   for (int i = 0; i < len; i++)
+ 655               		.stabn	68,0,138,.LM79-.LFBB9
+ 656               	.LM79:
+ 657 020c C017      		cp r28,r16
+ 658 020e D107      		cpc r29,r17
+ 659 0210 01F4      		brne .L33
+ 660               	.L34:
+ 661               	/* epilogue start */
+ 662               	.LBE46:
+ 142:../../common/can.c ****   }
+ 143:../../common/can.c ****   SPI_set_cs();
+ 144:../../common/can.c **** }
+ 663               		.stabn	68,0,144,.LM80-.LFBB9
+ 664               	.LM80:
+ 665 0212 DF91      		pop r29
+ 666 0214 CF91      		pop r28
+ 667 0216 1F91      		pop r17
+ 668 0218 0F91      		pop r16
+ 669 021a FF90      		pop r15
+ 143:../../common/can.c **** }
+ 670               		.stabn	68,0,143,.LM81-.LFBB9
+ 671               	.LM81:
+ 672 021c 0C94 0000 		jmp SPI_set_cs
+ 673               		.size	CAN_read_registers, .-CAN_read_registers
+ 674               	.Lscope9:
+ 675               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 676               		.stabd	78,0,0
+ 677               		.stabs	"CAN_read:F(0,49)",36,0,103,CAN_read
+ 678               		.stabs	"buffer:P(3,2)",64,0,103,24
+ 679               		.stabs	"frame:P(0,50)",64,0,103,16
+ 680               	.global	CAN_read
+ 681               		.type	CAN_read, @function
+ 682               	CAN_read:
+ 683               		.stabd	46,0,0
+ 104:../../common/can.c ****   uint8_t metadata[5];
+ 684               		.stabn	68,0,104,.LM82-.LFBB10
+GAS LISTING /tmp/ccj0XBbI.s 			page 16
+
+
+ 685               	.LM82:
+ 686               	.LFBB10:
+ 687 0220 0F93      		push r16
+ 688 0222 1F93      		push r17
+ 689 0224 CF93      		push r28
+ 690 0226 DF93      		push r29
+ 691 0228 00D0      		rcall .
+ 692 022a 1F92      		push __zero_reg__
+ 693 022c 1F92      		push __zero_reg__
+ 694 022e CDB7      		in r28,__SP_L__
+ 695 0230 DEB7      		in r29,__SP_H__
+ 696               	/* prologue: function */
+ 697               	/* frame size = 5 */
+ 698               	/* stack size = 9 */
+ 699               	.L__stack_usage = 9
+ 700 0232 8B01      		movw r16,r22
+ 106:../../common/can.c ****   {
+ 701               		.stabn	68,0,106,.LM83-.LFBB10
+ 702               	.LM83:
+ 703 0234 8823      		tst r24
+ 704 0236 01F0      		breq .L39
+ 117:../../common/can.c ****   {
+ 705               		.stabn	68,0,117,.LM84-.LFBB10
+ 706               	.LM84:
+ 707 0238 8130      		cpi r24,lo8(1)
+ 708 023a 01F4      		brne .+2
+ 709 023c 00C0      		rjmp .L40
+ 710               	.L38:
+ 128:../../common/can.c **** 
+ 711               		.stabn	68,0,128,.LM85-.LFBB10
+ 712               	.LM85:
+ 713 023e 8981      		ldd r24,Y+1
+ 714 0240 90E0      		ldi r25,0
+ 715 0242 880F      		lsl r24
+ 716 0244 991F      		rol r25
+ 717 0246 880F      		lsl r24
+ 718 0248 991F      		rol r25
+ 719 024a 880F      		lsl r24
+ 720 024c 991F      		rol r25
+ 721 024e 2A81      		ldd r18,Y+2
+ 722 0250 2295      		swap r18
+ 723 0252 2695      		lsr r18
+ 724 0254 2770      		andi r18,lo8(7)
+ 725 0256 822B      		or r24,r18
+ 726 0258 092E      		mov __tmp_reg__,r25
+ 727 025a 000C      		lsl r0
+ 728 025c AA0B      		sbc r26,r26
+ 729 025e BB0B      		sbc r27,r27
+ 730 0260 F801      		movw r30,r16
+ 731 0262 8083      		st Z,r24
+ 732 0264 9183      		std Z+1,r25
+ 733 0266 A283      		std Z+2,r26
+ 734 0268 B383      		std Z+3,r27
+ 130:../../common/can.c **** }
+ 735               		.stabn	68,0,130,.LM86-.LFBB10
+ 736               	.LM86:
+ 737 026a 8D81      		ldd r24,Y+5
+GAS LISTING /tmp/ccj0XBbI.s 			page 17
+
+
+ 738 026c 8F70      		andi r24,lo8(15)
+ 739 026e 982F      		mov r25,r24
+ 740 0270 990F      		lsl r25
+ 741 0272 8481      		ldd r24,Z+4
+ 742 0274 817E      		andi r24,lo8(-31)
+ 743 0276 892B      		or r24,r25
+ 744 0278 8483      		std Z+4,r24
+ 745               	/* epilogue start */
+ 131:../../common/can.c **** 
+ 746               		.stabn	68,0,131,.LM87-.LFBB10
+ 747               	.LM87:
+ 748 027a 0F90      		pop __tmp_reg__
+ 749 027c 0F90      		pop __tmp_reg__
+ 750 027e 0F90      		pop __tmp_reg__
+ 751 0280 0F90      		pop __tmp_reg__
+ 752 0282 0F90      		pop __tmp_reg__
+ 753 0284 DF91      		pop r29
+ 754 0286 CF91      		pop r28
+ 755 0288 1F91      		pop r17
+ 756 028a 0F91      		pop r16
+ 757 028c 0895      		ret
+ 758               	.L39:
+ 108:../../common/can.c ****     CAN_read_registers(RXB0D0, frame->data, 8);
+ 759               		.stabn	68,0,108,.LM88-.LFBB10
+ 760               	.LM88:
+ 761 028e 45E0      		ldi r20,lo8(5)
+ 762 0290 BE01      		movw r22,r28
+ 763 0292 6F5F      		subi r22,-1
+ 764 0294 7F4F      		sbci r23,-1
+ 765 0296 81E6      		ldi r24,lo8(97)
+ 766 0298 0E94 0000 		call CAN_read_registers
+ 109:../../common/can.c ****     SPI_unset_cs();
+ 767               		.stabn	68,0,109,.LM89-.LFBB10
+ 768               	.LM89:
+ 769 029c 48E0      		ldi r20,lo8(8)
+ 770 029e B801      		movw r22,r16
+ 771 02a0 6B5F      		subi r22,-5
+ 772 02a2 7F4F      		sbci r23,-1
+ 773 02a4 86E6      		ldi r24,lo8(102)
+ 774 02a6 0E94 0000 		call CAN_read_registers
+ 110:../../common/can.c ****     SPI_write(BIT_MODIFY);
+ 775               		.stabn	68,0,110,.LM90-.LFBB10
+ 776               	.LM90:
+ 777 02aa 0E94 0000 		call SPI_unset_cs
+ 111:../../common/can.c ****     SPI_write(CANINTF);
+ 778               		.stabn	68,0,111,.LM91-.LFBB10
+ 779               	.LM91:
+ 780 02ae 85E0      		ldi r24,lo8(5)
+ 781 02b0 0E94 0000 		call SPI_write
+ 112:../../common/can.c ****     SPI_write(RX0IF);
+ 782               		.stabn	68,0,112,.LM92-.LFBB10
+ 783               	.LM92:
+ 784 02b4 8CE2      		ldi r24,lo8(44)
+ 785 02b6 0E94 0000 		call SPI_write
+ 113:../../common/can.c ****     SPI_write(!RX0IF);
+ 786               		.stabn	68,0,113,.LM93-.LFBB10
+ 787               	.LM93:
+GAS LISTING /tmp/ccj0XBbI.s 			page 18
+
+
+ 788 02ba 81E0      		ldi r24,lo8(1)
+ 789 02bc 0E94 0000 		call SPI_write
+ 114:../../common/can.c ****     SPI_set_cs();
+ 790               		.stabn	68,0,114,.LM94-.LFBB10
+ 791               	.LM94:
+ 792 02c0 80E0      		ldi r24,0
+ 793 02c2 0E94 0000 		call SPI_write
+ 115:../../common/can.c ****   }
+ 794               		.stabn	68,0,115,.LM95-.LFBB10
+ 795               	.LM95:
+ 796 02c6 0E94 0000 		call SPI_set_cs
+ 797 02ca 00C0      		rjmp .L38
+ 798               	.L40:
+ 119:../../common/can.c ****     CAN_read_registers(RXB1D0, frame->data, 8);
+ 799               		.stabn	68,0,119,.LM96-.LFBB10
+ 800               	.LM96:
+ 801 02cc 45E0      		ldi r20,lo8(5)
+ 802 02ce BE01      		movw r22,r28
+ 803 02d0 6F5F      		subi r22,-1
+ 804 02d2 7F4F      		sbci r23,-1
+ 805 02d4 81E7      		ldi r24,lo8(113)
+ 806 02d6 0E94 0000 		call CAN_read_registers
+ 120:../../common/can.c ****     SPI_unset_cs();
+ 807               		.stabn	68,0,120,.LM97-.LFBB10
+ 808               	.LM97:
+ 809 02da 48E0      		ldi r20,lo8(8)
+ 810 02dc B801      		movw r22,r16
+ 811 02de 6B5F      		subi r22,-5
+ 812 02e0 7F4F      		sbci r23,-1
+ 813 02e2 86E7      		ldi r24,lo8(118)
+ 814 02e4 0E94 0000 		call CAN_read_registers
+ 121:../../common/can.c ****     SPI_write(BIT_MODIFY);
+ 815               		.stabn	68,0,121,.LM98-.LFBB10
+ 816               	.LM98:
+ 817 02e8 0E94 0000 		call SPI_unset_cs
+ 122:../../common/can.c ****     SPI_write(CANINTF);
+ 818               		.stabn	68,0,122,.LM99-.LFBB10
+ 819               	.LM99:
+ 820 02ec 85E0      		ldi r24,lo8(5)
+ 821 02ee 0E94 0000 		call SPI_write
+ 123:../../common/can.c ****     SPI_write(RX1IF);
+ 822               		.stabn	68,0,123,.LM100-.LFBB10
+ 823               	.LM100:
+ 824 02f2 8CE2      		ldi r24,lo8(44)
+ 825 02f4 0E94 0000 		call SPI_write
+ 124:../../common/can.c ****     SPI_write(!RX1IF);
+ 826               		.stabn	68,0,124,.LM101-.LFBB10
+ 827               	.LM101:
+ 828 02f8 82E0      		ldi r24,lo8(2)
+ 829 02fa 0E94 0000 		call SPI_write
+ 125:../../common/can.c ****     SPI_set_cs();
+ 830               		.stabn	68,0,125,.LM102-.LFBB10
+ 831               	.LM102:
+ 832 02fe 80E0      		ldi r24,0
+ 833 0300 0E94 0000 		call SPI_write
+ 126:../../common/can.c ****   }
+ 834               		.stabn	68,0,126,.LM103-.LFBB10
+GAS LISTING /tmp/ccj0XBbI.s 			page 19
+
+
+ 835               	.LM103:
+ 836 0304 0E94 0000 		call SPI_set_cs
+ 837 0308 00C0      		rjmp .L38
+ 838               		.size	CAN_read, .-CAN_read
+ 839               		.stabs	"metadata:(0,51)=ar(1,5);0;4;(3,2)",128,0,105,1
+ 840               		.stabn	192,0,0,.LFBB10-.LFBB10
+ 841               		.stabn	224,0,0,.Lscope10-.LFBB10
+ 842               	.Lscope10:
+ 843               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 844               		.stabd	78,0,0
+ 845               		.stabs	"CAN_send:F(1,7)",36,0,146,CAN_send
+ 846               		.stabs	"frame:P(0,50)",64,0,146,16
+ 847               	.global	CAN_send
+ 848               		.type	CAN_send, @function
+ 849               	CAN_send:
+ 850               		.stabd	46,0,0
+ 145:../../common/can.c **** 
+ 146:../../common/can.c **** CAN_error CAN_send(CAN_frame_t *frame)
+ 147:../../common/can.c **** {
+ 851               		.stabn	68,0,147,.LM104-.LFBB11
+ 852               	.LM104:
+ 853               	.LFBB11:
+ 854 030a 0F93      		push r16
+ 855 030c 1F93      		push r17
+ 856 030e CF93      		push r28
+ 857 0310 DF93      		push r29
+ 858               	/* prologue: function */
+ 859               	/* frame size = 0 */
+ 860               	/* stack size = 4 */
+ 861               	.L__stack_usage = 4
+ 862 0312 8C01      		movw r16,r24
+ 863               	.LBB47:
+ 864               	.LBB48:
+ 148:../../common/can.c ****   uint8_t abort, lost, txerr;
+ 149:../../common/can.c ****   uint8_t txbuffer_full[3];
+ 150:../../common/can.c ****   txbuffer_full[0] = CAN_check_bit(TXB0CTRL, 0x08);
+ 151:../../common/can.c ****   txbuffer_full[1] = CAN_check_bit(TXB1CTRL, 0x08);
+ 152:../../common/can.c ****   txbuffer_full[2] = CAN_check_bit(TXB2CTRL, 0x08);
+ 153:../../common/can.c **** 
+ 154:../../common/can.c ****   int selected_buffer = -1;
+ 155:../../common/can.c **** 
+ 156:../../common/can.c ****   for (int i = 0; i < 3; i++)
+ 157:../../common/can.c ****   {
+ 158:../../common/can.c ****     if (!txbuffer_full[i])
+ 159:../../common/can.c ****     {
+ 160:../../common/can.c ****       selected_buffer = i;
+ 161:../../common/can.c ****       break;
+ 162:../../common/can.c ****     }
+ 163:../../common/can.c ****   }
+ 164:../../common/can.c ****   if (selected_buffer == -1)
+ 165:../../common/can.c ****   {
+ 166:../../common/can.c **** 
+ 167:../../common/can.c ****     PORTD |= (1 << PD2) | (1 << PD7);
+ 168:../../common/can.c **** 
+ 169:../../common/can.c ****     return CAN_ERROR_ALLTXBUSY;
+ 170:../../common/can.c ****   }
+ 171:../../common/can.c **** 
+GAS LISTING /tmp/ccj0XBbI.s 			page 20
+
+
+ 172:../../common/can.c ****   switch (selected_buffer)
+ 173:../../common/can.c ****   {
+ 174:../../common/can.c ****   case 0:
+ 175:../../common/can.c ****     CAN_load_message(TXB0ADDR, frame);
+ 176:../../common/can.c ****     CAN_request_to_send(TXB0ADDR);
+ 177:../../common/can.c ****     abort = CAN_check_bit(TXB0ADDR, ABTF);
+ 178:../../common/can.c ****     lost = CAN_check_bit(TXB0ADDR, MLOA);
+ 179:../../common/can.c ****     txerr = CAN_check_bit(TXB0ADDR, TXERR);
+ 180:../../common/can.c ****     break;
+ 181:../../common/can.c ****   case 1:
+ 182:../../common/can.c ****     CAN_load_message(TXB1ADDR, frame);
+ 183:../../common/can.c ****     CAN_request_to_send(TXB1ADDR);
+ 184:../../common/can.c ****     abort = CAN_check_bit(TXB1ADDR, ABTF);
+ 185:../../common/can.c ****     lost = CAN_check_bit(TXB1ADDR, MLOA);
+ 186:../../common/can.c ****     txerr = CAN_check_bit(TXB1ADDR, TXERR);
+ 187:../../common/can.c ****     break;
+ 188:../../common/can.c ****   case 2:
+ 189:../../common/can.c ****     CAN_load_message(TXB2ADDR, frame);
+ 190:../../common/can.c ****     CAN_request_to_send(TXB2ADDR);
+ 191:../../common/can.c ****     abort = CAN_check_bit(TXB2ADDR, ABTF);
+ 192:../../common/can.c ****     lost = CAN_check_bit(TXB2ADDR, MLOA);
+ 193:../../common/can.c ****     txerr = CAN_check_bit(TXB2ADDR, TXERR);
+ 194:../../common/can.c ****     break;
+ 195:../../common/can.c ****   default:
+ 196:../../common/can.c ****     PORTD |= (1 << PD2);
+ 197:../../common/can.c ****     return CAN_ERROR_UNKNOWN_FLOW;
+ 198:../../common/can.c ****   }
+ 199:../../common/can.c **** 
+ 200:../../common/can.c ****   if (abort)
+ 201:../../common/can.c ****   {
+ 202:../../common/can.c ****     PORTD |= (1 << PD5);
+ 203:../../common/can.c ****     return CAN_ERROR_ABORT;
+ 204:../../common/can.c ****   }
+ 205:../../common/can.c ****   if (lost)
+ 206:../../common/can.c ****   {
+ 207:../../common/can.c ****     PORTD |= (1 << PD6);
+ 208:../../common/can.c **** 
+ 209:../../common/can.c ****     return CAN_ERROR_LOSTARBITATION;
+ 210:../../common/can.c ****   }
+ 211:../../common/can.c ****   if (txerr)
+ 212:../../common/can.c ****   {
+ 213:../../common/can.c ****     PORTD |= (1 << PD7);
+ 214:../../common/can.c **** 
+ 215:../../common/can.c ****     return CAN_ERROR_TXERR;
+ 216:../../common/can.c ****   }
+ 217:../../common/can.c **** 
+ 218:../../common/can.c ****   return CAN_ERROR_NONE;
+ 219:../../common/can.c **** }
+ 220:../../common/can.c **** 
+ 221:../../common/can.c **** uint8_t CAN_check_bit(uint8_t reg, uint8_t bitmask)
+ 222:../../common/can.c **** {
+ 223:../../common/can.c ****   return CAN_read_register(reg) & bitmask;
+ 865               		.stabn	68,0,223,.LM105-.LFBB11
+ 866               	.LM105:
+ 867 0314 80E3      		ldi r24,lo8(48)
+ 868 0316 0E94 0000 		call CAN_read_register
+ 869 031a C82F      		mov r28,r24
+GAS LISTING /tmp/ccj0XBbI.s 			page 21
+
+
+ 870               	.LBE48:
+ 871               	.LBE47:
+ 872               	.LBB49:
+ 873               	.LBB50:
+ 874 031c 80E4      		ldi r24,lo8(64)
+ 875 031e 0E94 0000 		call CAN_read_register
+ 876 0322 D82F      		mov r29,r24
+ 877 0324 D870      		andi r29,lo8(8)
+ 878               	.LBE50:
+ 879               	.LBE49:
+ 880               	.LBB51:
+ 881               	.LBB52:
+ 882 0326 80E5      		ldi r24,lo8(80)
+ 883 0328 0E94 0000 		call CAN_read_register
+ 884 032c 8870      		andi r24,lo8(8)
+ 885               	.LBE52:
+ 886               	.LBE51:
+ 887               	.LBB53:
+ 158:../../common/can.c ****     {
+ 888               		.stabn	68,0,158,.LM106-.LFBB11
+ 889               	.LM106:
+ 890 032e C3FF      		sbrs r28,3
+ 891 0330 00C0      		rjmp .L42
+ 892 0332 DD23      		tst r29
+ 893 0334 01F4      		brne .+2
+ 894 0336 00C0      		rjmp .L43
+ 895 0338 8823      		tst r24
+ 896 033a 01F0      		breq .L44
+ 897               	.LBE53:
+ 167:../../common/can.c **** 
+ 898               		.stabn	68,0,167,.LM107-.LFBB11
+ 899               	.LM107:
+ 900 033c 8BB1      		in r24,0xb
+ 901 033e 8468      		ori r24,lo8(-124)
+ 902 0340 8BB9      		out 0xb,r24
+ 169:../../common/can.c ****   }
+ 903               		.stabn	68,0,169,.LM108-.LFBB11
+ 904               	.LM108:
+ 905 0342 81E0      		ldi r24,lo8(1)
+ 906               	.L50:
+ 907               	/* epilogue start */
+ 219:../../common/can.c **** 
+ 908               		.stabn	68,0,219,.LM109-.LFBB11
+ 909               	.LM109:
+ 910 0344 DF91      		pop r29
+ 911 0346 CF91      		pop r28
+ 912 0348 1F91      		pop r17
+ 913 034a 0F91      		pop r16
+ 914 034c 0895      		ret
+ 915               	.L42:
+ 175:../../common/can.c ****     CAN_request_to_send(TXB0ADDR);
+ 916               		.stabn	68,0,175,.LM110-.LFBB11
+ 917               	.LM110:
+ 918 034e B801      		movw r22,r16
+ 919 0350 80E0      		ldi r24,0
+ 920 0352 0E94 0000 		call CAN_load_message
+ 921               	.LBB54:
+GAS LISTING /tmp/ccj0XBbI.s 			page 22
+
+
+ 922               	.LBB55:
+  98:../../common/can.c ****   SPI_write(RTS | address);
+ 923               		.stabn	68,0,98,.LM111-.LFBB11
+ 924               	.LM111:
+ 925 0356 0E94 0000 		call SPI_unset_cs
+  99:../../common/can.c ****   SPI_set_cs();
+ 926               		.stabn	68,0,99,.LM112-.LFBB11
+ 927               	.LM112:
+ 928 035a 81E8      		ldi r24,lo8(-127)
+ 929 035c 0E94 0000 		call SPI_write
+ 100:../../common/can.c **** }
+ 930               		.stabn	68,0,100,.LM113-.LFBB11
+ 931               	.LM113:
+ 932 0360 0E94 0000 		call SPI_set_cs
+ 933               	.LBE55:
+ 934               	.LBE54:
+ 935               	.LBB56:
+ 936               	.LBB57:
+ 937               		.stabn	68,0,223,.LM114-.LFBB11
+ 938               	.LM114:
+ 939 0364 80E0      		ldi r24,0
+ 940 0366 0E94 0000 		call CAN_read_register
+ 941 036a C82F      		mov r28,r24
+ 942 036c C074      		andi r28,lo8(64)
+ 943               	.LBE57:
+ 944               	.LBE56:
+ 945               	.LBB58:
+ 946               	.LBB59:
+ 947 036e 80E0      		ldi r24,0
+ 948 0370 0E94 0000 		call CAN_read_register
+ 949 0374 D82F      		mov r29,r24
+ 950 0376 D072      		andi r29,lo8(32)
+ 951               	.LBE59:
+ 952               	.LBE58:
+ 953               	.LBB60:
+ 954               	.LBB61:
+ 955 0378 80E0      		ldi r24,0
+ 956 037a 0E94 0000 		call CAN_read_register
+ 957 037e 8071      		andi r24,lo8(16)
+ 958               	.L48:
+ 959               	.LBE61:
+ 960               	.LBE60:
+ 200:../../common/can.c ****   {
+ 961               		.stabn	68,0,200,.LM115-.LFBB11
+ 962               	.LM115:
+ 963 0380 CC23      		tst r28
+ 964 0382 01F0      		breq .L46
+ 965               	.L51:
+ 202:../../common/can.c ****     return CAN_ERROR_ABORT;
+ 966               		.stabn	68,0,202,.LM116-.LFBB11
+ 967               	.LM116:
+ 968 0384 5D9A      		sbi 0xb,5
+ 203:../../common/can.c ****   }
+ 969               		.stabn	68,0,203,.LM117-.LFBB11
+ 970               	.LM117:
+ 971 0386 83E0      		ldi r24,lo8(3)
+ 972               	/* epilogue start */
+GAS LISTING /tmp/ccj0XBbI.s 			page 23
+
+
+ 219:../../common/can.c **** 
+ 973               		.stabn	68,0,219,.LM118-.LFBB11
+ 974               	.LM118:
+ 975 0388 DF91      		pop r29
+ 976 038a CF91      		pop r28
+ 977 038c 1F91      		pop r17
+ 978 038e 0F91      		pop r16
+ 979 0390 0895      		ret
+ 980               	.L44:
+ 189:../../common/can.c ****     CAN_request_to_send(TXB2ADDR);
+ 981               		.stabn	68,0,189,.LM119-.LFBB11
+ 982               	.LM119:
+ 983 0392 B801      		movw r22,r16
+ 984 0394 84E0      		ldi r24,lo8(4)
+ 985 0396 0E94 0000 		call CAN_load_message
+ 986               	.LBB62:
+ 987               	.LBB63:
+  98:../../common/can.c ****   SPI_write(RTS | address);
+ 988               		.stabn	68,0,98,.LM120-.LFBB11
+ 989               	.LM120:
+ 990 039a 0E94 0000 		call SPI_unset_cs
+  99:../../common/can.c ****   SPI_set_cs();
+ 991               		.stabn	68,0,99,.LM121-.LFBB11
+ 992               	.LM121:
+ 993 039e 84E8      		ldi r24,lo8(-124)
+ 994 03a0 0E94 0000 		call SPI_write
+ 100:../../common/can.c **** }
+ 995               		.stabn	68,0,100,.LM122-.LFBB11
+ 996               	.LM122:
+ 997 03a4 0E94 0000 		call SPI_set_cs
+ 998               	.LBE63:
+ 999               	.LBE62:
+ 1000               	.LBB64:
+ 1001               	.LBB65:
+ 1002               		.stabn	68,0,223,.LM123-.LFBB11
+ 1003               	.LM123:
+ 1004 03a8 84E0      		ldi r24,lo8(4)
+ 1005 03aa 0E94 0000 		call CAN_read_register
+ 1006 03ae C82F      		mov r28,r24
+ 1007 03b0 C074      		andi r28,lo8(64)
+ 1008               	.LBE65:
+ 1009               	.LBE64:
+ 1010               	.LBB66:
+ 1011               	.LBB67:
+ 1012 03b2 84E0      		ldi r24,lo8(4)
+ 1013 03b4 0E94 0000 		call CAN_read_register
+ 1014 03b8 D82F      		mov r29,r24
+ 1015 03ba D072      		andi r29,lo8(32)
+ 1016               	.LBE67:
+ 1017               	.LBE66:
+ 1018               	.LBB68:
+ 1019               	.LBB69:
+ 1020 03bc 84E0      		ldi r24,lo8(4)
+ 1021 03be 0E94 0000 		call CAN_read_register
+ 1022 03c2 8071      		andi r24,lo8(16)
+ 1023               	.LBE69:
+ 1024               	.LBE68:
+GAS LISTING /tmp/ccj0XBbI.s 			page 24
+
+
+ 200:../../common/can.c ****   {
+ 1025               		.stabn	68,0,200,.LM124-.LFBB11
+ 1026               	.LM124:
+ 1027 03c4 C111      		cpse r28,__zero_reg__
+ 1028 03c6 00C0      		rjmp .L51
+ 1029               	.L46:
+ 205:../../common/can.c ****   {
+ 1030               		.stabn	68,0,205,.LM125-.LFBB11
+ 1031               	.LM125:
+ 1032 03c8 DD23      		tst r29
+ 1033 03ca 01F0      		breq .L47
+ 207:../../common/can.c **** 
+ 1034               		.stabn	68,0,207,.LM126-.LFBB11
+ 1035               	.LM126:
+ 1036 03cc 5E9A      		sbi 0xb,6
+ 209:../../common/can.c ****   }
+ 1037               		.stabn	68,0,209,.LM127-.LFBB11
+ 1038               	.LM127:
+ 1039 03ce 84E0      		ldi r24,lo8(4)
+ 1040               	/* epilogue start */
+ 219:../../common/can.c **** 
+ 1041               		.stabn	68,0,219,.LM128-.LFBB11
+ 1042               	.LM128:
+ 1043 03d0 DF91      		pop r29
+ 1044 03d2 CF91      		pop r28
+ 1045 03d4 1F91      		pop r17
+ 1046 03d6 0F91      		pop r16
+ 1047 03d8 0895      		ret
+ 1048               	.L43:
+ 182:../../common/can.c ****     CAN_request_to_send(TXB1ADDR);
+ 1049               		.stabn	68,0,182,.LM129-.LFBB11
+ 1050               	.LM129:
+ 1051 03da B801      		movw r22,r16
+ 1052 03dc 82E0      		ldi r24,lo8(2)
+ 1053 03de 0E94 0000 		call CAN_load_message
+ 1054               	.LBB70:
+ 1055               	.LBB71:
+  98:../../common/can.c ****   SPI_write(RTS | address);
+ 1056               		.stabn	68,0,98,.LM130-.LFBB11
+ 1057               	.LM130:
+ 1058 03e2 0E94 0000 		call SPI_unset_cs
+  99:../../common/can.c ****   SPI_set_cs();
+ 1059               		.stabn	68,0,99,.LM131-.LFBB11
+ 1060               	.LM131:
+ 1061 03e6 82E8      		ldi r24,lo8(-126)
+ 1062 03e8 0E94 0000 		call SPI_write
+ 100:../../common/can.c **** }
+ 1063               		.stabn	68,0,100,.LM132-.LFBB11
+ 1064               	.LM132:
+ 1065 03ec 0E94 0000 		call SPI_set_cs
+ 1066               	.LBE71:
+ 1067               	.LBE70:
+ 1068               	.LBB72:
+ 1069               	.LBB73:
+ 1070               		.stabn	68,0,223,.LM133-.LFBB11
+ 1071               	.LM133:
+ 1072 03f0 82E0      		ldi r24,lo8(2)
+GAS LISTING /tmp/ccj0XBbI.s 			page 25
+
+
+ 1073 03f2 0E94 0000 		call CAN_read_register
+ 1074 03f6 C82F      		mov r28,r24
+ 1075 03f8 C074      		andi r28,lo8(64)
+ 1076               	.LBE73:
+ 1077               	.LBE72:
+ 1078               	.LBB74:
+ 1079               	.LBB75:
+ 1080 03fa 82E0      		ldi r24,lo8(2)
+ 1081 03fc 0E94 0000 		call CAN_read_register
+ 1082 0400 D82F      		mov r29,r24
+ 1083 0402 D072      		andi r29,lo8(32)
+ 1084               	.LBE75:
+ 1085               	.LBE74:
+ 1086               	.LBB76:
+ 1087               	.LBB77:
+ 1088 0404 82E0      		ldi r24,lo8(2)
+ 1089 0406 0E94 0000 		call CAN_read_register
+ 1090 040a 8071      		andi r24,lo8(16)
+ 1091               	.LBE77:
+ 1092               	.LBE76:
+ 187:../../common/can.c ****   case 2:
+ 1093               		.stabn	68,0,187,.LM134-.LFBB11
+ 1094               	.LM134:
+ 1095 040c 00C0      		rjmp .L48
+ 1096               	.L47:
+ 211:../../common/can.c ****   {
+ 1097               		.stabn	68,0,211,.LM135-.LFBB11
+ 1098               	.LM135:
+ 1099 040e 8823      		tst r24
+ 1100 0410 01F0      		breq .L49
+ 213:../../common/can.c **** 
+ 1101               		.stabn	68,0,213,.LM136-.LFBB11
+ 1102               	.LM136:
+ 1103 0412 5F9A      		sbi 0xb,7
+ 215:../../common/can.c ****   }
+ 1104               		.stabn	68,0,215,.LM137-.LFBB11
+ 1105               	.LM137:
+ 1106 0414 85E0      		ldi r24,lo8(5)
+ 1107 0416 00C0      		rjmp .L50
+ 1108               	.L49:
+ 218:../../common/can.c **** }
+ 1109               		.stabn	68,0,218,.LM138-.LFBB11
+ 1110               	.LM138:
+ 1111 0418 80E0      		ldi r24,0
+ 1112 041a 00C0      		rjmp .L50
+ 1113               		.size	CAN_send, .-CAN_send
+ 1114               		.stabs	"abort:r(3,2)",64,0,148,28
+ 1115               		.stabs	"lost:r(3,2)",64,0,148,29
+ 1116               		.stabs	"txerr:r(3,2)",64,0,148,24
+ 1117               		.stabn	192,0,0,.LFBB11-.LFBB11
+ 1118               		.stabn	224,0,0,.Lscope11-.LFBB11
+ 1119               	.Lscope11:
+ 1120               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 1121               		.stabd	78,0,0
+ 1122               		.stabs	"CAN_check_bit:F(3,2)",36,0,221,CAN_check_bit
+ 1123               		.stabs	"reg:P(3,2)",64,0,221,24
+ 1124               		.stabs	"bitmask:P(3,2)",64,0,221,28
+GAS LISTING /tmp/ccj0XBbI.s 			page 26
+
+
+ 1125               	.global	CAN_check_bit
+ 1126               		.type	CAN_check_bit, @function
+ 1127               	CAN_check_bit:
+ 1128               		.stabd	46,0,0
+ 222:../../common/can.c ****   return CAN_read_register(reg) & bitmask;
+ 1129               		.stabn	68,0,222,.LM139-.LFBB12
+ 1130               	.LM139:
+ 1131               	.LFBB12:
+ 1132 041c CF93      		push r28
+ 1133               	/* prologue: function */
+ 1134               	/* frame size = 0 */
+ 1135               	/* stack size = 1 */
+ 1136               	.L__stack_usage = 1
+ 1137 041e C62F      		mov r28,r22
+ 1138               		.stabn	68,0,223,.LM140-.LFBB12
+ 1139               	.LM140:
+ 1140 0420 0E94 0000 		call CAN_read_register
+ 224:../../common/can.c **** }
+ 1141               		.stabn	68,0,224,.LM141-.LFBB12
+ 1142               	.LM141:
+ 1143 0424 8C23      		and r24,r28
+ 1144               	/* epilogue start */
+ 1145 0426 CF91      		pop r28
+ 1146 0428 0895      		ret
+ 1147               		.size	CAN_check_bit, .-CAN_check_bit
+ 1148               	.Lscope12:
+ 1149               		.stabs	"",36,0,0,.Lscope12-.LFBB12
+ 1150               		.stabd	78,0,0
+ 1151               		.stabs	"CAN_get_TEC:F(3,2)",36,0,226,CAN_get_TEC
+ 1152               	.global	CAN_get_TEC
+ 1153               		.type	CAN_get_TEC, @function
+ 1154               	CAN_get_TEC:
+ 1155               		.stabd	46,0,0
+ 225:../../common/can.c **** 
+ 226:../../common/can.c **** uint8_t CAN_get_TEC()
+ 227:../../common/can.c **** {
+ 1156               		.stabn	68,0,227,.LM142-.LFBB13
+ 1157               	.LM142:
+ 1158               	.LFBB13:
+ 1159               	/* prologue: function */
+ 1160               	/* frame size = 0 */
+ 1161               	/* stack size = 0 */
+ 1162               	.L__stack_usage = 0
+ 228:../../common/can.c ****   return CAN_read_register(0x1C);
+ 1163               		.stabn	68,0,228,.LM143-.LFBB13
+ 1164               	.LM143:
+ 1165 042a 8CE1      		ldi r24,lo8(28)
+ 1166 042c 0C94 0000 		jmp CAN_read_register
+ 1167               		.size	CAN_get_TEC, .-CAN_get_TEC
+ 1168               	.Lscope13:
+ 1169               		.stabs	"",36,0,0,.Lscope13-.LFBB13
+ 1170               		.stabd	78,0,0
+ 1171               		.stabs	"",100,0,0,.Letext0
+ 1172               	.Letext0:
+ 1173               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/ccj0XBbI.s 			page 27
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 can.c
+     /tmp/ccj0XBbI.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccj0XBbI.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccj0XBbI.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccj0XBbI.s:5      *ABS*:000000000000003b __RAMPZ__
+     /tmp/ccj0XBbI.s:6      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccj0XBbI.s:7      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccj0XBbI.s:116    .text:0000000000000000 CAN_set_mode
+     /tmp/ccj0XBbI.s:164    .text:000000000000002c CAN_read_register
+     /tmp/ccj0XBbI.s:210    .text:0000000000000050 CAN_set_register
+     /tmp/ccj0XBbI.s:255    .text:0000000000000076 CAN_init
+     /tmp/ccj0XBbI.s:317    .text:00000000000000b8 CAN_verify_register
+     /tmp/ccj0XBbI.s:350    .text:00000000000000cc CAN_init_regcheck
+     /tmp/ccj0XBbI.s:412    .text:00000000000000f4 CAN_load_message
+     /tmp/ccj0XBbI.s:551    .text:00000000000001a4 CAN_request_to_send
+     /tmp/ccj0XBbI.s:606    .text:00000000000001d0 CAN_read_registers
+     /tmp/ccj0XBbI.s:682    .text:0000000000000220 CAN_read
+     /tmp/ccj0XBbI.s:849    .text:000000000000030a CAN_send
+     /tmp/ccj0XBbI.s:1127   .text:000000000000041c CAN_check_bit
+     /tmp/ccj0XBbI.s:1154   .text:000000000000042a CAN_get_TEC
+
+UNDEFINED SYMBOLS
+SPI_unset_cs
+SPI_write
+SPI_set_cs
